@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import media from 'styled-media-query';
+import CookieConsentBanner from '../CookieConsentBanner';
 
 const StyledPage = styled.div`
   margin-right: auto;
@@ -22,6 +23,7 @@ function Page(props) {
   return (
     <StyledPage {...props}>
       {props.children}
+      <CookieConsentBanner />
     </StyledPage>
   )
 }
