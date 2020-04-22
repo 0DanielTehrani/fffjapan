@@ -5,7 +5,7 @@ import imgWebp from './organize.webp';
 import img from './organize.png';
 
 const StyledImage = styled.img`
-  width: 182.385px;
+  width: ${props => props.width || '182.385px'};
 `;
 
 function Organize (props) {

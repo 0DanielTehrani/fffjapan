@@ -4,12 +4,16 @@ import Footer from '../components/Footer';
 import TopLargeImage from '../components/Top/LargeImage'
 import styled from 'styled-components';
 import media from 'styled-media-query';
+import { useMediaQuery } from 'react-responsive';
 import Page from '../components/Page';
 import JoinTheActionButton from '../components/Top/JoinTheActionButton';
 import MessageBanner from '../components/Top/MessageBanner';
 import AboutUsLinkIconButton from '../components/Top/LinkIconButtons/AboutUsLinkIconButton';
 import JoinUsLinkIconButton from '../components/Top/LinkIconButtons/JoinUsLinkIconButton';
 import OrganizeLinkIconButton from '../components/Top/LinkIconButtons/OrganizeLinkIconButton';
+import MobileAboutUsButton from '../components/Top/LinkIconButtons/MobileAboutUsButton'
+import MobileJoinUsButton from '../components/Top/LinkIconButtons/MobileJoinUsButton'
+import MobileOrganizeButton from '../components/Top/LinkIconButtons/MobileOrganizeButton'
 
 const TopLargeImageContainer = styled.div`
   margin-top: 40px;
@@ -17,6 +21,9 @@ const TopLargeImageContainer = styled.div`
 
 const FooterContainer = styled.div`
   margin-top: 84px;
+  ${media.lessThan('small')`
+    margin-top: 30px;
+  `}
 `;
 
 const JoinTheActionButtonContainer = styled.div`
@@ -72,7 +79,19 @@ const LinkIconButtonsContainer = styled.div`
   `}
 `;
 
+const MobileLinkIconButtonsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2em;
+  & >:not(:first-child) {
+    margin-top: 2em;
+  }
+`;
+
 function Top () {
+  const isMobile = useMediaQuery({ query: '(max-width: 450px)' });
+
   return (
     <Page>
       <Header />
@@ -85,11 +104,19 @@ function Top () {
       <MessageBannerContainer>
         <MessageBanner />
       </MessageBannerContainer>
-      <LinkIconButtonsContainer>
-        <AboutUsLinkIconButton />
-        <JoinUsLinkIconButton />
-        <OrganizeLinkIconButton />
-      </LinkIconButtonsContainer>
+      {
+        isMobile ?
+          <MobileLinkIconButtonsContainer>
+            <MobileAboutUsButton />
+            <MobileJoinUsButton />
+            <MobileOrganizeButton />
+          </MobileLinkIconButtonsContainer>
+          : <LinkIconButtonsContainer>
+            <AboutUsLinkIconButton />
+            <JoinUsLinkIconButton />
+            <OrganizeLinkIconButton />
+          </LinkIconButtonsContainer>
+      }
       <FooterContainer>
         <Footer />
       </FooterContainer>
