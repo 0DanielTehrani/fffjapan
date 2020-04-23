@@ -58,8 +58,9 @@ function Header (props) {
       {
         isMobileOrTablet ?
         <LinkMenu fontSize={fontSize}>
-          <MobileLinkItem fontSize={fontSize} to='/about-us'>About Us</MobileLinkItem>
-          <MobileLinkItem fontSize={fontSize} to='/faq'>FAQ</MobileLinkItem>
+          {pathname !== '/' && <MobileLinkItem fontSize={fontSize} to='/'>Top</MobileLinkItem>}
+          {pathname !== '/about-us' && <MobileLinkItem fontSize={fontSize} to='/about-us'>About Us</MobileLinkItem>}
+          {pathname !== '/faq' && <MobileLinkItem fontSize={fontSize} to='/faq'>FAQ</MobileLinkItem>}
           <MobileExternalLinkItem fontSize={fontSize} href={DIGITAL_MARCH_URL} target='_blank'>アクションに参加する</MobileExternalLinkItem>
         </LinkMenu>
         :
