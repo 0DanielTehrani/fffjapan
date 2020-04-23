@@ -28,15 +28,22 @@ const StyledModal = styled(Modal)`
 `;
 
 const StyledWhiteCloseButton = styled.span`
-  color: ${props => props.theme.textColor};
-  background-color: #fff;
-  font-size: ${props => props.fontSize};
+  font-size: 0.8em;
+  display: block;
+  color: #fff;
+  border-top: solid 0.1em #fff;
+  border-bottom: solid 0.1em #fff;
+  background-color: ${props => props.theme.green};
+  text-decoration: none;
   font-family: ${props => props.theme.fontFamily};
-  display: inline-block;
+  width: 100%;
+  text-align: center;
 `;
 
 const StyledCloseButtonContainer = styled.div`
   margin-top: 22px;
+  font-size: ${props => props.fontSize};
+  width: 100%;
 `;
 
 function LinkMenu (props) {
@@ -63,8 +70,8 @@ function LinkMenu (props) {
       >
         <StyledLinkMenu>
           {props.children}
-          <StyledCloseButtonContainer>
-            <StyledWhiteCloseButton fontSize={fontSize} onClick={handleClose}>閉じる</StyledWhiteCloseButton>
+          <StyledCloseButtonContainer fontSize={fontSize} >
+            <StyledWhiteCloseButton onClick={handleClose}>閉じる</StyledWhiteCloseButton>
           </StyledCloseButtonContainer>
         </StyledLinkMenu>
       </StyledModal>
