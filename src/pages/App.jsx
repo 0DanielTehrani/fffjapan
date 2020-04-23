@@ -7,6 +7,7 @@ import {
   Route,
   Link
 } from 'react-router-dom';
+import ScrollTop from '../components/ScrollTop';
 import Top from './Top';
 import AboutUs from './AboutUs';
 import FAQ from './FAQ';
@@ -29,6 +30,7 @@ function App () {
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
+        <ScrollTop>
         <Switch>
           <Route exact path='/'>
             <Top />
@@ -49,6 +51,7 @@ function App () {
             <ApproachToGovernments />
           </Route>
         </Switch>
+        </ScrollTop>
       </BrowserRouter>
     </ThemeProvider>
   );
