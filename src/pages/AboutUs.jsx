@@ -12,6 +12,7 @@ import History3 from '../components/AboutUs/Histories/History3';
 import History4 from '../components/AboutUs/Histories/History4';
 import History5 from '../components/AboutUs/Histories/History5';
 import History6 from '../components/AboutUs/Histories/History6';
+import ApproachToGovernmentsBoard from '../components/AboutUs/ApproachToGovernmentsBoard';
 import FloatingAboutUsImage from '../components/AboutUs/FloatingAboutUsImage';
 import ArrowImage from '../components/RandomImages/Arrow';
 
@@ -120,6 +121,10 @@ const History5_6Container = styled.div`
   `};
 `;
 
+const ApproachToGovernmentsBoardContainer = styled.div`
+  margin-top: 5em;
+`;
+
 const StyledFooterContainer = styled.div`
   margin-top: 5em;
 `;
@@ -156,6 +161,9 @@ function AboutUs () {
             <History6 />
             <History5 />
           </History5_6Container>
+          <ApproachToGovernmentsBoardContainer>
+            <ApproachToGovernmentsBoard />
+          </ApproachToGovernmentsBoardContainer>
         </StyledAboutUs>
       <StyledFooterContainer>
         <Footer />
