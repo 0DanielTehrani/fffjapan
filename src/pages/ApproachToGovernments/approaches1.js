@@ -85,6 +85,7 @@ const approaches = [
       what: (<span>
         大分県： <br />
         {largeSpace} 気候非常事態宣言の請願の署名集め<br />
+        {largeSpace} 請願を提出<br />
         別府市： <br />
         {largeSpace} 気候非常事態宣言の請願を提出 <br />
         </span>),
