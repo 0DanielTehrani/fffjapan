@@ -69,7 +69,7 @@ function Header (props) {
         <StyledLinkItems>
           <LinkItem fontSize={fontSize} to='/about-us' color={pathname === '/about-us' ? currentPageColor : textColor}>About Us</LinkItem>
           <LinkItem fontSize={fontSize} to='/faq' color={pathname === '/faq' ? currentPageColor : textColor}>FAQ</LinkItem>
-          <ExternalLinkItem fontSize={fontSize} target='_blank' href='https://ja.globalclimatestrike.net/0424digitalstrike/'>アクションに参加する</ExternalLinkItem>
+          <ExternalLinkItem fontSize={fontSize} target='_blank' href={DIGITAL_MARCH_URL}>アクションに参加する</ExternalLinkItem>
         </StyledLinkItems>
       }
     </StyledHeader>
