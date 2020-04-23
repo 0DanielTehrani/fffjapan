@@ -4,6 +4,7 @@ import { isWebpSupported } from 'react-image-webp/dist/utils';
 import JoinUsText from '../../../RandomImages/JoinUsText';
 import ActNow from '../../../RandomImages/ActNow';
 import Text from '../../../Text'
+import { DIGITAL_MARCH_URL } from '../../../../constants';
 
 const StyleMobileJoinUsButton = styled.button`
   display: flex;
@@ -23,7 +24,7 @@ const StyledText = styled(Text)`
 
 function MobileJoinUsButton (props) {
   return (
-  <StyleMobileJoinUsButton>
+  <StyleMobileJoinUsButton onClick={() => {window.open(DIGITAL_MARCH_URL)}}>
     <ActNow width='100px'/>
     <JoinUsText  width='100px'/>
     <StyledText>アクションに参加する</StyledText>

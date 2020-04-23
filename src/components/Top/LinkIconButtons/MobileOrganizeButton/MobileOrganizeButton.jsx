@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
+import { Link } from 'react-router-dom';
 import { isWebpSupported } from 'react-image-webp/dist/utils';
 import OrganizeText from '../../../RandomImages/OrganizeText';
 import Organize from '../../../RandomImages/Organize';
@@ -21,13 +22,17 @@ const StyledText = styled(Text)`
   font-size: 15px;
 `;
 
+const StyledLink = styled(Link)`
+  text-decoration: none;
+`;
+
 function MobileOrganizeButton (props) {
   return (
-  <StyleMobileOrganizeButton>
+  <StyledLink to='/to-organize-form'><StyleMobileOrganizeButton>
     <Organize width='100px'/>
     <OrganizeText  width='100px'/>
     <StyledText>オーガナイズする</StyledText>
-  </StyleMobileOrganizeButton>)
+  </StyleMobileOrganizeButton></StyledLink>)
 }
 
 export default MobileOrganizeButton;
