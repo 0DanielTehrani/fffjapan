@@ -7,6 +7,7 @@ const StyledText = styled.span`
   font-family: ${props => props.theme.fontFamily};
   font-weight: ${props => props.bold ? 'bold' : 'normal'};
   text-decoration: ${props => props.underline ? 'underline' : 'none'};
+  line-height: 1.625em;
 `;
 
 function Text (props) {
