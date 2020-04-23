@@ -14,7 +14,7 @@ function TopBoard (props) {
   return (
     <StyledTopBoard {...props}>
       <TextBoard>
-        <TitleContainer><Text fontSize='1.5em' bold underline>行政・政治へのアプローチ</Text></TitleContainer>
+        <TitleContainer><Text fontSize='1.45em' bold underline>行政・政治へのアプローチ</Text></TitleContainer>
         <Text fontSize='1em'>私たちFridays For Future（以下、FFF）は日本の気候変動政策を強化するため、
         マーチによる間接的なアプローチだけでなく、行政や政治への働きかけなどの直接的なアプローチも行っています
         。例えば、各地域のFFFが各地方自治体に対して気候非常事態宣言の発表を求めたり、
