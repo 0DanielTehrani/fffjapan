@@ -1,6 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { withTheme } from 'styled-components';
 import media from 'styled-media-query';
+import { withRouter } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-router-dom';
 import LinkItem from '../LinkItem';
@@ -42,6 +43,9 @@ function Header (props) {
   const roundLogoWidth = isMobileOrTablet ? '30px' : '50px';
   const logoWidth = isMobileOrTablet ? '231px' : '385px';
   const fontSize = isMobileOrTablet ? '25px' : '18px';
+  const { pathname } = props.location;
+  const { textColor, ocher } = props.theme;
+  const currentPageColor = ocher;
 
   return (
     <StyledHeader>
@@ -60,8 +64,8 @@ function Header (props) {
         </LinkMenu>
         :
         <StyledLinkItems>
-          <LinkItem fontSize={fontSize} to='/about-us'>About Us</LinkItem>
-          <LinkItem fontSize={fontSize} to='/faq'>FAQ</LinkItem>
+          <LinkItem fontSize={fontSize} to='/about-us' color={pathname === '/about-us' ? currentPageColor : textColor}>About Us</LinkItem>
+          <LinkItem fontSize={fontSize} to='/faq' color={pathname === '/faq' ? currentPageColor : textColor}>FAQ</LinkItem>
           <ExternalLinkItem fontSize={fontSize} target='_blank' href='https://ja.globalclimatestrike.net/0424digitalstrike/'>アクションに参加する</ExternalLinkItem>
         </StyledLinkItems>
       }
@@ -69,4 +73,4 @@ function Header (props) {
   )
 }
 
-export default Header;
+export default withTheme(withRouter(Header));
