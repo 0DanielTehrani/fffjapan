@@ -1,6 +1,5 @@
-html {
-  visibility: hidden;
-}
-html.wf-active {
-  visibility: visible;
+@font-face {
+  font-family: 'Noto Sans CJK jp';
+  font-style: normal;
+  src: url('../fonts/NotoSansCJKjp.woff') format("woff");
 }
