@@ -36,6 +36,8 @@ const StyledLargeImage = styled.img`
   `};
 `;
 
+const ImageContainer = styled.div``;
+
 const StyledSmallImage = styled.img`
   width: 15.93em;
   height: auto;
@@ -70,10 +72,10 @@ function History4 () {
   return (
     <StyledHistory4>
       <StyledImagesContainer>
-        <StyledLargeImage src={useWebp ? img1Wep : img1} />
+        <ImageContainer><StyledLargeImage src={useWebp ? img1Wep : img1} /></ImageContainer>
         <StyledSmallImagesContainer>
-          <StyledSmallImage src={useWebp ? img2Wep : img2} />
-          <StyledSmallImage src={useWebp ? img3Wep : img3} />
+          <ImageContainer><StyledSmallImage src={useWebp ? img2Wep : img2} /></ImageContainer>
+          <ImageContainer><StyledSmallImage src={useWebp ? img3Wep : img3} /></ImageContainer>
         </StyledSmallImagesContainer>
       </StyledImagesContainer>
       <HistoryBoard

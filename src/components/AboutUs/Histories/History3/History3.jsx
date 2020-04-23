@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useMediaQuery } from 'react-responsive';
 import { isWebpSupported } from 'react-image-webp/dist/utils';
 import media from 'styled-media-query';
 import HistoryBoard from '../../HistoryBoard';
@@ -32,8 +33,11 @@ const StyledImagesContainer = styled.div`
   }
   ${media.lessThan('large')`
     margin-right: 0;
+    margin-top: -10em;
   `};
 `;
+
+const ImageContainer = styled.div``;
 
 const StyledImage = styled.img`
   width: 18.43em;
@@ -53,6 +57,8 @@ function History3 () {
 
   const useWebp = isWebpSupported();
 
+  const isMobile = useMediaQuery({ query: '(max-width: 450px)' });
+
   return (
     <StyledHistory3>
       <HistoryBoard
@@ -60,11 +66,11 @@ function History3 () {
         mainText={mainText}
         dateText={dateText}
         countText='3'
-        paddingBottom='17.4em'
+        paddingBottom={isMobile ? '13em' : '17.4em'}
       />
       <StyledImagesContainer>
-        <StyledImage src={useWebp ? img1Webp : img1} />
-        <StyledImage src={useWebp ? img2Webp : img2} />
+        <ImageContainer><StyledImage src={useWebp ? img1Webp : img1} /></ImageContainer>
+        <ImageContainer><StyledImage src={useWebp ? img2Webp : img2} /></ImageContainer>
       </StyledImagesContainer>
     </StyledHistory3>
   )

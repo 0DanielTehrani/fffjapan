@@ -91,7 +91,7 @@ const History3_4Container = styled.div`
     justify-content: center;
     align-items: center;
     & >:nth-child(1) {
-      margin-top: 10em;
+      margin-top: 5em;
     };
     & > * {
       margin-top: 3em;
