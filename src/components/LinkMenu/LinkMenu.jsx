@@ -15,6 +15,7 @@ const StyledLinkMenu = styled.div`
   justify-content: center;
   align-items: center;
   outline: none;
+  width: 70%;
   & :not(:first-child) {
     margin-top: 22px;
   }
