@@ -14,8 +14,7 @@ import Actions2 from '../../components/ApproachToGovernments/Actions/Actions2';
 import ActionBoard from '../../components/ApproachToGovernments/ActionBoard';
 import Flower from '../../components/RandomImages/Flower';
 import Bee from '../../components/RandomImages/Bee';
-import approaches1 from './approaches1';
-import approaches2 from './approaches2';
+import approaches from './approaches';
 
 const StyledApproachToGovernments = styled.div`
   font-size: 16px;
@@ -107,6 +106,9 @@ function ApproachToGovernments () {
 
   const randomImagePositions = randomImages.map((randomImage) => randomImage.position);
 
+  const approaches1 = approaches.filter((approach, i) => !(i % 2));
+  const approaches2 = approaches.filter((approach, i) => i % 2);
+
   return (
     <Page>
       <HeaderContainer>
@@ -124,27 +126,41 @@ function ApproachToGovernments () {
           <ActionsTitle />
         </ActionsTitleContainer>
         <ActinosContainer>
-          <ActionsColumn>
           {
-            approaches1.map((approach, i) =>
-              <>
+            isMobile ?
+            <ActionsColumn>
+              {
+                approaches.map((approach, i) =>
                 <ActionBoardContainer>
-                  <ActionBoard {...approach} />
-                  {
-                    !isMobile &&
-                    randomImagePositions.includes(i) &&
-                    randomImages.find((randomImage) => randomImage.position === i).component
-                  }
-                </ActionBoardContainer>
-              </>
-            )
+                    <ActionBoard {...approach} />
+                </ActionBoardContainer>)
+              }
+            </ActionsColumn>
+            :
+            <>
+            <ActionsColumn>
+            {
+              approaches1.map((approach, i) =>
+                <>
+                  <ActionBoardContainer>
+                    <ActionBoard {...approach} />
+                    {
+                      !isMobile &&
+                      randomImagePositions.includes(i) &&
+                      randomImages.find((randomImage) => randomImage.position === i).component
+                    }
+                  </ActionBoardContainer>
+                </>
+              )
+            }
+            </ActionsColumn>
+            <ActionsColumn>
+            {
+              approaches2.map((approach) => <ActionBoardContainer><ActionBoard {...approach} /></ActionBoardContainer>)
+            }
+            </ActionsColumn>
+            </>
           }
-          </ActionsColumn>
-          <ActionsColumn>
-          {
-            approaches2.map((approach) => <ActionBoardContainer><ActionBoard {...approach} /></ActionBoardContainer>)
-          }
-          </ActionsColumn>
         </ActinosContainer>
         <BottomImageContainer><Bee /></BottomImageContainer>
       </StyledApproachToGovernments>
