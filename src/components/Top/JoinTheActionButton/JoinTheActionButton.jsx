@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import { isWebpSupported } from 'react-image-webp/dist/utils';
+import { DIGITAL_MARCH_URL } from '../../../constants';
 import iconWebp from './fffj-join-us.webp';
 import icon from './fffj-join-us.png';
 import LinkButton from './LinkButton';
@@ -38,7 +39,7 @@ const StyledButtonText = styled.span`
 
 function JoinTheActionButton (props) {
   return (
-    <LinkButton target='_blank' href='https://ja.globalclimatestrike.net/0424digitalstrike/' zIndex={props.zIndex}>
+    <LinkButton target='_blank' href={DIGITAL_MARCH_URL} zIndex={props.zIndex}>
       <StyledJoinTheActionButton {...props}>
         <StyledButtonIconContainer>
           <StyledButtonIcon src={isWebpSupported() ? iconWebp : icon}/>
