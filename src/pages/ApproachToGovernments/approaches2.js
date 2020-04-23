@@ -49,6 +49,20 @@ const approaches = [
         </span>)
     },
     {
+      title: 'FFF京都',
+      toWhom: '京都市・京都府',
+      what: (<span>
+        京都市： <br />
+        {largeSpace} 職員さんとの意見交換会の実施 <br />
+        京都府： <br />
+        {largeSpace} 職員さんへのアプローチ準備中 <br />
+        </span>),
+      achievements: (<span>
+        京都市： <br />
+        {largeSpace} 政策的対話の場の実現(2020年6月〜12月開催予定) <br />
+        </span>)
+    },
+    {
       title: 'FFF熊本＆グローバル気候マーチ熊本',
       toWhom: '熊本市、熊本県',
       what: (<span>
