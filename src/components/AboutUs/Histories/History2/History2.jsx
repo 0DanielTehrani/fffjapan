@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { isWebpSupported } from 'react-image-webp/dist/utils';
+import { useTranslation } from 'react-i18next';
 import media from 'styled-media-query';
 import HistoryBoard from '../../HistoryBoard';
 import imgWebp from './history2.webp';
@@ -26,10 +27,9 @@ const StyledImage = styled.img`
 `;
 
 function History2 () {
-  const title = '日本で初めての \n グローバルストライキ';
-  const mainText = '世界中のGlobal Climate Strikeと合わせて、 \
-  2019年3月15日にはマーチを東京と京都で行いました。 \
-  マーチの参加者数は2月に行ったアクション時の20倍の300人になりました。';
+  const { t } = useTranslation();
+  const title = t('About Us.History2_Title');
+  const mainText = t('About Us.History2');
   const dateText = '2019.3.15';
 
   return (

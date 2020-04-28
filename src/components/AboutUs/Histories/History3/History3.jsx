@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { useMediaQuery } from 'react-responsive';
 import { isWebpSupported } from 'react-image-webp/dist/utils';
+import { useTranslation } from 'react-i18next';
 import media from 'styled-media-query';
 import HistoryBoard from '../../HistoryBoard';
 import img1Webp from './history-3-1.webp';
@@ -49,10 +50,9 @@ const StyledImage = styled.img`
 `;
 
 function History3 () {
-  const title = '3回目の気候マーチ';
-  const mainText = '2019年5月24日のマーチの際には東京と京都の2ヶ所開催で450人の動員になりました。 \
-  世界各地のアクションと比べるとまだまだ少なかったですが、 \
-  少しずつ参加者数が増えてきたことに希望が持てました。';
+  const { t } = useTranslation();
+  const title = t('About Us.History3_Title');
+  const mainText = t('About Us.History3');
   const dateText = '2019.5.24';
 
   const useWebp = isWebpSupported();

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { isWebpSupported } from 'react-image-webp/dist/utils';
+import { useTranslation } from 'react-i18next';
 import media from 'styled-media-query';
 import HistoryBoard from '../../HistoryBoard';
 import imgWebp from './history1.webp';
@@ -25,11 +26,10 @@ const StyledImage = styled.img`
 `;
 
 function History1 () {
-  const title = 'FridaysForFuture\n日本での活動の始まり';
-  const mainText = '日本では2019年の2月に環境NGOでインターンをしていた学生たちが中心となり、 \
-  Fridays For Future Japanの活動が始まりました。 \
-  2月22日に国会議事堂の前に集まった人数は15人。 \
-  集まったメディアの数よりも少ないスタートでした。';
+  const { t } = useTranslation();
+
+  const title = t('About Us.History1_Title');
+  const mainText = t('About Us.History1');
   const dateText = '2019.2.22';
 
   return (

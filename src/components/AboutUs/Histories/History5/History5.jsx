@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { isWebpSupported } from 'react-image-webp/dist/utils';
+import { useTranslation } from 'react-i18next';
 import media from 'styled-media-query';
 import HistoryBoard from '../../HistoryBoard';
 import imgWebp from './history-5.webp';
@@ -26,10 +27,9 @@ const StyledImage = styled.img`
   `};
 `;
 function History5 () {
-  const title = 'FridaysForFutureの支部が \n 各地域に立ち上がる';
-  const mainText = '2019年11月に行われたマーチではさらに開催地域が増え、 \
-  25都道府県28地域で声が上がり、\
-  現在もなおFFF立ち上げ地域は増え続けています。';
+  const { t } = useTranslation();
+  const title = t('About Us.History5_Title');
+  const mainText = t('About Us.History5');
   const dateText = '2019.11.29';
 
   return (

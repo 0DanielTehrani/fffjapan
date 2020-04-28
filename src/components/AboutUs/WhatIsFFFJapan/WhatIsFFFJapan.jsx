@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { isWebpSupported } from 'react-image-webp/dist/utils';
+import { useTranslation } from 'react-i18next';
 import imgWebp from './what-is-fffjapan.webp';
 import img from './what-is-fffjapan.png';
 import media from 'styled-media-query';
@@ -58,17 +59,15 @@ const StyledTextBoardBody = styled.div`
 `;
 
 function WhatIsFFFJapan () {
+  const { t } = useTranslation();
+
   return (
     <StyledWhatIsFFFJapan>
       <StyledImage src={isWebpSupported() ? imgWebp : img} />
       <StyledTextBoard>
-        <StyledTextBoardTitle>FridaysForFuture Japanとは？</StyledTextBoardTitle>
+        <StyledTextBoardTitle>{t('About Us.What Is FFFJapan? Title')}</StyledTextBoardTitle>
         <StyledTextBoardBody>
-          FridaysForFuture（未来のための金曜日）は、2018年8月に当時15歳のグレタ・トゥーンベリが、
-          気候変動に対する行動の欠如に抗議するために、一人でスウェーデンの国会前に座り込みをしたことをきっかけに始まった運動です。
-          彼女のアクションは、多くの若者の共感を呼び、すぐさま世界的な広がりを見せました。
-          2019年9月20日から1週間行われた“Global Week for Future”では、世界で700万人以上がストライキをし、気候変動に対する行動を求めました。
-          この世界的なムーブメントに共感する若者は、ここ日本にもたくさんいました。2019年2月、日本でのFridaysForFutureの運動が東京から始まります。発足以来、学生たちを中心に、徐々に全国各地に活動が広がっています。
+          {t('About Us.What Is FFFJapan?')}
         </StyledTextBoardBody>
       </StyledTextBoard>
     </StyledWhatIsFFFJapan>

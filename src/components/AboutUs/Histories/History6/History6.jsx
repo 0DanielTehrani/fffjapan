@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { isWebpSupported } from 'react-image-webp/dist/utils';
+import { useTranslation } from 'react-i18next';
 import media from 'styled-media-query';
 import HistoryBoard from '../../HistoryBoard';
 import imgWebp from './history-6.webp';
@@ -26,11 +27,9 @@ const StyledImage = styled.img`
   `};
 `;
 function History6 () {
-  const title = '学生気候危機サミット開催！';
-  const mainText = '2020年2月には学生が「気候変動」を学び、繋がり、 \
-  アクションをするための準備イベントとして３日間の「学生気候危機サミット」を東京・渋谷にて開催しました。 \
-  全国各地から100人ほどの学生が参加し、国立環境研究所の江守正多氏をはじめとする様々な専門家をトークゲストとして \
-  お招きしました。';
+  const { t } = useTranslation();
+  const title = t('About Us.History6_Title');
+  const mainText = t('About Us.History6');
   const dateText = '2020.2.24';
 
   return (

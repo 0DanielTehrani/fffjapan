@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { isWebpSupported } from 'react-image-webp/dist/utils';
+import { useTranslation } from 'react-i18next';
 import media from 'styled-media-query';
 import HistoryBoard from '../../HistoryBoard';
 import img1Wep from './history-4-1.webp';
@@ -61,10 +62,9 @@ const StyledSmallImagesContainer = styled.div`
 `;
 
 function History4 () {
-  const title = '各地に広がるムーブメント \n ついに5000人のアクションへ';
-  const mainText = 'そこから徐々に名古屋、福岡、那須などにも \
-  FridaysForFutureのムーブメントが広がりました。9月20日に世界同時に行ったグローバル気候マーチでは、\
-  全国各地24の都道府県と27箇所で計5000人が参加しました。';
+  const { t } = useTranslation();
+  const title = t('About Us.History4_Title');
+  const mainText = t('About Us.History4');
   const dateText = '2019.9.20';
 
   const useWebp = isWebpSupported();
