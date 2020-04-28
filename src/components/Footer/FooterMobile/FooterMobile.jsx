@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useTranslation } from 'react-i18next';
 import { Twitter } from '@styled-icons/boxicons-logos/Twitter';
 import { FacebookSquare } from '@styled-icons/boxicons-logos/FacebookSquare';
 import { Link } from 'react-router-dom';
@@ -7,6 +8,7 @@ import LinkItem from '../../LinkItem';
 import ExternalLinkItem from '../../ExternalLinkItem';
 import RoundLogo from '../../RoundLogo';
 import Logo from '../../Logo';
+import LangSwitchButton from '../LangSwitchButton';
 import { DIGITAL_MARCH_URL } from '../../../constants';
 
 const StyledFooterMobile = styled.div`
@@ -67,10 +69,27 @@ const SocialsContainer = styled.div`
 
 const LinkWrapper = styled.a``;
 
+const LangSwapContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+`;
+
 function FooterMobile (props) {
   const roundLogoWidth = '21x';
   const fontSize = '15px';
   const logoWidth = '161.7px';
+
+  const { t, i18n } = useTranslation();
+
+  const toggleLang = () => {
+    if (i18n.language === 'en') {
+      i18n.changeLanguage('ja');
+    } else {
+      i18n.changeLanguage('en');
+    }
+  }
 
   return (
     <StyledFooterMobile>
@@ -81,17 +100,20 @@ function FooterMobile (props) {
         </StyledLogos>
       </Link>
       <StyledLinkItemsColumn>
-          <LinkItem fontSize={fontSize} to='/about-us'>About Us</LinkItem>
-          <LinkItem fontSize={fontSize} to='/faq'>FAQ</LinkItem>
-          <LinkItem fontSize={fontSize} to='/approach-to-governments'>行政・政治へのアプローチ</LinkItem>
-          <LinkItem fontSize={fontSize} to='/to-organize-form'>オーガナイズする</LinkItem>
-          <ExternalLinkItem fontSize={fontSize} href={DIGITAL_MARCH_URL} target='_blank'>アクションに参加する</ExternalLinkItem>
-          <LinkItem fontSize={fontSize} to='/privacy-policy'>プライバシーポリシー</LinkItem>
+          <LinkItem fontSize={fontSize} to='/about-us'>{t('Footer.About Us')}</LinkItem>
+          <LinkItem fontSize={fontSize} to='/faq'>{t('Footer.FAQ')}</LinkItem>
+          <LinkItem fontSize={fontSize} to='/approach-to-governments'>{t('Footer.APG')}</LinkItem>
+          <LinkItem fontSize={fontSize} to='/to-organize-form'>{t('Footer.Organize')}</LinkItem>
+          <ExternalLinkItem fontSize={fontSize} href={DIGITAL_MARCH_URL} target='_blank'>{t('Footer.Join The Action')}</ExternalLinkItem>
+          <LinkItem fontSize={fontSize} to='/privacy-policy'>{t('Footer.PP')}</LinkItem>
       </StyledLinkItemsColumn>
       <SocialsContainer>
         <LinkWrapper href='https://twitter.com/FridaysJapan' target='_blank'><StyledTwitterIcon/></LinkWrapper>
         <LinkWrapper href='https://www.facebook.com/fridaysforfuture.jp/' target='_blank'><StyledFacebookIcon/></LinkWrapper>
       </SocialsContainer>
+      <LangSwapContainer>
+        <LangSwitchButton currenctLang={i18n.language === 'en' ? 'English' : '日本語'} onClick={toggleLang}/>
+      </LangSwapContainer>
     </StyledFooterMobile>
   )
 }

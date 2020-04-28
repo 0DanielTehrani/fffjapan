@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import { isWebpSupported } from 'react-image-webp/dist/utils';
+import { useTranslation } from 'react-i18next';
 import JoinUsText from '../../../RandomImages/JoinUsText';
 import ActNow from '../../../RandomImages/ActNow';
 import Text from '../../../Text'
@@ -23,11 +24,12 @@ const StyledText = styled(Text)`
 `;
 
 function MobileJoinUsButton (props) {
+  const { t } = useTranslation();
   return (
   <StyleMobileJoinUsButton onClick={() => {window.open(DIGITAL_MARCH_URL)}}>
     <ActNow width='100px'/>
     <JoinUsText  width='100px'/>
-    <StyledText>アクションに参加する</StyledText>
+    <StyledText>{t('Top.Join The Action')}</StyledText>
   </StyleMobileJoinUsButton>)
 }
 

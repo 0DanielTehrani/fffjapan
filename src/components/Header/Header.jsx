@@ -3,6 +3,7 @@ import styled, { withTheme } from 'styled-components';
 import media from 'styled-media-query';
 import { withRouter } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import LinkItem from '../LinkItem';
 import MobileLinkItem from './MobileLinkItem';
@@ -47,6 +48,8 @@ function Header (props) {
   const { textColor, ocher } = props.theme;
   const currentPageColor = ocher;
 
+  const { t } = useTranslation();
+
   return (
     <StyledHeader>
       <Link to='/'>
@@ -58,8 +61,8 @@ function Header (props) {
       {
         isMobileOrTablet ?
         <LinkMenu fontSize={fontSize}>
-          {pathname !== '/' && <MobileLinkItem fontSize={fontSize} to='/'>Top</MobileLinkItem>}
-          {pathname !== '/about-us' && <MobileLinkItem fontSize={fontSize} to='/about-us'>About Us</MobileLinkItem>}
+          {pathname !== '/' && <MobileLinkItem fontSize={fontSize} to='/'>{t('Header.Top')}</MobileLinkItem>}
+          {pathname !== '/about-us' && <MobileLinkItem fontSize={fontSize} to='/about-us'>{t('Header.About Us')}</MobileLinkItem>}
           {pathname !== '/faq' && <MobileLinkItem fontSize={fontSize} to='/faq'>FAQ</MobileLinkItem>}
           {pathname !== '/to-organize-form' && <MobileLinkItem fontSize={fontSize} to='/to-organize-form'>オーガナイズする</MobileLinkItem>}
           {pathname !== '/approach-to-governments' && <MobileLinkItem fontSize={fontSize} to='/approach-to-governments'>行政・政治へのアプローチ</MobileLinkItem>}
@@ -67,9 +70,9 @@ function Header (props) {
         </LinkMenu>
         :
         <StyledLinkItems>
-          <LinkItem fontSize={fontSize} to='/about-us' color={pathname === '/about-us' ? currentPageColor : textColor}>About Us</LinkItem>
-          <LinkItem fontSize={fontSize} to='/faq' color={pathname === '/faq' ? currentPageColor : textColor}>FAQ</LinkItem>
-          <ExternalLinkItem fontSize={fontSize} target='_blank' href={DIGITAL_MARCH_URL}>アクションに参加する</ExternalLinkItem>
+          <LinkItem fontSize={fontSize} to='/about-us' color={pathname === '/about-us' ? currentPageColor : textColor}>{t('Header.About Us')}</LinkItem>
+          <LinkItem fontSize={fontSize} to='/faq' color={pathname === '/faq' ? currentPageColor : textColor}>{t('Header.FAQ')}</LinkItem>
+          <ExternalLinkItem fontSize={fontSize} target='_blank' href={DIGITAL_MARCH_URL}>{t('Header.Join The Action')}</ExternalLinkItem>
         </StyledLinkItems>
       }
     </StyledHeader>

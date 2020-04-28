@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components'
 import { Link } from 'react-router-dom';
 import { isWebpSupported } from 'react-image-webp/dist/utils';
+import { useTranslation } from 'react-i18next';
 import AboutUsText from '../../../RandomImages/AboutUsText';
 import Earth from '../../../RandomImages/Earth';
 import Text from '../../../Text'
@@ -28,11 +29,12 @@ const StyledLink = styled(Link)`
 `;
 
 function MobileAboutUsButton (props) {
+  const { t } = useTranslation();
   return (
   <StyledLink to='/about-us'><StyleAboutUsLinkIconButton>
     <Earth width='100px'/>
     <AboutUsText  width='100px'/>
-    <StyledText>私たちについて</StyledText>
+    <StyledText>{t('Top.About Us')}</StyledText>
   </StyleAboutUsLinkIconButton></StyledLink>)
 }
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { isWebpSupported } from 'react-image-webp/dist/utils';
+import { useTranslation } from 'react-i18next';
 import holdingBannerImage1Webp from './holding-banner-1.webp';
 import holdingBannerImage1 from './holding-banner-1.png';
 import holdingBannerImage2Webp from './holding-banner-2.webp';
@@ -40,10 +41,11 @@ const StyledHoldingBannerImage2 = styled.img`
 
 function MessageBanner () {
   const useWebp = isWebpSupported();
+  const { t } = useTranslation();
   return (
     <StyledMessageBanner>
       <StyledHoldingBannerImage src={useWebp ? holdingBannerImage1Webp : holdingBannerImage1} />
-      <StyledMessage>みんなで守る、みんなの未来</StyledMessage>
+      <StyledMessage>{t('Top.BannerMessage')}</StyledMessage>
       <StyledHoldingBannerImage2 src={useWebp ? holdingBannerImage2Webp : holdingBannerImage2} />
     </StyledMessageBanner>
   )

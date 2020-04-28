@@ -8,6 +8,7 @@ i18n
 .use(LngDetector)
 .init({
   resources,
+  whitelist: ['en', 'ja'],
   fallbackLng: 'en',
   debug: true,
   interpolation: {

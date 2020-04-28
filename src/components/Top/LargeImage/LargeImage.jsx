@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import { isWebpSupported } from 'react-image-webp/dist/utils';
+import { useTranslation } from 'react-i18next';
 import topImgWebp from './top-image.webp';
 import topImg from './top-image.png';
 import media from 'styled-media-query';
@@ -44,6 +45,8 @@ const StyledLabelTextContainer = styled.div`
 function LargeImage (props) {
   const isMobile = useMediaQuery({ query: '(max-width: 450px)' });
   const fontSize = isMobile ? '16px' : '32px';
+
+  const { t } = useTranslation();
 
   return (
     <StyledLargeImage>

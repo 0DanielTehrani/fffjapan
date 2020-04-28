@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import { isWebpSupported } from 'react-image-webp/dist/utils';
+import { useTranslation } from 'react-i18next';
 import { DIGITAL_MARCH_URL } from '../../../constants';
 import iconWebp from './fffj-join-us.webp';
 import icon from './fffj-join-us.png';
@@ -38,6 +39,8 @@ const StyledButtonText = styled.span`
 `;
 
 function JoinTheActionButton (props) {
+  const { t } = useTranslation();
+
   return (
     <LinkButton target='_blank' href={DIGITAL_MARCH_URL} zIndex={props.zIndex}>
       <StyledJoinTheActionButton {...props}>
@@ -45,8 +48,8 @@ function JoinTheActionButton (props) {
           <StyledButtonIcon src={isWebpSupported() ? iconWebp : icon}/>
         </StyledButtonIconContainer>
         <StyledButtonTextContainer>
-          <StyledButtonText>アクションに</StyledButtonText>
-          <StyledButtonText>参加する</StyledButtonText>
+          <StyledButtonText>{t('Top.Join The')}</StyledButtonText>
+          <StyledButtonText>{t('Top.Action')}</StyledButtonText>
         </StyledButtonTextContainer>
       </StyledJoinTheActionButton>
     </LinkButton>

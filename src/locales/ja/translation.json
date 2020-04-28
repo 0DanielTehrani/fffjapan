@@ -1,2 +1,28 @@
 {
+  "Header": {
+    "Top": "Top",
+    "About Us": "About Us",
+    "FAQ": "FAQ",
+    "Join The Action": "アクションに参加する"
+  },
+  "Footer": {
+    "About Us": "About Us",
+    "APG": "行政・政治へのアプローチ",
+    "Join The Action": "アクションに参加する",
+    "FAQ": "FAQ",
+    "Organize": "オーガナイズする",
+    "PP": "プライバシー"
+  },
+  "Top": {
+    "Join The": "アクションに",
+    "Action": "参加する",
+    "About Us": "私たちについて",
+    "Join The Action": "アクションに参加する",
+    "Organize": "オーガナイズする",
+    "MessageRow1": "気候変動対策の",
+    "MessageRow2": "緊急性を伝えるために",
+    "MessageRow3": "みんなで声をあげよう!",
+    "MessageRow4": "",
+    "BannerMessage": "みんなで守る、みんなの未来"
+  }
 }

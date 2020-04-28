@@ -1,2 +1,28 @@
 {
+  "Header": {
+    "Top": "Top",
+    "About Us": "About Us",
+    "FAQ": "FAQ",
+    "Join The Action": "Join The Action"
+  },
+  "Footer": {
+    "About Us": "About Us",
+    "APG": "Approach To Governments",
+    "Join The Action": "Join The Action",
+    "FAQ": "FAQ",
+    "Organize": "Organize",
+    "PP": "Privacy Policy"
+  },
+  "Top": {
+    "Join The": "Join The",
+    "Action": "Action",
+    "About Us": "About Us",
+    "Join The Action": "Join The Action",
+    "Organize": "Organize",
+    "MessageRow1": "We Unite Behind Science",
+    "MessageRow2": "To Inform The Urgency",
+    "MessageRow3": "Of Measures Against",
+    "MessageRow4": "Climate Change",
+    "BannerMessage": "Unite, and Protect our Future"
+  }
 }
