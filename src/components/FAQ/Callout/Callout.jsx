@@ -21,14 +21,14 @@ const StyledCallout = styled.div`
     margin: auto;
   }
   &:before {
-    top: 3.1818em;
+    top: 55%;
     left: -1.59em;
     border-style: solid;
     border-color: transparent ${props => props.color} transparent transparent;
     border-width: 0 1.5em 1.5em 0;
   }
   &:after {
-    top: 3.4545em;
+    top: 60%;
     left: -0.9545em;
     border-style: solid;
     border-color: transparent #fff transparent transparent;
