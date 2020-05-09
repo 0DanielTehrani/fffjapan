@@ -64,7 +64,7 @@ function Header (props) {
           {pathname !== '/' && <MobileLinkItem fontSize={fontSize} to='/'>{t('Header.Top')}</MobileLinkItem>}
           {pathname !== '/about-us' && <MobileLinkItem fontSize={fontSize} to='/about-us'>{t('Header.About Us')}</MobileLinkItem>}
           {pathname !== '/faq' && <MobileLinkItem fontSize={fontSize} to='/faq'>FAQ</MobileLinkItem>}
-          {pathname !== '/to-organize-form' && <MobileLinkItem fontSize={fontSize} to='/to-organize-form'>オーガナイズする</MobileLinkItem>}
+          {pathname !== '/to-organize-form' && <MobileLinkItem fontSize={fontSize} to='/to-organize-form'>{t('Header.Organize')}</MobileLinkItem>}
           {pathname !== '/approach-to-governments' && <MobileLinkItem fontSize={fontSize} to='/approach-to-governments'>行政・政治へのアプローチ</MobileLinkItem>}
         </LinkMenu>
         :

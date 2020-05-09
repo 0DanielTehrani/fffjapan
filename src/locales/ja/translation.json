@@ -3,14 +3,15 @@
     "Top": "Top",
     "About Us": "About Us",
     "FAQ": "FAQ",
-    "Join The Action": "アクションに参加する"
+    "Join The Action": "アクションに参加する",
+    "Organize": "運営に携わる"
   },
   "Footer": {
     "About Us": "About Us",
     "APG": "行政・政治へのアプローチ",
     "Join The Action": "アクションに参加する",
     "FAQ": "FAQ",
-    "Organize": "オーガナイズする",
+    "Organize": "運営に携わる",
     "PP": "プライバシーポリシー"
   },
   "Top": {
@@ -18,7 +19,7 @@
     "Action": "参加する",
     "About Us": "私たちについて",
     "Join The Action": "アクションに参加する",
-    "Organize": "オーガナイズする",
+    "Organize": "運営に携わる",
     "MessageRow1": "気候変動対策の",
     "MessageRow2": "緊急性を伝えるために",
     "MessageRow3": "みんなで声をあげよう!",
