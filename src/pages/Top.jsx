@@ -12,6 +12,7 @@ import OrganizeLinkIconButton from '../components/Top/LinkIconButtons/OrganizeLi
 import MobileAboutUsButton from '../components/Top/LinkIconButtons/MobileAboutUsButton'
 import MobileJoinUsButton from '../components/Top/LinkIconButtons/MobileJoinUsButton'
 import MobileOrganizeButton from '../components/Top/LinkIconButtons/MobileOrganizeButton'
+import Video from '../components/Top/Video';
 
 const TopLargeImageContainer = styled.div`
   margin-top: 40px;
@@ -70,6 +71,11 @@ const MobileLinkIconButtonsContainer = styled.div`
   }
 `;
 
+const VideoContainer = styled.div`
+  width: 100%;
+  margin-top: 2em;
+`;
+
 function Top () {
   const isMobile = useMediaQuery({ query: '(max-width: 450px)' });
 
@@ -82,6 +88,9 @@ function Top () {
       <MessageBannerContainer>
         <MessageBanner />
       </MessageBannerContainer>
+      <VideoContainer>
+        <Video />
+      </VideoContainer>
       {
         isMobile ?
           <MobileLinkIconButtonsContainer>
