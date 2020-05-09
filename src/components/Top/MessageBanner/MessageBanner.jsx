@@ -31,7 +31,7 @@ const StyledMessageSmall = styled.div`
 `;
 
 const StyledMessageLarge = styled.div`
-  font-size: 1.2em;
+  font-size: 1.1em;
 `;
 
 const StyledHoldingBannerImage = styled.img`
