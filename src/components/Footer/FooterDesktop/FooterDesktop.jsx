@@ -108,7 +108,6 @@ function FooterDesktop (props) {
             <LinkItem fontSize={fontSize} to='/to-organize-form'>{t('Footer.Organize')}</LinkItem>
           </StyledLinkItemsColumn>
           <StyledLinkItemsColumn>
-            <ExternalLinkItem fontSize={fontSize} href={DIGITAL_MARCH_URL} target='_blank'>{t('Footer.Join The Action')}</ExternalLinkItem>
             <LinkItem fontSize={fontSize} to='/privacy-policy'>{t('Footer.PP')}</LinkItem>
           </StyledLinkItemsColumn>
         </StyledLinkItemsRow>

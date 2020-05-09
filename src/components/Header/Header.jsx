@@ -66,13 +66,11 @@ function Header (props) {
           {pathname !== '/faq' && <MobileLinkItem fontSize={fontSize} to='/faq'>FAQ</MobileLinkItem>}
           {pathname !== '/to-organize-form' && <MobileLinkItem fontSize={fontSize} to='/to-organize-form'>オーガナイズする</MobileLinkItem>}
           {pathname !== '/approach-to-governments' && <MobileLinkItem fontSize={fontSize} to='/approach-to-governments'>行政・政治へのアプローチ</MobileLinkItem>}
-          <MobileExternalLinkItem fontSize={fontSize} href={DIGITAL_MARCH_URL} target='_blank'>アクションに参加する</MobileExternalLinkItem>
         </LinkMenu>
         :
         <StyledLinkItems>
           <LinkItem fontSize={fontSize} to='/about-us' color={pathname === '/about-us' ? currentPageColor : textColor}>{t('Header.About Us')}</LinkItem>
           <LinkItem fontSize={fontSize} to='/faq' color={pathname === '/faq' ? currentPageColor : textColor}>{t('Header.FAQ')}</LinkItem>
-          <ExternalLinkItem fontSize={fontSize} target='_blank' href={DIGITAL_MARCH_URL}>{t('Header.Join The Action')}</ExternalLinkItem>
         </StyledLinkItems>
       }
     </StyledHeader>

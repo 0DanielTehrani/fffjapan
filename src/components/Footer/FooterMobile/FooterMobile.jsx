@@ -104,7 +104,6 @@ function FooterMobile (props) {
           <LinkItem fontSize={fontSize} to='/faq'>{t('Footer.FAQ')}</LinkItem>
           <LinkItem fontSize={fontSize} to='/approach-to-governments'>{t('Footer.APG')}</LinkItem>
           <LinkItem fontSize={fontSize} to='/to-organize-form'>{t('Footer.Organize')}</LinkItem>
-          <ExternalLinkItem fontSize={fontSize} href={DIGITAL_MARCH_URL} target='_blank'>{t('Footer.Join The Action')}</ExternalLinkItem>
           <LinkItem fontSize={fontSize} to='/privacy-policy'>{t('Footer.PP')}</LinkItem>
       </StyledLinkItemsColumn>
       <SocialsContainer>

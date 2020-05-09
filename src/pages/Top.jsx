@@ -6,10 +6,8 @@ import styled from 'styled-components';
 import media from 'styled-media-query';
 import { useMediaQuery } from 'react-responsive';
 import Page from '../components/Page';
-import JoinTheActionButton from '../components/Top/JoinTheActionButton';
 import MessageBanner from '../components/Top/MessageBanner';
 import AboutUsLinkIconButton from '../components/Top/LinkIconButtons/AboutUsLinkIconButton';
-import JoinUsLinkIconButton from '../components/Top/LinkIconButtons/JoinUsLinkIconButton';
 import OrganizeLinkIconButton from '../components/Top/LinkIconButtons/OrganizeLinkIconButton';
 import MobileAboutUsButton from '../components/Top/LinkIconButtons/MobileAboutUsButton'
 import MobileJoinUsButton from '../components/Top/LinkIconButtons/MobileJoinUsButton'
@@ -23,23 +21,6 @@ const FooterContainer = styled.div`
   margin-top: 84px;
   ${media.lessThan('small')`
     margin-top: 30px;
-  `}
-`;
-
-const JoinTheActionButtonContainer = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  font-size: 22px;
-  margin-right: 2.09em;
-  margin-top: -2.3em;
-  ${media.lessThan('large')`
-    font-size: 20px;
-  `}
-  ${media.lessThan('medium')`
-    font-size: 20px;
-  `}
-  ${media.lessThan('small')`
-    font-size: 8px;
   `}
 `;
 
@@ -66,7 +47,7 @@ const LinkIconButtonsContainer = styled.div`
   margin-top: 1.97em;
   width: 100%;
   & > :not(:first-child) {
-    margin-left: 1.59em;
+    margin-left: 7em;
   }
   ${media.lessThan('large')`
     font-size: 18px;
@@ -98,9 +79,6 @@ function Top () {
       <TopLargeImageContainer>
         <TopLargeImage />
       </TopLargeImageContainer>
-      <JoinTheActionButtonContainer>
-        <JoinTheActionButton zIndex={2}/>
-      </JoinTheActionButtonContainer>
       <MessageBannerContainer>
         <MessageBanner />
       </MessageBannerContainer>
@@ -108,12 +86,10 @@ function Top () {
         isMobile ?
           <MobileLinkIconButtonsContainer>
             <MobileAboutUsButton />
-            <MobileJoinUsButton />
             <MobileOrganizeButton />
           </MobileLinkIconButtonsContainer>
           : <LinkIconButtonsContainer>
             <AboutUsLinkIconButton />
-            <JoinUsLinkIconButton />
             <OrganizeLinkIconButton />
           </LinkIconButtonsContainer>
       }
