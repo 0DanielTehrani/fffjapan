@@ -22,8 +22,16 @@ const StyledMessage = styled.span`
   font-size: 1em;
   font-family: ${props => props.theme.fontFamily};
   font-weight: bold;
-  padding: 0.73em 1.09em;
+  padding: 0.73em 3.5em;
   margin-top: 1.66em;
+`;
+
+const StyledMessageSmall = styled.div`
+  font-size: 0.8em;
+`;
+
+const StyledMessageLarge = styled.div`
+  font-size: 1.2em;
 `;
 
 const StyledHoldingBannerImage = styled.img`
@@ -45,7 +53,10 @@ function MessageBanner () {
   return (
     <StyledMessageBanner>
       <StyledHoldingBannerImage src={useWebp ? holdingBannerImage1Webp : holdingBannerImage1} />
-      <StyledMessage>{t('Top.BannerMessage')}</StyledMessage>
+      <StyledMessage>
+        <StyledMessageSmall>{t('Top.BannerMessageRow1')}</StyledMessageSmall>
+        <StyledMessageLarge>{t('Top.BannerMessageRow2')}</StyledMessageLarge>
+      </StyledMessage>
       <StyledHoldingBannerImage2 src={useWebp ? holdingBannerImage2Webp : holdingBannerImage2} />
     </StyledMessageBanner>
   )
