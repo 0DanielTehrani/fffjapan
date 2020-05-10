@@ -88,9 +88,6 @@ function Top () {
       <MessageBannerContainer>
         <MessageBanner />
       </MessageBannerContainer>
-      <VideoContainer>
-        <Video />
-      </VideoContainer>
       {
         isMobile ?
           <MobileLinkIconButtonsContainer>
@@ -102,6 +99,9 @@ function Top () {
             <OrganizeLinkIconButton />
           </LinkIconButtonsContainer>
       }
+      <VideoContainer>
+        <Video />
+      </VideoContainer>
       <FooterContainer>
         <Footer />
       </FooterContainer>
