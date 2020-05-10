@@ -16,6 +16,9 @@ import FAQ from './FAQ';
 import ToOrganizeForm from './ToOrganizeForm';
 import PrivacyPolicy from './PrivacyPolicy';
 import ApproachToGovernments from './ApproachToGovernments';
+import ChaptersSocials from './ChaptersSocials';
+import 'leaflet/dist/leaflet.css';
+import Leaflet from 'leaflet';
 
 const theme = {
   textColor: '#007850',
@@ -27,6 +30,9 @@ const theme = {
   beige: '#FAF5C8',
   ocher: '#c8a050'
 }
+
+Leaflet.Icon.Default.imagePath =
+  '//cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/images/'
 
 function App () {
   const { t, i18n } = useTranslation();
@@ -53,6 +59,9 @@ function App () {
           </Route>
           <Route path='/approach-to-governments'>
             <ApproachToGovernments />
+          </Route>
+          <Route path='/chapters-socials'>
+            <ChaptersSocials />
           </Route>
         </Switch>
         </ScrollTop>

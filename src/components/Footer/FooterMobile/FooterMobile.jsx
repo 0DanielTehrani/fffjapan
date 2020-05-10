@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
-import { Twitter } from '@styled-icons/boxicons-logos/Twitter';
-import { FacebookSquare } from '@styled-icons/boxicons-logos/FacebookSquare';
+import TwitterIcon from '../../SocialIcons/TwitterIcon';
+import FacebookIcon from '../../SocialIcons/FacebookIcon';
 import { Link } from 'react-router-dom';
 import LinkItem from '../../LinkItem';
 import ExternalLinkItem from '../../ExternalLinkItem';
@@ -46,16 +46,6 @@ const StyledLinkItemsColumn = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`;
-
-const StyledTwitterIcon = styled(Twitter)`
-  width: ${props => props.width || '27px'};
-  color: ${props => props.color || props.theme.textColor};
-`;
-
-const StyledFacebookIcon = styled(FacebookSquare)`
-  width: ${props => props.width || '25px'};
-  color: ${props => props.color || props.theme.textColor};
 `;
 
 const SocialsContainer = styled.div`
@@ -107,8 +97,8 @@ function FooterMobile (props) {
           <LinkItem fontSize={fontSize} to='/privacy-policy'>{t('Footer.PP')}</LinkItem>
       </StyledLinkItemsColumn>
       <SocialsContainer>
-        <LinkWrapper href='https://twitter.com/FridaysJapan' target='_blank'><StyledTwitterIcon/></LinkWrapper>
-        <LinkWrapper href='https://www.facebook.com/fridaysforfuture.jp/' target='_blank'><StyledFacebookIcon/></LinkWrapper>
+        <LinkWrapper href='https://twitter.com/FridaysJapan' target='_blank'><TwitterIcon/></LinkWrapper>
+        <LinkWrapper href='https://www.facebook.com/fridaysforfuture.jp/' target='_blank'><FacebookIcon/></LinkWrapper>
       </SocialsContainer>
       <LangSwapContainer>
         <LangSwitchButton currenctLang={i18n.language === 'en' ? 'English' : '日本語'} onClick={toggleLang}/>
