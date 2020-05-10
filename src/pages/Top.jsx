@@ -48,7 +48,7 @@ const LinkIconButtonsContainer = styled.div`
   margin-top: 1.97em;
   width: 100%;
   & > :not(:first-child) {
-    margin-left: 7em;
+    margin-left: 1.59em;
   }
   ${media.lessThan('large')`
     font-size: 18px;
