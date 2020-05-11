@@ -13,6 +13,8 @@ import MobileAboutUsButton from '../components/Top/LinkIconButtons/MobileAboutUs
 import MobileJoinUsButton from '../components/Top/LinkIconButtons/MobileJoinUsButton'
 import MobileOrganizeButton from '../components/Top/LinkIconButtons/MobileOrganizeButton'
 import Video from '../components/Top/Video';
+import ChapersSocials from '../components/Top/ChaptersSocials';
+import ChapterExpansionPanel from '../components/Top/ChaptersSocials/ChapterExpansionPanel';
 
 const TopLargeImageContainer = styled.div`
   margin-top: 40px;
@@ -76,6 +78,12 @@ const VideoContainer = styled.div`
   margin-top: 2em;
 `;
 
+const ChapersSocialsContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`;
+
 function Top () {
   const isMobile = useMediaQuery({ query: '(max-width: 450px)' });
 
@@ -99,6 +107,9 @@ function Top () {
             <OrganizeLinkIconButton />
           </LinkIconButtonsContainer>
       }
+      <ChapersSocialsContainer>
+        <ChapersSocials />
+      </ChapersSocialsContainer>
       <VideoContainer>
         <Video />
       </VideoContainer>
