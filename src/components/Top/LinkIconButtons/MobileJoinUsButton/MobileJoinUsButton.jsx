@@ -31,6 +31,7 @@ const LeftContainer = styled.div`
 
 const RigthContainer = styled.div`
   margin-right: 2em;
+  width: 150px;
 `;
 
 const TextContainer = styled.div`
