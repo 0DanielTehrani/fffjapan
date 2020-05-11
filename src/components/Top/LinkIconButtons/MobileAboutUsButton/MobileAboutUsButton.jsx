@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
-import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { isWebpSupported } from 'react-image-webp/dist/utils';
 import { useTranslation } from 'react-i18next';
 import AboutUsText from '../../../RandomImages/AboutUsText';
@@ -10,32 +10,48 @@ import Text from '../../../Text'
 const StyleAboutUsLinkIconButton = styled.button`
   display: flex;
   align-items: center;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   background-color: ${props => props.theme.green};
-  width: 185px;
-  height: 171px;
+  width: 100%;
   border: 0;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 `;
 
 const StyledText = styled(Text)`
+  display: block;
   color: ${props => props.theme.yellow};
   font-size: 15px;
 `;
 
-// TODO: Create a common Link component with no underline.
-const StyledLink = styled(Link)`
-  text-decoration: none;
+const LeftContainer = styled.div`
+  margin-right: 2em;
+  margin-left: 2em;
+`;
+
+const RigthContainer = styled.div`
+  margin-right: 4em;
+  width: 150px;
+`;
+
+const TextContainer = styled.div`
 `;
 
 function MobileAboutUsButton (props) {
   const { t } = useTranslation();
   return (
-  <StyledLink to='/about-us'><StyleAboutUsLinkIconButton>
-    <Earth width='100px'/>
-    <AboutUsText  width='100px'/>
-    <StyledText>{t('Top.About Us')}</StyledText>
-  </StyleAboutUsLinkIconButton></StyledLink>)
+  <StyleAboutUsLinkIconButton onClick={() => { props.history.push('/about-us')}}>
+    <LeftContainer>
+      <Earth width='90px'/>
+    </LeftContainer>
+    <RigthContainer>
+      <TextContainer>
+        <AboutUsText  width='100px'/>
+      </TextContainer>
+      <StyledText>{t('Top.About Us')}</StyledText>
+    </RigthContainer>
+  </StyleAboutUsLinkIconButton>)
 }
 
-export default MobileAboutUsButton;
+export default withRouter(MobileAboutUsButton);

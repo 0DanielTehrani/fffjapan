@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
-import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { isWebpSupported } from 'react-image-webp/dist/utils';
 import { useTranslation } from 'react-i18next';
 import OrganizeText from '../../../RandomImages/OrganizeText';
@@ -10,12 +10,13 @@ import Text from '../../../Text'
 const StyleMobileOrganizeButton = styled.button`
   display: flex;
   align-items: center;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   background-color: ${props => props.theme.blue};
-  width: 185px;
-  height: 171px;
+  width: 100%;
   border: 0;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 `;
 
 const StyledText = styled(Text)`
@@ -23,18 +24,33 @@ const StyledText = styled(Text)`
   font-size: 15px;
 `;
 
-const StyledLink = styled(Link)`
-  text-decoration: none;
+const LeftContainer = styled.div`
+  margin-right: 2em;
+  margin-left: 2em;
+`;
+
+const RigthContainer = styled.div`
+  margin-right: 2em;
+  width: 150px;
+`;
+
+const TextContainer = styled.div`
 `;
 
 function MobileOrganizeButton (props) {
   const { t } = useTranslation();
   return (
-  <StyledLink to='/to-organize-form'><StyleMobileOrganizeButton>
-    <Organize width='100px'/>
-    <OrganizeText  width='100px'/>
-    <StyledText>{t('Top.Organize')}</StyledText>
-  </StyleMobileOrganizeButton></StyledLink>)
+  <StyleMobileOrganizeButton onClick={() => { props.history.push('/to-organize-form')}}>
+    <LeftContainer>
+      <Organize width='90px'/>
+    </LeftContainer>
+    <RigthContainer>
+      <TextContainer>
+        <OrganizeText  width='100px'/>
+      </TextContainer>
+      <StyledText>{t('Top.Organize')}</StyledText>
+    </RigthContainer>
+  </StyleMobileOrganizeButton>)
 }
 
-export default MobileOrganizeButton;
+export default withRouter(MobileOrganizeButton);

@@ -10,12 +10,13 @@ import { DIGITAL_MARCH_URL } from '../../../../constants';
 const StyleMobileJoinUsButton = styled.button`
   display: flex;
   align-items: center;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   background-color: ${props => props.theme.red};
-  width: 185px;
-  height: 171px;
+  width: 100%;
   border: 0;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 `;
 
 const StyledText = styled(Text)`
@@ -23,13 +24,31 @@ const StyledText = styled(Text)`
   font-size: 15px;
 `;
 
+const LeftContainer = styled.div`
+  margin-right: 2em;
+  margin-left: 2em;
+`;
+
+const RigthContainer = styled.div`
+  margin-right: 2em;
+`;
+
+const TextContainer = styled.div`
+`;
+
 function MobileJoinUsButton (props) {
   const { t } = useTranslation();
   return (
   <StyleMobileJoinUsButton onClick={() => {window.open(DIGITAL_MARCH_URL)}}>
-    <ActNow width='100px'/>
-    <JoinUsText  width='100px'/>
-    <StyledText>{t('Top.Join The Action')}</StyledText>
+    <LeftContainer>
+      <ActNow width='90px'/>
+    </LeftContainer>
+    <RigthContainer>
+      <TextContainer>
+        <JoinUsText  width='100px'/>
+      </TextContainer>
+      <StyledText>{t('Top.Join The Action')}</StyledText>
+    </RigthContainer>
   </StyleMobileJoinUsButton>)
 }
 
