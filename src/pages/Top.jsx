@@ -89,10 +89,10 @@ const GetInTouchWithChaptersBannerContainer = styled.div`
     font-size: 28px;
   `}
   ${media.lessThan('medium')`
-    font-size: 16px;
+    font-size: 24px;
   `}
   ${media.lessThan('small')`
-    font-size: 16px;
+    font-size: 24px;
   `}
 `;
 
