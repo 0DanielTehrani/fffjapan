@@ -8,6 +8,7 @@ import { useMediaQuery } from 'react-responsive';
 import Page from '../components/Page';
 import MessageBanner from '../components/Top/MessageBanner';
 import AboutUsLinkIconButton from '../components/Top/LinkIconButtons/AboutUsLinkIconButton';
+import JoinUsLinkIconButton from '../components/Top/LinkIconButtons/JoinUsLinkIconButton';
 import OrganizeLinkIconButton from '../components/Top/LinkIconButtons/OrganizeLinkIconButton';
 import MobileAboutUsButton from '../components/Top/LinkIconButtons/MobileAboutUsButton'
 import MobileJoinUsButton from '../components/Top/LinkIconButtons/MobileJoinUsButton'
@@ -15,6 +16,7 @@ import MobileOrganizeButton from '../components/Top/LinkIconButtons/MobileOrgani
 import Video from '../components/Top/Video';
 import ChapersSocials from '../components/Top/ChaptersSocials';
 import ChapterExpansionPanel from '../components/Top/ChaptersSocials/ChapterExpansionPanel';
+import GetInTouchWithChaptersBanner from '../components/Top/GetInTouchWithChaptersBanner';
 
 const TopLargeImageContainer = styled.div`
   margin-top: 40px;
@@ -78,6 +80,22 @@ const VideoContainer = styled.div`
   margin-top: 2em;
 `;
 
+const GetInTouchWithChaptersBannerContainer = styled.div`
+  width: 100%;
+  text-align: center;
+  margin-top: 2em;
+  font-size: 32px;
+  ${media.lessThan('large')`
+    font-size: 28px;
+  `}
+  ${media.lessThan('medium')`
+    font-size: 16px;
+  `}
+  ${media.lessThan('small')`
+    font-size: 16px;
+  `}
+`;
+
 const ChapersSocialsContainer = styled.div`
   width: 100%;
   display: flex;
@@ -100,13 +118,18 @@ function Top () {
         isMobile ?
           <MobileLinkIconButtonsContainer>
             <MobileAboutUsButton />
+            <MobileJoinUsButton />
             <MobileOrganizeButton />
           </MobileLinkIconButtonsContainer>
           : <LinkIconButtonsContainer>
             <AboutUsLinkIconButton />
+            <JoinUsLinkIconButton />
             <OrganizeLinkIconButton />
           </LinkIconButtonsContainer>
       }
+      <GetInTouchWithChaptersBannerContainer>
+        <GetInTouchWithChaptersBanner />
+      </GetInTouchWithChaptersBannerContainer>
       <ChapersSocialsContainer>
         <ChapersSocials />
       </ChapersSocialsContainer>

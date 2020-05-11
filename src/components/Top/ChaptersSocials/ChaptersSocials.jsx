@@ -2,7 +2,6 @@ import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 import styled from 'styled-components'
 import media from 'styled-media-query';
-import GetInTouchWithChaptersBanner from '../GetInTouchWithChaptersBanner';
 import Divider from '@material-ui/core/Divider';
 import ChapterSocials from '../ChapterSocials'
 import ChapterExpansionPanel from './ChapterExpansionPanel';
@@ -19,11 +18,6 @@ const StyledChaptersSocials = styled.div`
   ${media.lessThan('small')`
     width: 600px;
   `}
-`;
-
-const ChapterSocialsTitleContainer = styled.div`
-  text-align: center;
-  margin-top: 3em;
 `;
 
 const ChaptersSocialsContainer = styled.div`
@@ -59,9 +53,6 @@ function ChaptersSocials (props) {
 
   return (
     <StyledChaptersSocials>
-      <ChapterSocialsTitleContainer>
-        <GetInTouchWithChaptersBanner />
-      </ChapterSocialsTitleContainer>
       <ChaptersSocialsContainer>
         {
           isMobileOrTablet ?

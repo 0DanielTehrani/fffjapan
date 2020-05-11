@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import Text from '../../Text';
 
 const StyledGetInTouchWithChaptersBanner = styled(Text)`
-  font-size: 2em;
+  font-size: 1em;
 `;
 
 function GetInTouchWithChaptersBanner () {
