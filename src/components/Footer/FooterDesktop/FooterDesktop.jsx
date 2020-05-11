@@ -13,8 +13,7 @@ import { DIGITAL_MARCH_URL } from '../../../constants';
 
 const StyledFooterDesktop = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   max-width: 100%;
   padding-bottom: 2em;
@@ -49,10 +48,19 @@ const SocialsContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-left: 41px;
-  & :not(:first-child) {
-    margin-left: 15px;
+  margin-bottom: 3em;
+  & :nth-child(1) {
+    margin-right: 30px;
+    margin-left: 30px;
   }
+`;
+
+const MainContainer = styled.div`
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 `;
 
 const LinkWrapper = styled.a``;
@@ -81,34 +89,36 @@ function FooterDesktop (props) {
 
   return (
     <StyledFooterDesktop>
-      <Link to='/'>
-        <StyledLogos>
-          <RoundLogo width={roundLogoWidth}/>
-          <Logo width={logoWidth}/>
-        </StyledLogos>
-      </Link>
-      <StyledLinkItems>
-        <StyledLinkItemsRow>
-          <StyledLinkItemsColumn>
-              <LinkItem fontSize={fontSize} to='/about-us'>{t('Footer.About Us')}</LinkItem>
-              <LinkItem fontSize={fontSize} to='/faq'>{t('Footer.FAQ')}</LinkItem>
-          </StyledLinkItemsColumn>
-          <StyledLinkItemsColumn>
-            <LinkItem fontSize={fontSize} to='/approach-to-governments'>{t('Footer.APG')}</LinkItem>
-            <LinkItem fontSize={fontSize} to='/to-organize-form'>{t('Footer.Organize')}</LinkItem>
-          </StyledLinkItemsColumn>
-          <StyledLinkItemsColumn>
-            <LinkItem fontSize={fontSize} to='/privacy-policy'>{t('Footer.PP')}</LinkItem>
-          </StyledLinkItemsColumn>
-        </StyledLinkItemsRow>
-        <SocialsContainer>
-          <LinkWrapper href='https://twitter.com/FridaysJapan' target='_blank'><TwitterIcon/></LinkWrapper>
-          <LinkWrapper href='https://www.facebook.com/fridaysforfuture.jp/' target='_blank'><FacebookIcon/></LinkWrapper>
-        </SocialsContainer>
-        <LangSwapContainer>
-          <LangSwitchButton currenctLang={i18n.language === 'en' ? 'English' : '日本語'} onClick={toggleLang}/>
-        </LangSwapContainer>
-      </StyledLinkItems>
+      <SocialsContainer>
+        <LinkWrapper href='https://twitter.com/FridaysJapan' target='_blank'><TwitterIcon width='5em'/></LinkWrapper>
+        <LinkWrapper href='https://www.facebook.com/fridaysforfuture.jp/' target='_blank'><FacebookIcon width='5em'/></LinkWrapper>
+      </SocialsContainer>
+      <MainContainer>
+        <Link to='/'>
+          <StyledLogos>
+            <RoundLogo width={roundLogoWidth}/>
+            <Logo width={logoWidth}/>
+          </StyledLogos>
+        </Link>
+        <StyledLinkItems>
+          <StyledLinkItemsRow>
+            <StyledLinkItemsColumn>
+                <LinkItem fontSize={fontSize} to='/about-us'>{t('Footer.About Us')}</LinkItem>
+                <LinkItem fontSize={fontSize} to='/faq'>{t('Footer.FAQ')}</LinkItem>
+            </StyledLinkItemsColumn>
+            <StyledLinkItemsColumn>
+              <LinkItem fontSize={fontSize} to='/approach-to-governments'>{t('Footer.APG')}</LinkItem>
+              <LinkItem fontSize={fontSize} to='/to-organize-form'>{t('Footer.Organize')}</LinkItem>
+            </StyledLinkItemsColumn>
+            <StyledLinkItemsColumn>
+              <LinkItem fontSize={fontSize} to='/privacy-policy'>{t('Footer.PP')}</LinkItem>
+            </StyledLinkItemsColumn>
+          </StyledLinkItemsRow>
+          <LangSwapContainer>
+            <LangSwitchButton currenctLang={i18n.language === 'en' ? 'English' : '日本語'} onClick={toggleLang}/>
+          </LangSwapContainer>
+        </StyledLinkItems>
+      </MainContainer>
     </StyledFooterDesktop>
   )
 }

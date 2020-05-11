@@ -23,9 +23,9 @@ const TopLargeImageContainer = styled.div`
 `;
 
 const FooterContainer = styled.div`
-  margin-top: 84px;
+  margin-top: 20px;
   ${media.lessThan('small')`
-    margin-top: 30px;
+    margin-top: 15px;
   `}
 `;
 

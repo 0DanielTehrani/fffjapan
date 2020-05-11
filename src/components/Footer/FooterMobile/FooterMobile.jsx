@@ -57,6 +57,14 @@ const SocialsContainer = styled.div`
   }
 `;
 
+const MainContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+`;
+
 const LinkWrapper = styled.a``;
 
 const LangSwapContainer = styled.div`
@@ -83,26 +91,28 @@ function FooterMobile (props) {
 
   return (
     <StyledFooterMobile>
-      <Link to='/'>
-        <StyledLogos>
-          <RoundLogo width={roundLogoWidth}/>
-          <Logo width={logoWidth}/>
-        </StyledLogos>
-      </Link>
-      <StyledLinkItemsColumn>
-          <LinkItem fontSize={fontSize} to='/about-us'>{t('Footer.About Us')}</LinkItem>
-          <LinkItem fontSize={fontSize} to='/faq'>{t('Footer.FAQ')}</LinkItem>
-          <LinkItem fontSize={fontSize} to='/approach-to-governments'>{t('Footer.APG')}</LinkItem>
-          <LinkItem fontSize={fontSize} to='/to-organize-form'>{t('Footer.Organize')}</LinkItem>
-          <LinkItem fontSize={fontSize} to='/privacy-policy'>{t('Footer.PP')}</LinkItem>
-      </StyledLinkItemsColumn>
       <SocialsContainer>
-        <LinkWrapper href='https://twitter.com/FridaysJapan' target='_blank'><TwitterIcon/></LinkWrapper>
-        <LinkWrapper href='https://www.facebook.com/fridaysforfuture.jp/' target='_blank'><FacebookIcon/></LinkWrapper>
+        <LinkWrapper href='https://twitter.com/FridaysJapan' target='_blank'><TwitterIcon width='2.5em'/></LinkWrapper>
+        <LinkWrapper href='https://www.facebook.com/fridaysforfuture.jp/' target='_blank'><FacebookIcon width='2.5em'/></LinkWrapper>
       </SocialsContainer>
-      <LangSwapContainer>
-        <LangSwitchButton currenctLang={i18n.language === 'en' ? 'English' : '日本語'} onClick={toggleLang}/>
-      </LangSwapContainer>
+      <MainContainer>
+        <Link to='/'>
+          <StyledLogos>
+            <RoundLogo width={roundLogoWidth}/>
+            <Logo width={logoWidth}/>
+          </StyledLogos>
+        </Link>
+        <StyledLinkItemsColumn>
+            <LinkItem fontSize={fontSize} to='/about-us'>{t('Footer.About Us')}</LinkItem>
+            <LinkItem fontSize={fontSize} to='/faq'>{t('Footer.FAQ')}</LinkItem>
+            <LinkItem fontSize={fontSize} to='/approach-to-governments'>{t('Footer.APG')}</LinkItem>
+            <LinkItem fontSize={fontSize} to='/to-organize-form'>{t('Footer.Organize')}</LinkItem>
+            <LinkItem fontSize={fontSize} to='/privacy-policy'>{t('Footer.PP')}</LinkItem>
+        </StyledLinkItemsColumn>
+        <LangSwapContainer>
+          <LangSwitchButton currenctLang={i18n.language === 'en' ? 'English' : '日本語'} onClick={toggleLang}/>
+        </LangSwapContainer>
+      </MainContainer>
     </StyledFooterMobile>
   )
 }
