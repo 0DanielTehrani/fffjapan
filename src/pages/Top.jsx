@@ -14,6 +14,7 @@ import MobileAboutUsButton from '../components/Top/LinkIconButtons/MobileAboutUs
 import MobileJoinUsButton from '../components/Top/LinkIconButtons/MobileJoinUsButton'
 import MobileOrganizeButton from '../components/Top/LinkIconButtons/MobileOrganizeButton'
 import Video from '../components/Top/Video';
+import VideoTitle from '../components/Top/VideoTitle';
 import ChapersSocials from '../components/Top/ChaptersSocials';
 import ChapterExpansionPanel from '../components/Top/ChaptersSocials/ChapterExpansionPanel';
 import GetInTouchWithChaptersBanner from '../components/Top/GetInTouchWithChaptersBanner';
@@ -75,9 +76,25 @@ const MobileLinkIconButtonsContainer = styled.div`
   }
 `;
 
+const VideoTitleContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 4em;
+  font-size: 16px;
+  ${media.lessThan('large')`
+    font-size: 16px;
+  `}
+  ${media.lessThan('medium')`
+    font-size: 16px;
+  `}
+  ${media.lessThan('small')`
+    font-size: 10px;
+  `}
+`;
+
 const VideoContainer = styled.div`
   width: 100%;
-  margin-top: 2em;
 `;
 
 const GetInTouchWithChaptersBannerContainer = styled.div`
@@ -133,6 +150,9 @@ function Top () {
       <ChapersSocialsContainer>
         <ChapersSocials />
       </ChapersSocialsContainer>
+      <VideoTitleContainer>
+        <VideoTitle />
+      </VideoTitleContainer>
       <VideoContainer>
         <Video />
       </VideoContainer>
