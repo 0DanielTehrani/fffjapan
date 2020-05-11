@@ -9,15 +9,9 @@ import chapters from './chapters-socials.js';
 
 
 const StyledChaptersSocials = styled.div`
-  width: 900px;
+  width: 1000px;
   ${media.lessThan('large')`
-    width: 600px;
-  `}
-  ${media.lessThan('medium')`
-    width: 600px;
-  `}
-  ${media.lessThan('small')`
-    width: 600px;
+    width: 700px;
   `}
 `;
 
@@ -62,15 +56,20 @@ function ChaptersSocials (props) {
           )
           :
           chapters.map((chapter, i) =>
-            !(i % 2) &&
+            !(i % 3) &&
             <>
               <Divider />
               <ChaptersContainer>
               <ChapterSocialsContainer><ChapterSocials {...chapter} /></ChapterSocialsContainer>
                 {
-                <ChapterSocialsContainer>
-                  {i + 1 < chapters.length && <ChapterSocials {...chapters[i + 1]} />}
-                </ChapterSocialsContainer>
+                <>
+                  <ChapterSocialsContainer>
+                    {i + 1 < chapters.length && <ChapterSocials {...chapters[i + 1]} />}
+                  </ChapterSocialsContainer>
+                  <ChapterSocialsContainer>
+                    {i + 2 < chapters.length && <ChapterSocials {...chapters[i + 2]} />}
+                  </ChapterSocialsContainer>
+                </>
                 }
               </ChaptersContainer>
             </>
