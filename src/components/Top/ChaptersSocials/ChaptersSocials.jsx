@@ -7,6 +7,7 @@ import ChapterSocials from '../ChapterSocials'
 import ChapterExpansionPanel from './ChapterExpansionPanel';
 import chapters from './chapters-socials.js';
 
+
 const StyledChaptersSocials = styled.div`
   width: 900px;
   ${media.lessThan('large')`
@@ -25,7 +26,7 @@ const ChaptersSocialsContainer = styled.div`
 `;
 
 const ChapterSocialsContainer = styled.div`
-  width: 500px;
+  width: 400px;
 `;
 
 const ChaptersContainer = styled.div`
@@ -67,15 +68,15 @@ function ChaptersSocials (props) {
               <ChaptersContainer>
               <ChapterSocialsContainer><ChapterSocials {...chapter} /></ChapterSocialsContainer>
                 {
-                  i + 1 < chapters.length
-                  && <ChapterSocialsContainer>
-                        <ChapterSocials {...chapters[i + 1]} />
-                     </ChapterSocialsContainer>
+                <ChapterSocialsContainer>
+                  {i + 1 < chapters.length && <ChapterSocials {...chapters[i + 1]} />}
+                </ChapterSocialsContainer>
                 }
               </ChaptersContainer>
             </>
         )
         }
+        <Divider />
       </ChaptersSocialsContainer>
     </StyledChaptersSocials>
   )

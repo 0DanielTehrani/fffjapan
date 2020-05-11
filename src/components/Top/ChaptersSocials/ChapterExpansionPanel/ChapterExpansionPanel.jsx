@@ -1,16 +1,16 @@
 import React from 'react';
 import styled from 'styled-components'
+import { useTranslation } from 'react-i18next';
 import Text from '../../../Text';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
-import TwitterIcon from '../../../SocialIcons/TwitterIcon';
-import FacebookIcon from '../../../SocialIcons/FacebookIcon';
-import InstagramIcon from '../../../SocialIcons/InstagramIcon';
+import TwitterIconButton from '../../../SocialIconButtons/TwitterIconButton';
+import FacebookIconButton from '../../../SocialIconButtons/FacebookIconButton';
+import InstagramIconButton from '../../../SocialIconButtons/InstagramIconButton';
 
 const StyledExpansionPanelDetails = styled(ExpansionPanelDetails)`
 `;
-
 
 const SocialIconsContainer = styled.div`
   display: flex;
@@ -24,16 +24,19 @@ const SocialIconsContainer = styled.div`
 `;
 
 function ChapterExpansionPanel (props) {
-  const { name, twitter, facebook, instagram } = props;
+  const { i18n } = useTranslation();
+
+  const { twitter, facebook, instagram } = props;
+  const name = i18n.language === 'en' ? props.name_en : props.name_ja;
 
   return (
     <ExpansionPanel>
       <ExpansionPanelSummary aria-controls="panel1bh-content"><Text>{name}</Text></ExpansionPanelSummary>
       <StyledExpansionPanelDetails>
         <SocialIconsContainer>
-          <TwitterIcon width='2em'/>
-          <FacebookIcon width='2em'/>
-          <InstagramIcon width='2em'/>
+          {twitter && <TwitterIconButton width='32px'/>}
+          {facebook && <FacebookIconButton width='32px'/>}
+          {instagram && <InstagramIconButton width='32px'/>}
         </SocialIconsContainer>
       </StyledExpansionPanelDetails>
     </ExpansionPanel>
