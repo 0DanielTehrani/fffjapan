@@ -15,7 +15,7 @@ const StyledButton = styled.button`
 
 function InstagramIconButton (props) {
   return (
-    <StyledButton href={props.href} target='_blank'>
+    <StyledButton onClick={props.onClick} target='_blank'>
       <InstagramIcon width={props.width}/>
     </StyledButton>
   )

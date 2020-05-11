@@ -15,7 +15,7 @@ const StyledButton = styled.button`
 
 function TwitterIconButton (props) {
   return (
-    <StyledButton href={props.href} target='_blank'>
+    <StyledButton onClick={props.onClick} target='_blank'>
       <TwitterIcon width={props.width}/>
     </StyledButton>
   )

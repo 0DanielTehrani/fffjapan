@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useMediaQuery } from 'react-responsive';
 import media from 'styled-media-query';
 import CookieConsentBanner from '../CookieConsentBanner';
+import MobileShareBar from '../MobileShareBar';
+import Sidebar from '../Sidebar';
 
 const StyledPage = styled.div`
   margin-right: auto;
@@ -20,10 +23,12 @@ const StyledPage = styled.div`
 `;
 
 function Page(props) {
+  const isMobileOrTablet = useMediaQuery({ query: '(max-width: 1024px)' });
   return (
     <StyledPage {...props}>
       {props.children}
       <CookieConsentBanner />
+      {isMobileOrTablet ? <MobileShareBar /> : <Sidebar />}
     </StyledPage>
   )
 }

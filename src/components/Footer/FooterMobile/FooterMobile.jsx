@@ -20,7 +20,7 @@ const StyledFooterMobile = styled.div`
   & * {
     margin-top: 7px;
   }
-  padding-bottom: 2em;
+  padding-bottom: 4em;
 `;
 
 const StyledLogos = styled.div`
@@ -71,7 +71,6 @@ const LangSwapContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 10px;
 `;
 
 function FooterMobile (props) {

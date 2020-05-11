@@ -13,13 +13,12 @@ import MobileExternalLinkItem from './MobileExternalLinkItem';
 import LabelText from '../LabelText';
 import RoundLogo from '../RoundLogo';
 import Logo from '../Logo';
+import MobileShareBar from '../MobileShareBar';
 import { DIGITAL_MARCH_URL } from '../../constants';
 
 const StyledHeader = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   max-width: 100%;
 `;
 
@@ -39,6 +38,24 @@ const StyledLogos = styled.div`
   }
 `;
 
+const UpperHalfContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const LowerHalfContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1em;
+`;
+
+const MobileShareBarContainer = styled.div`
+  width: 100%;
+`;
+
 function Header (props) {
   const isMobileOrTablet = useMediaQuery({ query: '(max-width: 768px)' });
   const roundLogoWidth = isMobileOrTablet ? '30px' : '50px';
@@ -52,28 +69,35 @@ function Header (props) {
 
   return (
     <StyledHeader>
-      <Link to='/'>
-        <StyledLogos>
-          <RoundLogo width={roundLogoWidth}/>
-          <Logo width={logoWidth}/>
-        </StyledLogos>
-      </Link>
+      <UpperHalfContainer>
+        <Link to='/'>
+          <StyledLogos>
+            <RoundLogo width={roundLogoWidth}/>
+            <Logo width={logoWidth}/>
+          </StyledLogos>
+        </Link>
+        {
+          isMobileOrTablet ?
+          <LinkMenu fontSize={fontSize}>
+            {pathname !== '/' && <MobileLinkItem fontSize={fontSize} to='/'>{t('Header.Top')}</MobileLinkItem>}
+            {pathname !== '/about-us' && <MobileLinkItem fontSize={fontSize} to='/about-us'>{t('Header.About Us')}</MobileLinkItem>}
+            {pathname !== '/faq' && <MobileLinkItem fontSize={fontSize} to='/faq'>FAQ</MobileLinkItem>}
+            {pathname !== '/to-organize-form' && <MobileLinkItem fontSize={fontSize} to='/to-organize-form'>{t('Header.Organize')}</MobileLinkItem>}
+            {pathname !== '/approach-to-governments' && <MobileLinkItem fontSize={fontSize} to='/approach-to-governments'>{t('Header.APG')}</MobileLinkItem>}
+          </LinkMenu>
+          :
+          <StyledLinkItems>
+            <LinkItem fontSize={fontSize} to='/about-us' color={pathname === '/about-us' ? currentPageColor : textColor}>{t('Header.About Us')}</LinkItem>
+            <LinkItem fontSize={fontSize} to='/approach-to-governments' color={pathname === '/approach-to-governments' ? currentPageColor : textColor}>{t('Header.APG')}</LinkItem>
+            <LinkItem fontSize={fontSize} to='/faq' color={pathname === '/faq' ? currentPageColor : textColor}>{t('Header.FAQ')}</LinkItem>
+          </StyledLinkItems>
+        }
+      </UpperHalfContainer>
+      <LowerHalfContainer>
       {
-        isMobileOrTablet ?
-        <LinkMenu fontSize={fontSize}>
-          {pathname !== '/' && <MobileLinkItem fontSize={fontSize} to='/'>{t('Header.Top')}</MobileLinkItem>}
-          {pathname !== '/about-us' && <MobileLinkItem fontSize={fontSize} to='/about-us'>{t('Header.About Us')}</MobileLinkItem>}
-          {pathname !== '/faq' && <MobileLinkItem fontSize={fontSize} to='/faq'>FAQ</MobileLinkItem>}
-          {pathname !== '/to-organize-form' && <MobileLinkItem fontSize={fontSize} to='/to-organize-form'>{t('Header.Organize')}</MobileLinkItem>}
-          {pathname !== '/approach-to-governments' && <MobileLinkItem fontSize={fontSize} to='/approach-to-governments'>{t('Header.APG')}</MobileLinkItem>}
-        </LinkMenu>
-        :
-        <StyledLinkItems>
-          <LinkItem fontSize={fontSize} to='/about-us' color={pathname === '/about-us' ? currentPageColor : textColor}>{t('Header.About Us')}</LinkItem>
-          <LinkItem fontSize={fontSize} to='/approach-to-governments' color={pathname === '/approach-to-governments' ? currentPageColor : textColor}>{t('Header.APG')}</LinkItem>
-          <LinkItem fontSize={fontSize} to='/faq' color={pathname === '/faq' ? currentPageColor : textColor}>{t('Header.FAQ')}</LinkItem>
-        </StyledLinkItems>
+        isMobileOrTablet && <MobileShareBar />
       }
+      </LowerHalfContainer>
     </StyledHeader>
   )
 }

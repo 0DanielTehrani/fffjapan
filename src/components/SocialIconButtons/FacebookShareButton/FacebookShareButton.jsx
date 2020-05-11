@@ -1,9 +1,10 @@
 import React from 'react';
+import { FacebookWithCircle } from '@styled-icons/entypo-social/FacebookWithCircle';
 import styled from 'styled-components';
 import FacebookIcon from '../../SocialIcons/FacebookIcon';
 
 const StyledButton = styled.button`
-  background-color: #fff;
+  background-color: transparent;
   border: 0;
   &:focus {
     outline:0;
@@ -13,10 +14,14 @@ const StyledButton = styled.button`
   }
 `;
 
+const StyledFacebookWithCircle = styled(FacebookWithCircle)`
+  color: ${props => props.theme.green};
+`;
+
 function FacebookIconButton (props) {
   return (
     <StyledButton onClick={props.onClick} target='_blank'>
-      <FacebookIcon width={props.width}/>
+      <StyledFacebookWithCircle width={props.width} />
     </StyledButton>
   )
 }
