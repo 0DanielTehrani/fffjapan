@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components'
 import { isWebpSupported } from 'react-image-webp/dist/utils';
 import { useTranslation } from 'react-i18next';
-import LinkIconButton from '../../../LinkIconButton';
+import LinkIconButton from '../../../LinkIconButton2';
 import iconSrcWebp from './join-us.webp';
 import iconSrc from './join-us.png';
 import textImageSrcWebp from './join-us-text.webp';
