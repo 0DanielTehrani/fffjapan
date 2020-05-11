@@ -11,6 +11,7 @@ import {
 } from 'react-router-dom';
 import ScrollTop from '../components/ScrollTop';
 import Top from './Top';
+import Top2 from './Top2'
 import AboutUs from './AboutUs';
 import FAQ from './FAQ';
 import ToOrganizeForm from './ToOrganizeForm';
@@ -44,6 +45,9 @@ function App () {
         <Switch>
           <Route exact path='/'>
             <Top />
+          </Route>
+          <Route path='/top-2'>
+            <Top2 />
           </Route>
           <Route path='/about-us'>
             <AboutUs />
