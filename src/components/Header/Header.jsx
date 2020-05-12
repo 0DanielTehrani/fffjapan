@@ -89,6 +89,7 @@ function Header (props) {
           <StyledLinkItems>
             <LinkItem fontSize={fontSize} to='/about-us' color={pathname === '/about-us' ? currentPageColor : textColor}>{t('Header.About Us')}</LinkItem>
             <LinkItem fontSize={fontSize} to='/approach-to-governments' color={pathname === '/approach-to-governments' ? currentPageColor : textColor}>{t('Header.APG')}</LinkItem>
+            <LinkItem fontSize={fontSize} to='/to-organize-form' color={pathname === '/to-organize-form' ? currentPageColor : textColor}>{t('Header.Organize')}</LinkItem>
             <LinkItem fontSize={fontSize} to='/faq' color={pathname === '/faq' ? currentPageColor : textColor}>{t('Header.FAQ')}</LinkItem>
           </StyledLinkItems>
         }
