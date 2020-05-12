@@ -11,13 +11,13 @@ import { withTheme } from 'styled-components';
 
 function OrganizeLinkIconButton (props) {
   const webpIsSupported = isWebpSupported();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   return <LinkIconButton
     href='/to-organize-form'
     backgroundColor={props.theme.blue}
     iconSrc={webpIsSupported ? iconSrcWebp : iconSrc}
     textImageSrc={webpIsSupported ? textImageSrcWebp : textImageSrc}
-    text={t('Top.Organize')}
+    text={i18n.language === 'en' ? '' : t('Top.Organize')}
   />
 }
 

@@ -38,7 +38,7 @@ const TextContainer = styled.div`
 `;
 
 function MobileOrganizeButton (props) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   return (
   <StyleMobileOrganizeButton onClick={() => { props.history.push('/to-organize-form')}}>
     <LeftContainer>
@@ -48,7 +48,7 @@ function MobileOrganizeButton (props) {
       <TextContainer>
         <OrganizeText  width='100px'/>
       </TextContainer>
-      <StyledText>{t('Top.Organize')}</StyledText>
+      <StyledText>{i18n.language === 'en' ? '' : t('Top.Organize')}</StyledText>
     </RigthContainer>
   </StyleMobileOrganizeButton>)
 }

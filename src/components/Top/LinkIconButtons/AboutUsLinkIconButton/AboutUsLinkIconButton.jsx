@@ -11,13 +11,13 @@ import { withTheme } from 'styled-components';
 
 function AboutUsLinkIconButton (props) {
   const webpIsSupported = isWebpSupported();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   return <LinkIconButton
     href='/about-us'
     backgroundColor={props.theme.green}
     iconSrc={webpIsSupported ? iconSrcWebp : iconSrc}
     textImageSrc={webpIsSupported ? textImageSrcWebp : textImageSrc}
-    text={t('Top.About Us')}
+    text={i18n.language === 'en' ? '' : t('Top.About Us')}
   />
 }
 

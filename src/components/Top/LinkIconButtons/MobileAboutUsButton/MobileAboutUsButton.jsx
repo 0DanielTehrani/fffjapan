@@ -39,7 +39,7 @@ const TextContainer = styled.div`
 `;
 
 function MobileAboutUsButton (props) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   return (
   <StyleAboutUsLinkIconButton onClick={() => { props.history.push('/about-us')}}>
     <LeftContainer>
@@ -49,7 +49,7 @@ function MobileAboutUsButton (props) {
       <TextContainer>
         <AboutUsText  width='100px'/>
       </TextContainer>
-      <StyledText>{t('Top.About Us')}</StyledText>
+      <StyledText>{i18n.language === 'en' ? '' : t('Top.About Us')}</StyledText>
     </RigthContainer>
   </StyleAboutUsLinkIconButton>)
 }

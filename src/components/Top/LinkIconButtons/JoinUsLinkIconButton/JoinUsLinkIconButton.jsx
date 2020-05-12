@@ -12,13 +12,13 @@ import { DIGITAL_MARCH_URL } from '../../../../constants';
 
 function JoinUsLinkIconButton (props) {
   const webpIsSupported = isWebpSupported();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   return <LinkIconButton
     href={DIGITAL_MARCH_URL}
     backgroundColor={props.theme.red}
     iconSrc={webpIsSupported ? iconSrcWebp: iconSrc}
     textImageSrc={webpIsSupported ? textImageSrcWebp : textImageSrc}
-    text={t('Top.Join The Action')}
+    text={i18n.language === 'en' ? '' : t('Top.Join The Action')}
   />
 }
 

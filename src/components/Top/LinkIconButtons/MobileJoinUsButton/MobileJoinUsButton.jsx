@@ -38,7 +38,7 @@ const TextContainer = styled.div`
 `;
 
 function MobileJoinUsButton (props) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   return (
   <StyleMobileJoinUsButton onClick={() => {window.open(DIGITAL_MARCH_URL)}}>
     <LeftContainer>
@@ -48,7 +48,7 @@ function MobileJoinUsButton (props) {
       <TextContainer>
         <JoinUsText  width='100px'/>
       </TextContainer>
-      <StyledText>{t('Top.Join The Action')}</StyledText>
+      <StyledText>{i18n.language === 'en' ? '' : t('Top.Join The Action')}</StyledText>
     </RigthContainer>
   </StyleMobileJoinUsButton>)
 }
