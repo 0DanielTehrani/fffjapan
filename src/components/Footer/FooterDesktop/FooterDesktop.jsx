@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import media from 'styled-media-query';
 import { useTranslation } from 'react-i18next';
 import TwitterIcon from '../../SocialIcons/TwitterIcon';
 import FacebookIcon from '../../SocialIcons/FacebookIcon';
@@ -17,6 +18,9 @@ const StyledFooterDesktop = styled.div`
   align-items: center;
   max-width: 100%;
   padding-bottom: 2em;
+  ${media.lessThan('1425px')`
+    padding-bottom: 4em;
+  `};
 `;
 
 const StyledLogos = styled.div`
