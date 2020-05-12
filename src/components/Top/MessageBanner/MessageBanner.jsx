@@ -44,7 +44,7 @@ const StyledMessageRow1 = styled.div`
 `;
 
 const StyledMessageRow2 = styled.div`
-  font-size: 1.2em;
+  font-size: 1em;
   display: inline-block;
   padding-right: 2.3em;
   padding-left: 2.3em;
