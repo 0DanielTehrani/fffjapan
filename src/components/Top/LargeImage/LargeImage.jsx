@@ -52,9 +52,9 @@ function LargeImage (props) {
     <StyledLargeImage>
       <StyledImage src={isWebpSupported() ? topImgWebp : topImg} />
       <StyledLabelTextContainer>
-        <LabelText fontSize={fontSize}>気候変動対策の</LabelText>
-        <LabelText fontSize={fontSize}>緊急性を伝えるために</LabelText>
-        <LabelText fontSize={fontSize}>みんなで声をあげよう!</LabelText>
+        <LabelText fontSize={fontSize}>{t('Top.MessageRow1')}</LabelText>
+        <LabelText fontSize={fontSize}>{t('Top.MessageRow2')}</LabelText>
+        <LabelText fontSize={fontSize}>{t('Top.MessageRow3')}</LabelText>
       </StyledLabelTextContainer>
     </StyledLargeImage>
   )
