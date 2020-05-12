@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import styled from 'styled-components'
 import media from 'styled-media-query';
@@ -46,6 +46,12 @@ const SocialsContainer = styled.div`
 function ChaptersSocials (props) {
   const isMobileOrTablet = useMediaQuery({ query: '(max-width: 768px)' });
 
+  const [expandedChapter, setExpandedChapter] = useState(null);
+
+  const toggleExpandedChapter = (chapterIndex) => {
+    expandedChapter === chapterIndex ? setExpandedChapter(null) : setExpandedChapter(chapterIndex);
+  }
+
   return (
     <StyledChaptersSocials>
       <ChaptersSocialsContainer>
@@ -60,14 +66,18 @@ function ChaptersSocials (props) {
             <>
               <Divider />
               <ChaptersContainer>
-              <ChapterSocialsContainer><ChapterSocials {...chapter} /></ChapterSocialsContainer>
+              <ChapterSocialsContainer>
+                <ChapterSocials {...chapter} key={i} onClick={toggleExpandedChapter.bind(this, i)} showSocials={expandedChapter === i}/>
+              </ChapterSocialsContainer>
                 {
                 <>
                   <ChapterSocialsContainer>
-                    {i + 1 < chapters.length && <ChapterSocials {...chapters[i + 1]} />}
+                    {i + 1 < chapters.length &&
+                    <ChapterSocials {...chapters[i + 1]} key={i + 1} onClick={toggleExpandedChapter.bind(this, i + 1)} showSocials={expandedChapter === i + 1}/>}
                   </ChapterSocialsContainer>
                   <ChapterSocialsContainer>
-                    {i + 2 < chapters.length && <ChapterSocials {...chapters[i + 2]} />}
+                    {i + 2 < chapters.length &&
+                    <ChapterSocials {...chapters[i + 2]} key={i + 2} onClick={toggleExpandedChapter.bind(this, i + 2)} showSocials={expandedChapter === i + 2}/>}
                   </ChapterSocialsContainer>
                 </>
                 }
