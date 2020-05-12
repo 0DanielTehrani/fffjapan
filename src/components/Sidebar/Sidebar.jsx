@@ -1,8 +1,10 @@
 import React from 'react'
 import styled from 'styled-components';
+import { useTranslation } from 'react-i18next';
 import TwitterShareButton from '../SocialIconButtons/TwitterShareButton';
 import FacebookShareButton from '../SocialIconButtons/FacebookShareButton';
 import { Share } from '@styled-icons/boxicons-solid/Share';
+import Text from '../Text';
 
 const StyledSidebar = styled.div`
   position: fixed;
@@ -22,17 +24,18 @@ const FacebookButtonContainer = styled.div`
   margin-top: 1em;
 `;
 
-const StyledShare = styled(Share)`
-  color: ${props => props.theme.green};
+const StyledText = styled(Text)`
+  display: inline-block;
   margin-bottom: 1em;
-  width: 2.5em;
+  font-size: 1em;
 `;
 
-
 function Sidebar () {
+  const { t } = useTranslation();
+
   return (
     <StyledSidebar>
-      <StyledShare />
+      <StyledText>{t('Sidebar.share')}</StyledText>
       <TwitterButtonContainer>
         <TwitterShareButton
           width='3.2em'

@@ -61,5 +61,8 @@
     "A3_3": ".",
     "Q4": "Do you have a representative/ leader?",
     "A4": "Although the amount of time each member spends on this project differs, we don’t have hierarchical relationships nor leaders."
+  },
+  "Sidebar": {
+    "share": "SHARE"
   }
 }
