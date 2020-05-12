@@ -23,12 +23,12 @@ const StyledPage = styled.div`
 `;
 
 function Page(props) {
-  const isMobileOrTablet = useMediaQuery({ query: '(max-width: 1024px)' });
+  const isBelowThreshold = useMediaQuery({ query: '(max-width: 1425px)' });
   return (
     <StyledPage {...props}>
       {props.children}
       <CookieConsentBanner />
-      {isMobileOrTablet ? <MobileShareBar /> : <Sidebar />}
+      {isBelowThreshold ? <MobileShareBar /> : <Sidebar />}
     </StyledPage>
   )
 }

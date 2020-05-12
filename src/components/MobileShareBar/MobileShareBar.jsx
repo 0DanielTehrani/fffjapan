@@ -13,6 +13,7 @@ const StyledMobileShareBar = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
+  z-index: 100;
 `;
 
 const TwitterButtonContainer = styled.div`
