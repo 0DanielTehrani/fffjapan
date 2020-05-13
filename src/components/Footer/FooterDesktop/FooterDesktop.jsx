@@ -10,6 +10,7 @@ import ExternalLinkItem from '../../ExternalLinkItem';
 import RoundLogo from '../../RoundLogo';
 import Logo from '../../Logo';
 import LangSwitchButton from '../LangSwitchButton';
+import Text from '../../Text';
 import { DIGITAL_MARCH_URL } from '../../../constants';
 
 const StyledFooterDesktop = styled.div`
@@ -52,11 +53,19 @@ const SocialsContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-top: 3em;
   margin-bottom: 3em;
-  & :nth-child(1) {
-    margin-right: 30px;
-    margin-left: 30px;
+  background-color: ${props => props.theme.beige};
+  padding: 3.125em 5em;
+  & :nth-child(2) {
+    margin-right: 1.875em;
+    margin-left: 1.875em;
   }
+`;
+
+const SocialsContainerTitle = styled(Text)`
+  font-size: 1.8em;
+  font-weight: bold;
 `;
 
 const MainContainer = styled.div`
@@ -94,8 +103,9 @@ function FooterDesktop (props) {
   return (
     <StyledFooterDesktop>
       <SocialsContainer>
-        <LinkWrapper href='https://twitter.com/FridaysJapan' target='_blank'><TwitterIcon width='5em'/></LinkWrapper>
-        <LinkWrapper href='https://www.facebook.com/fridaysforfuture.jp/' target='_blank'><FacebookIcon width='5em'/></LinkWrapper>
+        <SocialsContainerTitle>{t('Footer.FollowFFFJ')}</SocialsContainerTitle>
+        <LinkWrapper href='https://twitter.com/FridaysJapan' target='_blank'><TwitterIcon width='3.5em'/></LinkWrapper>
+        <LinkWrapper href='https://www.facebook.com/fridaysforfuture.jp/' target='_blank'><FacebookIcon width='3.5em'/></LinkWrapper>
       </SocialsContainer>
       <MainContainer>
         <Link to='/'>

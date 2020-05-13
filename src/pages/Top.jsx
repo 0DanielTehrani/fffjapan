@@ -24,10 +24,6 @@ const TopLargeImageContainer = styled.div`
 `;
 
 const FooterContainer = styled.div`
-  margin-top: 20px;
-  ${media.lessThan('small')`
-    margin-top: 15px;
-  `}
 `;
 
 const MessageBannerContainer = styled.div`
