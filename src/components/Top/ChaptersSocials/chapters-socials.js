@@ -12,18 +12,18 @@ export default [
     facebook: 'fffsendai',
   },
   {
-    name_ja: '東京',
-    name_en: 'Tokyo',
-    twitter: 'fff_tokyo',
-    facebook: 'fridaysforfuturetokyo',
-    instagram: 'fridaysforfuturetokyo'
-  },
-  {
     name_ja: '那須（栃木）',
     name_en: 'Nasu(Tochigi)',
     twitter: 'fff_nasu',
     facebook: 'fridaysforfuturenasu',
     instagram: 'fridaysforfuturenasu'
+  },
+  {
+    name_ja: '東京',
+    name_en: 'Tokyo',
+    twitter: 'fff_tokyo',
+    facebook: 'fridaysforfuturetokyo',
+    instagram: 'fridaysforfuturetokyo'
   },
   {
     name_ja: '埼玉',
@@ -67,6 +67,7 @@ export default [
   {
     name_ja: '滋賀',
     name_en: 'Shiga',
+    facebook: 'fridaysforfutureshiga',
     instagram: 'fff_shiga_japan'
   },
   {
