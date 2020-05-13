@@ -36,14 +36,18 @@ function ChapterSocials (props) {
   const { i18n } = useTranslation();
   const name = i18n.language === 'en' ? props.name_en : props.name_ja;
 
+  const twitterURL = `https://twitter.com/${twitter}`;
+  const facebookURL = `https://facebook.com/${facebook}`;
+  const instagramURL = `https://instagram.com/${instagram}`;
+
   return (
     <StyledChapterSocials>
       <StyledChapterName onClick={onClick}>{name}</StyledChapterName>
       <Collapse in={showSocials}>
         <SocialsContainer>
-          {twitter && <TwitterIconButton width='32px'/>}
-          {facebook && <FacebookIconButton width='32px'/>}
-          {instagram && <InstagramIconButton width='32px'/>}
+          {twitter && <TwitterIconButton width='32px' onClick={() => {window.open(twitterURL)}}/>}
+          {facebook && <FacebookIconButton width='32px' onClick={() => {window.open(facebookURL)}}/>}
+          {instagram && <InstagramIconButton width='32px' onClick={() => {window.open(instagramURL)}}/>}
         </SocialsContainer>
       </Collapse>
     </StyledChapterSocials>

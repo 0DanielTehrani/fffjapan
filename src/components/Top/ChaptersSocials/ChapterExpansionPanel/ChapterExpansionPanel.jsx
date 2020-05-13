@@ -29,14 +29,18 @@ function ChapterExpansionPanel (props) {
   const { twitter, facebook, instagram } = props;
   const name = i18n.language === 'en' ? props.name_en : props.name_ja;
 
+  const twitterURL = `https://twitter.com/${twitter}`;
+  const facebookURL = `https://facebook.com/${facebook}`;
+  const instagramURL = `https://instagram.com/${instagram}`;
+
   return (
     <ExpansionPanel>
       <ExpansionPanelSummary aria-controls="panel1bh-content"><Text>{name}</Text></ExpansionPanelSummary>
       <StyledExpansionPanelDetails>
         <SocialIconsContainer>
-          {twitter && <TwitterIconButton width='32px'/>}
-          {facebook && <FacebookIconButton width='32px'/>}
-          {instagram && <InstagramIconButton width='32px'/>}
+          {twitter && <TwitterIconButton width='32px' onClick={() => {window.open(twitterURL)}}/>}
+          {facebook && <FacebookIconButton width='32px' onClick={() => {window.open(facebookURL)}}/>}
+          {instagram && <InstagramIconButton width='32px' onClick={() => {window.open(instagramURL)}}/>}
         </SocialIconsContainer>
       </StyledExpansionPanelDetails>
     </ExpansionPanel>
