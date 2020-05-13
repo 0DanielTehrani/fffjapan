@@ -64,6 +64,14 @@
     "A4": "活動のためにどれだけの時間をかけられるかには個人差がありますが、私たちの間には上下関係はなく、代表もいません。"
   },
   "Sidebar": {
-    "share": "シェア"
+    "share": "シェア",
+    "ShareText": {
+      "/": "気候変動対策の緊急性を伝えるためにみんなで声をあげよう！",
+      "/about-us": "Fridays For Future Japan: About Us",
+      "/faq": "Fridays For Future Japan: FAQ",
+      "/to-organize-form": "Fridays For Future Japan: 運営に携わる",
+      "/approach-to-governments": "Fridays For Future Japan: 各地の活動",
+      "/privacy-policy": "Fridays For Future Japan: プライバシーポリシー"
+    }
   }
 }

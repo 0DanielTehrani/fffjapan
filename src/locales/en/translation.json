@@ -63,6 +63,14 @@
     "A4": "Although the amount of time each member spends on this project differs, we don’t have hierarchical relationships nor leaders."
   },
   "Sidebar": {
-    "share": "SHARE"
+    "share": "SHARE",
+    "ShareText": {
+      "/": "Inform The Urgency Of Measures Against Climate Change",
+      "/about-us": "Fridays For Future Japan: About Us",
+      "/faq": "Fridays For Future Japan: FAQ",
+      "/to-organize-form": "Fridays For Future Japan: Organize",
+      "/approach-to-governments": "Fridays For Future Japan: Our Actions",
+      "/privacy-policy": "Fridays For Future Japan: Privacy Policy"
+    }
   }
 }

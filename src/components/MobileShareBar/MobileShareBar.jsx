@@ -1,10 +1,13 @@
 import React from 'react'
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
+import { withRouter } from 'react-router-dom';
 import TwitterShareButton from '../SocialIconButtons/TwitterShareButton';
 import FacebookShareButton from '../SocialIconButtons/FacebookShareButton';
 import { Share } from '@styled-icons/boxicons-solid/Share';
 import Text from '../Text';
+import { FACEBOOK_SHARE_URL } from '../../constants';
+import { constructTwitterShareURL } from '../utils';
 
 const StyledMobileShareBar = styled.div`
   position: fixed;
@@ -29,8 +32,10 @@ const StyledText = styled(Text)`
   font-size: 1em;
 `;
 
-function MobileShareBar () {
+function MobileShareBar (props) {
   const { t } = useTranslation();
+  const { pathname } = props.location;
+  const twitterShareURL = constructTwitterShareURL(t(`Sidebar.ShareText.${pathname}`), window.location.href);
 
   return (
     <StyledMobileShareBar>
@@ -38,15 +43,15 @@ function MobileShareBar () {
       <TwitterButtonContainer>
         <TwitterShareButton
           width='3.2em'
-          onClick={() => {window.open(`http://twitter.com/share?url=${window.location.href}`)}} />
+          onClick={() => {window.open(twitterShareURL)}} />
       </TwitterButtonContainer>
       <FacebookButtonContainer>
         <FacebookShareButton
           width='3.2em'
-          onClick={() => {window.open(`https://www.facebook.com/share.php?u=${window.location.href}`)}}/>
+          onClick={() => {window.open(FACEBOOK_SHARE_URL)}}/>
       </FacebookButtonContainer>
     </StyledMobileShareBar>
   )
 }
 
-export default MobileShareBar;
+export default withRouter(MobileShareBar);

@@ -3,3 +3,4 @@ export const ORGANIZE_GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/1Ru5in0
 export const MUNICIPALITY_CED_LIST = 'https://www.es-inc.jp/ced/index.html';
 export const ZERO_CARBON_CITY_LIST = 'https://www.env.go.jp/policy/zerocarbon.html';
 export const DIGITAL_STRIKE_YOUTUBE = 'https://www.youtube.com/watch?v=xpYNJepgPmM&feature=emb_title'
+export const FACEBOOK_SHARE_URL = 'https://www.facebook.com/share.php?u=https://fridaysforfuture.jp/';
