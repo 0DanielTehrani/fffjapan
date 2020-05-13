@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useTranslation } from 'react-i18next';
 import media from 'styled-media-query';
 import { useMediaQuery } from 'react-responsive';
 import { withTheme } from 'styled-components';
@@ -32,6 +33,8 @@ function CookieConsentBanner(props) {
     margin: '0',
   }
 
+  const { t } = useTranslation();
+
   return (
     <CookieConsent
       style={bannerStyle}
@@ -39,7 +42,7 @@ function CookieConsentBanner(props) {
       buttonStyle={buttonStyle}
       contentStyle={contentStyle}
     >
-      <StyledText>当ウェブサイトでは、より良いコンテンツを提供するために、クッキーを使用しています</StyledText>
+      <StyledText>{t('CookieConsent.text')}</StyledText>
     </CookieConsent>
   )
 }
