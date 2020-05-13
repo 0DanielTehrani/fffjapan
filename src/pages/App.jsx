@@ -11,15 +11,11 @@ import {
 } from 'react-router-dom';
 import ScrollTop from '../components/ScrollTop';
 import Top from './Top';
-import Top2 from './Top2'
 import AboutUs from './AboutUs';
 import FAQ from './FAQ';
 import ToOrganizeForm from './ToOrganizeForm';
 import PrivacyPolicy from './PrivacyPolicy';
 import ApproachToGovernments from './ApproachToGovernments';
-import ChaptersSocials from './ChaptersSocials';
-import 'leaflet/dist/leaflet.css';
-import Leaflet from 'leaflet';
 
 const theme = {
   textColor: '#007850',
@@ -32,9 +28,6 @@ const theme = {
   ocher: '#c8a050'
 }
 
-Leaflet.Icon.Default.imagePath =
-  '//cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/images/'
-
 function App () {
   const { t, i18n } = useTranslation();
 
@@ -45,9 +38,6 @@ function App () {
         <Switch>
           <Route exact path='/'>
             <Top />
-          </Route>
-          <Route path='/top-2'>
-            <Top2 />
           </Route>
           <Route path='/about-us'>
             <AboutUs />
@@ -63,9 +53,6 @@ function App () {
           </Route>
           <Route path='/approach-to-governments'>
             <ApproachToGovernments />
-          </Route>
-          <Route path='/chapters-socials'>
-            <ChaptersSocials />
           </Route>
         </Switch>
         </ScrollTop>
