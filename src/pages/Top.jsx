@@ -76,7 +76,7 @@ const VideoTitleContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 4em;
+  margin-top: 7em;
   font-size: 16px;
   ${media.lessThan('large')`
     font-size: 16px;
@@ -96,21 +96,22 @@ const VideoContainer = styled.div`
 const GetInTouchWithChaptersBannerContainer = styled.div`
   width: 100%;
   text-align: center;
-  margin-top: 2em;
-  font-size: 32px;
+  margin-top: 7em;
+  font-size: 16px;
   ${media.lessThan('large')`
-    font-size: 28px;
+    font-size: 16px;
   `}
   ${media.lessThan('medium')`
-    font-size: 24px;
+    font-size: 16px;
   `}
   ${media.lessThan('small')`
-    font-size: 24px;
+    font-size: 10px;
   `}
 `;
 
 const ChapersSocialsContainer = styled.div`
   width: 100%;
+  margin-top: 1em;
   display: flex;
   justify-content: center;
 `;
