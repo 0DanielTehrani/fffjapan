@@ -62,6 +62,8 @@ export default [
   {
     name_ja: '名古屋',
     name_en: 'Nagoya',
+    twitter: 'ClimatActNagoya',
+    facebook: 'FridaysforFutureNagoya',
     instagram: 'fridaysforfuture_nagoya'
   },
   {
