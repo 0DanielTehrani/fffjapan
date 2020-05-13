@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components'
+import { useTranslation } from 'react-i18next';
 import Modal from '@material-ui/core/Modal';
 import LinkItem from '../LinkItem';
 import { Bars } from '@styled-icons/fa-solid/Bars';
@@ -60,6 +61,8 @@ function LinkMenu (props) {
 
   const { fontSize } = props;
 
+  const { t } = useTranslation();
+
   return (
     <>
       <StyledBars onClick={handleBarsClick} />
@@ -72,7 +75,7 @@ function LinkMenu (props) {
         <StyledLinkMenu>
           {props.children}
           <StyledCloseButtonContainer fontSize={fontSize} >
-            <StyledWhiteCloseButton onClick={handleClose}>閉じる</StyledWhiteCloseButton>
+            <StyledWhiteCloseButton onClick={handleClose}>{t('Header.Close')}</StyledWhiteCloseButton>
           </StyledCloseButtonContainer>
         </StyledLinkMenu>
       </StyledModal>
