@@ -4,6 +4,7 @@ import styled, { withTheme } from 'styled-components'
 import media from 'styled-media-query';
 import ChapterSocials from '../ChapterSocials'
 import ChapterExpansionPanel from './ChapterExpansionPanel';
+import MobileExpansionPanel from './MobileExpansionPanel';
 import GetInTouchWithChaptersBanner from '../GetInTouchWithChaptersBanner';
 import chapters from './chapters-socials.js';
 
@@ -18,6 +19,12 @@ const StyledDivider = styled.hr`
   border-width: 0.1px;
   border-style: inset;
   width: 80%;
+`;
+
+const StyledMobileDivider = styled.hr`
+  border-width: 0.1px;
+  border-style: inset;
+  width: 60%;
 `;
 
 const ChaptersSocialsContainer = styled.div`
@@ -82,9 +89,16 @@ function ChaptersSocials (props) {
       <ChaptersSocialsContainer>
         {
           isMobileOrTablet ?
-          chapters.map((chapter) =>
-            <ChapterExpansionPanel {...chapter} />
-          )
+          chapters.map((chapter, i) =>
+            <>
+              <StyledMobileDivider color={props.theme.green}/>
+              <MobileExpansionPanel
+                {...chapter}
+                key={i}
+                onClick={toggleExpandedChapter.bind(this, i)}
+                showSocials={expandedChapter === i} />
+            </>
+            )
           :
           chapters.map((chapter, i) =>
             !(i % 3) &&
@@ -110,7 +124,7 @@ function ChaptersSocials (props) {
             </>
         )
         }
-        <StyledDivider color={props.theme.green}/>
+        { isMobileOrTablet ? <StyledMobileDivider color={props.theme.green}/> : <StyledDivider color={props.theme.green}/>}
       </ChaptersSocialsContainer>
     </StyledChaptersSocials>
   )

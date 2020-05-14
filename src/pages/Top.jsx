@@ -17,7 +17,6 @@ import Video from '../components/Top/Video';
 import VideoTitle from '../components/Top/VideoTitle';
 import ChapersSocials from '../components/Top/ChaptersSocials';
 import ChapterExpansionPanel from '../components/Top/ChaptersSocials/ChapterExpansionPanel';
-import GetInTouchWithChaptersBanner from '../components/Top/GetInTouchWithChaptersBanner';
 
 const TopLargeImageContainer = styled.div`
   margin-top: 40px;
@@ -96,6 +95,9 @@ const VideoContainer = styled.div`
 const ChapersSocialsContainer = styled.div`
   width: 100%;
   margin-top: 7em;
+  ${media.lessThan('large')`
+    margin-top: 4em;
+  `};
   display: flex;
   justify-content: center;
 `;
