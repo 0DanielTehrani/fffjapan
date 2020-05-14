@@ -131,7 +131,7 @@ function FooterMobile (props) {
             <LinkItem fontSize={fontSize} to='/privacy-policy'>{t('Footer.PP')}</LinkItem>
         </StyledLinkItemsColumn>
         <LangSwapContainer>
-          <LangSwitchButton currenctLang={i18n.language === 'en' ? 'English' : '日本語'} onClick={toggleLang}/>
+          <LangSwitchButton currenctLang={i18n.language === 'en' ? '日本語' : 'English'} onClick={toggleLang}/>
         </LangSwapContainer>
       </MainContainer>
     </StyledFooterMobile>

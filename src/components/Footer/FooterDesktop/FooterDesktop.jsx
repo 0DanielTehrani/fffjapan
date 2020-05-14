@@ -129,7 +129,7 @@ function FooterDesktop (props) {
             </StyledLinkItemsColumn>
           </StyledLinkItemsRow>
           <LangSwapContainer>
-            <LangSwitchButton currenctLang={i18n.language === 'en' ? 'English' : '日本語'} onClick={toggleLang}/>
+            <LangSwitchButton currenctLang={i18n.language === 'en' ? '日本語' : 'English'} onClick={toggleLang}/>
           </LangSwapContainer>
         </StyledLinkItems>
       </MainContainer>
