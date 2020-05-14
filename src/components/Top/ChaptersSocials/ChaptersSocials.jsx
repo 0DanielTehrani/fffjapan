@@ -1,22 +1,44 @@
 import React, { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
-import styled from 'styled-components'
+import styled, { withTheme } from 'styled-components'
 import media from 'styled-media-query';
-import Divider from '@material-ui/core/Divider';
 import ChapterSocials from '../ChapterSocials'
 import ChapterExpansionPanel from './ChapterExpansionPanel';
+import GetInTouchWithChaptersBanner from '../GetInTouchWithChaptersBanner';
 import chapters from './chapters-socials.js';
 
 
 const StyledChaptersSocials = styled.div`
-  width: 1000px;
-  ${media.lessThan('large')`
-    width: 700px;
-  `}
+  width: 93%;
+  background-color: ${props => props.theme.beige};
+  text-align: center;
+`;
+
+const StyledDivider = styled.hr`
+  border-width: 0.1px;
+  border-style: inset;
+  width: 80%;
 `;
 
 const ChaptersSocialsContainer = styled.div`
-  margin-top: 2em;
+  padding-bottom: 3em;
+`;
+
+const GetInTouchWithChaptersBannerContainer = styled.div`
+  width: 100%;
+  text-align: center;
+  margin-top: 3em;
+  margin-bottom: 2em;
+  font-size: 16px;
+  ${media.lessThan('large')`
+    font-size: 16px;
+  `}
+  ${media.lessThan('medium')`
+    font-size: 16px;
+  `}
+  ${media.lessThan('small')`
+    font-size: 10px;
+  `}
 `;
 
 const ChapterSocialsContainer = styled.div`
@@ -54,6 +76,9 @@ function ChaptersSocials (props) {
 
   return (
     <StyledChaptersSocials>
+      <GetInTouchWithChaptersBannerContainer>
+        <GetInTouchWithChaptersBanner />
+      </GetInTouchWithChaptersBannerContainer>
       <ChaptersSocialsContainer>
         {
           isMobileOrTablet ?
@@ -64,7 +89,7 @@ function ChaptersSocials (props) {
           chapters.map((chapter, i) =>
             !(i % 3) &&
             <>
-              <Divider />
+              <StyledDivider color={props.theme.green}/>
               <ChaptersContainer>
               <ChapterSocialsContainer>
                 <ChapterSocials {...chapter} key={i} onClick={toggleExpandedChapter.bind(this, i)} showSocials={expandedChapter === i}/>
@@ -85,10 +110,10 @@ function ChaptersSocials (props) {
             </>
         )
         }
-        <Divider />
+        <StyledDivider color={props.theme.green}/>
       </ChaptersSocialsContainer>
     </StyledChaptersSocials>
   )
 }
 
-export default ChaptersSocials;
+export default withTheme(ChaptersSocials);

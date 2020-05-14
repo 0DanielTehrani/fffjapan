@@ -93,25 +93,9 @@ const VideoContainer = styled.div`
   width: 100%;
 `;
 
-const GetInTouchWithChaptersBannerContainer = styled.div`
-  width: 100%;
-  text-align: center;
-  margin-top: 7em;
-  font-size: 16px;
-  ${media.lessThan('large')`
-    font-size: 16px;
-  `}
-  ${media.lessThan('medium')`
-    font-size: 16px;
-  `}
-  ${media.lessThan('small')`
-    font-size: 10px;
-  `}
-`;
-
 const ChapersSocialsContainer = styled.div`
   width: 100%;
-  margin-top: 1em;
+  margin-top: 7em;
   display: flex;
   justify-content: center;
 `;
@@ -141,9 +125,6 @@ function Top () {
             <OrganizeLinkIconButton />
           </LinkIconButtonsContainer>
       }
-      <GetInTouchWithChaptersBannerContainer>
-        <GetInTouchWithChaptersBanner />
-      </GetInTouchWithChaptersBannerContainer>
       <ChapersSocialsContainer>
         <ChapersSocials />
       </ChapersSocialsContainer>

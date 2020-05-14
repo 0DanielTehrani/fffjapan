@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import InstagramIcon from '../../SocialIcons/InstagramIcon';
 
 const StyledButton = styled.button`
-  background-color: #fff;
+  background-color: transparent;
   border: 0;
   &:focus {
     outline:0;

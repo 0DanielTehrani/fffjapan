@@ -5,8 +5,6 @@ import Text from '../../Text';
 
 const StyledVideoTitle = styled.div`
   text-align: center;
-  background-color: ${props => props.theme.beige};
-  padding: 0.4em 5em;
 `;
 
 const StyledRow1 = styled(Text)`
