@@ -18,7 +18,7 @@ const StyledChaptersSocials = styled.div`
 const StyledDivider = styled.hr`
   border-width: 0.1px;
   border-style: inset;
-  width: 80%;
+  width: 85%;
 `;
 
 const StyledMobileDivider = styled.hr`
@@ -59,8 +59,8 @@ const ChaptersContainer = styled.div`
     flex-direction: column;
   `}
   justify-content: center;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+  margin-top: 0.5em 0;
+  padding: 0 4em;
 `;
 
 
@@ -137,21 +137,17 @@ function ChaptersSocials (props) {
             <>
               <StyledDivider color={props.theme.green}/>
               <ChaptersContainer>
-              <ChapterSocialsContainer>
-                <ChapterSocials {...chapter} key={i} onClick={toggleExpandedChapter.bind(this, i)} showSocials={expandedChapter === i}/>
-              </ChapterSocialsContainer>
-                {
-                <>
-                  <ChapterSocialsContainer>
-                    {i + 1 < chapters.length &&
-                    <ChapterSocials {...chapters[i + 1]} key={i + 1} onClick={toggleExpandedChapter.bind(this, i + 1)} showSocials={expandedChapter === i + 1}/>}
-                  </ChapterSocialsContainer>
-                  <ChapterSocialsContainer>
-                    {i + 2 < chapters.length &&
-                    <ChapterSocials {...chapters[i + 2]} key={i + 2} onClick={toggleExpandedChapter.bind(this, i + 2)} showSocials={expandedChapter === i + 2}/>}
-                  </ChapterSocialsContainer>
-                </>
-                }
+                <ChapterSocialsContainer>
+                  <ChapterSocials {...chapter} key={i} onClick={toggleExpandedChapter.bind(this, i)} showSocials={expandedChapter === i}/>
+                </ChapterSocialsContainer>
+                <ChapterSocialsContainer>
+                  {i + 1 < chapters.length &&
+                  <ChapterSocials {...chapters[i + 1]} key={i + 1} onClick={toggleExpandedChapter.bind(this, i + 1)} showSocials={expandedChapter === i + 1}/>}
+                </ChapterSocialsContainer>
+                <ChapterSocialsContainer>
+                  {i + 2 < chapters.length &&
+                  <ChapterSocials {...chapters[i + 2]} key={i + 2} onClick={toggleExpandedChapter.bind(this, i + 2)} showSocials={expandedChapter === i + 2}/>}
+                </ChapterSocialsContainer>
               </ChaptersContainer>
             </>
         )
