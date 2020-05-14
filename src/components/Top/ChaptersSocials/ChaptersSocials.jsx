@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import styled, { withTheme } from 'styled-components'
 import media from 'styled-media-query';
@@ -72,7 +72,32 @@ const SocialsContainer = styled.div`
   }
 `;
 
+/**
+ * Hook that alerts clicks outside of the passed ref
+ */
+function useOutsideAlerter(ref, onClickOutside) {
+  useEffect(() => {
+    /**
+     * Alert if clicked on outside of element
+     */
+    function handleClickOutside(event) {
+      if (ref.current && !ref.current.contains(event.target)) {
+        onClickOutside();
+      }
+    }
+
+    // Bind the event listener
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      // Unbind the event listener on clean up
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [ref]);
+}
+
 function ChaptersSocials (props) {
+
+
   const isMobileOrTablet = useMediaQuery({ query: '(max-width: 768px)' });
 
   const [expandedChapter, setExpandedChapter] = useState(null);
@@ -81,8 +106,15 @@ function ChaptersSocials (props) {
     expandedChapter === chapterIndex ? setExpandedChapter(null) : setExpandedChapter(chapterIndex);
   }
 
+  const closeExpandedChapter = () => {
+    setExpandedChapter(null);
+  }
+
+  const wrapperRef = useRef(null);
+  useOutsideAlerter(wrapperRef, closeExpandedChapter);
+
   return (
-    <StyledChaptersSocials>
+    <StyledChaptersSocials ref={wrapperRef}>
       <GetInTouchWithChaptersBannerContainer>
         <GetInTouchWithChaptersBanner />
       </GetInTouchWithChaptersBannerContainer>
