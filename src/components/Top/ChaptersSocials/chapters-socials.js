@@ -48,7 +48,7 @@ export default [
   },
   {
     name_ja: '信州(長野)',
-    name_en: 'Shinsu(Nagano)',
+    name_en: 'Shinshu(Nagano)',
     twitter: 'fff_shinshu',
     instagram: 'fffshinshu'
   },
