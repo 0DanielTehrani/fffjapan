@@ -4,6 +4,7 @@ import media from 'styled-media-query';
 import { useTranslation } from 'react-i18next';
 import TwitterIcon from '../../SocialIcons/TwitterIcon';
 import FacebookIcon from '../../SocialIcons/FacebookIcon';
+import YouTubeIcon from '../../SocialIcons/YouTubeIcon';
 import { Link } from 'react-router-dom';
 import LinkItem from '../../LinkItem';
 import ExternalLinkItem from '../../ExternalLinkItem';
@@ -11,7 +12,7 @@ import RoundLogo from '../../RoundLogo';
 import Logo from '../../Logo';
 import LangSwitchButton from '../LangSwitchButton';
 import Text from '../../Text';
-import { DIGITAL_MARCH_URL } from '../../../constants';
+import { DIGITAL_MARCH_URL, YOUTUBE_CHANNEL_LINK } from '../../../constants';
 
 const StyledFooterDesktop = styled.div`
   display: flex;
@@ -57,9 +58,9 @@ const SocialsContainer = styled.div`
   margin-bottom: 3em;
   background-color: ${props => props.theme.beige};
   padding: 3.125em 5em;
-  & :nth-child(2) {
-    margin-right: 1.875em;
-    margin-left: 1.875em;
+  & * {
+    margin-right: 0.5em;
+    margin-left: 0.5em;
   }
 `;
 
@@ -106,6 +107,7 @@ function FooterDesktop (props) {
         <SocialsContainerTitle>{t('Footer.FollowFFFJ')}</SocialsContainerTitle>
         <LinkWrapper href='https://twitter.com/FridaysJapan' target='_blank'><TwitterIcon width='3.5em'/></LinkWrapper>
         <LinkWrapper href='https://www.facebook.com/fridaysforfuture.jp/' target='_blank'><FacebookIcon width='3.5em'/></LinkWrapper>
+        <LinkWrapper href={YOUTUBE_CHANNEL_LINK} target='_blank'><YouTubeIcon width='3.5em'/></LinkWrapper>
       </SocialsContainer>
       <MainContainer>
         <Link to='/'>

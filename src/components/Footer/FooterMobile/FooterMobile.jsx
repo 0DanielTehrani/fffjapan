@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 import TwitterIcon from '../../SocialIcons/TwitterIcon';
 import FacebookIcon from '../../SocialIcons/FacebookIcon';
+import YouTubeIcon from '../../SocialIcons/YouTubeIcon';
 import { Link } from 'react-router-dom';
 import LinkItem from '../../LinkItem';
 import ExternalLinkItem from '../../ExternalLinkItem';
@@ -10,7 +11,7 @@ import RoundLogo from '../../RoundLogo';
 import Logo from '../../Logo';
 import LangSwitchButton from '../LangSwitchButton';
 import Text from '../../Text';
-import { DIGITAL_MARCH_URL } from '../../../constants';
+import { DIGITAL_MARCH_URL, YOUTUBE_CHANNEL_LINK } from '../../../constants';
 
 const StyledFooterMobile = styled.div`
   display: flex;
@@ -52,15 +53,12 @@ const StyledLinkItemsColumn = styled.div`
 
 const SocialsContainer = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: ${props => props.theme.beige};
   width: 100%;
   padding: 1em 0;
-  & :nth-child(2) {
-    margin-left: 15px;
-  }
 `;
 
 const SocialsContainerTitle = styled(Text)`
@@ -70,9 +68,12 @@ const SocialsContainerTitle = styled(Text)`
 `;
 
 const IconsContainer = styled.div`
-  margin-top: 0;
+  margin-top: 10px;
   & * {
     margin-top: 0;
+  }
+  & :not(:first-child) {
+    margin-left: 15px;
   }
 `;
 
@@ -114,6 +115,7 @@ function FooterMobile (props) {
         <IconsContainer>
           <LinkWrapper href='https://twitter.com/FridaysJapan' target='_blank'><TwitterIcon width='2.5em'/></LinkWrapper>
           <LinkWrapper href='https://www.facebook.com/fridaysforfuture.jp/' target='_blank'><FacebookIcon width='2.5em'/></LinkWrapper>
+          <LinkWrapper href={YOUTUBE_CHANNEL_LINK} target='_blank'><YouTubeIcon width='2.5em'/></LinkWrapper>
         </IconsContainer>
       </SocialsContainer>
       <MainContainer>
