@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactPlayer from "react-player"
 import styled from 'styled-components';
-import { VIDEO_A_URL } from '../../../constants';
+import { VIDEO_B_URL } from '../../../constants';
 
 const StyledWrapper = styled.div`
   position: relative;
@@ -17,11 +17,11 @@ const StyledReactPlayer = styled(ReactPlayer)`
   margin: auto;
 `;
 
-function Video () {
+function VideoB () {
   return (
     <StyledWrapper>
       <StyledReactPlayer
-        url={VIDEO_A_URL}
+        url={VIDEO_B_URL}
         controls
         width='80%'
         height='80%'
@@ -30,4 +30,4 @@ function Video () {
   )
 }
 
-export default Video;
+export default VideoB;

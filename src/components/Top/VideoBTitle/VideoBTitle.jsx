@@ -7,26 +7,22 @@ const StyledVideoTitle = styled.div`
   text-align: center;
 `;
 
-const StyledRow1 = styled(Text)`
-  display: block;
-  font-size: 1.5em;
-`;
-
-const StyledRow2 = styled(Text)`
+const StyledRow = styled(Text)`
   display: block;
   font-size: 2em;
+  height: 2.84375em;
+  display: flex;
+  align-items: center;
 `;
 
-// TODO: Rename this to VideoATitle.
-function VideoTitle () {
+function VideoBTitle () {
   const { t } = useTranslation();
 
   return (
     <StyledVideoTitle>
-      <StyledRow1>{t('Top.VideoTitleRow1')}</StyledRow1>
-      <StyledRow2>{t('Top.VideoTitleRow2')}</StyledRow2>
+      <StyledRow>{t('Top.VideoBTitle')}</StyledRow>
     </StyledVideoTitle>
   )
 }
 
-export default VideoTitle;
+export default VideoBTitle;

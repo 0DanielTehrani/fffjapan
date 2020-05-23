@@ -14,7 +14,9 @@ import MobileAboutUsButton from '../components/Top/LinkIconButtons/MobileAboutUs
 import MobileJoinUsButton from '../components/Top/LinkIconButtons/MobileJoinUsButton'
 import MobileOrganizeButton from '../components/Top/LinkIconButtons/MobileOrganizeButton'
 import Video from '../components/Top/Video';
+import VideoB from '../components/Top/VideoB';
 import VideoTitle from '../components/Top/VideoTitle';
+import VideoBTitle from '../components/Top/VideoBTitle';
 import ChapersSocials from '../components/Top/ChaptersSocials';
 import ChapterExpansionPanel from '../components/Top/ChaptersSocials/ChapterExpansionPanel';
 
@@ -75,7 +77,6 @@ const VideoTitleContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 7em;
   font-size: 16px;
   ${media.lessThan('large')`
     font-size: 16px;
@@ -85,6 +86,17 @@ const VideoTitleContainer = styled.div`
   `}
   ${media.lessThan('small')`
     font-size: 10px;
+  `}
+`;
+
+const VideosContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 7em;
+  ${media.lessThan('medium')`
+    flex-direction: column;
+    margin-top: 4em;
   `}
 `;
 
@@ -130,12 +142,21 @@ function Top () {
       <ChapersSocialsContainer>
         <ChapersSocials />
       </ChapersSocialsContainer>
-      <VideoTitleContainer>
-        <VideoTitle />
-      </VideoTitleContainer>
-      <VideoContainer>
-        <Video />
-      </VideoContainer>
+
+      <VideosContainer>
+        <VideoContainer>
+          <VideoTitleContainer>
+            <VideoTitle />
+          </VideoTitleContainer>
+          <Video />
+        </VideoContainer>
+        <VideoContainer>
+          <VideoTitleContainer>
+            <VideoBTitle />
+          </VideoTitleContainer>
+          <VideoB />
+        </VideoContainer>
+      </VideosContainer>
       <FooterContainer>
         <Footer />
       </FooterContainer>
