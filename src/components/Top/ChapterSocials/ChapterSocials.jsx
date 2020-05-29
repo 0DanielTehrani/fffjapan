@@ -6,6 +6,7 @@ import Text from '../../Text';
 import TwitterIconButton from '../../SocialIconButtons/TwitterIconButton';
 import FacebookIconButton from '../../SocialIconButtons/FacebookIconButton';
 import InstagramIconButton from '../../SocialIconButtons/InstagramIconButton';
+import WebsiteIconButton from '../../SocialIconButtons/WebsiteIconButton';
 
 const StyledChapterSocials = styled.div`
   text-align: center;
@@ -32,7 +33,7 @@ const SocialsContainer = styled.div`
 `;
 
 function ChapterSocials (props) {
-  const { twitter, facebook, instagram, onClick, showSocials } = props;
+  const { twitter, facebook, instagram, website, onClick, showSocials } = props;
   const { i18n } = useTranslation();
   const name = i18n.language === 'en' ? props.name_en : props.name_ja;
 
@@ -48,6 +49,7 @@ function ChapterSocials (props) {
           {twitter && <TwitterIconButton width='32px' onClick={() => {window.open(twitterURL)}}/>}
           {facebook && <FacebookIconButton width='32px' onClick={() => {window.open(facebookURL)}}/>}
           {instagram && <InstagramIconButton width='32px' onClick={() => {window.open(instagramURL)}}/>}
+          {website && <WebsiteIconButton width='32px' onClick={() => {window.open(website)}}/>}
         </SocialsContainer>
       </Collapse>
     </StyledChapterSocials>

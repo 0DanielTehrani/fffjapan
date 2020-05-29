@@ -120,6 +120,14 @@ export default [
     instagram: 'fridaysforfuturedazaifu'
   },
   {
+    name_ja: '熊本',
+    name_en: 'Kumamoto',
+    twitter: 'fff_kumamoto',
+    facebook: 'FFFKumamoto',
+    instagram: 'fff_kumamoto',
+    website: 'http://fffkumamoto.online'
+  },
+  {
     name_ja: '鹿児島',
     name_en: 'Kagoshima',
     instagram: 'fffkagoshima'
