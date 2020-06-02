@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import media from 'styled-media-query';
 import { useMediaQuery } from 'react-responsive';
 import Page from '../components/Page';
+import Text from '../components/Text';
 import MessageBanner from '../components/Top/MessageBanner';
 import AboutUsLinkIconButton from '../components/Top/LinkIconButtons/AboutUsLinkIconButton';
 import JoinUsLinkIconButton from '../components/Top/LinkIconButtons/JoinUsLinkIconButton';
@@ -17,6 +18,7 @@ import Video from '../components/Top/Video';
 import VideoB from '../components/Top/VideoB';
 import VideoTitle from '../components/Top/VideoTitle';
 import VideoBTitle from '../components/Top/VideoBTitle';
+import TimeToQuestionTitle from '../components/Top/TimeToQuestionTitle';
 import ChapersSocials from '../components/Top/ChaptersSocials';
 import ChapterExpansionPanel from '../components/Top/ChaptersSocials/ChapterExpansionPanel';
 
@@ -114,6 +116,37 @@ const ChapersSocialsContainer = styled.div`
   justify-content: center;
 `;
 
+const MiraiQContainer = styled.div`
+  margin: 7em 0em;
+  text-align: center;
+  font-size: 16px;
+  ${media.lessThan('large')`
+    font-size: 16px;
+  `}
+  ${media.lessThan('medium')`
+    font-size: 16px;
+  `}
+  ${media.lessThan('small')`
+    font-size: 10px;
+  `}
+`;
+
+const TimeToQuestionTitleContainer = styled.div`
+  margin: 7em 0em;
+  text-align: center;
+  font-size: 16px;
+  ${media.lessThan('large')`
+    font-size: 16px;
+  `}
+  ${media.lessThan('medium')`
+    font-size: 16px;
+  `}
+  ${media.lessThan('small')`
+    font-size: 10px;
+  `}
+  margin-bottom: 2em;
+`;
+
 function Top () {
   const isMobile = useMediaQuery({ query: '(max-width: 450px)' });
 
@@ -157,6 +190,17 @@ function Top () {
           <VideoB />
         </VideoContainer>
       </VideosContainer>
+      <MiraiQContainer>
+        <TimeToQuestionTitleContainer>
+          <TimeToQuestionTitle />
+        </TimeToQuestionTitleContainer>
+        <iframe
+          src="https://www.time-to-question.com/ja/questions/?partner=fridays-for-future-japan"
+          width="100%"
+          height="700"
+          frameborder="0"
+          style={{ height: '80vh'}}></iframe>
+      </MiraiQContainer>
       <FooterContainer>
         <Footer />
       </FooterContainer>
