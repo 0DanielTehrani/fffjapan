@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import media from 'styled-media-query'
 
 const StyledCallout = styled.div`
   width: 17.8em;

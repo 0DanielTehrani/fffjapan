@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import LinkItem from '../../LinkItem'
+
 import { ORGANIZE_GOOGLE_FORM_URL } from '../../../constants'
 
 const StyledToOrganizeFormButton = styled.button`

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { withRouter } from 'react-router-dom'
-import { isWebpSupported } from 'react-image-webp/dist/utils'
+
 import { useTranslation } from 'react-i18next'
 import OrganizeText from '../../../RandomImages/OrganizeText'
 import Organize from '../../../RandomImages/Organize'

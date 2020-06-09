@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import media from 'styled-media-query'
 
 const StyledCallout2 = styled.div`
   font-size: 1.375em;

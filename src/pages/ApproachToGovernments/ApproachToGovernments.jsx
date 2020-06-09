@@ -31,9 +31,6 @@ const HeaderContainer = styled.div`
   margin-bottom: 6em;
 `
 
-const TopBoardContainer = styled.div`
-`
-
 const TextImageContainer = styled.div`
   margin-top: -2.625em;
   margin-left: 1.6875em;

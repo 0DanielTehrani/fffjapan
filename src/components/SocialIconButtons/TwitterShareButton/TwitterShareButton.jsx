@@ -1,7 +1,6 @@
 import React from 'react'
 import { TwitterWithCircle } from '@styled-icons/entypo-social/TwitterWithCircle'
 import styled from 'styled-components'
-import TwitterIcon from '../../SocialIcons/TwitterIcon'
 
 const StyledButton = styled.button`
   background-color: transparent;

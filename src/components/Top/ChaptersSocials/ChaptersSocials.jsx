@@ -3,7 +3,7 @@ import { useMediaQuery } from 'react-responsive'
 import styled, { withTheme } from 'styled-components'
 import media from 'styled-media-query'
 import ChapterSocials from '../ChapterSocials'
-import ChapterExpansionPanel from './ChapterExpansionPanel'
+
 import MobileExpansionPanel from './MobileExpansionPanel'
 import GetInTouchWithChaptersBanner from '../GetInTouchWithChaptersBanner'
 import chapters from './chapters-socials.js'
@@ -60,13 +60,6 @@ const ChaptersContainer = styled.div`
   justify-content: center;
   margin-top: 0.5em 0;
   padding: 0 4em;
-`
-
-const SocialsContainer = styled.div`
-  margin-top: 0.4em;
-  & :not(:first-child) {
-    margin-left: 1em;
-  }
 `
 
 /**

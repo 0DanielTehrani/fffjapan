@@ -4,7 +4,6 @@ import { withTranslation } from 'react-i18next';
 import { withRouter } from 'react-router-dom';
 import TwitterShareButton from '../SocialIconButtons/TwitterShareButton';
 import FacebookShareButton from '../SocialIconButtons/FacebookShareButton';
-import { Share } from '@styled-icons/boxicons-solid/Share';
 import Fade from 'react-reveal/Fade';
 import Text from '../Text';
 import { FACEBOOK_SHARE_URL } from '../../constants';

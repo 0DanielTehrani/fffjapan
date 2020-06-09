@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { withTheme } from 'styled-components'
 import { useTranslation } from 'react-i18next'
-import media from 'styled-media-query'
+
 import { useMediaQuery } from 'react-responsive'
 
 import CookieConsent from 'react-cookie-consent'

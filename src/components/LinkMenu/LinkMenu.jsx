@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { useTranslation } from 'react-i18next'
 import Modal from '@material-ui/core/Modal'
-import LinkItem from '../LinkItem'
+
 import { Bars } from '@styled-icons/fa-solid/Bars'
 
 const StyledBars = styled(Bars)`

@@ -1,6 +1,6 @@
 import React from 'react'
 import { isWebpSupported } from 'react-image-webp/dist/utils'
-import styled from 'styled-components'
+
 import FloatingImage from '../../FloatingImage'
 import imgWebp from './about-us-text.webp'
 import img from './about-us-text.png'

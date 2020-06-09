@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import TextBoard from '../../TextBoard'
+
 import Text from '../../Text'
 import TwitterIcon from '../../SocialIcons/TwitterIcon'
 import FacebookIcon from '../../SocialIcons/FacebookIcon'

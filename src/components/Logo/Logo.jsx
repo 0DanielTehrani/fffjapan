@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { isWebpSupported } from 'react-image-webp/dist/utils'
 import logoWebp from './fffjapan.webp'
 import logo from './fffjapan.png'
-import media from 'styled-media-query'
 
 const StyledLogo = styled.img`
   width: ${props => props.width};

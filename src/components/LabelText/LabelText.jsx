@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import media from 'styled-media-query'
 
 const StyledLabelText = styled.span`
   color: ${props => props.color || props.theme.textColor};

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { withTheme } from 'styled-components'
-import media from 'styled-media-query'
+
 import { withRouter, Link } from 'react-router-dom'
 import { useMediaQuery } from 'react-responsive'
 import { useTranslation } from 'react-i18next'
@@ -8,13 +8,10 @@ import { useTranslation } from 'react-i18next'
 import LinkItem from '../LinkItem'
 import MobileLinkItem from './MobileLinkItem'
 import LinkMenu from '../LinkMenu'
-import ExternalLinkItem from '../ExternalLinkItem'
-import MobileExternalLinkItem from './MobileExternalLinkItem'
-import LabelText from '../LabelText'
+
 import RoundLogo from '../RoundLogo'
 import Logo from '../Logo'
 import MobileShareBar from '../MobileShareBar'
-import { DIGITAL_MARCH_URL } from '../../constants'
 
 const StyledHeader = styled.div`
   display: flex;
@@ -50,10 +47,6 @@ const LowerHalfContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   margin-top: 1em;
-`
-
-const MobileShareBarContainer = styled.div`
-  width: 100%;
 `
 
 function Header (props) {

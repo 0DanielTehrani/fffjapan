@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import media from 'styled-media-query'
 
 const StyledHistoryBoard = styled.div`
   font-size: 1em;

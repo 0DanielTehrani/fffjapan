@@ -1,7 +1,6 @@
 import React from 'react'
 import { FacebookWithCircle } from '@styled-icons/entypo-social/FacebookWithCircle'
 import styled from 'styled-components'
-import FacebookIcon from '../../SocialIcons/FacebookIcon'
 
 const StyledButton = styled.button`
   background-color: transparent;

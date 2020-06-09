@@ -5,11 +5,10 @@ import TwitterIcon from '../../SocialIcons/TwitterIcon'
 import FacebookIcon from '../../SocialIcons/FacebookIcon'
 import { Link } from 'react-router-dom'
 import LinkItem from '../../LinkItem'
-import ExternalLinkItem from '../../ExternalLinkItem'
+
 import RoundLogo from '../../RoundLogo'
 import Logo from '../../Logo'
 import LangSwitchButton from '../LangSwitchButton'
-import { DIGITAL_MARCH_URL } from '../../../constants'
 
 const StyledFooterMobile = styled.div`
   display: flex;

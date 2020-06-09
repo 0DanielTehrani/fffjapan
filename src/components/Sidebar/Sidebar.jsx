@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { withRouter } from 'react-router-dom'
 import TwitterShareButton from '../SocialIconButtons/TwitterShareButton'
 import FacebookShareButton from '../SocialIconButtons/FacebookShareButton'
-import { Share } from '@styled-icons/boxicons-solid/Share'
+
 import Text from '../Text'
 import { FACEBOOK_SHARE_URL } from '../../constants'
 import { constructTwitterShareURL } from '../utils'

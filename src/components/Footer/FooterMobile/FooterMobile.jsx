@@ -6,12 +6,12 @@ import FacebookIcon from '../../SocialIcons/FacebookIcon'
 import YouTubeIcon from '../../SocialIcons/YouTubeIcon'
 import { Link } from 'react-router-dom'
 import LinkItem from '../../LinkItem'
-import ExternalLinkItem from '../../ExternalLinkItem'
+
 import RoundLogo from '../../RoundLogo'
 import Logo from '../../Logo'
 import LangSwitchButton from '../LangSwitchButton'
 import Text from '../../Text'
-import { DIGITAL_MARCH_URL, YOUTUBE_CHANNEL_LINK } from '../../../constants'
+import { YOUTUBE_CHANNEL_LINK } from '../../../constants'
 
 const StyledFooterMobile = styled.div`
   display: flex;
@@ -31,20 +31,6 @@ const StyledLogos = styled.div`
     margin-right: 8.4px;
   }
 `
-
-const StyledLinkItemsRow = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  & a {
-    margin-left: 30px;
-  }
-  & svg {
-    margin-left: 41px;
-  }
-`
-
 const StyledLinkItemsColumn = styled.div`
   display: flex;
   flex-direction: column;
