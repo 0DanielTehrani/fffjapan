@@ -42,7 +42,7 @@ const approaches = [
         {largeSpace} 議員提案による決議案 <br />
         3月16日 <br />
         {largeSpace} 那須町議会 気候非常事態宣言に関する議員提案を採択<br />
-        <u><a href={NASU_CED_RESOLUTION} target='_blank'>那須町気候非常事態宣言に関する決議</a></u><br />
+        <u><a href={NASU_CED_RESOLUTION} target='_blank' rel="noopener noreferrer">那須町気候非常事態宣言に関する決議</a></u><br />
         ※気候非常事態宣言の採択が下野新聞、朝日新聞、毎日新聞に掲載される <br />
         那須塩原市：市長多忙につき実現せず
         </span>)
@@ -59,7 +59,7 @@ const approaches = [
       what: '気候非常事態宣言を求める請願書と署名の提出',
       achievements: (<span>
         2019年12月4日、白馬村が気候非常事態宣言、その後、長野県や隣接する池田町、小谷村の気候非常事態宣言に波及 <br />
-        <u><a href={HAKUBA_CED} target='_blank'>白馬村気候非常事態宣言</a></u>
+        <u><a href={HAKUBA_CED} target='_blank' rel="noopener noreferrer">白馬村気候非常事態宣言</a></u>
         </span>)
     },
     {
