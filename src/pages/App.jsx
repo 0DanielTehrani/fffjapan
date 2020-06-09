@@ -1,6 +1,5 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import { useTranslation } from 'react-i18next';
 import './App.css'
 import '../i18n';
 import {
@@ -28,8 +27,6 @@ const theme = {
 }
 
 function App () {
-  const { t, i18n } = useTranslation();
-
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
