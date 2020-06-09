@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
 
 const StyledText = styled.span`
   font-size: 1.5em;
@@ -7,7 +7,7 @@ const StyledText = styled.span`
   font-family: ${props => props.theme.fontFamily};
   font-weight: bold;
   text-decoration: underline;
-`;
+`
 
 function Text (props) {
   return (
@@ -15,4 +15,4 @@ function Text (props) {
   )
 }
 
-export default Text;
+export default Text

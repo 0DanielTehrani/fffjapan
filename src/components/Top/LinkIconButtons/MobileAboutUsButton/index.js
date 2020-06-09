@@ -1,1 +1,1 @@
-export { default } from './MobileAboutUsButton';
+export { default } from './MobileAboutUsButton'

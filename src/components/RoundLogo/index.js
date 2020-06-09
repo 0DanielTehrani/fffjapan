@@ -1,1 +1,1 @@
-export { default } from './RoundLogo';
+export { default } from './RoundLogo'

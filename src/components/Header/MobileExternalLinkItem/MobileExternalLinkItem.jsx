@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import ExternalLinkItem from '../../ExternalLinkItem';
-import Text from '../../Text';
+import React from 'react'
+import styled from 'styled-components'
+import ExternalLinkItem from '../../ExternalLinkItem'
+import Text from '../../Text'
 
 const StyledMobileExternalLinkItem = styled(ExternalLinkItem)`
   border-top: solid 0.1em #fff;
@@ -10,12 +10,12 @@ const StyledMobileExternalLinkItem = styled(ExternalLinkItem)`
   text-decoration: none;
   width:100%;
   text-align: center;
-`;
+`
 
 const StyledText = styled(Text)`
   font-size: 0.8em;
   color: #fff;
-`;
+`
 
 function MobileExternalLinkItem (props) {
   return (
@@ -23,4 +23,4 @@ function MobileExternalLinkItem (props) {
   )
 }
 
-export default MobileExternalLinkItem;
+export default MobileExternalLinkItem

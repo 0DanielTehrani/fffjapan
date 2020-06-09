@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import styled from 'styled-components'
-import media from 'styled-media-query';
+import media from 'styled-media-query'
 
 const StyledLabelText = styled.span`
   color: ${props => props.color || props.theme.textColor};
@@ -8,7 +8,7 @@ const StyledLabelText = styled.span`
   font-size: ${props => props.fontSize || '1em'};
   font-family: ${props => props.theme.fontFamily};
   padding: 0px 5px;
-`;
+`
 
 function LabelText (props) {
   return (
@@ -18,4 +18,4 @@ function LabelText (props) {
   )
 }
 
-export default LabelText;
+export default LabelText

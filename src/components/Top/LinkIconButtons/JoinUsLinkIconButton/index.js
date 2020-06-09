@@ -1,1 +1,1 @@
-export { default } from './JoinUsLinkIconButton';
+export { default } from './JoinUsLinkIconButton'

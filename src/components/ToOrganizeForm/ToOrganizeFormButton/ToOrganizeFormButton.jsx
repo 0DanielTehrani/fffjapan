@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import LinkItem from '../../LinkItem';
-import { ORGANIZE_GOOGLE_FORM_URL } from '../../../constants';
+import React from 'react'
+import styled from 'styled-components'
+import LinkItem from '../../LinkItem'
+import { ORGANIZE_GOOGLE_FORM_URL } from '../../../constants'
 
 const StyledToOrganizeFormButton = styled.button`
   display: inline-block;
@@ -18,14 +18,12 @@ const StyledToOrganizeFormButton = styled.button`
   &:hover {
     cursor: pointer;
   };
-`;
+`
 
 function ToOrganizeFormButton (props) {
-
-
   return (
-    <StyledToOrganizeFormButton {...props} onClick={() => {window.open(ORGANIZE_GOOGLE_FORM_URL)}}>応募フォームへ</StyledToOrganizeFormButton>
+    <StyledToOrganizeFormButton {...props} onClick={() => { window.open(ORGANIZE_GOOGLE_FORM_URL) }}>応募フォームへ</StyledToOrganizeFormButton>
   )
 }
 
-export default ToOrganizeFormButton;
+export default ToOrganizeFormButton

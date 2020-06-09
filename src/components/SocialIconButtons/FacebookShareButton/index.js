@@ -1,1 +1,1 @@
-export { default } from './FacebookShareButton';
+export { default } from './FacebookShareButton'

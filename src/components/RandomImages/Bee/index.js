@@ -1,1 +1,1 @@
-export { default } from './Bee';
+export { default } from './Bee'

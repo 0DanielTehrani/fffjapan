@@ -1,1 +1,1 @@
-export { default } from './GetInTouchWithChaptersBanner';
+export { default } from './GetInTouchWithChaptersBanner'

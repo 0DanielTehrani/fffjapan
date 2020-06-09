@@ -1,1 +1,1 @@
-export { default } from './ChapterSocials';
+export { default } from './ChapterSocials'

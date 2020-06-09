@@ -1,10 +1,10 @@
-import React from 'react';
-import styled from 'styled-components';
-import TextBoard from '../../TextBoard';
-import Text from '../../Text';
-import TwitterIcon from '../../SocialIcons/TwitterIcon';
-import FacebookIcon from '../../SocialIcons/FacebookIcon';
-import InstagramIcon from '../../SocialIcons/InstagramIcon';
+import React from 'react'
+import styled from 'styled-components'
+import TextBoard from '../../TextBoard'
+import Text from '../../Text'
+import TwitterIcon from '../../SocialIcons/TwitterIcon'
+import FacebookIcon from '../../SocialIcons/FacebookIcon'
+import InstagramIcon from '../../SocialIcons/InstagramIcon'
 
 const StyledChapterBox = styled.div`
   padding-top: 0.3em;
@@ -13,20 +13,20 @@ const StyledChapterBox = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-`;
+`
 
 const StyledChapterName = styled(Text)`
   font-size: 1.5em;
   margin-right: 2em;
-`;
+`
 
 const SocialIconContainer = styled.div`
   display: inline-block;
   margin-left: 1em;
-`;
+`
 
 function ChapterBox (props) {
-  const { name, twitter, facebook, instagram } = props;
+  const { name, twitter, facebook, instagram } = props
   return (
     <StyledChapterBox>
       <StyledChapterName>{name}</StyledChapterName>
@@ -37,4 +37,4 @@ function ChapterBox (props) {
   )
 }
 
-export default ChapterBox;
+export default ChapterBox

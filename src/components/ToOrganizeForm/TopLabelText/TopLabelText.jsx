@@ -1,20 +1,19 @@
-import React from 'react';
-import styled from 'styled-components';
-import LabelText from '../../LabelText';
-import { withTheme } from 'styled-components';
+import React from 'react'
+import styled, { withTheme } from 'styled-components'
+import LabelText from '../../LabelText'
 
 const StyledTopLabelText = styled.div`
   & :not(:first-child) {
     margin-top: 0.28em;
   }
-`;
+`
 
 const LabelTextContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   font-size: 2.25em;
-`;
+`
 
 function TopLabelText (props) {
   return (
@@ -28,4 +27,4 @@ function TopLabelText (props) {
   )
 }
 
-export default withTheme(TopLabelText);
+export default withTheme(TopLabelText)

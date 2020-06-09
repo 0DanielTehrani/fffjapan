@@ -1,1 +1,1 @@
-export { default } from './QA';
+export { default } from './QA'

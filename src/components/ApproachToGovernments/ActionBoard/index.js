@@ -1,1 +1,1 @@
-export { default } from './ActionBoard';
+export { default } from './ActionBoard'

@@ -1,1 +1,1 @@
-export { default } from './FooterMobile';
+export { default } from './FooterMobile'

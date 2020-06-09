@@ -3,4 +3,4 @@ export const constructTwitterShareURL = (text, url) =>
 ?text=${text}%0a\
 &url=${url}\
 &hashtags=${'FridaysForFuture,気候も危機,ClimateStrike'}\
-&via=FridaysJapan`;
+&via=FridaysJapan`

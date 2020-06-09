@@ -1,1 +1,1 @@
-export { default } from './TimeToQuestionTitle';
+export { default } from './TimeToQuestionTitle'

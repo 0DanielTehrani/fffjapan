@@ -1,1 +1,1 @@
-export { default } from './Callout2';
+export { default } from './Callout2'

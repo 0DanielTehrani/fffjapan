@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import media from 'styled-media-query';
+import React from 'react'
+import styled from 'styled-components'
+import media from 'styled-media-query'
 
 const StyledCallout2 = styled.div`
   font-size: 1.375em;
@@ -32,7 +32,7 @@ const StyledCallout2 = styled.div`
     border-color: transparent  transparent #fff transparent;
     border-width: 0 1.36em 1.36em 1.36em;
   }
-`;
+`
 
 function Callout2 (props) {
   return (
@@ -40,4 +40,4 @@ function Callout2 (props) {
   )
 }
 
-export default Callout2;
+export default Callout2

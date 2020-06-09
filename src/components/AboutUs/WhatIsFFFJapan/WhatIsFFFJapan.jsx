@@ -1,10 +1,10 @@
-import React from 'react';
-import styled from 'styled-components';
-import { isWebpSupported } from 'react-image-webp/dist/utils';
-import { useTranslation } from 'react-i18next';
-import imgWebp from './what-is-fffjapan.webp';
-import img from './what-is-fffjapan.png';
-import media from 'styled-media-query';
+import React from 'react'
+import styled from 'styled-components'
+import { isWebpSupported } from 'react-image-webp/dist/utils'
+import { useTranslation } from 'react-i18next'
+import imgWebp from './what-is-fffjapan.webp'
+import img from './what-is-fffjapan.png'
+import media from 'styled-media-query'
 
 const StyledWhatIsFFFJapan = styled.div`
   font-size: 1em;
@@ -17,7 +17,7 @@ const StyledWhatIsFFFJapan = styled.div`
     align-items: center;
     justify-content: center;
   `};
-`;
+`
 
 const StyledImage = styled.img`
   width: 37.5em;
@@ -29,7 +29,7 @@ const StyledImage = styled.img`
   ${media.lessThan('small')`
     width: 90vw;
   `};
-`;
+`
 
 const StyledTextBoard = styled.div`
   font-size: 1em;
@@ -43,23 +43,23 @@ const StyledTextBoard = styled.div`
   ${media.lessThan('large')`
     margin-top: 3em;
   `};
-`;
+`
 
 const StyledTextBoardTitle = styled.div`
   font-size: 1.5em;
   font-family: ${props => props.theme.fontFamily};
   font-weight: bold;
-`;
+`
 
 const StyledTextBoardBody = styled.div`
   font-size: 1em;
   margin-top: 2.68em;
   line-height: 1.625em;
   font-family: ${props => props.theme.fontFamily};
-`;
+`
 
 function WhatIsFFFJapan () {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   return (
     <StyledWhatIsFFFJapan>
@@ -74,4 +74,4 @@ function WhatIsFFFJapan () {
   )
 }
 
-export default WhatIsFFFJapan;
+export default WhatIsFFFJapan

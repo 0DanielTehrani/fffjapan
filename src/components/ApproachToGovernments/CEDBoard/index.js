@@ -1,1 +1,1 @@
-export { default } from './CEDBoard';
+export { default } from './CEDBoard'

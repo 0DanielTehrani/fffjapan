@@ -1,1 +1,1 @@
-export { default } from './ToOrganizeFormButton';
+export { default } from './ToOrganizeFormButton'

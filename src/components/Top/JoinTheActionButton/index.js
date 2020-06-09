@@ -1,1 +1,1 @@
-export { default } from './JoinTheActionButton';
+export { default } from './JoinTheActionButton'

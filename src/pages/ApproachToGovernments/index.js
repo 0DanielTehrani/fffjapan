@@ -1,1 +1,1 @@
-export { default } from './ApproachToGovernments';
+export { default } from './ApproachToGovernments'

@@ -1,15 +1,15 @@
-import React from 'react';
-import styled from 'styled-components';
-import { useTranslation } from 'react-i18next';
-import TwitterIcon from '../../SocialIcons/TwitterIcon';
-import FacebookIcon from '../../SocialIcons/FacebookIcon';
-import { Link } from 'react-router-dom';
-import LinkItem from '../../LinkItem';
-import ExternalLinkItem from '../../ExternalLinkItem';
-import RoundLogo from '../../RoundLogo';
-import Logo from '../../Logo';
-import LangSwitchButton from '../LangSwitchButton';
-import { DIGITAL_MARCH_URL } from '../../../constants';
+import React from 'react'
+import styled from 'styled-components'
+import { useTranslation } from 'react-i18next'
+import TwitterIcon from '../../SocialIcons/TwitterIcon'
+import FacebookIcon from '../../SocialIcons/FacebookIcon'
+import { Link } from 'react-router-dom'
+import LinkItem from '../../LinkItem'
+import ExternalLinkItem from '../../ExternalLinkItem'
+import RoundLogo from '../../RoundLogo'
+import Logo from '../../Logo'
+import LangSwitchButton from '../LangSwitchButton'
+import { DIGITAL_MARCH_URL } from '../../../constants'
 
 const StyledFooterDesktop = styled.div`
   display: flex;
@@ -18,18 +18,18 @@ const StyledFooterDesktop = styled.div`
   align-items: center;
   max-width: 100%;
   padding-bottom: 2em;
-`;
+`
 
 const StyledLogos = styled.div`
   & img:first-child {
     margin-right: 8.4px;
   }
-`;
+`
 
 const StyledLinkItems = styled.div`
   display: flex;
   flex-direction: row;
-`;
+`
 
 const StyledLinkItemsRow = styled.div`
   display: flex;
@@ -37,13 +37,13 @@ const StyledLinkItemsRow = styled.div`
   & a {
     margin-left: 30px;
   }
-`;
+`
 
 const StyledLinkItemsColumn = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`;
+`
 
 const SocialsContainer = styled.div`
   display: flex;
@@ -53,29 +53,29 @@ const SocialsContainer = styled.div`
   & :not(:first-child) {
     margin-left: 15px;
   }
-`;
+`
 
-const LinkWrapper = styled.a``;
+const LinkWrapper = styled.a``
 
 const LangSwapContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-left: 15px;
-`;
+`
 
 function FooterDesktop (props) {
-  const roundLogoWidth = '35px';
-  const fontSize = '15px';
-  const logoWidth = '269.5px';
+  const roundLogoWidth = '35px'
+  const fontSize = '15px'
+  const logoWidth = '269.5px'
 
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation()
 
   const toggleLang = () => {
     if (i18n.language === 'en') {
-      i18n.changeLanguage('ja');
+      i18n.changeLanguage('ja')
     } else {
-      i18n.changeLanguage('en');
+      i18n.changeLanguage('en')
     }
   }
 
@@ -90,8 +90,8 @@ function FooterDesktop (props) {
       <StyledLinkItems>
         <StyledLinkItemsRow>
           <StyledLinkItemsColumn>
-              <LinkItem fontSize={fontSize} to='/about-us'>{t('Footer.About Us')}</LinkItem>
-              <LinkItem fontSize={fontSize} to='/faq'>{t('Footer.FAQ')}</LinkItem>
+            <LinkItem fontSize={fontSize} to='/about-us'>{t('Footer.About Us')}</LinkItem>
+            <LinkItem fontSize={fontSize} to='/faq'>{t('Footer.FAQ')}</LinkItem>
           </StyledLinkItemsColumn>
           <StyledLinkItemsColumn>
             <LinkItem fontSize={fontSize} to='/approach-to-governments'>{t('Footer.APG')}</LinkItem>
@@ -113,4 +113,4 @@ function FooterDesktop (props) {
   )
 }
 
-export default FooterDesktop;
+export default FooterDesktop

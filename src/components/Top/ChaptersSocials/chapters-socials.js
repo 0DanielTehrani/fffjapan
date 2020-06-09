@@ -9,7 +9,7 @@ export default [
     name_ja: '仙台',
     name_en:　'Sendai',
     twitter: 'fffsendai',
-    facebook: 'fffsendai',
+    facebook: 'fffsendai'
   },
   {
     name_ja: '那須（栃木）',
@@ -131,6 +131,6 @@ export default [
     name_ja: '鹿児島',
     name_en: 'Kagoshima',
     instagram: 'fffkagoshima'
-  },
+  }
 
 ]

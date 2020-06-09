@@ -1,1 +1,1 @@
-export { default } from './ChapterExpansionPanel';
+export { default } from './ChapterExpansionPanel'

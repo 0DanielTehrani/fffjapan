@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import FacebookIcon from '../../SocialIcons/FacebookIcon';
+import React from 'react'
+import styled from 'styled-components'
+import FacebookIcon from '../../SocialIcons/FacebookIcon'
 
 const StyledButton = styled.button`
   background-color: transparent;
@@ -11,7 +11,7 @@ const StyledButton = styled.button`
   &:hover {
     cursor: pointer;
   }
-`;
+`
 
 function FacebookIconButton (props) {
   return (
@@ -21,5 +21,4 @@ function FacebookIconButton (props) {
   )
 }
 
-
-export default FacebookIconButton;
+export default FacebookIconButton

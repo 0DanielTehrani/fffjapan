@@ -1,1 +1,1 @@
-export { default } from './MobileLinkItem';
+export { default } from './MobileLinkItem'

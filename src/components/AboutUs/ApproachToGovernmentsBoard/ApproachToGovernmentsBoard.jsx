@@ -1,21 +1,21 @@
-import React from 'react';
-import styled from 'styled-components';
-import TextBoard from '../../TextBoard';
-import Text from '../../Text';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import styled from 'styled-components'
+import TextBoard from '../../TextBoard'
+import Text from '../../Text'
+import { Link } from 'react-router-dom'
 
 const StyledApproachToGovernmentsBoard = styled.div`
-`;
+`
 
 const StyledTitle = styled(Text)`
   text-decoration: underline;
   font-size: 1.375em;
   margin-bottom: 2em
-`;
+`
 
 const TextContainer = styled.div`
   margin-top: 2em;
-`;
+`
 
 function ApproachToGovernmentsBoard (props) {
   return (
@@ -32,4 +32,4 @@ function ApproachToGovernmentsBoard (props) {
   )
 }
 
-export default ApproachToGovernmentsBoard;
+export default ApproachToGovernmentsBoard

@@ -1,1 +1,1 @@
-export { default } from './MobileExternalLinkItem';
+export { default } from './MobileExternalLinkItem'

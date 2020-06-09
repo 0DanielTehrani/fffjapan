@@ -1,1 +1,1 @@
-export { default } from './JoinUsText';
+export { default } from './JoinUsText'

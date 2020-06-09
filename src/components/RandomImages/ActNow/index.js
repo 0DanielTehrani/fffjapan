@@ -1,1 +1,1 @@
-export { default } from './ActNow';
+export { default } from './ActNow'

@@ -1,1 +1,1 @@
-export { default } from './InstagramIconButton';
+export { default } from './InstagramIconButton'

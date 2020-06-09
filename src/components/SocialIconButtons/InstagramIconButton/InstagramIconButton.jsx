@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import InstagramIcon from '../../SocialIcons/InstagramIcon';
+import React from 'react'
+import styled from 'styled-components'
+import InstagramIcon from '../../SocialIcons/InstagramIcon'
 
 const StyledButton = styled.button`
   background-color: transparent;
@@ -11,7 +11,7 @@ const StyledButton = styled.button`
   &:hover {
     cursor: pointer;
   }
-`;
+`
 
 function InstagramIconButton (props) {
   return (
@@ -21,5 +21,4 @@ function InstagramIconButton (props) {
   )
 }
 
-
-export default InstagramIconButton;
+export default InstagramIconButton

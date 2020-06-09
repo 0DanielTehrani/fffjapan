@@ -1,1 +1,1 @@
-export { default } from './TwitterIconButton';
+export { default } from './TwitterIconButton'

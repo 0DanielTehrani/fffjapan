@@ -1,12 +1,12 @@
-import React from 'react';
-import { isWebpSupported } from 'react-image-webp/dist/utils';
-import styled from 'styled-components';
-import imgWebp from './earth.webp';
-import img from './earth.png';
+import React from 'react'
+import { isWebpSupported } from 'react-image-webp/dist/utils'
+import styled from 'styled-components'
+import imgWebp from './earth.webp'
+import img from './earth.png'
 
 const StyledEarth = styled.img`
   width: ${props => props.width || '190px'};
-`;
+`
 
 function Earth (props) {
   return (
@@ -14,4 +14,4 @@ function Earth (props) {
   )
 }
 
-export default Earth;
+export default Earth

@@ -1,1 +1,1 @@
-export { default } from './MobileExpansionPanel';
+export { default } from './MobileExpansionPanel'

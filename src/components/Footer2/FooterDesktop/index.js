@@ -1,1 +1,1 @@
-export { default } from './FooterDesktop';
+export { default } from './FooterDesktop'

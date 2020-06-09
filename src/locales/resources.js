@@ -1,5 +1,5 @@
-import enTranslation from './en/translation';
-import jaTranslation from './ja/translation';
+import enTranslation from './en/translation'
+import jaTranslation from './ja/translation'
 
 export default {
   en: {
@@ -8,4 +8,4 @@ export default {
   ja: {
     translation: jaTranslation
   }
-};
+}

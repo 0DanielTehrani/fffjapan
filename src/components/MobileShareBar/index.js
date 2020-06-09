@@ -1,1 +1,1 @@
-export { default } from './MobileShareBar';
+export { default } from './MobileShareBar'

@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import media from 'styled-media-query';
+import React from 'react'
+import styled from 'styled-components'
+import media from 'styled-media-query'
 
 const StyledCallout = styled.div`
   width: 17.8em;
@@ -34,7 +34,7 @@ const StyledCallout = styled.div`
     border-color: transparent #fff transparent transparent;
     border-width: 0 1.36em 1.36em 0;
   }
-`;
+`
 
 function Callout (props) {
   return (
@@ -42,4 +42,4 @@ function Callout (props) {
   )
 }
 
-export default Callout;
+export default Callout

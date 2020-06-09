@@ -1,33 +1,31 @@
-import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import React from 'react'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 import TopLargeImage from '../components/Top/LargeImage'
-import styled from 'styled-components';
-import media from 'styled-media-query';
-import { useMediaQuery } from 'react-responsive';
-import Page from '../components/Page';
-import Text from '../components/Text';
-import MessageBanner from '../components/Top/MessageBanner';
-import AboutUsLinkIconButton from '../components/Top/LinkIconButtons/AboutUsLinkIconButton';
-import JoinUsLinkIconButton from '../components/Top/LinkIconButtons/JoinUsLinkIconButton';
-import OrganizeLinkIconButton from '../components/Top/LinkIconButtons/OrganizeLinkIconButton';
+import styled from 'styled-components'
+import media from 'styled-media-query'
+import { useMediaQuery } from 'react-responsive'
+import Page from '../components/Page'
+import MessageBanner from '../components/Top/MessageBanner'
+import AboutUsLinkIconButton from '../components/Top/LinkIconButtons/AboutUsLinkIconButton'
+import JoinUsLinkIconButton from '../components/Top/LinkIconButtons/JoinUsLinkIconButton'
+import OrganizeLinkIconButton from '../components/Top/LinkIconButtons/OrganizeLinkIconButton'
 import MobileAboutUsButton from '../components/Top/LinkIconButtons/MobileAboutUsButton'
 import MobileJoinUsButton from '../components/Top/LinkIconButtons/MobileJoinUsButton'
 import MobileOrganizeButton from '../components/Top/LinkIconButtons/MobileOrganizeButton'
-import Video from '../components/Top/Video';
-import VideoB from '../components/Top/VideoB';
-import VideoTitle from '../components/Top/VideoTitle';
-import VideoBTitle from '../components/Top/VideoBTitle';
-import TimeToQuestionTitle from '../components/Top/TimeToQuestionTitle';
-import ChapersSocials from '../components/Top/ChaptersSocials';
-import ChapterExpansionPanel from '../components/Top/ChaptersSocials/ChapterExpansionPanel';
+import Video from '../components/Top/Video'
+import VideoB from '../components/Top/VideoB'
+import VideoTitle from '../components/Top/VideoTitle'
+import VideoBTitle from '../components/Top/VideoBTitle'
+import TimeToQuestionTitle from '../components/Top/TimeToQuestionTitle'
+import ChapersSocials from '../components/Top/ChaptersSocials'
 
 const TopLargeImageContainer = styled.div`
   margin-top: 40px;
-`;
+`
 
 const FooterContainer = styled.div`
-`;
+`
 
 const MessageBannerContainer = styled.div`
   font-size: 42px;
@@ -42,7 +40,7 @@ const MessageBannerContainer = styled.div`
   ${media.lessThan('small')`
     font-size: 11px;
   `}
-`;
+`
 
 const LinkIconButtonsContainer = styled.div`
   display: flex;
@@ -63,7 +61,7 @@ const LinkIconButtonsContainer = styled.div`
   ${media.lessThan('small')`
     font-size: 6px;
   `}
-`;
+`
 
 const MobileLinkIconButtonsContainer = styled.div`
   display: flex;
@@ -73,7 +71,7 @@ const MobileLinkIconButtonsContainer = styled.div`
   & >:not(:first-child) {
     margin-top: 2em;
   }
-`;
+`
 
 const VideoTitleContainer = styled.div`
   width: 100%;
@@ -89,7 +87,7 @@ const VideoTitleContainer = styled.div`
   ${media.lessThan('small')`
     font-size: 10px;
   `}
-`;
+`
 
 const VideosContainer = styled.div`
   width: 100%;
@@ -100,11 +98,11 @@ const VideosContainer = styled.div`
     flex-direction: column;
     margin-top: 4em;
   `}
-`;
+`
 
 const VideoContainer = styled.div`
   width: 100%;
-`;
+`
 
 const ChapersSocialsContainer = styled.div`
   width: 100%;
@@ -114,7 +112,7 @@ const ChapersSocialsContainer = styled.div`
   `};
   display: flex;
   justify-content: center;
-`;
+`
 
 const MiraiQContainer = styled.div`
   margin: 7em 0em;
@@ -129,7 +127,7 @@ const MiraiQContainer = styled.div`
   ${media.lessThan('small')`
     font-size: 10px;
   `}
-`;
+`
 
 const TimeToQuestionTitleContainer = styled.div`
   margin: 7em 0em;
@@ -145,10 +143,10 @@ const TimeToQuestionTitleContainer = styled.div`
     font-size: 10px;
   `}
   margin-bottom: 2em;
-`;
+`
 
 function Top () {
-  const isMobile = useMediaQuery({ query: '(max-width: 450px)' });
+  const isMobile = useMediaQuery({ query: '(max-width: 450px)' })
 
   return (
     <Page>
@@ -160,8 +158,8 @@ function Top () {
         <MessageBanner />
       </MessageBannerContainer>
       {
-        isMobile ?
-          <MobileLinkIconButtonsContainer>
+        isMobile
+          ? <MobileLinkIconButtonsContainer>
             <MobileAboutUsButton />
             <MobileJoinUsButton />
             <MobileOrganizeButton />
@@ -198,8 +196,8 @@ function Top () {
           src="https://www.time-to-question.com/ja/questions/?partner=fridays-for-future-japan"
           width="100%"
           height="700"
-          frameborder="0"
-          style={{ height: '80vh'}}></iframe>
+          frameBorder="0"
+          style={{ height: '80vh' }}></iframe>
       </MiraiQContainer>
       <FooterContainer>
         <Footer />
@@ -208,4 +206,4 @@ function Top () {
   )
 }
 
-export default Top;
+export default Top

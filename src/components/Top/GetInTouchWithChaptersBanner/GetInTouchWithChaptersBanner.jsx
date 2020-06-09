@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 import styled from 'styled-components'
-import media from 'styled-media-query';
-import { useTranslation } from 'react-i18next';
-import Text from '../../Text';
+import media from 'styled-media-query'
+import { useTranslation } from 'react-i18next'
+import Text from '../../Text'
 
 const StyledGetInTouchWithChaptersBanner = styled(Text)`
   font-size: 2em;
@@ -13,10 +13,10 @@ const StyledGetInTouchWithChaptersBanner = styled(Text)`
     width: 100%;
   `}
   display: inline-block;
-`;
+`
 
 function GetInTouchWithChaptersBanner () {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   return (
     <StyledGetInTouchWithChaptersBanner>
@@ -25,4 +25,4 @@ function GetInTouchWithChaptersBanner () {
   )
 }
 
-export default GetInTouchWithChaptersBanner;
+export default GetInTouchWithChaptersBanner

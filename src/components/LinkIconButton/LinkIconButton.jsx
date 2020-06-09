@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import LinkButton from './LinkButton';
+import React from 'react'
+import styled from 'styled-components'
+import LinkButton from './LinkButton'
 
 const StyledLinkIconButton = styled.div`
   display: flex;
@@ -10,21 +10,21 @@ const StyledLinkIconButton = styled.div`
   width: 15.9em;
   height: 15.9em;
   background-color: ${props => props.backgroundColor};
-`;
+`
 
 const StyledIcon = styled.img`
   width: 8.63em;
-`;
+`
 
 const StyledTextImage = styled.img`
   height: 2.96em;
-`;
+`
 
 const StyledText = styled.span`
   font-size: 1em;
   font-family: ${props => props.theme.fontFamily};
   color: ${props => props.theme.yellow};
-`;
+`
 
 function LinkIconButton (props) {
   return (
@@ -38,4 +38,4 @@ function LinkIconButton (props) {
   )
 }
 
-export default LinkIconButton;
+export default LinkIconButton

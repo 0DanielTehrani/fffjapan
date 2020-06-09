@@ -1,5 +1,5 @@
-import React from 'react';
-import Text from '../../Text';
+import React from 'react'
+import Text from '../../Text'
 
 function AboutOrganizing (props) {
   return (
@@ -12,4 +12,4 @@ function AboutOrganizing (props) {
   )
 }
 
-export default AboutOrganizing;
+export default AboutOrganizing

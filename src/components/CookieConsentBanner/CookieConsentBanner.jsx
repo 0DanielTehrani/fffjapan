@@ -1,39 +1,39 @@
-import React from 'react';
-import styled from 'styled-components';
-import { useTranslation } from 'react-i18next';
-import media from 'styled-media-query';
-import { useMediaQuery } from 'react-responsive';
-import { withTheme } from 'styled-components';
-import CookieConsent from 'react-cookie-consent';
-import Text from '../Text';
+import React from 'react'
+import styled, { withTheme } from 'styled-components'
+import { useTranslation } from 'react-i18next'
+import media from 'styled-media-query'
+import { useMediaQuery } from 'react-responsive'
+
+import CookieConsent from 'react-cookie-consent'
+import Text from '../Text'
 
 const StyledText = styled(Text)`
   font-size: 0.8em;
   margin: 0;
-`;
+`
 
-function CookieConsentBanner(props) {
-  const isMobile = useMediaQuery({ query: '(max-width: 450px)' });
+function CookieConsentBanner (props) {
+  const isMobile = useMediaQuery({ query: '(max-width: 450px)' })
 
   const bannerStyle = {
     backgroundColor: '#fff',
     textAlign: 'center',
     padding: isMobile ? '0.5em' : '0.5em 10em 0.5em 0px',
     boxShadow: '-4px -6px 14px rgba(179, 177, 177)',
-    alignItems: 'center',
-  };
+    alignItems: 'center'
+  }
 
   const buttonStyle = {
     backgroundColor: props.theme.beige,
     color: props.theme.green,
-    fontSize: '0.8em',
-  };
-
-  const contentStyle = {
-    margin: '0',
+    fontSize: '0.8em'
   }
 
-  const { t } = useTranslation();
+  const contentStyle = {
+    margin: '0'
+  }
+
+  const { t } = useTranslation()
 
   return (
     <CookieConsent
@@ -47,4 +47,4 @@ function CookieConsentBanner(props) {
   )
 }
 
-export default withTheme(CookieConsentBanner);
+export default withTheme(CookieConsentBanner)

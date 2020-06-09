@@ -1,16 +1,16 @@
-import React from 'react';
-import styled from 'styled-components';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import Page from '../components/Page';
-import Text from '../components/Text';
-import { ORGANIZE_GOOGLE_FORM_URL } from '../constants';
-const largeSpace = '\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0';
+import React from 'react'
+import styled from 'styled-components'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+import Page from '../components/Page'
+import Text from '../components/Text'
+import { ORGANIZE_GOOGLE_FORM_URL } from '../constants'
+const largeSpace = '\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0'
 
 const StyledPrivacyPolicy = styled(Text)`
   white-space: pre-line;
   color: #000;
-`;
+`
 
 const Heading = styled(Text)`
   display: inline-block;
@@ -19,7 +19,7 @@ const Heading = styled(Text)`
   color: #000;
   white-space: pre-line;
   padding: 1em 0;
-`;
+`
 
 const Body = styled(Text)`
   font-size: 0.9em;
@@ -29,13 +29,11 @@ const Body = styled(Text)`
 
 const HeaderContainer = styled.div`
   margin-bottom: 5em;
-`;
-
+`
 
 const FooterContainer = styled.div`
   margin-top: 5em;
-`;
-
+`
 
 function PrivacyPolicy () {
   return (
@@ -43,7 +41,7 @@ function PrivacyPolicy () {
       <HeaderContainer>
         <Header />
       </HeaderContainer>
-        <StyledPrivacyPolicy>
+      <StyledPrivacyPolicy>
         当サイト fridaysforfuture.jp（以下，「当サイト」といいます。）では，
         ユーザーの個人情報の取扱いについて，以下のとおりプライバシーポリシー（以下，「本ポリシー」といいます。）
         を定めます。 <br />
@@ -73,11 +71,11 @@ function PrivacyPolicy () {
 
         <Body>
         当サイトが個人情報を収集・利用する目的は、以下のとおりです。 <br />
-        {largeSpace}1.ユーザーからのお問い合わせに回答するため <br />
-        {largeSpace}2.当サイトの<a href={ORGANIZE_GOOGLE_FORM_URL}>オーガナイザー募集フォーム</a>使い、応募したの方へのご連絡のため <br />
-        {largeSpace}3.重要なお知らせなど必要に応じたご連絡のため <br />
-        {largeSpace}4.不正・不当な目的で当サイトを利用しようとするユーザーの特定をし，ご利用をお断りするため <br />
-        {largeSpace}5.（上記の利用目的に付随する目的）<br />
+          {largeSpace}1.ユーザーからのお問い合わせに回答するため <br />
+          {largeSpace}2.当サイトの<a href={ORGANIZE_GOOGLE_FORM_URL}>オーガナイザー募集フォーム</a>使い、応募したの方へのご連絡のため <br />
+          {largeSpace}3.重要なお知らせなど必要に応じたご連絡のため <br />
+          {largeSpace}4.不正・不当な目的で当サイトを利用しようとするユーザーの特定をし，ご利用をお断りするため <br />
+          {largeSpace}5.（上記の利用目的に付随する目的）<br />
         </Body>
 
         <br />
@@ -98,21 +96,21 @@ function PrivacyPolicy () {
         <Body>
         1.当サイトは，次に掲げる場合を除いて，あらかじめユーザーの同意を得ることなく，
         第三者に個人情報を提供することはありません。ただし，個人情報保護法その他の法令で認められる場合を除きます。 <br />
-        {largeSpace}1.人の生命，身体または財産の保護のために必要がある場合であって，本人の同意を得ることが困難であるとき <br />
-        {largeSpace}2.公衆衛生の向上または児童の健全な育成の推進のために特に必要がある場合であって，本人の同意を得ることが困難であるとき <br />
-        {largeSpace}3.国の機関もしくは地方公共団体またはその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合であって，
+          {largeSpace}1.人の生命，身体または財産の保護のために必要がある場合であって，本人の同意を得ることが困難であるとき <br />
+          {largeSpace}2.公衆衛生の向上または児童の健全な育成の推進のために特に必要がある場合であって，本人の同意を得ることが困難であるとき <br />
+          {largeSpace}3.国の機関もしくは地方公共団体またはその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合であって，
         本人の同意を得ることにより当該事務の遂行に支障を及ぼすおそれがあるとき <br />
-        {largeSpace}4.予め次の事項を告知あるいは公表し，かつ当サイトが個人情報保護委員会に届出をしたとき <br />
-        {largeSpace}{largeSpace}1.利用目的に第三者への提供を含むこと <br />
-        {largeSpace}{largeSpace}2.利用目的に第三者への提供を含むこと第三者に提供されるデータの項目 <br />
-        {largeSpace}{largeSpace}3.第三者への提供の手段または方法 <br />
-        {largeSpace}{largeSpace}4.本人の求めに応じて個人情報の第三者への提供を停止すること <br />
-        {largeSpace}{largeSpace}5.本人の求めを受け付ける方法 <br />
-        <br />
+          {largeSpace}4.予め次の事項を告知あるいは公表し，かつ当サイトが個人情報保護委員会に届出をしたとき <br />
+          {largeSpace}{largeSpace}1.利用目的に第三者への提供を含むこと <br />
+          {largeSpace}{largeSpace}2.利用目的に第三者への提供を含むこと第三者に提供されるデータの項目 <br />
+          {largeSpace}{largeSpace}3.第三者への提供の手段または方法 <br />
+          {largeSpace}{largeSpace}4.本人の求めに応じて個人情報の第三者への提供を停止すること <br />
+          {largeSpace}{largeSpace}5.本人の求めを受け付ける方法 <br />
+          <br />
         2.前項の定めにかかわらず，次に掲げる場合には，当該情報の提供先は第三者に該当しないものとします。<br />
-        {largeSpace}1.当サイトが利用目的の達成に必要な範囲内において個人情報の取扱いの全部または一部を委託する場合 <br />
-        {largeSpace}2.合併その他の事由による活動の承継に伴って個人情報が提供される場合 <br />
-        {largeSpace}3.個人情報を特定の者との間で共同して利用する場合であって，
+          {largeSpace}1.当サイトが利用目的の達成に必要な範囲内において個人情報の取扱いの全部または一部を委託する場合 <br />
+          {largeSpace}2.合併その他の事由による活動の承継に伴って個人情報が提供される場合 <br />
+          {largeSpace}3.個人情報を特定の者との間で共同して利用する場合であって，
         その旨並びに共同して利用される個人情報の項目，共同して利用する者の範囲，利用する者の利用目的および当該個人情報の管理について責任を有する者の氏名または名称について，
         あらかじめ本人に通知し，または本人が容易に知り得る状態に置いた場合<br />
         </Body>
@@ -177,8 +175,7 @@ function PrivacyPolicy () {
           Eメールアドレス：contact@fridaysforfuture.jp
         </Body>
 
-
-        </StyledPrivacyPolicy>
+      </StyledPrivacyPolicy>
       <FooterContainer>
         <Footer />
       </FooterContainer>
@@ -186,4 +183,4 @@ function PrivacyPolicy () {
   )
 }
 
-export default PrivacyPolicy;
+export default PrivacyPolicy

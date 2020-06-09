@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import media from 'styled-media-query';
+import React from 'react'
+import styled from 'styled-components'
+import media from 'styled-media-query'
 
 const StyledHistoryBoard = styled.div`
   font-size: 1em;
@@ -11,14 +11,14 @@ const StyledHistoryBoard = styled.div`
   padding-left: 3.125em;
   display: inline-block;
   max-width: 26.875em;
-`;
+`
 
 const StyledHeaderContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-top: 1em;
-`;
+`
 
 const StyledDateText = styled.div`
   font-size: 0.875em;
@@ -26,18 +26,18 @@ const StyledDateText = styled.div`
   text-align: right;
   margin-right: -1.875em;
   text-decoration: underline;
-`;
+`
 
 const StyledHistoryCountContainer = styled.div`
   display: inline-block;
   text-align: center;
-`;
+`
 
 const StyledHistoryText = styled.div`
   font-size: 0.75em;
   color: ${props => props.theme.textColor};
   font-family: ${props => props.theme.fontFamily};
-`;
+`
 
 const StyledCountText = styled.span`
   display: inline-block;
@@ -47,7 +47,7 @@ const StyledCountText = styled.span`
   border-bottom: solid 0.06em ${props => props.theme.textColor};
   width: 1.4em;
   text-align: center;
-`;
+`
 
 const StyledTitle = styled.div`
   display: inline-block;
@@ -56,7 +56,7 @@ const StyledTitle = styled.div`
   font-family: ${props => props.theme.fontFamily};
   white-space: pre-line;
   margin-left: 0.81em;
-`;
+`
 
 const StyledText = styled.div`
   font-size: 1em;
@@ -66,14 +66,14 @@ const StyledText = styled.div`
   padding: 0;
   margin-right: auto;
   margin-left: auto;
-`;
+`
 
 function HistoryBoard (props) {
-  const { title, mainText, alignDateTextBottom, dateText, countText } = props;
+  const { title, mainText, alignDateTextBottom, dateText, countText } = props
 
   return (
     <StyledHistoryBoard {...props}>
-      { !alignDateTextBottom &&  <StyledDateText>{dateText}</StyledDateText>}
+      { !alignDateTextBottom && <StyledDateText>{dateText}</StyledDateText>}
       <StyledHeaderContainer>
         <StyledHistoryCountContainer>
           <StyledHistoryText>history</StyledHistoryText>
@@ -87,4 +87,4 @@ function HistoryBoard (props) {
   )
 }
 
-export default HistoryBoard;
+export default HistoryBoard

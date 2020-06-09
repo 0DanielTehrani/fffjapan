@@ -1,1 +1,1 @@
-export { default } from './Flower';
+export { default } from './Flower'

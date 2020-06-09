@@ -1,1 +1,1 @@
-export { default } from './WhatIsFFFJapan';
+export { default } from './WhatIsFFFJapan'

@@ -1,1 +1,1 @@
-export { default } from './OrganizeLinkIconButton';
+export { default } from './OrganizeLinkIconButton'

@@ -1,1 +1,1 @@
-export { default } from './TopLabelText';
+export { default } from './TopLabelText'

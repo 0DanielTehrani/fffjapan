@@ -1,1 +1,1 @@
-export { default } from './MobileOrganizeButton';
+export { default } from './MobileOrganizeButton'

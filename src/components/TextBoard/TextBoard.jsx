@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
 
 const StyledTextBoard = styled.div`
   font-size: 1em;
@@ -8,7 +8,7 @@ const StyledTextBoard = styled.div`
   padding-top: ${props => props.paddingTop || '3.125em'};
   color: ${props => props.theme.textColor};
   font-family: ${props => props.theme.fontFamily};
-`;
+`
 
 function TextBoard (props) {
   return (
@@ -16,4 +16,4 @@ function TextBoard (props) {
   )
 }
 
-export default TextBoard;
+export default TextBoard

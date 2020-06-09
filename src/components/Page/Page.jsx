@@ -1,10 +1,10 @@
-import React from 'react';
-import styled from 'styled-components';
-import { useMediaQuery } from 'react-responsive';
-import media from 'styled-media-query';
-import CookieConsentBanner from '../CookieConsentBanner';
-import MobileShareBar from '../MobileShareBar';
-import Sidebar from '../Sidebar';
+import React from 'react'
+import styled from 'styled-components'
+import { useMediaQuery } from 'react-responsive'
+import media from 'styled-media-query'
+import CookieConsentBanner from '../CookieConsentBanner'
+import MobileShareBar from '../MobileShareBar'
+import Sidebar from '../Sidebar'
 
 const StyledPage = styled.div`
   margin-right: auto;
@@ -20,10 +20,10 @@ const StyledPage = styled.div`
   ${media.lessThan('small')`
     max-width: 330px;
   `}
-`;
+`
 
-function Page(props) {
-  const isBelowThreshold = useMediaQuery({ query: '(max-width: 1425px)' });
+function Page (props) {
+  const isBelowThreshold = useMediaQuery({ query: '(max-width: 1425px)' })
   return (
     <StyledPage {...props}>
       {props.children}
@@ -33,4 +33,4 @@ function Page(props) {
   )
 }
 
-export default Page;
+export default Page

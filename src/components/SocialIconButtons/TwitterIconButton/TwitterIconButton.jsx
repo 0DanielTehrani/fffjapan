@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import TwitterIcon from '../../SocialIcons/TwitterIcon';
+import React from 'react'
+import styled from 'styled-components'
+import TwitterIcon from '../../SocialIcons/TwitterIcon'
 
 const StyledButton = styled.button`
   background-color: transparent;
@@ -11,7 +11,7 @@ const StyledButton = styled.button`
   &:hover {
     cursor: pointer;
   }
-`;
+`
 
 function TwitterIconButton (props) {
   return (
@@ -21,5 +21,4 @@ function TwitterIconButton (props) {
   )
 }
 
-
-export default TwitterIconButton;
+export default TwitterIconButton

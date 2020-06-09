@@ -1,12 +1,12 @@
-import React from 'react';
-import { isWebpSupported } from 'react-image-webp/dist/utils';
-import styled from 'styled-components';
-import imgWebp from './organize-large.webp';
-import img from './organize-large.png';
+import React from 'react'
+import { isWebpSupported } from 'react-image-webp/dist/utils'
+import styled from 'styled-components'
+import imgWebp from './organize-large.webp'
+import img from './organize-large.png'
 
 const StyledLargeImage = styled.img`
   width: ${props => props.width || '39.875em'};
-`;
+`
 
 function LargeImage (props) {
   return (
@@ -14,4 +14,4 @@ function LargeImage (props) {
   )
 }
 
-export default LargeImage;
+export default LargeImage

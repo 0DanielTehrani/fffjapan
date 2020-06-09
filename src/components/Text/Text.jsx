@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
 
 const StyledText = styled.span`
   font-size: ${props => props.fontSize || '1em'};
@@ -8,7 +8,7 @@ const StyledText = styled.span`
   font-weight: ${props => props.bold ? 'bold' : 'normal'};
   text-decoration: ${props => props.underline ? 'underline' : 'none'};
   line-height: 1.625em;
-`;
+`
 
 function Text (props) {
   return (
@@ -16,4 +16,4 @@ function Text (props) {
   )
 }
 
-export default Text;
+export default Text

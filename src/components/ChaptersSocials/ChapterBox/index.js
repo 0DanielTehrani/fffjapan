@@ -1,1 +1,1 @@
-export { default } from './ChapterBox';
+export { default } from './ChapterBox'

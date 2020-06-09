@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import styled from 'styled-components'
-import { useTranslation } from 'react-i18next';
-import Modal from '@material-ui/core/Modal';
-import LinkItem from '../LinkItem';
-import { Bars } from '@styled-icons/fa-solid/Bars';
+import { useTranslation } from 'react-i18next'
+import Modal from '@material-ui/core/Modal'
+import LinkItem from '../LinkItem'
+import { Bars } from '@styled-icons/fa-solid/Bars'
 
 const StyledBars = styled(Bars)`
   width: 20px;
   color: ${props => props.theme.textColor};
-`;
+`
 
 const StyledLinkMenu = styled.div`
   display: flex;
@@ -20,14 +20,14 @@ const StyledLinkMenu = styled.div`
   & :not(:first-child) {
     margin-top: 22px;
   }
-`;
+`
 
 const StyledModal = styled(Modal)`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`;
+`
 
 const StyledWhiteCloseButton = styled.span`
   font-size: 0.8em;
@@ -40,28 +40,28 @@ const StyledWhiteCloseButton = styled.span`
   font-family: ${props => props.theme.fontFamily};
   width: 100%;
   text-align: center;
-`;
+`
 
 const StyledCloseButtonContainer = styled.div`
   margin-top: 22px;
   font-size: ${props => props.fontSize};
   width: 100%;
-`;
+`
 
 function LinkMenu (props) {
-  const [menuExpanded, setMenuExpanded] = useState(false);
+  const [menuExpanded, setMenuExpanded] = useState(false)
 
   const handleBarsClick = () => {
-    setMenuExpanded(true);
+    setMenuExpanded(true)
   }
 
   const handleClose = () => {
-    setMenuExpanded(false);
+    setMenuExpanded(false)
   }
 
-  const { fontSize } = props;
+  const { fontSize } = props
 
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   return (
     <>
@@ -83,4 +83,4 @@ function LinkMenu (props) {
   )
 }
 
-export default LinkMenu;
+export default LinkMenu

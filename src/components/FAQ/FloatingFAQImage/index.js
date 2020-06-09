@@ -1,1 +1,1 @@
-export { default } from './FloatingFAQImage';
+export { default } from './FloatingFAQImage'

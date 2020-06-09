@@ -1,21 +1,21 @@
-import React from 'react';
-import styled from 'styled-components';
-import { isWebpSupported } from 'react-image-webp/dist/utils';
-import { useTranslation } from 'react-i18next';
-import media from 'styled-media-query';
-import HistoryBoard from '../../HistoryBoard';
-import img1Wep from './history-4-1.webp';
-import img2Wep from './history-4-2.webp';
-import img3Wep from './history-4-3.webp';
-import img1 from './history-4-1.png';
-import img2 from './history-4-2.png';
-import img3 from './history-4-3.png';
+import React from 'react'
+import styled from 'styled-components'
+import { isWebpSupported } from 'react-image-webp/dist/utils'
+import { useTranslation } from 'react-i18next'
+import media from 'styled-media-query'
+import HistoryBoard from '../../HistoryBoard'
+import img1Wep from './history-4-1.webp'
+import img2Wep from './history-4-2.webp'
+import img3Wep from './history-4-3.webp'
+import img1 from './history-4-1.png'
+import img2 from './history-4-2.png'
+import img3 from './history-4-3.png'
 
 const StyledHistory4 = styled.div`
   font-size: 1em;
   display: flex;
   flex-direction: column;
-`;
+`
 
 const StyledImagesContainer = styled.div`
   margin-bottom: -23.25em;
@@ -25,7 +25,7 @@ const StyledImagesContainer = styled.div`
     margin-left: auto;
     margin-right: auto;
   `};
-`;
+`
 
 const StyledLargeImage = styled.img`
   width: 32.5em;
@@ -35,9 +35,9 @@ const StyledLargeImage = styled.img`
     margin-left: auto;
     margin-right: auto;
   `};
-`;
+`
 
-const ImageContainer = styled.div``;
+const ImageContainer = styled.div``
 
 const StyledSmallImage = styled.img`
   width: 15.93em;
@@ -47,8 +47,7 @@ const StyledSmallImage = styled.img`
     margin-left: auto;
     margin-right: auto;
   `};
-`;
-
+`
 
 const StyledSmallImagesContainer = styled.div`
   margin-top: 0.75em;
@@ -59,15 +58,15 @@ const StyledSmallImagesContainer = styled.div`
   & > :nth-child(2) {
     margin-left: 0.35em;
   }
-`;
+`
 
 function History4 () {
-  const { t } = useTranslation();
-  const title = t('About Us.History4_Title');
-  const mainText = t('About Us.History4');
-  const dateText = '2019.9.20';
+  const { t } = useTranslation()
+  const title = t('About Us.History4_Title')
+  const mainText = t('About Us.History4')
+  const dateText = '2019.9.20'
 
-  const useWebp = isWebpSupported();
+  const useWebp = isWebpSupported()
 
   return (
     <StyledHistory4>
@@ -90,4 +89,4 @@ function History4 () {
   )
 }
 
-export default History4;
+export default History4

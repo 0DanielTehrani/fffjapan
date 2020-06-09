@@ -1,15 +1,14 @@
-import React from 'react';
-import styled from 'styled-components';
-import { useMediaQuery } from 'react-responsive';
-import { isWebpSupported } from 'react-image-webp/dist/utils';
-import { useTranslation } from 'react-i18next';
-import media from 'styled-media-query';
-import HistoryBoard from '../../HistoryBoard';
-import img1Webp from './history-3-1.webp';
-import img2Webp from './history-3-2.webp';
-import img1 from './history-3-1.png';
-import img2 from './history-3-2.png';
-
+import React from 'react'
+import styled from 'styled-components'
+import { useMediaQuery } from 'react-responsive'
+import { isWebpSupported } from 'react-image-webp/dist/utils'
+import { useTranslation } from 'react-i18next'
+import media from 'styled-media-query'
+import HistoryBoard from '../../HistoryBoard'
+import img1Webp from './history-3-1.webp'
+import img2Webp from './history-3-2.webp'
+import img1 from './history-3-1.png'
+import img2 from './history-3-2.png'
 
 const StyledHistory3 = styled.div`
   font-size: 1em;
@@ -19,7 +18,7 @@ const StyledHistory3 = styled.div`
   ${media.lessThan('large')`
     align-items: center;
   `};
-`;
+`
 
 const StyledImagesContainer = styled.div`
   display: flex;
@@ -36,9 +35,9 @@ const StyledImagesContainer = styled.div`
     margin-right: 0;
     margin-top: -10em;
   `};
-`;
+`
 
-const ImageContainer = styled.div``;
+const ImageContainer = styled.div``
 
 const StyledImage = styled.img`
   width: 18.43em;
@@ -47,17 +46,17 @@ const StyledImage = styled.img`
   ${media.lessThan('small')`
     width: 44vw;
   `};
-`;
+`
 
 function History3 () {
-  const { t } = useTranslation();
-  const title = t('About Us.History3_Title');
-  const mainText = t('About Us.History3');
-  const dateText = '2019.5.24';
+  const { t } = useTranslation()
+  const title = t('About Us.History3_Title')
+  const mainText = t('About Us.History3')
+  const dateText = '2019.5.24'
 
-  const useWebp = isWebpSupported();
+  const useWebp = isWebpSupported()
 
-  const isMobile = useMediaQuery({ query: '(max-width: 450px)' });
+  const isMobile = useMediaQuery({ query: '(max-width: 450px)' })
 
   return (
     <StyledHistory3>
@@ -76,4 +75,4 @@ function History3 () {
   )
 }
 
-export default History3;
+export default History3

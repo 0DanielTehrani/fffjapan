@@ -1,1 +1,1 @@
-export { default } from './WebsiteIconButton';
+export { default } from './WebsiteIconButton'

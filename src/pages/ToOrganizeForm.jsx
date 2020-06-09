@@ -1,16 +1,16 @@
-import React from 'react';
-import styled from 'styled-components';
-import media from 'styled-media-query';
-import { useMediaQuery } from 'react-responsive';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import Page from '../components/Page';
-import TopLabelText from '../components/ToOrganizeForm/TopLabelText';
-import LargeImage from '../components/ToOrganizeForm/LargeImage';
-import OrganizeImage from '../components/RandomImages/Organize';
-import AboutOrganizing from '../components/ToOrganizeForm/AboutOrganizing';
-import ToOrganizeFormButton from '../components/ToOrganizeForm/ToOrganizeFormButton';
-import CreditNotation from '../components/CreditNotation';
+import React from 'react'
+import styled from 'styled-components'
+import media from 'styled-media-query'
+import { useMediaQuery } from 'react-responsive'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+import Page from '../components/Page'
+import TopLabelText from '../components/ToOrganizeForm/TopLabelText'
+import LargeImage from '../components/ToOrganizeForm/LargeImage'
+import OrganizeImage from '../components/RandomImages/Organize'
+import AboutOrganizing from '../components/ToOrganizeForm/AboutOrganizing'
+import ToOrganizeFormButton from '../components/ToOrganizeForm/ToOrganizeFormButton'
+import CreditNotation from '../components/CreditNotation'
 
 const StyledToOrganizeForm = styled.div`
   background-color: ${props => props.theme.blue};
@@ -31,7 +31,7 @@ const StyledToOrganizeForm = styled.div`
     font-size: 13px;
   `}
   margin-top: 3.125em;
-`;
+`
 
 const TopRowContainer = styled.div`
   display: flex;
@@ -41,19 +41,19 @@ const TopRowContainer = styled.div`
   ${media.lessThan('small')`
     flex-direction: column;
   `}
-`;
+`
 
 const OrganizeImageContainer = styled.div`
-`;
+`
 
 const RightContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-`;
+`
 
 const LargeImageContainer = styled.div`
-`;
+`
 
 const LeftContainer = styled.div`
   display: flex;
@@ -65,51 +65,51 @@ const LeftContainer = styled.div`
     align-items: center;
     width: auto;
   `}
-`;
+`
 
 const AboutOrganizingContainer = styled.div`
   margin-bottom: 9em;
-`;
+`
 
 const ToOrganizeFormButtonContainer = styled.div`
-`;
+`
 
 const FooterContainer = styled.div`
   margin-top: 5em;
-`;
+`
 
 function ToOrganizeForm () {
-  const isMobile = useMediaQuery({ query: '(max-width: 450px)' });
+  const isMobile = useMediaQuery({ query: '(max-width: 450px)' })
 
   return (
     <Page>
       <Header />
-        <StyledToOrganizeForm>
-          <LeftContainer>
-            <TopRowContainer>
-              <TopLabelText />
-              <OrganizeImageContainer>
-                <OrganizeImage />
-              </OrganizeImageContainer>
-            </TopRowContainer>
-            <AboutOrganizingContainer>
-              <AboutOrganizing />
-            </AboutOrganizingContainer>
-            <ToOrganizeFormButtonContainer>
-              <ToOrganizeFormButton />
-            </ToOrganizeFormButtonContainer>
-          </LeftContainer>
-          <RightContainer>
-            <LargeImageContainer>
+      <StyledToOrganizeForm>
+        <LeftContainer>
+          <TopRowContainer>
+            <TopLabelText />
+            <OrganizeImageContainer>
+              <OrganizeImage />
+            </OrganizeImageContainer>
+          </TopRowContainer>
+          <AboutOrganizingContainer>
+            <AboutOrganizing />
+          </AboutOrganizingContainer>
+          <ToOrganizeFormButtonContainer>
+            <ToOrganizeFormButton />
+          </ToOrganizeFormButtonContainer>
+        </LeftContainer>
+        <RightContainer>
+          <LargeImageContainer>
             {
-              isMobile ?
-              <LargeImage width='95%' />
-              : <LargeImage/>
+              isMobile
+                ? <LargeImage width='95%' />
+                : <LargeImage/>
             }
-            </LargeImageContainer>
-            <CreditNotation creditTo='Fridays For Future Kyoto'/>
-          </RightContainer>
-        </StyledToOrganizeForm>
+          </LargeImageContainer>
+          <CreditNotation creditTo='Fridays For Future Kyoto'/>
+        </RightContainer>
+      </StyledToOrganizeForm>
       <FooterContainer>
         <Footer />
       </FooterContainer>
@@ -117,4 +117,4 @@ function ToOrganizeForm () {
   )
 }
 
-export default ToOrganizeForm;
+export default ToOrganizeForm

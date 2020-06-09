@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 import styled from 'styled-components'
-import { isWebpSupported } from 'react-image-webp/dist/utils';
-import { useTranslation } from 'react-i18next';
-import { DIGITAL_MARCH_URL } from '../../../constants';
-import iconWebp from './fffj-join-us.webp';
-import icon from './fffj-join-us.png';
-import LinkButton from './LinkButton';
+import { isWebpSupported } from 'react-image-webp/dist/utils'
+import { useTranslation } from 'react-i18next'
+import { DIGITAL_MARCH_URL } from '../../../constants'
+import iconWebp from './fffj-join-us.webp'
+import icon from './fffj-join-us.png'
+import LinkButton from './LinkButton'
 
 const StyledJoinTheActionButton = styled.div`
   display: flex;
@@ -17,29 +17,29 @@ const StyledJoinTheActionButton = styled.div`
   border-radius: 2.2em;
   border: 0px;
   font-size: 1em;
-`;
+`
 
 const StyledButtonIconContainer = styled.div`
   margin-left: 1.22em;
-`;
+`
 
 const StyledButtonIcon = styled.img`
   width: 3.45em;
-`;
+`
 
 const StyledButtonTextContainer = styled.div`
   margin-left: 0.74em;
-`;
+`
 
 const StyledButtonText = styled.span`
   font-size: 1em;
   color: ${props => props.theme.yellow || props.color};
   display: block;
   font-family: ${props => props.theme.fontFamily};
-`;
+`
 
 function JoinTheActionButton (props) {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   return (
     <LinkButton target='_blank' href={DIGITAL_MARCH_URL} zIndex={props.zIndex}>
@@ -56,4 +56,4 @@ function JoinTheActionButton (props) {
   )
 }
 
-export default JoinTheActionButton;
+export default JoinTheActionButton

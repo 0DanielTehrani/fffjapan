@@ -1,8 +1,8 @@
-import React from 'react';
-import media from 'styled-media-query';
-import styled from 'styled-components';
-import { useTranslation } from 'react-i18next';
-import Text from '../../Text';
+import React from 'react'
+import media from 'styled-media-query'
+import styled from 'styled-components'
+import { useTranslation } from 'react-i18next'
+import Text from '../../Text'
 
 const StyledTitle = styled.div`
   display: flex;
@@ -11,23 +11,22 @@ const StyledTitle = styled.div`
   ${media.lessThan('medium')`
     flex-direction: column;
   `}
-`;
+`
 
 const Row1 = styled(Text)`
   text-align: center;
   font-size: 2em;
   white-space: pre;
-`;
+`
 
 const Row2 = styled(Text)`
   text-align: center;
   font-size: 2em;
   white-space: pre;
-`;
-
+`
 
 function TimeToQuestionTitle () {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   return (
     <StyledTitle>
@@ -37,4 +36,4 @@ function TimeToQuestionTitle () {
   )
 }
 
-export default TimeToQuestionTitle;
+export default TimeToQuestionTitle

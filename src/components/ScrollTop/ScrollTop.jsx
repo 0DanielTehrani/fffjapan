@@ -1,14 +1,14 @@
-import { Component} from 'react';
-import { withRouter } from 'react-router-dom';
+import { Component } from 'react'
+import { withRouter } from 'react-router-dom'
 
 class ScrollTop extends Component {
-  componentDidUpdate(prevProps) {
+  componentDidUpdate (prevProps) {
     if (this.props.location !== prevProps.location) {
       window.scrollTo(0, 0)
     }
   }
 
-  render() {
+  render () {
     return this.props.children
   }
 }

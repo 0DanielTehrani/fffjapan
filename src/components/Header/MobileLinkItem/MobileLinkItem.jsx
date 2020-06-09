@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import Text from '../../Text';
+import React from 'react'
+import styled from 'styled-components'
+import { Link } from 'react-router-dom'
+import Text from '../../Text'
 
 const StyledLinkItem = styled(Link)`
   font-size: ${props => props.fontSize};
@@ -11,17 +11,17 @@ const StyledLinkItem = styled(Link)`
   text-decoration: none;
   width:100%;
   text-align: center;
-`;
+`
 
 const StyledText = styled(Text)`
   font-size: 0.8em;
   color: #fff;
-`;
+`
 
-function MobileLinkItem(props) {
+function MobileLinkItem (props) {
   return (
     <StyledLinkItem {...props}><StyledText>{props.children}</StyledText></StyledLinkItem>
   )
 }
 
-export default MobileLinkItem;
+export default MobileLinkItem

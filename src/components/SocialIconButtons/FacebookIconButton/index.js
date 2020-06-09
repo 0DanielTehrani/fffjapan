@@ -1,1 +1,1 @@
-export { default } from './FacebookIconButton';
+export { default } from './FacebookIconButton'

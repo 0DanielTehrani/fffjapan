@@ -1,1 +1,1 @@
-export { default } from './CreditNotation';
+export { default } from './CreditNotation'

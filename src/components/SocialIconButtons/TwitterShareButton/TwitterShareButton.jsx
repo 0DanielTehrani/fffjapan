@@ -1,7 +1,7 @@
-import React from 'react';
-import { TwitterWithCircle } from '@styled-icons/entypo-social/TwitterWithCircle';
-import styled from 'styled-components';
-import TwitterIcon from '../../SocialIcons/TwitterIcon';
+import React from 'react'
+import { TwitterWithCircle } from '@styled-icons/entypo-social/TwitterWithCircle'
+import styled from 'styled-components'
+import TwitterIcon from '../../SocialIcons/TwitterIcon'
 
 const StyledButton = styled.button`
   background-color: transparent;
@@ -12,11 +12,11 @@ const StyledButton = styled.button`
   &:hover {
     cursor: pointer;
   }
-`;
+`
 
 const StyledTwitterWithCircle = styled(TwitterWithCircle)`
   color: ${props => props.theme.green};
-`;
+`
 
 function TwitterShareButton (props) {
   return (
@@ -26,5 +26,4 @@ function TwitterShareButton (props) {
   )
 }
 
-
-export default TwitterShareButton;
+export default TwitterShareButton

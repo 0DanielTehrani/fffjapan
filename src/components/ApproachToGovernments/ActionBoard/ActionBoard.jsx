@@ -1,20 +1,20 @@
-import React from 'react';
-import styled from 'styled-components';
-import TextBoard from '../../TextBoard';
+import React from 'react'
+import styled from 'styled-components'
+import TextBoard from '../../TextBoard'
 
 const TitleContainer = styled.div`
-`;
+`
 
 const StyledActionBoard = styled.div`
-`;
+`
 
 const TextContainer = styled.div`
   margin-left: 2em;
-`;
+`
 
 const StyledTitleContainer = styled.div`
   margin-bottom: 0.8125em;
-`;
+`
 
 const StyledTitle = styled.span`
   color: ${props => props.theme.textColor};
@@ -22,7 +22,7 @@ const StyledTitle = styled.span`
   font-weight: bold;
   white-space: pre-line;
   font-size: 1.375em;
-`;
+`
 
 const StyledSubTitle = styled.span`
   font-size: 1em;
@@ -30,7 +30,7 @@ const StyledSubTitle = styled.span`
   font-family: ${props => props.theme.fontFamily};
   font-weight: bold;
   text-decoration: underline;
-`;
+`
 
 const StyledText = styled.span`
   font-size: 1em;
@@ -38,7 +38,7 @@ const StyledText = styled.span`
   font-family: ${props => props.theme.fontFamily};
   line-height: 1.625em;
   white-space: pre-line;
-`;
+`
 
 function ActionBoard (props) {
   return (
@@ -56,4 +56,4 @@ function ActionBoard (props) {
   )
 }
 
-export default ActionBoard;
+export default ActionBoard

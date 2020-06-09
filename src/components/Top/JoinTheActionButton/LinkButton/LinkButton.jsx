@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import styled from 'styled-components'
 
 const StyledLinkButton = styled.a`
@@ -8,10 +8,10 @@ const StyledLinkButton = styled.a`
   &:hover {
     cursor: pointer;
   }
-`;
+`
 
 function LinkButton (props) {
   return <StyledLinkButton {...props}>{props.children}</StyledLinkButton>
 }
 
-export default LinkButton;
+export default LinkButton

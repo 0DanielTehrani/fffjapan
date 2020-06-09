@@ -1,1 +1,1 @@
-export { default } from './MessageBanner';
+export { default } from './MessageBanner'

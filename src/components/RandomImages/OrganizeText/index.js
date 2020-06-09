@@ -1,1 +1,1 @@
-export { default } from './OrganizeText';
+export { default } from './OrganizeText'

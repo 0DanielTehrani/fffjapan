@@ -1,14 +1,14 @@
-import React from 'react';
-import styled from 'styled-components';
-import TextBoard from '../../TextBoard';
-import Text from '../../Text';
+import React from 'react'
+import styled from 'styled-components'
+import TextBoard from '../../TextBoard'
+import Text from '../../Text'
 
 const TitleContainer = styled.div`
   margin-bottom: 2.5em;
-`;
+`
 
 const StyledTopBoard = styled.div`
-`;
+`
 
 function TopBoard (props) {
   return (
@@ -25,4 +25,4 @@ function TopBoard (props) {
   )
 }
 
-export default TopBoard;
+export default TopBoard

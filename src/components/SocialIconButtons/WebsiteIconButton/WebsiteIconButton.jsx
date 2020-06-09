@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import WebsiteIcon from '../../SocialIcons/WebsiteIcon';
+import React from 'react'
+import styled from 'styled-components'
+import WebsiteIcon from '../../SocialIcons/WebsiteIcon'
 
 const StyledButton = styled.button`
   background-color: transparent;
@@ -11,7 +11,7 @@ const StyledButton = styled.button`
   &:hover {
     cursor: pointer;
   }
-`;
+`
 
 function WebsiteIconButton (props) {
   return (
@@ -21,5 +21,4 @@ function WebsiteIconButton (props) {
   )
 }
 
-
-export default WebsiteIconButton;
+export default WebsiteIconButton
