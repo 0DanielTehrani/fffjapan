@@ -126,8 +126,8 @@ function ApproachToGovernments () {
               ? <ActionsColumn>
                 {
                   approaches.map((approach, i) =>
-                    <ActionBoardContainer>
-                      <ActionBoard {...approach} />
+                    <ActionBoardContainer key={i}>
+                      <ActionBoard {...approach} key={i} />
                     </ActionBoardContainer>)
                 }
               </ActionsColumn>
@@ -150,7 +150,7 @@ function ApproachToGovernments () {
                 </ActionsColumn>
                 <ActionsColumn>
                   {
-                    approaches2.map((approach) => <ActionBoardContainer><ActionBoard {...approach} /></ActionBoardContainer>)
+                    approaches2.map((approach, i) => <ActionBoardContainer key={i}><ActionBoard {...approach} key={i} /></ActionBoardContainer>)
                   }
                 </ActionsColumn>
               </>

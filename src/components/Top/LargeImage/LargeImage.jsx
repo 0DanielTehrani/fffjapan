@@ -42,7 +42,7 @@ const StyledLabelTextContainer = styled.div`
   `}
 `
 
-function LargeImage (props) {
+function LargeImage () {
   const isMobile = useMediaQuery({ query: '(max-width: 450px)' })
   const fontSize = isMobile ? '16px' : '32px'
 

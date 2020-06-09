@@ -193,6 +193,7 @@ function Top () {
           <TimeToQuestionTitle />
         </TimeToQuestionTitleContainer>
         <iframe
+          title="time-to-question"
           src="https://www.time-to-question.com/ja/questions/?partner=fridays-for-future-japan"
           width="100%"
           height="700"

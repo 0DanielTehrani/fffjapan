@@ -37,7 +37,7 @@ const RigthContainer = styled.div`
 const TextContainer = styled.div`
 `
 
-function MobileJoinUsButton (props) {
+function MobileJoinUsButton () {
   const { t, i18n } = useTranslation()
   return (
     <StyleMobileJoinUsButton onClick={() => { window.open(DIGITAL_MARCH_URL) }}>

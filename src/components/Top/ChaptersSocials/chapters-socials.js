@@ -7,7 +7,7 @@ export default [
   },
   {
     name_ja: '仙台',
-    name_en:　'Sendai',
+    name_en: 'Sendai',
     twitter: 'fffsendai',
     facebook: 'fffsendai'
   },

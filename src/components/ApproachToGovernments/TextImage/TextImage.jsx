@@ -8,7 +8,7 @@ const StyledTextImage = styled.img`
   width: ${props => props.width || '7.75em'};
 `
 
-function TextImage (props) {
+function TextImage () {
   return <StyledTextImage src={isWebpSupported() ? imgWebp : img} />
 }
 

@@ -3,7 +3,6 @@ import { useMediaQuery } from 'react-responsive'
 import styled, { withTheme } from 'styled-components'
 import media from 'styled-media-query'
 import ChapterSocials from '../ChapterSocials'
-
 import MobileExpansionPanel from './MobileExpansionPanel'
 import GetInTouchWithChaptersBanner from '../GetInTouchWithChaptersBanner'
 import chapters from './chapters-socials.js'
@@ -82,7 +81,7 @@ function useOutsideAlerter (ref, onClickOutside) {
       // Unbind the event listener on clean up
       document.removeEventListener('mousedown', handleClickOutside)
     }
-  }, [ref])
+  }, [ref, onClickOutside])
 }
 
 function ChaptersSocials (props) {

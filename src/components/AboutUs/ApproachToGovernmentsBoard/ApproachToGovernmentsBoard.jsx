@@ -17,7 +17,7 @@ const TextContainer = styled.div`
   margin-top: 2em;
 `
 
-function ApproachToGovernmentsBoard (props) {
+function ApproachToGovernmentsBoard () {
   return (
     <StyledApproachToGovernmentsBoard>
       <TextBoard>

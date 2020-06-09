@@ -24,7 +24,9 @@ module.exports = {
     'unused-imports/no-unused-vars': [
       'warn',
       { vars: 'all', varsIgnorePattern: '^_', args: 'after-used', argsIgnorePattern: '^_' }
-    ]
+    ],
+    quotes: [2, 'single', { allowTemplateLiterals: true }],
+    'react/prop-types': 0
   },
   settings: {
     react: {

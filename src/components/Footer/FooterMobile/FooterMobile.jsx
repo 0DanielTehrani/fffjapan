@@ -79,7 +79,7 @@ const LangSwapContainer = styled.div`
   align-items: center;
 `
 
-function FooterMobile (props) {
+function FooterMobile () {
   const roundLogoWidth = '21x'
   const fontSize = '15px'
   const logoWidth = '161.7px'

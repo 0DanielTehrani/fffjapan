@@ -85,7 +85,7 @@ const LangSwapContainer = styled.div`
   margin-left: 15px;
 `
 
-function FooterDesktop (props) {
+function FooterDesktop () {
   const roundLogoWidth = '35px'
   const fontSize = '15px'
   const logoWidth = '269.5px'

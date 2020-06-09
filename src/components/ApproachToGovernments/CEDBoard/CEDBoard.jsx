@@ -11,7 +11,7 @@ const TitleContainer = styled.div`
 const StyledCEDBoard = styled.div`
 `
 
-function CEDBoard (props) {
+function CEDBoard () {
   return (
     <StyledCEDBoard>
       <TextBoard>
