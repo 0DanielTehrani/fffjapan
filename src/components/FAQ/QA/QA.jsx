@@ -25,9 +25,6 @@ const CalloutContainer = styled.div`
   margin-left: 1.8em;
 `;
 
-const AContainer = styled.div`
-`;
-
 function QA (props) {
   const { answer, question, avatarType, color } = props;
   return (

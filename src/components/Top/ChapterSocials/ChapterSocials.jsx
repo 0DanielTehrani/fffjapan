@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components'
 import { useTranslation } from 'react-i18next';
 import Collapse from '@material-ui/core/Collapse';
@@ -18,10 +18,6 @@ const StyledChapterName = styled(Text)`
   &:hover {
     cursor: pointer;
   }
-`;
-
-const SocialIconContainer = styled.div`
-  display: inline-block;
 `;
 
 const SocialsContainer = styled.div`

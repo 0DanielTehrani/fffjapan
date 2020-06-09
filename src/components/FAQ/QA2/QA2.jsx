@@ -8,23 +8,12 @@ const StyledQA2 = styled.div`
   font-size: 1em;
 `;
 
-const QContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  margin-bottom: -5em;
-`;
-
 const AvatarContainer = styled.div`
   margin-left: 0.6em;
   margin-bottom: 2em;
 `;
 
 const CalloutContainer = styled.div`
-`;
-
-const AContainer = styled.div`
 `;
 
 function QA2 (props) {

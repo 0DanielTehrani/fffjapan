@@ -6,8 +6,7 @@ import '../i18n';
 import {
   BrowserRouter,
   Switch,
-  Route,
-  Link
+  Route
 } from 'react-router-dom';
 import ScrollTop from '../components/ScrollTop';
 import Top from './Top';

@@ -38,9 +38,6 @@ function Sidebar (props) {
   const { pathname } = props.location;
   const twitterShareURL = constructTwitterShareURL(t(`Sidebar.ShareText.${pathname}`), window.location.href);
 
-  console.log(pathname);
-  console.log(t(`Sidebar.ShareText.${pathname}`));
-
   return (
     <StyledSidebar>
       <StyledText>{t('Sidebar.share')}</StyledText>

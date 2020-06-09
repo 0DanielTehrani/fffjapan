@@ -9,8 +9,6 @@ import TopBoard from '../../components/ApproachToGovernments/TopBoard';
 import CEDBoard from '../../components/ApproachToGovernments/CEDBoard';
 import TextImage from '../../components/ApproachToGovernments/TextImage';
 import ActionsTitle from '../../components/ApproachToGovernments/ActionsTitle';
-import Actions1 from '../../components/ApproachToGovernments/Actions/Actions1';
-import Actions2 from '../../components/ApproachToGovernments/Actions/Actions2';
 import ActionBoard from '../../components/ApproachToGovernments/ActionBoard';
 import Flower from '../../components/RandomImages/Flower';
 import Bee from '../../components/RandomImages/Bee';

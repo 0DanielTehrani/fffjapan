@@ -7,12 +7,11 @@ import FacebookIcon from '../../SocialIcons/FacebookIcon';
 import YouTubeIcon from '../../SocialIcons/YouTubeIcon';
 import { Link } from 'react-router-dom';
 import LinkItem from '../../LinkItem';
-import ExternalLinkItem from '../../ExternalLinkItem';
 import RoundLogo from '../../RoundLogo';
 import Logo from '../../Logo';
 import LangSwitchButton from '../LangSwitchButton';
 import Text from '../../Text';
-import { DIGITAL_MARCH_URL, YOUTUBE_CHANNEL_LINK } from '../../../constants';
+import { YOUTUBE_CHANNEL_LINK } from '../../../constants';
 
 const StyledFooterDesktop = styled.div`
   display: flex;
