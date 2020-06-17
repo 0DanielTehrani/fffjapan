@@ -14,6 +14,7 @@ import FAQ from './FAQ'
 import ToOrganizeForm from './ToOrganizeForm'
 import PrivacyPolicy from './PrivacyPolicy'
 import ApproachToGovernments from './ApproachToGovernments'
+import Actions from './Actions'
 
 const theme = {
   textColor: '#007850',
@@ -49,6 +50,9 @@ function App () {
             </Route>
             <Route path='/approach-to-governments'>
               <ApproachToGovernments />
+            </Route>
+            <Route path='/actions'>
+              <Actions />
             </Route>
           </Switch>
         </ScrollTop>

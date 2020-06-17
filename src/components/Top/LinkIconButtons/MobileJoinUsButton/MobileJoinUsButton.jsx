@@ -1,11 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import { withRouter } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import JoinUsText from '../../../RandomImages/JoinUsText'
 import ActNow from '../../../RandomImages/ActNow'
 import Text from '../../../Text'
-import { DIGITAL_MARCH_URL } from '../../../../constants'
 
 const StyleMobileJoinUsButton = styled.button`
   display: flex;
@@ -37,10 +36,10 @@ const RigthContainer = styled.div`
 const TextContainer = styled.div`
 `
 
-function MobileJoinUsButton () {
+function MobileJoinUsButton (props) {
   const { t, i18n } = useTranslation()
   return (
-    <StyleMobileJoinUsButton onClick={() => { window.open(DIGITAL_MARCH_URL) }}>
+    <StyleMobileJoinUsButton onClick={() => { props.history.push('/actions') }}>
       <LeftContainer>
         <ActNow width='90px'/>
       </LeftContainer>
@@ -53,4 +52,4 @@ function MobileJoinUsButton () {
     </StyleMobileJoinUsButton>)
 }
 
-export default MobileJoinUsButton
+export default withRouter(MobileJoinUsButton)

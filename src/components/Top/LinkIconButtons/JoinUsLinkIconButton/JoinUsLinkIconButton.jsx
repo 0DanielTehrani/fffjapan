@@ -7,13 +7,12 @@ import iconSrc from './join-us.png'
 import textImageSrcWebp from './join-us-text.webp'
 import textImageSrc from './join-us-text.png'
 import { withTheme } from 'styled-components'
-import { DIGITAL_MARCH_URL } from '../../../../constants'
 
 function JoinUsLinkIconButton (props) {
   const webpIsSupported = isWebpSupported()
   const { t, i18n } = useTranslation()
   return <LinkIconButton
-    href={DIGITAL_MARCH_URL}
+    href='/actions'
     backgroundColor={props.theme.red}
     iconSrc={webpIsSupported ? iconSrcWebp : iconSrc}
     textImageSrc={webpIsSupported ? textImageSrcWebp : textImageSrc}

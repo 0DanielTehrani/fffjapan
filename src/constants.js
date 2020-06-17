@@ -7,3 +7,4 @@ export const FACEBOOK_SHARE_URL = 'https://www.facebook.com/share.php?u=https://
 export const YOUTUBE_CHANNEL_LINK = 'https://www.youtube.com/channel/UCmAxzODI33fBPXrXefFKgog'
 export const VIDEO_A_URL = 'https://www.youtube.com/watch?v=TLdvpdU-rH0'
 export const VIDEO_B_URL = 'https://www.youtube.com/watch?v=YUkruYxI5B4'
+export const MEGA_BANKS_SIGNATURE_URL = 'https://act.350.org/sign/jp-bank-agms2020/'
