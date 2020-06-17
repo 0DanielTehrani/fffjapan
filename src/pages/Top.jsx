@@ -200,6 +200,7 @@ function Top () {
           frameBorder="0"
           style={{ height: '80vh' }}></iframe>
       </MiraiQContainer>
+      <ul className="juicer-feed" data-feed-id="_danieltehrani"><h1 className="referral"><a href="https://www.juicer.io">Powered by Juicer.io</a></h1></ul>
       <FooterContainer>
         <Footer />
       </FooterContainer>
