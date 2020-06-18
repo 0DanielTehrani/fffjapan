@@ -44,7 +44,7 @@ const ImageContainer = styled.div`
 `
 
 const StyledImage = styled.img`
-  width: 645px;
+  width: 750px;
   height: auto;
   ${media.lessThan('medium')`
     width: 250px;
@@ -111,7 +111,7 @@ function Actions () {
           </StyledImage>
         </ImageContainer>
         <JoinButtonContainer>
-          <JoinButton onClick={() => { window.open(MEGA_BANKS_SIGNATURE_URL) }}>署名に参加</JoinButton>
+          <JoinButton onClick={() => { window.open(MEGA_BANKS_SIGNATURE_URL) }}>署名をする</JoinButton>
         </JoinButtonContainer>
       </StyledBox>
       <FooterContainer><Footer /></FooterContainer>
