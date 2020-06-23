@@ -19,6 +19,8 @@ import VideoTitle from '../components/Top/VideoTitle'
 import VideoBTitle from '../components/Top/VideoBTitle'
 import TimeToQuestionTitle from '../components/Top/TimeToQuestionTitle'
 import ChapersSocials from '../components/Top/ChaptersSocials'
+import UpdateNotificationList from '../components/Top/UpdateNotificationList'
+import Text from '../components/Text'
 
 const TopLargeImageContainer = styled.div`
   margin-top: 40px;
@@ -145,6 +147,28 @@ const TimeToQuestionTitleContainer = styled.div`
   margin-bottom: 2em;
 `
 
+const LatestUpdateTitleContainer = styled.div
+`
+  margin: 7em 0em 3em 0em;
+  text-align: center;
+  font-size: 16px;
+  ${media.lessThan('large')`
+    font-size: 16px;
+  `}
+  ${media.lessThan('medium')`
+    font-size: 16px;
+  `}
+  ${media.lessThan('small')`
+    font-size: 10px;
+  `}
+  margin-bottom: 2em;
+`
+
+const LatestUpdateTitle = styled(Text)
+`
+  font-size: 2em;
+`
+
 function Top () {
   const isMobile = useMediaQuery({ query: '(max-width: 450px)' })
 
@@ -157,6 +181,10 @@ function Top () {
       <MessageBannerContainer>
         <MessageBanner />
       </MessageBannerContainer>
+      <LatestUpdateTitleContainer>
+        <LatestUpdateTitle>更新情報</LatestUpdateTitle>
+      </LatestUpdateTitleContainer>
+      <UpdateNotificationList />
       {
         isMobile
           ? <MobileLinkIconButtonsContainer>
