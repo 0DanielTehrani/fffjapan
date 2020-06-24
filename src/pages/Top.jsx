@@ -149,7 +149,7 @@ const TimeToQuestionTitleContainer = styled.div`
 
 const LatestUpdateTitleContainer = styled.div
 `
-  margin: 7em 0em 3em 0em;
+  margin-bottom: 3em;
   text-align: center;
   font-size: 16px;
   ${media.lessThan('large')`
@@ -169,6 +169,20 @@ const LatestUpdateTitle = styled(Text)
   font-size: 2em;
 `
 
+const UpdateNotificationListContainer = styled.div
+`
+  margin: 7em auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: ${props => props.theme.beige};
+  padding: 3em;
+  ${media.lessThan('medium')`
+    padding: 3em 1em;
+  `}
+`
+
 function Top () {
   const isMobile = useMediaQuery({ query: '(max-width: 450px)' })
 
@@ -181,10 +195,12 @@ function Top () {
       <MessageBannerContainer>
         <MessageBanner />
       </MessageBannerContainer>
+      <UpdateNotificationListContainer>
       <LatestUpdateTitleContainer>
         <LatestUpdateTitle>更新情報</LatestUpdateTitle>
       </LatestUpdateTitleContainer>
-      <UpdateNotificationList />
+        <UpdateNotificationList />
+      </UpdateNotificationListContainer>
       {
         isMobile
           ? <MobileLinkIconButtonsContainer>
