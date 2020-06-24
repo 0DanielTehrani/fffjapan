@@ -19,7 +19,7 @@ import PressRelease200623 from './Articles/PressRelease200623'
 
 const theme = {
   textColor: '#007850',
-  fontFamily: 'Noto Sans CJK jp',
+  fontFamily: 'Noto Sans CJK jp, sans-serif',
   green: '#007850',
   yellow: '#FFE664',
   red: '#C80032',
