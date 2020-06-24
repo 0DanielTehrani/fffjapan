@@ -1,11 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
+import { isWebpSupported } from 'react-image-webp/dist/utils'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import Page from '../../../components/Page'
 import Text from '../../../components/Text'
 import img from './press-release.200623.png'
+import imgWebp from './press-release.200623.webp'
 
 const StyledPage = styled(Page)
 `
@@ -131,21 +133,18 @@ function PressRelease200623() {
         </Title>
       </TitleContainer>
       <ImageContainer>
-        <Image src={img} />
+        <Image src={isWebpSupported() ? imgWebp : img} />
       </ImageContainer>
       <Body>
       <Section>
-        スウェーデンの17歳の気候活動家、グレタ・トゥーンベリさんの気候ストライキに端を発して世界
-        中に気候危機解決の運動が広がっています。、日本では、<TextSmallRed>6月下旬に開かれる日本3メガバンクの2行
+        スウェーデンの17歳の気候活動家、グレタ・トゥーンベリさんの気候ストライキに端を発して世界中に気候危機解決の運動が広がっています。、日本では、<TextSmallRed>6月下旬に開かれる日本3メガバンクの2行
         の(みずほ銀行、三菱UFJ銀行)の株主総会に、</TextSmallRed>気候変動への対策強化を求める若者組織の国内全国
-        ネットワーク「Fridays For Future Japan(以下FFFJ)」に属する現役大学生4人が、<TextSmallRed>気候変動を訴え
-        る日本の若者としては初めて</TextSmallRed>参加します。
+        ネットワーク「Fridays For Future Japan(以下FFFJ)」に属する現役大学生4人が、<TextSmallRed>気候変動を訴える日本の若者としては初めて</TextSmallRed>参加します。
       </Section>
       <Section>
         世界中の政治の場で大きな問題として取り扱われ、被害が益々深刻化している「気候変動」問題。
         日本でも今年6月は厳しい暑さから第一週の時点で1194人が体調不良を訴え、そのうち2人が亡くな
-        りました(*1)​。先日、環境省では、地球温暖化によって今後、豪雨災害などのさらなる頻発化・激甚
-        化が予測されるとして「気候危機宣言」を出しています(*2)​。
+        りました(*1)​。先日、環境省では、地球温暖化によって今後、豪雨災害などのさらなる頻発化・激甚化が予測されるとして「気候危機宣言」を出しています(*2)​。
       </Section>
       <Section>
         このような状況の中、日本の3メガバンクは、気候変動の大きな要因である石炭火力発電事業に多
@@ -154,15 +153,10 @@ function PressRelease200623() {
   Urgewald)およびオランダのバンクトラック(Banktrack)によって指摘されました(*3)​。
       </Section>
       <Section>
-      石炭火力発電所の新規案件に投融資をしないことを3メガバンクは公言していますが(*4)​、現在の
-方針には抜け穴があり東南アジア諸国での新規建設が懸念されるなど、パリ協定の1.5°C目標を達成
-するには程遠い現状と言わざるを得ません(*5)​。
+      石炭火力発電所の新規案件に投融資をしないことを3メガバンクは公言していますが(*4)​、現在の方針には抜け穴があり東南アジア諸国での新規建設が懸念されるなど、パリ協定の1.5°C目標を達成するには程遠い現状と言わざるを得ません(*5)​。
       </Section>
       <Section>
-      コロナ禍で停滞した経済活動が再び動き出そうとしている今、グリーン・リカバリーに基づいて、
-より公平な社会を築けるかどうかの大きな境目と考えます。そこで、<TextSmallRed>気候危機の影響を最も受ける世
-代である私たちFFFJは、銀行の取締役会に脱石炭をはじめとする化石燃料に関わる事業への投資撤
-退を求めるために、学生初めての試みとして株主総会に参加し、会場での発言を試みます。</TextSmallRed>
+      コロナ禍で停滞した経済活動が再び動き出そうとしている今、グリーン・リカバリーに基づいて、より公平な社会を築けるかどうかの大きな境目と考えます。そこで、<TextSmallRed>気候危機の影響を最も受ける世代である私たちFFFJは、銀行の取締役会に脱石炭をはじめとする化石燃料に関わる事業への投資撤退を求めるために、学生初めての試みとして株主総会に参加し、会場での発言を試みます。</TextSmallRed>
       </Section>
       <References>
         <ReferenceTitle>
