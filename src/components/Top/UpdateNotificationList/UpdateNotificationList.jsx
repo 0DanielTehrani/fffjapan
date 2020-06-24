@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Text from '../../Text'
+import { Link } from 'react-router-dom'
 import { RightArrowCircle } from '@styled-icons/boxicons-regular/RightArrowCircle'
 import pressRelease1 from './press-release.200623.png'
 
@@ -95,7 +96,7 @@ function UpdateNotificationList() {
           <RightBottomContainer>
             <DateText>2020/06/23</DateText>
             <ReadMoreButtonContainer>
-              <ReadMoreButton />
+              <Link to='/press-release-200623'><ReadMoreButton /></Link>
             </ReadMoreButtonContainer>
           </RightBottomContainer>
         </RightContainer>

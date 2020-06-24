@@ -15,6 +15,7 @@ import ToOrganizeForm from './ToOrganizeForm'
 import PrivacyPolicy from './PrivacyPolicy'
 import ApproachToGovernments from './ApproachToGovernments'
 import Actions from './Actions'
+import PressRelease200623 from './Articles/PressRelease200623'
 
 const theme = {
   textColor: '#007850',
@@ -53,6 +54,9 @@ function App () {
             </Route>
             <Route path='/actions'>
               <Actions />
+            </Route>
+            <Route path='/press-release-200623'>
+              <PressRelease200623 />
             </Route>
           </Switch>
         </ScrollTop>
