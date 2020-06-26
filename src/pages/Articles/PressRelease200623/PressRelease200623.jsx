@@ -5,6 +5,7 @@ import { isWebpSupported } from 'react-image-webp/dist/utils'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import Page from '../../../components/Page'
+import TextLight from '../../../components/TextLight'
 import Text from '../../../components/Text'
 import img from './press-release.200623.png'
 import imgWebp from './press-release.200623.webp'
@@ -64,7 +65,7 @@ const Section = styled.div
 
 const Body = styled.div
 `
-  font-family: ${props => props.theme.fontFamily};
+  font-family: ${props => props.theme.fontFamilyLight};
   padding: 0 12em;
   ${media.lessThan('large')`
     padding: 0 1em;
@@ -80,17 +81,17 @@ const StyledFooterContainer = styled.div
 const References = styled.div
 `
   margin: 2em 0;
-  font-family: ${props => props.theme.fontFamily};
+  font-family: ${props => props.theme.fontFamilyLight};
   font-size: 0.8em;
 `
 
-const ReferenceTitle = styled(Text)
+const ReferenceTitle = styled(TextLight)
 `
   display: block;
   color: #000;
 `
 
-const ReferenceText = styled(Text)
+const ReferenceText = styled(TextLight)
 `
   color: #000;
 `
@@ -101,23 +102,28 @@ const Link = styled.a
   text-decoration: underline;
 `
 
-const TextSmall = styled(Text)
+const TextSmall = styled(TextLight)
 `
   display: block;
   color: #000;
   font-size: 0.9em;
 `
 
-const TextSmallRed = styled(Text)
+const TextSmallRed = styled(TextLight)
 `
   color: ${props => props.theme.red};
 `
 
-const TextMedium = styled(Text)
+const TextMedium = styled(TextLight)
 `
   display: block;
   color: #000;
   font-size: 1.1em;
+`
+
+const TextMediumHeading = styled(TextMedium)
+`
+  color: ${props => props.theme.green};
 `
 
 function PressRelease200623() {
@@ -189,7 +195,7 @@ function PressRelease200623() {
         <Link href='https://www.kikonet.org/info/press-release/2020-04-15/Mizuho_Coal_Finance_Policy-jointrelease' target='_blank' rel='noopener noreferrer'>https://www.kikonet.org/info/press-release/2020-04-15/Mizuho_Coal_Finance_Policy-jointrelease</Link>
         <ReferenceText>&emsp;(閲覧2020/06/20)</ReferenceText>
         </References>
-        <TextMedium>◆日時・場所</TextMedium>
+        <TextMediumHeading>◆日時・場所</TextMediumHeading>
         <TextSmall>※それぞれの株主総会の後に小規模なアクションを行う準備も進めています。</TextSmall>
         <br />
         <TextSmall>みずほ銀行株主総会（参加者：高橋、益子、高倉）</TextSmall>
@@ -200,17 +206,17 @@ function PressRelease200623() {
         <TextMedium>日時：6月29日（月）10:00～</TextMedium>
         <TextMedium>場所：グランドプリンスホテル新高輪 「飛天」（東京都港区高輪三丁目13番1号）</TextMedium>
         <br />
-        <TextMedium>◆ 連絡先</TextMedium>
+        <TextMediumHeading>◆ 連絡先</TextMediumHeading>
         <TextSmall>メールアドレス：contact@fridaysforfuture.jp</TextSmall>
         <TextSmall>電話番号：090-2721-7651</TextSmall>
         <TextSmall>益子実香（Fridays For Future Nasu）</TextSmall>
         <br />
-        <TextMedium>◆取材に際してのお願い</TextMedium>
+        <TextMediumHeading>◆取材に際してのお願い</TextMediumHeading>
         <TextSmall>・取材をしていただける場合は事前に上記メールまたは携帯番号までご連絡をお願いします。</TextSmall>
         <TextSmall>・株主総会において必ずしも発言の機会が与えられるとは限りません。</TextSmall>
         <TextSmall>・当日のアクションについては準備中です。</TextSmall>
         <br />
-        <TextMedium>◆参加する現役大学生のコメント</TextMedium>
+        <TextMediumHeading>◆参加する現役大学生のコメント</TextMediumHeading>
         <TextMedium>益子実香（Fridays For Future Nasu）</TextMedium>
         <TextSmall>
         気候変動は早ければ残り10年で取り返しがつかないと言われており、決して未来の問題ではなく現在すでに目の前に被害の実態が広がっている「危機」です。既得権益にとらわれ、気候危機にしっかりと向き合わない政治や経済で決定権を持つ人たちの行動で多くの罪のない命が失われています。当たり前に接してきた美しい那須の自然も壊されそうになっています。このままでは未来がありません。銀行の取締役会にいる方々は私よりも経験も知識も豊富で、周囲からの人望があるからトップになっているはずです。それにもかかわらず、気候変動を食い止めるためのスピードで石炭火力発電から投融資撤退をしていません。よって、今回の株主総会に参加して本格的な「変化」「英断」を求めます！

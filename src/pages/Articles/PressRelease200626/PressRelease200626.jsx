@@ -8,6 +8,7 @@ import { isWebpSupported } from 'react-image-webp/dist/utils'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import Page from '../../../components/Page'
+import TextLight from '../../../components/TextLight'
 import Text from '../../../components/Text'
 import img from './press-release.200626.png'
 import imgWebp from './press-release.200626.webp'
@@ -49,7 +50,7 @@ const TitleAlignRight = styled(Text)
   font-size: 1em;
 `
 
-const TextAlignRight = styled(Text)
+const TextAlignRight = styled(TextLight)
 `
   display: block;
   text-align: right;
@@ -85,7 +86,7 @@ const Section = styled.div
 
 const Body = styled.div
 `
-  font-family: ${props => props.theme.fontFamily};
+  font-family: ${props => props.theme.fontFamilyLight};
   padding: 0 12em;
   ${media.lessThan('large')`
     padding: 0 1em;
@@ -101,22 +102,22 @@ const StyledFooterContainer = styled.div
 const References = styled.div
 `
   margin: 2em 0;
-  font-family: ${props => props.theme.fontFamily};
+  font-family: ${props => props.theme.fontFamilyLight};
   font-size: 0.8em;
 `
 
-const ReferenceTitle = styled(Text)
+const ReferenceTitle = styled(TextLight)
 `
   display: block;
   color: #000;
 `
 
-const ReferenceText = styled(Text)
+const ReferenceText = styled(TextLight)
 `
   color: #000;
 `
 
-const TextSmall = styled(Text)
+const TextSmall = styled(TextLight)
 `
   display: block;
   color: #000;
@@ -128,16 +129,21 @@ const TextSmallUnderline = styled(TextSmall)
   text-decoration: underline;
 `
 
-const TextSmallRed = styled(Text)
+const TextSmallRed = styled(TextLight)
 `
   color: ${props => props.theme.red};
 `
 
-const TextMedium = styled(Text)
+const TextMedium = styled(TextLight)
 `
   display: block;
   color: #000;
   font-size: 1.1em;
+`
+
+const TextMediumHeading = styled(TextMedium)
+`
+  color: ${props => props.theme.green};
 `
 
 function PressRelease200626() {
@@ -165,7 +171,7 @@ function PressRelease200626() {
   <TextSmallRed>アフターコロナの日本社会において、気候危機の深刻化を防ぐことができる暮らしに転換するため、グリーンリカバリ―の道を選ぶことを求めます。</TextSmallRed>
       </Section>
       <Section>
-        FFFJからは、以下５つの指針を十分考慮して政策が実行されることを求める「<Link to='/opinion-200626' target="_blank"  >コロナ後の経済社会の再設計に関する意見交換会に際する意見書</Link>」を環境大臣に提出し、趣旨を説明しました。
+        FFFJからは、以下５つの指針を十分考慮して政策が実行されることを求める「<Link to='/opinion-200626' target="_blank" style={{color: '#000'}}>コロナ後の経済社会の再設計に関する意見交換会に際する意見書</Link>」を環境大臣に提出し、趣旨を説明しました。
       </Section>
       <Section>
       <TextMedium>⒈Youth - 若者の視点を尊重する</TextMedium>
@@ -186,20 +192,20 @@ function PressRelease200626() {
       経産省、財務省、外務省と合意をして、海外への石炭火力輸出を見直して、議論をようやく正式に始めたところなのでこれから頑張っていきたい。」
       との回答がありました。
       </Section>
-        <TextMedium>◯代表連絡先</TextMedium>
+        <TextMediumHeading>◆代表連絡先</TextMediumHeading>
         <TextSmallUnderline>メールアドレス</TextSmallUnderline>
         <TextSmall>media@fridaysforfuture.jp</TextSmall>
         <TextSmallUnderline>電話番号</TextSmallUnderline>
         <TextSmall>奥野華子（Fridays for Future Hiroshima)　080-1635-2179（メディア対応）</TextSmall>
         <TextSmall>鈴木弥也子（Fridays for Future Yokosuka）　080-1336-3890（横須賀石炭火力について）</TextSmall>
         <br />
-        <TextMedium>◯環境大臣室での意見交換会参加者からのコメント</TextMedium>
-        <TextSmall>◎岩野さおり（Fridays For Future Tokyo / 都立国際高校2年）</TextSmall>
+        <TextMediumHeading>◆環境大臣室での意見交換会参加者からのコメント</TextMediumHeading>
+        <TextSmall>岩野さおり（Fridays For Future Tokyo / 都立国際高校2年）</TextSmall>
         <TextSmall>
         私には選挙権がありません。しかし、気候変動の影響をこれから一番受ける若者の意見が気候変動対策をはじめとする今後の社会を形作る政策に反映されるべきであり、選挙権がないからといって無視されるべきではないと考えます。気候変動対策においてもその他の政策においても、アフターコロナの今この瞬間は大きな転換点です。今後の社会復興においてグリーンリカバリーが、脱炭素でより持続可能性のあるボトムアップの社会システムを築くための第一歩となります。従来通りの経済成長に回復を求めるのではなく、民主的アプローチによる社会再建とパリ協定1.５度努力目標に見合った気候変動対策によって、世代間の不平等を是正し、回復力のある、全ての人が尊厳をもって生きていける社会を実現することを求めます。
         </TextSmall>
         <br />
-        <TextSmall>◎堺大輔（Fridays For Future Yokosuka / 日本大学経済学部2年）</TextSmall>
+        <TextSmall>堺大輔（Fridays For Future Yokosuka / 日本大学経済学部2年）</TextSmall>
         <TextSmall>
         ポストコロナの社会を考えていくうえでグリーンリカバリ―は切っても切り離せない存在です。コロナからの復興をグリーンな対策なしで推し進めてしまえば、今後さらに気候変動からの影響は増え続け、将来人間の経済社会は成り立たなくなるはずです。今回の意見交換会は大変重要な機会であり、私たち若者の声をしっかりと大臣の元に届け、その声を元にグリーンな復興のために具体的な行動を起こすことを求めます！また、僕はFFF横須賀として活動していることもあり、大臣には大臣の地元でもある横須賀の石炭火力発電建設の中止を求めます。国内の石炭火力についても他省庁と連携してフェーズアウトへ向けて動くことに期待します。
         </TextSmall>

@@ -3,3 +3,9 @@
   font-style: normal;
   src: url('../fonts/NotoSansCJKjp-Medium.otf') format("woff");
 }
+
+@font-face {
+  font-family: 'Noto Sans CJK jp DemiLight';
+  font-style: normal;
+  src: url('../fonts/NotoSansCJKjp-DemiLight.otf') format("woff");
+}

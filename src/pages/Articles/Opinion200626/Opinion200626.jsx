@@ -5,6 +5,7 @@ import { isWebpSupported } from 'react-image-webp/dist/utils'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import Page from '../../../components/Page'
+import TextLight from '../../../components/TextLight'
 import Text from '../../../components/Text'
 
 const StyledPage = styled(Page)
@@ -40,7 +41,7 @@ const TitleSmall = styled(Title)
   font-size: 1.72em;
 `
 
-const TitleAlignRight = styled(Text)
+const TitleAlignRight = styled(TextLight)
 `
   display: block;
   width: 85%;
@@ -49,7 +50,7 @@ const TitleAlignRight = styled(Text)
   font-size: 1em;
 `
 
-const TextAlignRight = styled(Text)
+const TextAlignRight = styled(TextLight)
 `
   display: block;
   text-align: right;
@@ -79,7 +80,9 @@ const Section = styled.div
 
 const Body = styled.div
 `
-  font-family: ${props => props.theme.fontFamily};
+  font-family: ${props => props.theme.fontFamilyLight};
+  font-weight: 300;
+  font-style: normal;
   padding: 0 12em;
   ${media.lessThan('large')`
     padding: 0 1em;
@@ -95,17 +98,17 @@ const StyledFooterContainer = styled.div
 const References = styled.div
 `
   margin: 2em 0;
-  font-family: ${props => props.theme.fontFamily};
+  font-family: ${props => props.theme.fontFamilyLight};
   font-size: 0.8em;
 `
 
-const ReferenceTitle = styled(Text)
+const ReferenceTitle = styled(TextLight)
 `
   display: block;
   color: #000;
 `
 
-const ReferenceText = styled(Text)
+const ReferenceText = styled(TextLight)
 `
   color: #000;
 `
@@ -116,7 +119,7 @@ const Link = styled.a
   text-decoration: underline;
 `
 
-const TextSmall = styled(Text)
+const TextSmall = styled(TextLight)
 `
   display: block;
   color: #000;
@@ -128,12 +131,12 @@ const TextSmallUnderline = styled(TextSmall)
   text-decoration: underline;
 `
 
-const TextSmallRed = styled(Text)
+const TextSmallRed = styled(TextLight)
 `
   color: ${props => props.theme.red};
 `
 
-const TextMedium = styled(Text)
+const TextMedium = styled(TextLight)
 `
   display: block;
   color: #000;
