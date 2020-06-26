@@ -134,6 +134,11 @@ const TextSmallRed = styled(TextLight)
   color: ${props => props.theme.red};
 `
 
+const TextSmallBold = styled(TextSmall)
+`
+  font-family: ${props => props.theme.fontFamily};
+`
+
 const TextMedium = styled(TextLight)
 `
   display: block;
@@ -200,12 +205,12 @@ function PressRelease200626() {
         <TextSmall>鈴木弥也子（Fridays for Future Yokosuka）　080-1336-3890（横須賀石炭火力について）</TextSmall>
         <br />
         <TextMediumHeading>◆環境大臣室での意見交換会参加者からのコメント</TextMediumHeading>
-        <TextSmall>岩野さおり（Fridays For Future Tokyo / 都立国際高校2年）</TextSmall>
+        <TextSmallBold>岩野さおり（Fridays For Future Tokyo / 都立国際高校2年）</TextSmallBold>
         <TextSmall>
         私には選挙権がありません。しかし、気候変動の影響をこれから一番受ける若者の意見が気候変動対策をはじめとする今後の社会を形作る政策に反映されるべきであり、選挙権がないからといって無視されるべきではないと考えます。気候変動対策においてもその他の政策においても、アフターコロナの今この瞬間は大きな転換点です。今後の社会復興においてグリーンリカバリーが、脱炭素でより持続可能性のあるボトムアップの社会システムを築くための第一歩となります。従来通りの経済成長に回復を求めるのではなく、民主的アプローチによる社会再建とパリ協定1.５度努力目標に見合った気候変動対策によって、世代間の不平等を是正し、回復力のある、全ての人が尊厳をもって生きていける社会を実現することを求めます。
         </TextSmall>
         <br />
-        <TextSmall>堺大輔（Fridays For Future Yokosuka / 日本大学経済学部2年）</TextSmall>
+        <TextSmallBold>堺大輔（Fridays For Future Yokosuka / 日本大学経済学部2年）</TextSmallBold>
         <TextSmall>
         ポストコロナの社会を考えていくうえでグリーンリカバリ―は切っても切り離せない存在です。コロナからの復興をグリーンな対策なしで推し進めてしまえば、今後さらに気候変動からの影響は増え続け、将来人間の経済社会は成り立たなくなるはずです。今回の意見交換会は大変重要な機会であり、私たち若者の声をしっかりと大臣の元に届け、その声を元にグリーンな復興のために具体的な行動を起こすことを求めます！また、僕はFFF横須賀として活動していることもあり、大臣には大臣の地元でもある横須賀の石炭火力発電建設の中止を求めます。国内の石炭火力についても他省庁と連携してフェーズアウトへ向けて動くことに期待します。
         </TextSmall>
