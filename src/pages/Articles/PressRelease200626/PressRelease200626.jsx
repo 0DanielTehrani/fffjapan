@@ -41,7 +41,7 @@ const Title = styled(Text)
   font-size: 2em
 `
 
-const TitleAlignRight = styled(Text)
+const TitleAlignRight = styled(TextLight)
 `
   display: block;
   width: 85%;
