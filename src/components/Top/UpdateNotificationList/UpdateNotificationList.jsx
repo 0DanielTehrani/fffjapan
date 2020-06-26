@@ -13,6 +13,7 @@ const StyledUpdateNotificationList = styled.div
 
 const ListItem = styled.div
 `
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -32,6 +33,7 @@ margin: 0 2em;
 
 const RightContainer = styled.div
 `
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,6 +53,7 @@ const ListItemTitle = styled.span
 `
   font-family: ${props => props.theme.fontFamily};
   font-size: 1em;
+  text-align: center;
 `
 
 const ReadMoreButtonContainer = styled.div
@@ -96,6 +99,41 @@ function UpdateNotificationList() {
             <DateText>2020/06/23</DateText>
             <ReadMoreButtonContainer>
               <Link to='/press-release-200623'><ReadMoreButton /></Link>
+            </ReadMoreButtonContainer>
+          </RightBottomContainer>
+        </RightContainer>
+      </ListItem>
+      <Divider variant="inset" />
+      <ListItem>
+        <RightContainer>
+          <ListItemTitle>
+          若者、小泉環境大臣との
+          コロナ後の経済社会の再設計に関する意見交換会に出席
+          </ListItemTitle>
+          <ListItemTitle>
+          ー小泉大臣：政府全体の動きをより脱炭素にー
+          </ListItemTitle>
+          <RightBottomContainer>
+            <DateText>2020/06/26</DateText>
+            <ReadMoreButtonContainer>
+              <Link to='/press-release-200626'><ReadMoreButton /></Link>
+            </ReadMoreButtonContainer>
+          </RightBottomContainer>
+        </RightContainer>
+      </ListItem>
+      <Divider variant="inset" />
+      <ListItem>
+        <RightContainer>
+          <ListItemTitle>
+          コロナ後の経済社会の再設計に関する意見交換会に際する意見書
+          </ListItemTitle>
+          <ListItemTitle>
+          グリーンリカバリーについて
+          </ListItemTitle>
+          <RightBottomContainer>
+            <DateText>2020/06/26</DateText>
+            <ReadMoreButtonContainer>
+              <Link to='/opinion-200626'><ReadMoreButton /></Link>
             </ReadMoreButtonContainer>
           </RightBottomContainer>
         </RightContainer>

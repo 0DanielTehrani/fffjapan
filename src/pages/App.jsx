@@ -16,6 +16,8 @@ import PrivacyPolicy from './PrivacyPolicy'
 import ApproachToGovernments from './ApproachToGovernments'
 import Actions from './Actions'
 import PressRelease200623 from './Articles/PressRelease200623'
+import PressRelease200626 from './Articles/PressRelease200626'
+import Opinion200626 from './Articles/Opinion200626'
 
 const theme = {
   textColor: '#007850',
@@ -57,6 +59,12 @@ function App () {
             </Route>
             <Route path='/press-release-200623'>
               <PressRelease200623 />
+            </Route>
+            <Route path='/press-release-200626'>
+              <PressRelease200626 />
+            </Route>
+            <Route path='/opinion-200626'>
+              <Opinion200626 />
             </Route>
           </Switch>
         </ScrollTop>
