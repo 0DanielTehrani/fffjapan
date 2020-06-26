@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import media from 'styled-media-query'
 import Text from '../../Text'
 import { Link } from 'react-router-dom'
 import { RightArrowCircle } from '@styled-icons/boxicons-regular/RightArrowCircle'
@@ -7,7 +8,7 @@ import pressRelease1 from './press-release.200623.png'
 
 const StyledUpdateNotificationList = styled.div
 `
-  width: 100%;
+  width: 80%;
   margin: 0 auto;
 `
 
@@ -15,8 +16,7 @@ const ListItem = styled.div
 `
   width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
   margin-bottom: 1em;
 `
 
@@ -53,17 +53,19 @@ const ListItemTitle = styled.span
 `
   font-family: ${props => props.theme.fontFamily};
   font-size: 1em;
-  text-align: center;
+  text-align: left;
 `
 
 const ReadMoreButtonContainer = styled.div
 `
-  padding-right: 0.5em;
+  position: relative;
+  margin-right: 1.9em;
+  text-align: right;
+  margin-top: 0.3em;
 `
 
 const DateText = styled(Text)
 `
-  display: block;
   color: #000;
   font-size: 0.8em;
 `
@@ -73,6 +75,11 @@ const ReadMoreButton = styled(RightArrowCircle)
   display: inline-block;
   width: 2em;
   color: ${props => props.theme.green};
+  position: absolute;
+  ${media.lessThan('medium')`
+    position: relative;
+  `}
+  bottom: 0;
 `
 
 
@@ -86,59 +93,78 @@ const Divider = styled.div
   opacity: 0.5;
 `
 
+const TitleAndButtonContainer = styled.div
+`
+  display: flex;
+  justify-content: space-between;
+  ${media.lessThan('medium')`
+    flex-direction: column;
+  `};
+`
+
+const TitleContainer = styled.div
+`
+  margin-right: 1em;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+`
+
+const DateContainer = styled.div
+`
+  width: 100%;
+  text-align: left;
+  margin: 0.8em 0;
+`
+
 function UpdateNotificationList() {
   return (
     <StyledUpdateNotificationList>
       <Divider variant="inset" />
+
       <ListItem>
-        <RightContainer>
-          <ListItemTitle>
-          現役大学生4人が気候変動の要因を生み出す銀行に物申す石炭火力発電事業に加担するメガバンク株主総会に参加！
-          </ListItemTitle>
-          <RightBottomContainer>
-            <DateText>2020/06/23</DateText>
-            <ReadMoreButtonContainer>
-              <Link to='/press-release-200623'><ReadMoreButton /></Link>
-            </ReadMoreButtonContainer>
-          </RightBottomContainer>
-        </RightContainer>
+        <DateContainer>
+          <DateText>2020/06/26</DateText>
+        </DateContainer>
+        <TitleAndButtonContainer>
+          <TitleContainer>
+            <ListItemTitle>若者、小泉環境大臣とのコロナ後の経済社会の再設計に関する意見交換会に出席</ListItemTitle>
+          </TitleContainer>
+          <ReadMoreButtonContainer><Link to='/press-release-200626'><ReadMoreButton /></Link></ReadMoreButtonContainer>
+        </TitleAndButtonContainer>
       </ListItem>
+
       <Divider variant="inset" />
+
       <ListItem>
-        <RightContainer>
-          <ListItemTitle>
-          若者、小泉環境大臣との
-          コロナ後の経済社会の再設計に関する意見交換会に出席
-          </ListItemTitle>
-          <ListItemTitle>
-          ー小泉大臣：政府全体の動きをより脱炭素にー
-          </ListItemTitle>
-          <RightBottomContainer>
-            <DateText>2020/06/26</DateText>
-            <ReadMoreButtonContainer>
-              <Link to='/press-release-200626'><ReadMoreButton /></Link>
-            </ReadMoreButtonContainer>
-          </RightBottomContainer>
-        </RightContainer>
+        <DateContainer>
+          <DateText>2020/06/26</DateText>
+        </DateContainer>
+        <TitleAndButtonContainer>
+          <TitleContainer>
+            <ListItemTitle>コロナ後の経済社会の再設計に関する意見交換会に際する意見書</ListItemTitle>
+            <ListItemTitle>グリーンリカバリーについて</ListItemTitle>
+          </TitleContainer>
+          <ReadMoreButtonContainer><Link to='/opinion-200626'><ReadMoreButton /></Link></ReadMoreButtonContainer>
+        </TitleAndButtonContainer>
       </ListItem>
+
       <Divider variant="inset" />
+
       <ListItem>
-        <RightContainer>
-          <ListItemTitle>
-          コロナ後の経済社会の再設計に関する意見交換会に際する意見書
-          </ListItemTitle>
-          <ListItemTitle>
-          グリーンリカバリーについて
-          </ListItemTitle>
-          <RightBottomContainer>
-            <DateText>2020/06/26</DateText>
-            <ReadMoreButtonContainer>
-              <Link to='/opinion-200626'><ReadMoreButton /></Link>
-            </ReadMoreButtonContainer>
-          </RightBottomContainer>
-        </RightContainer>
+        <DateContainer>
+          <DateText>2020/06/23</DateText>
+        </DateContainer>
+        <TitleAndButtonContainer>
+          <TitleContainer>
+            <ListItemTitle>現役大学生4人が気候変動の要因を生み出す銀行に物申す石炭火力発電事業に加担するメガバンク株主総会に参加！</ListItemTitle>
+          </TitleContainer>
+          <ReadMoreButtonContainer><Link to='/press-release-200623'><ReadMoreButton /></Link></ReadMoreButtonContainer>
+        </TitleAndButtonContainer>
       </ListItem>
+
       <Divider variant="inset" />
+
     </StyledUpdateNotificationList>
   )
 }
