@@ -147,8 +147,7 @@ const TimeToQuestionTitleContainer = styled.div`
   margin-bottom: 2em;
 `
 
-const LatestUpdateTitleContainer = styled.div
-`
+const LatestUpdateTitleContainer = styled.div`
   margin-bottom: 3em;
   text-align: center;
   font-size: 16px;
@@ -164,13 +163,11 @@ const LatestUpdateTitleContainer = styled.div
   margin-bottom: 2em;
 `
 
-const LatestUpdateTitle = styled(Text)
-`
+const LatestUpdateTitle = styled(Text)`
   font-size: 2em;
 `
 
-const UpdateNotificationListContainer = styled.div
-`
+const UpdateNotificationListContainer = styled.div`
   margin: 7em auto;
   width: 80%;
   display: flex;
@@ -196,9 +193,9 @@ function Top () {
         <MessageBanner />
       </MessageBannerContainer>
       <UpdateNotificationListContainer>
-      <LatestUpdateTitleContainer>
-        <LatestUpdateTitle>更新情報</LatestUpdateTitle>
-      </LatestUpdateTitleContainer>
+        <LatestUpdateTitleContainer>
+          <LatestUpdateTitle>更新情報</LatestUpdateTitle>
+        </LatestUpdateTitleContainer>
         <UpdateNotificationList />
       </UpdateNotificationListContainer>
       {
