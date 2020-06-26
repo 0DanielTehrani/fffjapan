@@ -1,6 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
+import {
+  Link
+} from 'react-router-dom'
 import { isWebpSupported } from 'react-image-webp/dist/utils'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
@@ -113,12 +116,6 @@ const ReferenceText = styled(Text)
   color: #000;
 `
 
-const Link = styled.a
-`
-  color: ${props => props.theme.blue};
-  text-decoration: underline;
-`
-
 const TextSmall = styled(Text)
 `
   display: block;
@@ -168,7 +165,7 @@ function PressRelease200626() {
   <TextSmallRed>アフターコロナの日本社会において、気候危機の深刻化を防ぐことができる暮らしに転換するため、グリーンリカバリ―の道を選ぶことを求めます。</TextSmallRed>
       </Section>
       <Section>
-        FFFJからは、以下５つの指針を十分考慮して政策が実行されることを求める「コロナ後の経済社会の再設計に関する意見交換会に際する意見書」（3ページ以降記載）を環境大臣に提出し、趣旨を説明しました。
+        FFFJからは、以下５つの指針を十分考慮して政策が実行されることを求める「<Link to='/opinion-200626' target="_blank"  >コロナ後の経済社会の再設計に関する意見交換会に際する意見書</Link>」を環境大臣に提出し、趣旨を説明しました。
       </Section>
       <Section>
       <TextMedium>⒈Youth - 若者の視点を尊重する</TextMedium>
@@ -180,7 +177,7 @@ function PressRelease200626() {
       <Section>
       その後の質疑応答では、Fridays for Future Yokosukaの堺大輔が小泉環境大臣に以下のように質問しました。
       「環境省の気候非常事態宣言を歓迎します。しかしながら、小泉大臣の地元である横須賀では石炭火力が新設が計画されている状況にあります。またこの横須賀の発電所の建設中止を求めて、FFF Yokosukaでは小泉大臣宛のレターアクションを行いました。これらのことを踏まえ、
-      <TextSmallRed>横須賀の石炭火力発電について大臣個人の意見や思いをお聞きしたいです</TextSmallRed>
+      <TextSmallRed>横須賀の石炭火力発電について大臣個人の意見や思いをお聞きしたいです</TextSmallRed>。」
       </Section>
       <Section>
       この質問に対し小泉環境大臣からは、
@@ -193,8 +190,8 @@ function PressRelease200626() {
         <TextSmallUnderline>メールアドレス</TextSmallUnderline>
         <TextSmall>media@fridaysforfuture.jp</TextSmall>
         <TextSmallUnderline>電話番号</TextSmallUnderline>
-        <TextSmall>奥野華子（Fridays for Future Hiroshima)　080-1635-2179(メディア対応）</TextSmall>
-        <TextSmall>鈴木弥也子(Fridays for Future Yokosuka)　080-1336-3890(横須賀石炭火力について)</TextSmall>
+        <TextSmall>奥野華子（Fridays for Future Hiroshima)　080-1635-2179（メディア対応）</TextSmall>
+        <TextSmall>鈴木弥也子（Fridays for Future Yokosuka）　080-1336-3890（横須賀石炭火力について）</TextSmall>
         <br />
         <TextMedium>◯環境大臣室での意見交換会参加者からのコメント</TextMedium>
         <TextSmall>◎岩野さおり（Fridays For Future Tokyo / 都立国際高校2年）</TextSmall>
