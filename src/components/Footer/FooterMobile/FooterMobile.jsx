@@ -4,6 +4,8 @@ import { useTranslation } from 'react-i18next'
 import TwitterIcon from '../../SocialIcons/TwitterIcon'
 import FacebookIcon from '../../SocialIcons/FacebookIcon'
 import YouTubeIcon from '../../SocialIcons/YouTubeIcon'
+import InstagramIcon from '../../SocialIcons/InstagramIcon'
+import NoteIcon from '../../SocialIcons/NoteIcon'
 import { Link } from 'react-router-dom'
 import LinkItem from '../../LinkItem'
 
@@ -11,7 +13,7 @@ import RoundLogo from '../../RoundLogo'
 import Logo from '../../Logo'
 import LangSwitchButton from '../LangSwitchButton'
 import Text from '../../Text'
-import { YOUTUBE_CHANNEL_LINK } from '../../../constants'
+import { YOUTUBE_CHANNEL_LINK, NOTE_ACCOUNT_LINK, INSTAGRAM_ACCOUNT_LINK } from '../../../constants'
 
 const StyledFooterMobile = styled.div`
   display: flex;
@@ -54,6 +56,8 @@ const SocialsContainerTitle = styled(Text)`
 `
 
 const IconsContainer = styled.div`
+  display: flex;
+  align-items: center;
   margin-top: 10px;
   & * {
     margin-top: 0;
@@ -102,6 +106,8 @@ function FooterMobile () {
           <LinkWrapper href='https://twitter.com/FridaysJapan' target='_blank'><TwitterIcon width='2.5em'/></LinkWrapper>
           <LinkWrapper href='https://www.facebook.com/fridaysforfuture.jp/' target='_blank'><FacebookIcon width='2.5em'/></LinkWrapper>
           <LinkWrapper href={YOUTUBE_CHANNEL_LINK} target='_blank'><YouTubeIcon width='2.5em'/></LinkWrapper>
+          <LinkWrapper href={INSTAGRAM_ACCOUNT_LINK} target='_blank'><InstagramIcon width='2.5em'/></LinkWrapper>
+          <LinkWrapper href={NOTE_ACCOUNT_LINK} target='_blank'><NoteIcon width='1.7em'/></LinkWrapper>
         </IconsContainer>
       </SocialsContainer>
       <MainContainer>
