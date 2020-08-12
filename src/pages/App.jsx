@@ -18,6 +18,7 @@ import Actions from './Actions'
 import PressRelease200623 from './Articles/PressRelease200623'
 import PressRelease200626 from './Articles/PressRelease200626'
 import Opinion200626 from './Articles/Opinion200626'
+import GDAApplicationForm from './GDAApplicationForm'
 
 const theme = {
   textColor: '#007850',
@@ -28,7 +29,10 @@ const theme = {
   red: '#C80032',
   blue: '#0032c8',
   beige: '#FAF5C8',
-  ocher: '#c8a050'
+  ocher: '#c8a050',
+  gdaPrimaryColor: '#007850',
+  gdaSecondaryColor: '#FFE564',
+  black: '#3C3C3C'
 }
 
 function App () {
@@ -66,6 +70,9 @@ function App () {
             </Route>
             <Route path='/opinion-200626'>
               <Opinion200626 />
+            </Route>
+            <Route path='/gda-application-form'>
+              <GDAApplicationForm />
             </Route>
           </Switch>
         </ScrollTop>
