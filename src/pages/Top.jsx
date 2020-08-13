@@ -2,6 +2,8 @@ import React from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import TopLargeImage from '../components/Top/LargeImage'
+import GDABanner from '../components/Top/GDABanner'
+import TopSlider from '../components/Top/TopSlider'
 import styled from 'styled-components'
 import media from 'styled-media-query'
 import { useMediaQuery } from 'react-responsive'
@@ -23,7 +25,7 @@ import UpdateNotificationList from '../components/Top/UpdateNotificationList'
 import Text from '../components/Text'
 
 const TopLargeImageContainer = styled.div`
-  margin-top: 40px;
+  margin-top: 25px;
 `
 
 const FooterContainer = styled.div`
@@ -187,7 +189,7 @@ function Top () {
     <Page>
       <Header />
       <TopLargeImageContainer>
-        <TopLargeImage />
+        <TopSlider />
       </TopLargeImageContainer>
       <MessageBannerContainer>
         <MessageBanner />
