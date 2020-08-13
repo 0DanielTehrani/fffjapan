@@ -24,8 +24,8 @@ import ScrollTop from '../components/ScrollTop'
 
 const theme = {
   textColor: '#007850',
-  fontFamily: 'Noto Sans CJK jp, sans-serif',
-  fontFamilyLight: 'Noto Sans CJK jp DemiLight, sans-serif',
+  fontFamily: 'Noto Sans JP Medium, sans-serif',
+  fontFamilyLight: 'Noto Sans JP Light, sans-serif',
   green: '#007850',
   yellow: '#FFE664',
   red: '#C80032',

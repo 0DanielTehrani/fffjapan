@@ -1,13 +1,13 @@
 @font-face {
-  font-family: 'Noto Sans CJK jp';
+  font-family: 'Noto Sans JP Medium';
   font-style: normal;
-  src: url('../fonts/NotoSansCJKjp-Medium.otf') format("woff");
+  src: url('../fonts/NotoSansJP-Medium.otf') format("woff");
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Noto Sans CJK jp DemiLight';
+  font-family: 'Noto Sans JP Light';
   font-style: normal;
-  src: url('../fonts/NotoSansCJKjp-DemiLight.otf') format("woff");
+  src: url('../fonts/NotoSansJP-Light.otf') format("woff");
   font-display: swap;
 }
