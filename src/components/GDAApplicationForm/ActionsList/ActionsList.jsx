@@ -45,13 +45,13 @@ function ActionsList () {
   const rows = [
     {
       time: '全日',
-      actionTitle: 'つなげ地球愛！お家アクションキャンペーン(4.24 Online Strike)',
-      org: 'FFF Osaka',
+      actionTitle: '企画企画企画',
+      org: '主催主催主催',
     },
     {
       time: '全日',
-      actionTitle: 'グローバル気候マーチ 太宰府宣言',
-      org: 'FFF Dazaifu',
+      actionTitle: '企画企画企画',
+      org: '主催主催主催',
     },
     {
       time: '全日',

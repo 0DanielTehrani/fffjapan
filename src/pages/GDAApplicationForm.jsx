@@ -2,7 +2,7 @@ import React from 'react'
 import { useMediaQuery } from 'react-responsive'
 import styled from 'styled-components'
 import media from 'styled-media-query'
-import Header from '../components/Header'
+import GDAHeader from '../components/GDAHeader'
 import Footer from '../components/Footer'
 import Heading from '../components/GDAApplicationForm/Heading'
 import Heading2 from '../components/GDAApplicationForm/Heading2'
@@ -12,6 +12,7 @@ import GoogleForm from '../components/GDAApplicationForm/GoogleForm'
 import Page from '../components/Page'
 import ClimateJusticeNow from '../components/RandomImages/ClimateJusticeNow'
 import ShoesHand from '../components/RandomImages/ShoesHand'
+import explain from '../components/GDAApplicationForm/explain'
 
 
 const HeaderContainer = styled.div`
@@ -111,7 +112,7 @@ const StyledDivider = styled.hr`
 function GDAApplicationForm () {
   return (
     <Page maxWidth='1120px'>
-      <HeaderContainer><Header /></HeaderContainer>
+      <HeaderContainer><GDAHeader /></HeaderContainer>
       <StyledGDAApplicationForm>
         <Heading1Container>
           <Image2Container>
@@ -125,14 +126,7 @@ function GDAApplicationForm () {
         <StyledDivider />
         <Box1Container>
           <SentenceContainer>
-          テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-          テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-          テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-          テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-          テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-          テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-          テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-          テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+          {explain}
           </SentenceContainer>
         </Box1Container>
         <Box2Container>

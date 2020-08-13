@@ -4,7 +4,7 @@ import { useMediaQuery } from 'react-responsive'
 
 const StyledSentenceContainer = styled.div
 `
-  font-family: ${props => props.theme.fontFamilyLight};
+  font-family: ${props => props.theme.fontFamily};
   color: #3C3C3C;
   padding: 10px;
 `

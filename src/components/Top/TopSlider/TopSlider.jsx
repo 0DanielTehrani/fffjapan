@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import SimpleImageSlider from "react-simple-image-slider";
 import GDABanner from '../GDABanner'
 import GDABannerB from '../GDABannerB'
 import LargeImage from '../LargeImage'

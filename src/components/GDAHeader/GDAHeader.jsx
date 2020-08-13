@@ -6,12 +6,14 @@ import { useMediaQuery } from 'react-responsive'
 import { useTranslation } from 'react-i18next'
 
 import LinkItem from '../LinkItem'
-import MobileLinkItem from './MobileLinkItem'
+import MobileLinkItem from '../Header/MobileLinkItem'
 import LinkMenu from '../LinkMenu'
 
 import RoundLogo from '../RoundLogo'
 import Logo from '../Logo'
 import MobileShareBar from '../MobileShareBar'
+
+import Text from '../Text'
 
 import { Helmet } from 'react-helmet'
 
@@ -50,6 +52,17 @@ const LowerHalfContainer = styled.div`
   justify-content: flex-end;
   margin-top: 1em;
 `
+const GDATitleLink = styled(Link)
+`
+  text-decoration: none;
+`
+
+const GDATitle = styled(Text)
+`
+  font-size: 2.4em;
+  text-decoration: none;
+  font-weight: bold;
+`
 
 function Header (props) {
   const isMobileOrTablet = useMediaQuery({ query: '(max-width: 768px)' })
@@ -61,19 +74,20 @@ function Header (props) {
   const currentPageColor = ocher
 
   const { t } = useTranslation()
+  
+  
 
   return (
     <StyledHeader>
       <Helmet>
-        <title>Fridays For Future Japan</title>
+          <title>世界気候アクション0925</title>
       </Helmet>
       <UpperHalfContainer>
-        <Link to='/'>
+        <GDATitleLink to='/'>
           <StyledLogos>
-            <RoundLogo width={roundLogoWidth}/>
-            <Logo width={logoWidth}/>
+            <GDATitle>世界気候アクション0925</GDATitle>
           </StyledLogos>
-        </Link>
+        </GDATitleLink>
         {
           isMobileOrTablet
             ? <LinkMenu fontSize={fontSize}>
