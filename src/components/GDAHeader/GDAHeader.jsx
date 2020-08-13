@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, { withTheme } from 'styled-components'
+import media from 'styled-media-query'
 
 import { withRouter, Link } from 'react-router-dom'
 import { useMediaQuery } from 'react-responsive'
@@ -58,8 +59,14 @@ const GDATitleLink = styled(Link)
 `
 
 const GDATitle = styled(Text)
-`
-  font-size: 2.4em;
+` 
+  font-size: 1.3em;
+  ${
+    media.greaterThan('medium')
+    `
+      font-size: 2.4em;
+    `
+  }
   text-decoration: none;
   font-weight: bold;
 `
