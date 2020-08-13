@@ -103,6 +103,11 @@ const Image2Container = styled.div
   }
 `
 
+const StyledDivider = styled.hr`
+  border-width: 0.1px;
+  width: 70%;
+`
+
 function GDAApplicationForm () {
   return (
     <Page maxWidth='1120px'>
@@ -117,6 +122,7 @@ function GDAApplicationForm () {
             <ClimateJusticeNow width='125px'/>
           </Image1Container>
         </Heading1Container>
+        <StyledDivider />
         <Box1Container>
           <SentenceContainer>
           テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
