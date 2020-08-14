@@ -89,6 +89,9 @@ function Header (props) {
     <StyledHeader>
       <Helmet>
           <title>世界気候アクション0925</title>
+          <link id="faviconApple" rel="apple-touch-icon" sizes="180x180" href="gda/apple-touch-icon.png" />
+          <link id="favicon32" rel="icon" type="image/png" sizes="32x32" href="gda/favicon-32x32.png" />
+          <link id="favicon16" rel="icon" type="image/png" sizes="16x16" href="gda/favicon-16x16.png" />
       </Helmet>
       <UpperHalfContainer>
         <GDATitleLink to='/'>
