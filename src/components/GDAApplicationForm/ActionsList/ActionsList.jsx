@@ -43,36 +43,6 @@ const StyledTableCellOrg = styled(TableCell)
 
 function ActionsList () {
   const rows = [
-    {
-      time: '全日',
-      actionTitle: '企画企画企画',
-      org: '主催主催主催',
-    },
-    {
-      time: '全日',
-      actionTitle: '企画企画企画',
-      org: '主催主催主催',
-    },
-    {
-      time: '全日',
-      actionTitle: '企画企画企画',
-      org: '主催主催主催',
-    },
-    {
-      time: '全日',
-      actionTitle: '企画企画企画',
-      org: '主催主催主催',
-    },
-    {
-      time: '全日',
-      actionTitle: '企画企画企画',
-      org: '主催主催主催',
-    },
-    {
-      time: '全日',
-      actionTitle: '企画企画企画',
-      org: '主催主催主催',
-    }
   ]
   
   return (

@@ -61,6 +61,7 @@ const Box1Container = styled.div
 
 const Box2Container = styled.div
 `
+  display: none;
   margin: 50px 0;
   ${
     media.greaterThan('medium')`
