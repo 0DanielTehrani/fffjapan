@@ -60,6 +60,7 @@ const GDATitleLink = styled(Link)
 
 const GDATitle = styled(Text)
 ` 
+  color: #3C3C3C;
   font-size: 1.3em;
   ${
     media.greaterThan('medium')
