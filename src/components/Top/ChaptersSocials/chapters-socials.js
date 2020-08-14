@@ -1,9 +1,21 @@
 export default [
   {
+    name_ja: '札幌',
+    name_en: 'Sapporo',
+    facebook: 'fffsapporo',
+    twitter: 'fffsapporo'
+  },
+  {
     name_ja: '函館',
     name_en: 'Hakodate',
     facebook: 'Fridays-For-Future-函館-107846400807722/',
     instagram: 'fridaysforfuture.hakodate'
+  },
+  {
+    name_ja: '岩手',
+    name_en: 'Iwate',
+    twitter: 'fff_iwate',
+    instagram: 'fridaysforfutureiwate'
   },
   {
     name_ja: '仙台',
