@@ -52,6 +52,12 @@ export default [
     instagram: 'fridaysforfuturechiba'
   },
   {
+    name_ja: '新潟',
+    name_en: 'Niigata',
+    twitter: 'FFFNiigata',
+    instagram: 'fridaysforfutureniigata'
+  },
+  {
     name_ja: '金沢',
     name_en: 'Kanazawa',
     twitter: 'fff_kanazawa',
