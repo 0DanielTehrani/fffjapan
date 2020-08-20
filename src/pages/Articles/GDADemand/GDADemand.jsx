@@ -8,6 +8,7 @@ import Footer from '../../../components/Footer'
 import Page from '../../../components/Page'
 import TextLight from '../../../components/TextLight'
 import Text from '../../../components/Text'
+import { CHANGE_ORG_URL } from '../../../constants'
 
 export const StyledPage = styled(Page)`
   font-size: 16px;
@@ -189,7 +190,7 @@ function GDADemand () {
       </Section>
       <Section>
       <Heading2>署名に参加</Heading2>
-      上記を求める署名活動を行っています。署名リンクは<LinkExternal>こちら</LinkExternal>！
+      上記を求める署名活動を行っています。署名リンクは<LinkExternal href={CHANGE_ORG_URL} target='_blank'>こちら</LinkExternal>！
       </Section>
       
       <Section>

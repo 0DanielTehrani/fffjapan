@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 import slider from './endorse-b.png'
 import { useHistory } from "react-router-dom";
+import { CHANGE_ORG_URL } from '../../../constants'
 
 const EndorseBannerContainer = styled.div
 `
@@ -116,8 +117,8 @@ function EndorseBanner () {
       </Text3>
       {
         isMobileOrTablet ? 
-        <Button>▶︎ 署名</Button>
-        : <Button>▶︎ 署名する</Button>
+        <Button onClick={() => {window.open(CHANGE_ORG_URL)}}>▶︎ 署名</Button>
+        : <Button onClick={() => {window.open(CHANGE_ORG_URL)}}>▶︎ 署名する</Button>
       }
     </EndorseBannerContainer>
   )
