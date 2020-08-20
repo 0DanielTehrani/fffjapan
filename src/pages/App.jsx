@@ -11,6 +11,8 @@ const Actions = lazy(() => import('./Actions'));
 const PressRelease200623 = lazy(() => import('./Articles/PressRelease200623'));
 const PressRelease200626 = lazy(() => import('./Articles/PressRelease200626'));
 const Opinion200626 = lazy(() => import('./Articles/Opinion200626'));
+const GDADemand = lazy(() => import('./Articles/GDADemand'))
+const GDAParticipantInfo = lazy(() => import('./Articles/GDAParticipantInfo'))
 const GDAApplicationForm = lazy(() => import('./GDAApplicationForm'));
 import { ThemeProvider } from 'styled-components'
 import './App.css'
@@ -76,6 +78,12 @@ function App () {
               </Route>
               <Route path='/gda-application-form'>
                 <GDAApplicationForm />
+              </Route>
+              <Route path='/gdca-demand'>
+                <GDADemand />
+              </Route>
+              <Route path='/gdca-participants-info'>
+                <GDAParticipantInfo />
               </Route>
             </Switch>
           </ScrollTop>

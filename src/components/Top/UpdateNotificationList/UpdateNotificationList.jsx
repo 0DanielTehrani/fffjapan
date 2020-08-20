@@ -104,6 +104,21 @@ function UpdateNotificationList () {
   return (
     <StyledUpdateNotificationList>
       <Divider variant="inset" />
+    
+    
+      <ListItem>
+        <DateContainer>
+          <DateText>2020/08/21</DateText>
+        </DateContainer>
+        <TitleAndButtonContainer>
+          <TitleContainer>
+            <ListItemTitle>世界気候アクション0925：私たちが求めること</ListItemTitle>
+          </TitleContainer>
+          <ReadMoreButtonContainer><Link to='/gdca-demand'><ReadMoreButton /></Link></ReadMoreButtonContainer>
+        </TitleAndButtonContainer>
+      </ListItem>
+    
+      <Divider variant="inset" />
 
       <ListItem>
         <DateContainer>
