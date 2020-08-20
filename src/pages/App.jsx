@@ -14,6 +14,7 @@ const Opinion200626 = lazy(() => import('./Articles/Opinion200626'));
 const GDADemand = lazy(() => import('./Articles/GDADemand'))
 const GDAParticipantInfo = lazy(() => import('./Articles/GDAParticipantInfo'))
 const GDAApplicationForm = lazy(() => import('./GDAApplicationForm'));
+const Statement200821 = lazy(() => import('./Articles/Statement200821'))
 import { ThemeProvider } from 'styled-components'
 import './App.css'
 import '../i18n'
@@ -84,6 +85,9 @@ function App () {
               </Route>
               <Route path='/gdca-participants-info'>
                 <GDAParticipantInfo />
+              </Route>
+              <Route path='/statement-2020-08-21'>
+                <Statement200821 />
               </Route>
             </Switch>
           </ScrollTop>

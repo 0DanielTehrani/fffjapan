@@ -111,6 +111,20 @@ function UpdateNotificationList () {
         </DateContainer>
         <TitleAndButtonContainer>
           <TitleContainer>
+            <ListItemTitle>責任ある気候変動対策・エネルギー政策を求める若者の声明</ListItemTitle>
+          </TitleContainer>
+          <ReadMoreButtonContainer><Link to='/statement-2020-08-21'><ReadMoreButton /></Link></ReadMoreButtonContainer>
+        </TitleAndButtonContainer>
+      </ListItem>
+      
+      <Divider variant="inset" />
+      
+      <ListItem>
+        <DateContainer>
+          <DateText>2020/08/21</DateText>
+        </DateContainer>
+        <TitleAndButtonContainer>
+          <TitleContainer>
             <ListItemTitle>世界気候アクション0925：参加者の心得</ListItemTitle>
           </TitleContainer>
           <ReadMoreButtonContainer><Link to='/gdca-participants-info'><ReadMoreButton /></Link></ReadMoreButtonContainer>
