@@ -123,8 +123,8 @@ function GDADemand () {
       <GDAHeader />
       <Body>
       <Section>
-        <TextSmall style={{ 'textAlign': 'center' }}>
-          私たちはNDC（温室効果ガス削減目標）の引き上げのために、エネルギー政策決定に関わる会議を重要視しています。
+        <TextSmall style={{ 'textAlign': 'center', 'fontWeight': 'bold' }}>
+          私たちはNDC（温室効果ガス削減目標）の引き上げのために、<br />エネルギー政策決定に関わる会議を重要視しています。
         </TextSmall>
       </Section>
       <Section>
