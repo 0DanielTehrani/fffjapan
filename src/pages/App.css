@@ -11,3 +11,9 @@
   src: url('../fonts/NotoSansJP-Light.otf') format("woff");
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'GothicA1 Bold';
+  src: url('../fonts/GothicA1-ExtraBold.ttf') format("woff");
+  font-display: swap;
+}
