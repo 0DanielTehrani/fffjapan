@@ -11,6 +11,8 @@ import TextLight from '../../../components/TextLight'
 import Text from '../../../components/Text'
 import { ArrowDown } from '@styled-icons/icomoon/ArrowDown'
 
+import sampleInsta from './sample-insta.jpg'
+import sampleTwitter from './sample-twitter.png'
 
 const StyledPage = styled(Page)`
   font-size: 16px;
@@ -141,6 +143,35 @@ const StyledArrowDown = styled(ArrowDown)
   color: ${props => props.theme.green};
 `
 
+const TwitterImageContainer = styled.div
+`
+  width: 60%;
+`
+
+const TwitterImage = styled.img
+`
+width: 100%;
+`
+
+const InstaImageContainer = styled.div
+`
+  width: 35%;
+`
+
+const InstaImage = styled.img
+`
+  width: 100%;
+`
+
+const SampleImagesContainer = styled.div
+`
+  margin-top: 2em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+`
+
 function GDAParticipantInfo () {
   return (
     <StyledPage maxWidth='1120px'>
@@ -201,6 +232,15 @@ function GDAParticipantInfo () {
           <div style={{ 'textAlign': 'center' }}>InstagramとTwitterでClimate Shose Actionに参加したい場合は...。</div>
           <ul>
           <li>靴とプラカードの写った写真と「＃シューズアクション」をつけてSNSに投稿！</li>
+          <SampleImagesContainer>
+          <InstaImageContainer>
+          <InstaImage src={sampleInsta} />  
+          </InstaImageContainer>
+          <TwitterImageContainer>
+          <TwitterImage src={sampleTwitter} />  
+          </TwitterImageContainer>
+          
+          </SampleImagesContainer>
           <li>実際に参加者としてカウントされます！</li>
           </ul>
         </Section>
