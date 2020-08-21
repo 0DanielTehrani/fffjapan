@@ -2,6 +2,7 @@ import React from 'react'
 import { useMediaQuery } from 'react-responsive'
 import styled from 'styled-components'
 import media from 'styled-media-query'
+import { Link } from 'react-router-dom'
 import GDAHeader from '../components/GDAHeader'
 import Footer from '../components/Footer'
 import Heading from '../components/GDAApplicationForm/Heading'
@@ -12,7 +13,11 @@ import GoogleForm from '../components/GDAApplicationForm/GoogleForm'
 import Page from '../components/Page'
 import ClimateJusticeNow from '../components/RandomImages/ClimateJusticeNow'
 import ShoesHand from '../components/RandomImages/ShoesHand'
+import Text from '../components/Text'
 import explain from '../components/GDAApplicationForm/explain'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 
 const HeaderContainer = styled.div`
@@ -61,7 +66,6 @@ const Box1Container = styled.div
 
 const Box2Container = styled.div
 `
-  display: none;
   margin: 50px 0;
   ${
     media.greaterThan('medium')`
@@ -110,7 +114,38 @@ const StyledDivider = styled.hr`
   width: 70%;
 `
 
+const GuidesContainer = styled(Container)
+`
+  margin-top: 2em;
+  margin-bottom: 6em;
+`
+
+const GuidesTitle = styled(Text)
+`
+  font-size: 1.8em;
+`
+
+const GuideTitle = styled(Link)
+`
+  font-family: ${props => props.theme.fontFamily};
+  color: ${props => props.theme.green} !important;
+  text-decoration: underline !important;
+  font-size: 1.3em;
+  &:hover {
+    cursor: pointer !important;
+  }
+  
+`
+
+const StyledCol = styled(Col)
+`
+  text-align: center;
+  padding: 1em 0;
+`
+
+
 function GDAApplicationForm () {
+  const isMobileOrTablet = useMediaQuery({ query: '(max-width: 767px)' })
   return (
     <Page maxWidth='1120px'>
       <HeaderContainer><GDAHeader /></HeaderContainer>
@@ -130,6 +165,19 @@ function GDAApplicationForm () {
           {explain}
           </SentenceContainer>
         </Box1Container>
+        <Heading2>アクションモデルガイドライン</Heading2>
+        <GuidesContainer>
+          <Row>
+            { !isMobileOrTablet && <StyledCol xs={0} md={2}></StyledCol> }
+            <StyledCol xs={12} md={4}><GuideTitle to='gdca-action-guide'>企画：地域版</GuideTitle></StyledCol>
+            <StyledCol xs={12} md={4}><GuideTitle to='gdca-action-guide-university'>企画：大学版</GuideTitle></StyledCol>
+            { !isMobileOrTablet && <StyledCol xs={0} md={2}></StyledCol> }
+            { !isMobileOrTablet && <StyledCol xs={0} md={2}></StyledCol> }
+            <StyledCol xs={12} md={4}><GuideTitle to='gdca-action-guide-school'>企画：小中高校版</GuideTitle></StyledCol>
+            <StyledCol xs={12} md={4}><GuideTitle to='gdca-participants-info'>参加者の心得</GuideTitle></StyledCol>
+            { !isMobileOrTablet && <StyledCol xs={0} md={2}></StyledCol> }
+          </Row>
+        </GuidesContainer>
         <Box2Container>
           <Heading2>イベントを確認しよう！</Heading2>
           <ActionsListContainer>
