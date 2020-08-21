@@ -26,7 +26,7 @@ const Button = styled.button
   height: 40px;
   color: #000;
   font-size: 0.8em;
-  font-family: 'GothicA1 Bold';
+  font-family: 'Noto Sans JP Medium';
   font-weight: bold;
   ${media.greaterThan('medium')`
     width: 280px;
@@ -49,8 +49,9 @@ const Button = styled.button
 const TextBase = styled.div
 `
   position: absolute;
-  font-family: 'GothicA1 Bold';
+  font-family: 'Noto Sans JP Medium';
   font-size: 0.7em;
+  font-weight: bold;
   color: #000;
   background-color: #fff;
   padding: 0.5em;
