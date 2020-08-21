@@ -205,17 +205,7 @@ function GDAApplicationForm () {
           {explain}
           </SentenceContainer>
         </Box1Container>
-        <Heading2>アクションモデルガイドライン</Heading2>
-        <GuidesContainer>
-          <Row>
-            <StyledCol><Link to='gdca-action-guide'><GuideTitle>企画：地域版</GuideTitle></Link></StyledCol>
-            <StyledCol><Link to='gdca-action-guide-university'><GuideTitle>企画：大学版</GuideTitle></Link></StyledCol>
-          </Row>
-          <Row>
-            <StyledCol><Link to='gdca-action-guide-school'><GuideTitle>企画：小中高校版</GuideTitle></Link></StyledCol>
-            <StyledCol><Link to='gdca-participants-info'><GuideTitle>参加者の心得</GuideTitle></Link></StyledCol>
-          </Row>
-        </GuidesContainer>
+        
         <Box2Container>
           <Heading2>イベントを確認しよう！</Heading2>
           <ActionsListContainer>
