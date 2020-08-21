@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
 import { Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link'
 
 import GDAHeader from '../../../components/GDAHeader'
 import Footer from '../../../components/Footer'
@@ -157,14 +158,14 @@ function GDAParticipantInfo () {
           <ol>
           <li><Heading2>見つけよう！</Heading2></li>
           <ul>
-          <li>FFF JapanのHPの企画一覧から自分の地域のクションを見つけよう！</li>
+          <li>FFF JapanのHPの<HashLink smooth to='gda-application-form#actions-list'><TextLink>企画一覧</TextLink></HashLink>から自分の地域のクションを見つけよう！</li>
           <li>自分の地域近くに開催場所がない場合はSNS発信しよう！（発信の方法は下をチェック）</li>
           </ul>
         
         <Section>
           <li><Heading2>検索して、要件チェック！</Heading2></li>
           <ul>
-          <li>企画一覧のページから各地域のイベントページへ</li>
+          <li><HashLink smooth to='gda-application-form#actions-list'><TextLink>企画一覧</TextLink></HashLink>のページから各地域のイベントページへ</li>
           <li>各地域の企画内容と要件をチェックしてみよう！</li>
           <ul>
           <li>注：事前申し込みが必要な地域もあるので要チェック！</li>
@@ -196,7 +197,7 @@ function GDAParticipantInfo () {
           <ArrowDownContainer>
             <StyledArrowDown />
           </ArrowDownContainer>
-          <Heading1 style={{ 'fontSize': '2em'}}>オンラインで参加しよう！</Heading1>
+          <Heading1 style={{ 'fontSize': '2em'}} id='join-online'>オンラインで参加しよう！</Heading1>
           <div style={{ 'textAlign': 'center' }}>InstagramとTwitterでClimate Shose Actionに参加したい場合は...。</div>
           <ul>
           <li>靴とプラカードの写った写真と「＃シューズアクション」をつけてSNSに投稿！</li>

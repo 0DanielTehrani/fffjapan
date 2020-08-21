@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
 import { Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link'
 
 import GDAHeader from '../../../components/GDAHeader'
 import Footer from '../../../components/Footer'
@@ -186,7 +187,7 @@ function GDADemand () {
       <Heading1>被選挙権がない学生、若者世代は、行動で示します！</Heading1>
       <Heading2>シューズアクションに参加</Heading2>
       ・<Link to='gda-application-form'><TextLink>イベントを企画しよう </TextLink></Link> <br />
-      ・イベントに参加しよう<br />
+      ・<HashLink smooth to='gda-application-form#actions-list'><TextLink>イベントに参加しよう</TextLink></HashLink><br />
       </Section>
       <Section>
       <Heading2>署名に参加</Heading2>
@@ -196,7 +197,7 @@ function GDADemand () {
       <Section>
       <Heading2>SNSで参加</Heading2>
       ・自宅からシューズアクションに参加しよう <br />
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;・<Link to='/gdca-participants-info'><TextLink>「＃シューズアクション」のハッシュタグをつけて投稿</TextLink></Link><br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;・<HashLink smooth to='/gdca-participants-info#join-online'><TextLink>「＃シューズアクション」のハッシュタグをつけて投稿</TextLink></HashLink><br />
       ・自分の思いをSNSで皆に伝えよう<br />
       </Section>
       

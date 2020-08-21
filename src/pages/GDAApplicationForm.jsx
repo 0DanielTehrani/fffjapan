@@ -216,7 +216,7 @@ function GDAApplicationForm () {
             <StyledCol><Link to='gdca-participants-info'><GuideTitle>参加者の心得</GuideTitle></Link></StyledCol>
           </Row>
         </GuidesContainer>
-        <Box2Container>
+        <Box2Container id='actions-list'>
           <Heading2>イベントを確認しよう！</Heading2>
           <ActionsListContainer>
             <ActionsList />
