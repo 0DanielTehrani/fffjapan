@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
-import { Link as _Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import GDAHeader from '../../../components/GDAHeader'
 import Footer from '../../../components/Footer'
@@ -10,8 +10,9 @@ import TextLight from '../../../components/TextLight'
 import Text from '../../../components/Text'
 
 
-export const StyledPage = styled(Page)`
+const StyledPage = styled(Page)`
   font-size: 16px;
+  ol {list-style-type: lower-roman;}
   ${media.lessThan('large')`
     font-size: 16px;
   `}
@@ -23,23 +24,23 @@ export const StyledPage = styled(Page)`
   `}
 `
 
-export const TitleContainer = styled.div`
+const TitleContainer = styled.div`
   text-align: center;
   margin: 2em 0;
 `
 
-export const Title = styled(Text)`
+const Title = styled(Text)`
   display: block;
   color: #000;
   font-size: 2em
 `
 
-export const Section = styled.div`
+const Section = styled.div`
   margin: 2em 0;
 `
 
-export const Body = styled.div`
-  font-family: ${props => props.theme.fontFamilyLight};
+const Body = styled.div`
+  font-family: ${props => props.theme.fontFamily};
   font-weight: 300;
   font-style: normal;
   padding: 0 12em;
@@ -50,13 +51,13 @@ export const Body = styled.div`
   line-height: 1.9;
 `
 
-export const Link = styled(_Link)`
+const TextLink = styled(Text)`
   color: ${props => props.theme.blue};
   text-decoration: underline;
   font-weight: bold;
 `
 
-export const LinkExternal = styled.a
+const LinkExternal = styled.a
 `
   color: ${props => props.theme.blue};
   text-decoration: underline;
@@ -86,7 +87,7 @@ const TextMedium = styled(TextLight)`
   font-size: 1.1em;
 `
 
-export const Heading1 = styled(Text)
+const Heading1 = styled(Text)
 `
   display: block;
   color: #000;
@@ -94,7 +95,7 @@ export const Heading1 = styled(Text)
   font-weight: bold;
 `
 
-export const Heading1Green = styled(Heading1)
+const Heading1Green = styled(Heading1)
 `
   color: ${props => props.theme.green};
   text-align: center;
@@ -102,7 +103,7 @@ export const Heading1Green = styled(Heading1)
 
 
 
-export const Heading2 = styled(Text)
+const Heading2 = styled(Text)
 `
   display: block;
   color: #000;
@@ -134,6 +135,7 @@ const StyledTable = styled.table
   border: solid 1px;
   th {
     border-right: 1px solid;
+    text-align: center;
   }
   td {
     text-align: center;
@@ -148,7 +150,7 @@ function GDAOrganizeInfo () {
       <GDAHeader />
       <Body>
         <TitleContainer>
-          <Title>地域版　アクションガイド</Title>
+          <Title>アクションモデル：地域版</Title>
         </TitleContainer>
         <div style={{ 'textAlign': 'center'}}>オーガナイザー：4-5人想定</div>
         <Section>
@@ -168,7 +170,7 @@ function GDAOrganizeInfo () {
           <li>時間の検討</li>
             <ul>
               <li>プレリに合わせて終わる時間を決める：終わりが17時半までになるようにする</li>
-              <li>例））16時-18時に開催(ピークの時間＆シューズの数のカウント：17時)</li>
+              <li>例）16時-18時に開催(ピークの時間＆シューズの数のカウント：17時)</li>
               <li>場所の予約は実際にアクションをする時間の前後1時間取る</li>
             </ul>
           <li>
@@ -258,19 +260,7 @@ function GDAOrganizeInfo () {
               </tr>
               <tr>
                 <td>16時</td>
-                <td>靴の受け取りスタート</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>署名(QR)依頼</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>インスタライブコラボ</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>メディア対応</td>
+                <td>靴の受け取りスタート<br />署名(QR)依頼 <br />インスタライブコラボ <br />メディア対応</td>
               </tr>
               <tr>
                 <td>17時</td>

@@ -63,7 +63,7 @@ const Body = styled.div`
   line-height: 1.9;
 `
 
-export const Heading1 = styled(Text)
+const Heading1 = styled(Text)
 `
   display: block;
   color: #000;
@@ -71,7 +71,7 @@ export const Heading1 = styled(Text)
   font-weight: bold;
 `
 
-export const Heading2 = styled(Text)
+const Heading2 = styled(Text)
 `
   display: block;
   color: #000;

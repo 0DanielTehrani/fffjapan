@@ -1,16 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
-import { Link as _Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import GDAHeader from '../../../components/GDAHeader'
 import Footer from '../../../components/Footer'
 import Page from '../../../components/Page'
 import TextLight from '../../../components/TextLight'
 import Text from '../../../components/Text'
+import { ArrowDown } from '@styled-icons/icomoon/ArrowDown'
 
 
-export const StyledPage = styled(Page)`
+const StyledPage = styled(Page)`
   font-size: 16px;
   ${media.lessThan('large')`
     font-size: 16px;
@@ -23,23 +24,23 @@ export const StyledPage = styled(Page)`
   `}
 `
 
-export const TitleContainer = styled.div`
+const TitleContainer = styled.div`
   text-align: center;
   margin: 2em 0;
 `
 
-export const Title = styled(Text)`
+const Title = styled(Text)`
   display: block;
   color: #000;
   font-size: 2em
 `
 
-export const Section = styled.div`
+const Section = styled.div`
   margin: 2em 0;
 `
 
-export const Body = styled.div`
-  font-family: ${props => props.theme.fontFamilyLight};
+const Body = styled.div`
+  font-family: ${props => props.theme.fontFamily};
   font-weight: 300;
   font-style: normal;
   padding: 0 12em;
@@ -50,13 +51,13 @@ export const Body = styled.div`
   line-height: 1.9;
 `
 
-export const Link = styled(_Link)`
+const TextLink = styled(Text)`
   color: ${props => props.theme.blue};
   text-decoration: underline;
   font-weight: bold;
 `
 
-export const LinkExternal = styled.a
+const LinkExternal = styled.a
 `
   color: ${props => props.theme.blue};
   text-decoration: underline;
@@ -86,22 +87,24 @@ const TextMedium = styled(TextLight)`
   font-size: 1.1em;
 `
 
-export const Heading1 = styled(Text)
+const Heading1 = styled(Text)
 `
   display: block;
   color: #000;
   font-size: 1.4em;
   font-weight: bold;
+  text-align: center;
 `
 
-export const Heading1Green = styled(Heading1)
+const Heading1Green = styled(Heading1)
 `
   color: ${props => props.theme.green};
+  text-align: center;
 `
 
 
 
-export const Heading2 = styled(Text)
+const Heading2 = styled(Text)
 `
   display: block;
   color: #000;
@@ -125,6 +128,17 @@ const Heading2Green = styled(Text)
   font-weight: bold;
 `
 
+const ArrowDownContainer = styled.div
+`
+  text-align: center;
+  margin: 2em 0;
+`
+
+const StyledArrowDown = styled(ArrowDown)
+`
+  width: 70px;
+  color: ${props => props.theme.green};
+`
 
 function GDAParticipantInfo () {
   return (
@@ -140,14 +154,15 @@ function GDAParticipantInfo () {
         </TitleContainer>
         <Heading1Green>手順</Heading1Green>
         <hr />
-          <Heading2>見つけよう！</Heading2>
+          <ol>
+          <li><Heading2>見つけよう！</Heading2></li>
           <ul>
           <li>FFF JapanのHPの企画一覧から自分の地域のクションを見つけよう！</li>
           <li>自分の地域近くに開催場所がない場合はSNS発信しよう！（発信の方法は下をチェック）</li>
           </ul>
         
         <Section>
-          <Heading2>検索して、要件チェック！</Heading2>
+          <li><Heading2>検索して、要件チェック！</Heading2></li>
           <ul>
           <li>企画一覧のページから各地域のイベントページへ</li>
           <li>各地域の企画内容と要件をチェックしてみよう！</li>
@@ -158,7 +173,7 @@ function GDAParticipantInfo () {
         </Section>
 
         <Section>
-          <Heading2>イベントに参加！</Heading2>
+          <li><Heading2>イベントに参加！</Heading2></li>
           <ul>
           <li>実際にイベントに参加しよう！忘れ物はないかな？（下の持ち物をチェック！）</li>
           <li>開催場所にあるQRコードからFFFが行っている署名に参加しよう！</li>
@@ -166,10 +181,26 @@ function GDAParticipantInfo () {
         </Section>
 
         <Section>
-          <Heading2>後片付けも忘れずに！</Heading2>
+          <li><Heading2>後片付けも忘れずに！</Heading2></li>
           <ul>
           <li>靴やプラカードを回収しよう！</li>
           <li>SNSで自分の思いとともにみんなへ拡散だ</li>
+          </ul>
+        </Section>
+        </ol>
+
+        <Section>
+        <br />
+          <br />
+          <Heading2  style={{ 'textAlign': 'center' }}>近くに開催場所がない！感染対策でオンラインで参加したい！</Heading2>
+          <ArrowDownContainer>
+            <StyledArrowDown />
+          </ArrowDownContainer>
+          <Heading1 style={{ 'fontSize': '2em'}}>オンラインで参加しよう！</Heading1>
+          <div style={{ 'textAlign': 'center' }}>InstagramとTwitterでClimate Shose Actionに参加したい場合は...。</div>
+          <ul>
+          <li>靴とプラカードの写った写真と「＃シューズアクション」をつけてSNSに投稿！</li>
+          <li>実際に参加者としてカウントされます！</li>
           </ul>
         </Section>
 

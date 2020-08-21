@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
-import { Link as _Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import GDAHeader from '../../../components/GDAHeader'
 import Footer from '../../../components/Footer'
@@ -10,7 +10,7 @@ import TextLight from '../../../components/TextLight'
 import Text from '../../../components/Text'
 
 
-export const StyledPage = styled(Page)`
+const StyledPage = styled(Page)`
   font-size: 16px;
   ${media.lessThan('large')`
     font-size: 16px;
@@ -23,23 +23,23 @@ export const StyledPage = styled(Page)`
   `}
 `
 
-export const TitleContainer = styled.div`
+const TitleContainer = styled.div`
   text-align: center;
   margin: 2em 0;
 `
 
-export const Title = styled(Text)`
+const Title = styled(Text)`
   display: block;
   color: #000;
   font-size: 2em
 `
 
-export const Section = styled.div`
+const Section = styled.div`
   margin: 2em 0;
 `
 
-export const Body = styled.div`
-  font-family: ${props => props.theme.fontFamilyLight};
+const Body = styled.div`
+  font-family: ${props => props.theme.fontFamily};
   font-weight: 300;
   font-style: normal;
   padding: 0 12em;
@@ -50,13 +50,13 @@ export const Body = styled.div`
   line-height: 1.9;
 `
 
-export const Link = styled(_Link)`
+const TextLink = styled(Text)`
   color: ${props => props.theme.blue};
   text-decoration: underline;
   font-weight: bold;
 `
 
-export const LinkExternal = styled.a
+const LinkExternal = styled.a
 `
   color: ${props => props.theme.blue};
   text-decoration: underline;
@@ -86,7 +86,7 @@ const TextMedium = styled(TextLight)`
   font-size: 1.1em;
 `
 
-export const Heading1 = styled(Text)
+const Heading1 = styled(Text)
 `
   display: block;
   color: #000;
@@ -94,7 +94,7 @@ export const Heading1 = styled(Text)
   font-weight: bold;
 `
 
-export const Heading1Green = styled(Heading1)
+const Heading1Green = styled(Heading1)
 `
   color: ${props => props.theme.green};
   text-align: center;
@@ -102,7 +102,7 @@ export const Heading1Green = styled(Heading1)
 
 
 
-export const Heading2 = styled(Text)
+const Heading2 = styled(Text)
 `
   display: block;
   color: #000;
@@ -147,8 +147,10 @@ function GDAOrganizeInfoSchool() {
     <StyledPage maxWidth='1120px'>
       <GDAHeader />
       <Body>
+        <TitleContainer>
+        <Title>アクションモデル：小中高校版 </Title>
+        </TitleContainer>
         <Section>
-        <Heading2>小中高校モデル </Heading2>
         <div style={{ textAlign: 'center' }}>当日の登校時に下駄箱の前にプラカードを置いて、次の日に回収する。</div>
         <br />
         <Heading1Green>開催前</Heading1Green>
@@ -157,10 +159,10 @@ function GDAOrganizeInfoSchool() {
           <li>アクションを設定する</li>
           <ul>
             <li>時間：登校してから帰宅するまで</li>
-            <li>場所：<b>下駄箱</b></li>
+            <li>場所：下駄箱</li>
           </ul>
           <li>
-            <Link to="gda-application-form">企画者応募フォーム（ここをクリック）</Link>に記入
+            <Link to="gda-application-form"><TextLink>企画者応募フォーム（ここをクリック）</TextLink></Link>に記入
             （<LinkExternal href="https://actionnetwork.org/event_campaigns/global-strike-9-25-or-9-26" target='_blank'>海外版の企画者記入も忘れずに！</LinkExternal>）
           </li>
           <li>場所を手配する</li>
@@ -201,11 +203,11 @@ function GDAOrganizeInfoSchool() {
         <li>それぞれの場所で待機&呼びかけ</li>
         <li>参加人数カウント、写真撮ってSNSにあげる</li>
         <li>FFFJapan（運営）に参加者数（靴の数）を連絡</li>
-        <ol>
+        <ul>
         <li>担当者：中村涼夏（FFF Nagoya）</li>
         <li>電話番号：080-1561-9887</li>
         <li>受付時間：9/25　18:00まで</li>
-        </ol>
+        </ul>
         <li>帰るまでがGDCA、気をつけて帰る！！</li>
         </Section>
         <Section>

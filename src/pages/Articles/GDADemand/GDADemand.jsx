@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
-import { Link as _Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import GDAHeader from '../../../components/GDAHeader'
 import Footer from '../../../components/Footer'
@@ -10,7 +10,7 @@ import TextLight from '../../../components/TextLight'
 import Text from '../../../components/Text'
 import { CHANGE_ORG_URL } from '../../../constants'
 
-export const StyledPage = styled(Page)`
+const StyledPage = styled(Page)`
   font-size: 16px;
   ${media.lessThan('large')`
     font-size: 16px;
@@ -23,22 +23,22 @@ export const StyledPage = styled(Page)`
   `}
 `
 
-export const TitleContainer = styled.div`
+const TitleContainer = styled.div`
   text-align: center;
   margin: 2em 0;
 `
 
-export const Title = styled(Text)`
+const Title = styled(Text)`
   display: block;
   color: #000;
   font-size: 2em
 `
 
-export const Section = styled.div`
+const Section = styled.div`
   margin: 2em 0;
 `
 
-export const Body = styled.div`
+const Body = styled.div`
   font-family: ${props => props.theme.fontFamilyLight};
   font-weight: 300;
   font-style: normal;
@@ -50,13 +50,13 @@ export const Body = styled.div`
   line-height: 1.9;
 `
 
-export const Link = styled(_Link)`
+const TextLink = styled(Text)`
   color: ${props => props.theme.blue};
   text-decoration: underline;
   font-weight: bold;
 `
 
-export const LinkExternal = styled.a
+const LinkExternal = styled.a
 `
   color: ${props => props.theme.blue};
   text-decoration: underline;
@@ -86,7 +86,7 @@ const TextMedium = styled(TextLight)`
   font-size: 1.1em;
 `
 
-export const Heading1 = styled(Text)
+const Heading1 = styled(Text)
 `
   display: block;
   color: #000;
@@ -95,7 +95,7 @@ export const Heading1 = styled(Text)
   color: ${props => props.theme.green};
 `
 
-export const Heading2 = styled(Text)
+const Heading2 = styled(Text)
 `
   display: block;
   color: #000;
@@ -185,7 +185,7 @@ function GDADemand () {
       <Section>
       <Heading1>被選挙権がない学生、若者世代は、行動で示します！</Heading1>
       <Heading2>シューズアクションに参加</Heading2>
-      ・<Link to='gda-application-form'><b>イベントを企画しよう </b></Link> <br />
+      ・<Link to='gda-application-form'><TextLink>イベントを企画しよう </TextLink></Link> <br />
       ・イベントに参加しよう<br />
       </Section>
       <Section>
@@ -196,7 +196,7 @@ function GDADemand () {
       <Section>
       <Heading2>SNSで参加</Heading2>
       ・自宅からシューズアクションに参加しよう <br />
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;・<Link to='/gdca-participants-info'>「＃シューズアクション」のハッシュタグをつけて投稿</Link><br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;・<Link to='/gdca-participants-info'><TextLink>「＃シューズアクション」のハッシュタグをつけて投稿</TextLink></Link><br />
       ・自分の思いをSNSで皆に伝えよう<br />
       </Section>
       
