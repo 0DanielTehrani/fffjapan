@@ -76,6 +76,11 @@ const BoxTitle = styled(Text)`
   `};
 `
 
+const TextSmall = styled(Text)
+`
+  color: #000;
+`
+
 const JoinButtonContainer = styled.div`
   margin-top: 2em;
 `
@@ -100,6 +105,11 @@ const JoinButton = styled.button`
 }
 `
 
+const SpacerSmall = styled.div
+`
+  margin-top: 2em;
+`
+
 function Actions () {
   return (
     <Page maxWidth='1120px'>
@@ -109,8 +119,16 @@ function Actions () {
       </PageTitleContainer>
       <StyledBox>
         <TitleContianer>
-          <BoxTitle>【私たちの未来を奪わないで】</BoxTitle>
+          <BoxTitle>【#私たちの未来を奪わないで】</BoxTitle>
           <BoxTitle>日本政府は今すぐ本気の<br/>気候変動対策をとってください</BoxTitle>
+          <SpacerSmall />
+          <TextSmall>
+          気候変動の脅威はすでにあらわれています。 <br />
+私たちの未来は今まで社会を築いてきた人々によって失われようとしています。
+しかし、私たちはそんな未来を受け入れる気はありません。 <br />
+気候危機を訴え、十分な対策をとるよう求めるため、署名を立ち上げました。<br />
+時間はありません、今すぐ行動を起こしてください。<br />
+          </TextSmall>
         </TitleContianer>
         <ImageContainer>
           <StyledImage src={endorseB}>

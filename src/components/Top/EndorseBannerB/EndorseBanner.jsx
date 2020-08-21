@@ -106,7 +106,7 @@ function EndorseBanner () {
       {
         !isMobileOrTablet && 
         <Text1>
-          【私たちの未来を奪わないで】
+          【#私たちの未来を奪わないで】
         </Text1>
       }
       <Text2>
