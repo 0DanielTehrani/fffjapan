@@ -104,6 +104,19 @@ function UpdateNotificationList () {
   return (
     <StyledUpdateNotificationList>
       <Divider variant="inset" />
+      <ListItem>
+        <DateContainer>
+          <DateText>2020/08/21</DateText>
+        </DateContainer>
+        <TitleAndButtonContainer>
+          <TitleContainer>
+            <ListItemTitle>若者からエネルギー政策の大転換を求める声明文の提出</ListItemTitle>
+          </TitleContainer>
+          <ReadMoreButtonContainer><Link to='/press-release-200821'><ReadMoreButton /></Link></ReadMoreButtonContainer>
+        </TitleAndButtonContainer>
+      </ListItem>
+      
+      <Divider variant="inset" />
       
       <ListItem>
         <DateContainer>
