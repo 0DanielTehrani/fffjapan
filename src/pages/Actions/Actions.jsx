@@ -110,6 +110,29 @@ const SpacerSmall = styled.div
   margin-top: 2em;
 `
 
+const SocialsPostExampleContainer = styled.div
+`
+  width: 65%;
+  ${media.lessThan('medium')`
+    width: 90%;
+  `}
+`
+
+const TextBold = styled(Text)
+`
+  display: block;
+  text-align: center;
+  font-family: ${props => props.theme.fontFamilyBold};
+`
+
+const TextLarge = styled(Text)
+`
+  font-size: 1.5em;
+  display: block;
+  text-align: center;
+`
+
+
 function Actions () {
   return (
     <Page maxWidth='1120px'>
@@ -137,6 +160,35 @@ function Actions () {
         <JoinButtonContainer>
           <JoinButton onClick={() => { window.open(CHANGE_ORG_URL) }}>署名をする</JoinButton>
         </JoinButtonContainer>
+        <SocialsPostExampleContainer>
+        <TextSmall>
+        <br />
+        <br />
+        <br />
+        <TextLarge>SNSでシェアしよう！</TextLarge>
+        <br />
+        <div style={{ 'textAlign': 'center'}}>↓SNS投稿例　コピペしてね↓</div>
+        <TextBold>【インスタ・FBなど】</TextBold> <br />
+FFFJは、気候危機を訴え、十分な対策をとるよう求めるため、署名を立ち上げました。<br />
+気候変動の脅威はすでにあらわれています。<br />
+私たちの未来は今まで社会を築いてきた人々によって失われようとしています。<br />
+しかし、私たちはそんな未来を受け入れる気はありません<br />
+時間はありません、今すぐ行動を起こしてください。<br />
+‪以下のキャンペーンに賛同をお願いします！<br/>
+「【 #私たちの未来を奪わないで 】日本政府は今すぐ本気の気候変動対策をとってください。」 
+<a href="http://chng.it/GhXxFjsy" target='_blank'>http://chng.it/GhXxFjsy</a>
+<br/>
+<br/>
+<br/>
+<TextBold>【Twitter】</TextBold> <br/>
+‪以下のキャンペーンに賛同をお願いします！<br/>
+「【 #私たちの未来を奪わないで 】日本政府は今すぐ本気の気候変動対策をとってください。」
+<a href="http://chng.it/GhXxFjsy" target='_blank'>http://chng.it/GhXxFjsy</a><br/>
+‪FFFJは、署名を立ち上げました。
+‪気候変動の脅威はすでにあらわれています。 時間はありません、今すぐ行動を起こしてください。
+</TextSmall>
+        </SocialsPostExampleContainer>
+        
       </StyledBox>
       <Spacer />
       <StyledBox>
