@@ -189,7 +189,7 @@ function GDAParticipantInfo () {
           <ol>
           <li><Heading2>見つけよう！</Heading2></li>
           <ul>
-          <li>FFF JapanのHPの<HashLink smooth to='gda-application-form#actions-list'><TextLink>企画一覧</TextLink></HashLink>から自分の地域のクションを見つけよう！</li>
+          <li>FFF JapanのHPの<HashLink smooth to='gda-application-form#actions-list'><TextLink>企画一覧</TextLink></HashLink>から自分の地域のアクションを見つけよう！</li>
           <li>自分の地域近くに開催場所がない場合はSNS発信しよう！（発信の方法は下をチェック）</li>
           </ul>
         
