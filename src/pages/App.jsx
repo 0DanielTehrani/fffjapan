@@ -19,6 +19,7 @@ const GDAOrganizeInfoSchool = lazy(() => import('./Articles/GDAOrganizeInfoSchoo
 const GDAOrganizeInfoSchool2 = lazy(() => import('./Articles/GDAOrganizeInfoSchool2'))
 const GDAApplicationForm = lazy(() => import('./GDAApplicationForm'));
 const Statement200821 = lazy(() => import('./Articles/Statement200821'))
+const GDCAHome = lazy(() => import('./GDCAHome'))
 import { ThemeProvider } from 'styled-components'
 import './App.css'
 import '../i18n'
@@ -104,6 +105,9 @@ function App () {
               </Route>
               <Route path='/press-release-200821'>
                 <PressRelease200821 />
+              </Route>
+              <Route path='/gdca'>
+                <GDCAHome />
               </Route>
             </Switch>
           </ScrollTop>

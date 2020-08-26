@@ -23,6 +23,7 @@ import TimeToQuestionTitle from '../components/Top/TimeToQuestionTitle'
 import ChapersSocials from '../components/Top/ChaptersSocials'
 import UpdateNotificationList from '../components/Top/UpdateNotificationList'
 import Text from '../components/Text'
+import GDCAHome from '../components/GDCAHome'
 
 const TopLargeImageContainer = styled.div`
   margin-top: 25px;
@@ -191,6 +192,7 @@ function Top () {
       <TopLargeImageContainer>
         <TopSlider />
       </TopLargeImageContainer>
+      <GDCAHome />
       <MessageBannerContainer>
         <MessageBanner />
       </MessageBannerContainer>
