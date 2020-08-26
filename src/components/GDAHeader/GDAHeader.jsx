@@ -94,11 +94,9 @@ function Header (props) {
           <link id="favicon16" rel="icon" type="image/png" sizes="16x16" href="gda/favicon-16x16.png" />
       </Helmet>
       <UpperHalfContainer>
-        <GDATitleLink to='/gdca'>
           <StyledLogos>
             <GDATitle>世界気候アクション0925</GDATitle>
           </StyledLogos>
-        </GDATitleLink>
         <Link to='/'>
           <RoundLogo width={roundLogoWidth}/>
         </Link>
