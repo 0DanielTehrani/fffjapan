@@ -69,7 +69,6 @@ function GDCAHome () {
           <LatestInfoTitle>最新情報を入手</LatestInfoTitle>
           <SubscribeButton onClick={() => {window.open(NEWSLETTER_SUB_URL)}}>マーチ通信に登録する</SubscribeButton>
         </SubscribeContainer>
-      <FooterContainer><Footer /></FooterContainer>
     </Page>
   )
 }
