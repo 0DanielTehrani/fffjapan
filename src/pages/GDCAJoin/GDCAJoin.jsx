@@ -28,19 +28,17 @@ const FooterContainer = styled.div`
   margin-top: 2.5em;
 `
 
-
-const TitleContainer = styled.div
-`
-  text-align: center;
-`
-
-const Title = styled(Text)
-`
-  font-size: 1.5em;
-  ${media.greaterThan('medium')`
-    font-size: 3.5em;
-  `};
-  color: ${props => props.theme.black};
+const StyledGDCAJoin = styled.div`
+  font-size: 16px;
+  ${media.lessThan('large')`
+    font-size: 16px;
+  `}
+  ${media.lessThan('medium')`
+    font-size: 14px;
+  `}
+  ${media.lessThan('small')`
+    font-size: 14px;
+  `}
 `
 
 const ButtonsContaienr = styled.div
@@ -88,7 +86,8 @@ function GDCAJoin () {
   
   return (
     <Page maxWidth='1120px'>
-        <HeaderContainer><GDAHeader /></HeaderContainer>
+      <HeaderContainer><GDAHeader /></HeaderContainer>
+        <StyledGDCAJoin>
         <Heading1Container>
           <Image2Container>
             <ShoesHand2 width='100px'/>
@@ -126,6 +125,7 @@ function GDCAJoin () {
           </ButtonsColumn>
         </ButtonsContaienr>
       <FooterContainer><Footer /></FooterContainer>
+      </StyledGDCAJoin>
     </Page>
   )
 }
