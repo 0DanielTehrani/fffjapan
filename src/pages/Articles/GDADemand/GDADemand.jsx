@@ -127,6 +127,7 @@ function GDADemand () {
       <Section>
         <TextSmall style={{ 'textAlign': 'center', 'fontWeight': 'bold' }}>
           私たちはNDC（温室効果ガス削減目標）の引き上げのために、<br />エネルギー政策決定に関わる会議を重要視しています。
+          <br />コロナ禍からどうグリーンに復興していくかは私たちにかかっています。
         </TextSmall>
       </Section>
       <Section>
