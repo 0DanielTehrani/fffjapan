@@ -192,10 +192,10 @@ function Top () {
       <TopLargeImageContainer>
         <TopSlider />
       </TopLargeImageContainer>
-      <GDCAHome />
       <MessageBannerContainer>
         <MessageBanner />
       </MessageBannerContainer>
+      <GDCAHome />
       <UpdateNotificationListContainer>
         <LatestUpdateTitleContainer>
           <LatestUpdateTitle>更新情報</LatestUpdateTitle>
