@@ -113,9 +113,12 @@ const StyledDivider = styled.hr`
 
 const GuidesContainer = styled.div
 `
-  margin-top: 2em;
+  padding-top: 2em;
   padding-bottom: 4em;
   width: 50%;
+  ${media.greaterThan('medium')`
+  width: 70%;
+  `}
   margin: auto;
 `
 
@@ -127,7 +130,7 @@ const GuidesTitle = styled(Text)
 const GuideTitle = styled(Text)
 `
   display: block;
-  width: 175px;
+  width: 210px;
   font-family: ${props => props.theme.fontFamily};
   color: ${props => props.theme.green} !important;
   text-decoration: underline !important;
@@ -210,10 +213,12 @@ function GDAApplicationForm () {
           <Row>
             <StyledCol><Link to='gdca-action-guide'><GuideTitle>企画：地域版</GuideTitle></Link></StyledCol>
             <StyledCol><Link to='gdca-action-guide-university'><GuideTitle>企画：大学版</GuideTitle></Link></StyledCol>
+            <StyledCol><Link to='gdca-action-guide-school'><GuideTitle>企画：小中高校版</GuideTitle></Link></StyledCol>
           </Row>
           <Row>
-            <StyledCol><Link to='gdca-action-guide-school'><GuideTitle>企画：小中高校版</GuideTitle></Link></StyledCol>
             <StyledCol><Link to='gdca-participants-info'><GuideTitle>参加者の心得</GuideTitle></Link></StyledCol>
+            <StyledCol><Link to='gdca-crisis-management'><GuideTitle>危機管理ガイドライン</GuideTitle></Link></StyledCol>
+            <StyledCol><Link to='gdca-action-guide-school'><GuideTitle></GuideTitle></Link></StyledCol>
           </Row>
         </GuidesContainer>
         <Box2Container id='actions-list'>

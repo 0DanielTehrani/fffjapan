@@ -106,6 +106,19 @@ function UpdateNotificationList () {
       <Divider variant="inset" />
       <ListItem>
         <DateContainer>
+          <DateText>2020/08/27</DateText>
+        </DateContainer>
+        <TitleAndButtonContainer>
+          <TitleContainer>
+            <ListItemTitle>世界気候アクション0925：危機管理ガイドラインを掲載</ListItemTitle>
+          </TitleContainer>
+          <ReadMoreButtonContainer><Link to='/gdca-crisis-management'><ReadMoreButton /></Link></ReadMoreButtonContainer>
+        </TitleAndButtonContainer>
+      </ListItem>
+    
+      <Divider variant="inset" />
+      <ListItem>
+        <DateContainer>
           <DateText>2020/08/21</DateText>
         </DateContainer>
         <TitleAndButtonContainer>
