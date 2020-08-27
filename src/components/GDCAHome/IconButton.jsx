@@ -40,7 +40,10 @@ const Button = styled.button
 
 const StyledText = styled(Text)
 `
-  font-size: 1.5rem;
+  font-size: 1.5em;
+  ${media.greaterThan('medium')`
+    font-size: 2.5em;
+  `};
   color: ${props => props.theme.yellow};
 `
 

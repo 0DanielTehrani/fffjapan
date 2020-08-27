@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { useMediaQuery } from 'react-responsive'
 import styled from 'styled-components'
 import media from 'styled-media-query'
@@ -37,7 +38,7 @@ const Title = styled(Text)
 `
   font-size: 1.5em;
   ${media.greaterThan('medium')`
-    font-size: 2.5em;
+    font-size: 3.5em;
   `};
   color: ${props => props.theme.black};
 `
@@ -108,8 +109,12 @@ function GDCAHome () {
     <StyledGDCAHome maxWidth='1120px'>
         <TitleContainer><Title>世界気候アクション0925</Title></TitleContainer>
         <ButtonsContaienr>
-          <ButtonContainer><IconButton text='参加する'　imgSrc={joinIcon } /></ButtonContainer>
-          <ButtonContainer><IconButton text='企画する'　imgSrc={orgIcon} /></ButtonContainer>
+          <Link to='/gdca-join'>
+            <ButtonContainer><IconButton text='参加する'　imgSrc={joinIcon } /></ButtonContainer>
+          </Link>
+          <Link to='/gda-application-form'>
+            <ButtonContainer><IconButton text='企画する'　imgSrc={orgIcon} /></ButtonContainer>
+          </Link>
         </ButtonsContaienr>
         <SubscribeContainer>
           <LatestInfoTitle>最新情報を入手</LatestInfoTitle>

@@ -17,3 +17,7 @@
   src: url('../fonts/GothicA1-ExtraBold.ttf') format("woff");
   font-display: swap;
 }
+
+a {
+  text-decoration: none;
+}
