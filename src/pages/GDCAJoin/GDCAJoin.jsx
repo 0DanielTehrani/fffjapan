@@ -8,8 +8,17 @@ import Text from '../../components/Text'
 import GDAHeader from '../../components/GDAHeader'
 import Page from '../../components/Page'
 import Footer from '../../components/Footer'
-import IconButton from '../../components/GDCAHome/IconButton'
-import sampleImg from './press-release.200626.png'
+import ShoesHand2 from '../../components/RandomImages/ShoesHand2'
+import IconButton from '../../components/GDCAJoin/IconButton'
+import Heading from '../../components/GDAApplicationForm/Heading'
+import Heading2 from '../../components/GDAApplicationForm/Heading2'
+import sampleImgSrc from './shoes1-2.png'
+import { 
+  Heading1Container,
+  Image1Container,
+  Image2Container,
+  StyledDivider 
+} from '../GDAApplicationForm'
 
 const HeaderContainer = styled.div`
   margin-bottom: 6em;
@@ -26,8 +35,13 @@ const TitleContainer = styled.div
 `
 
 const Title = styled(Text)
-``
-
+`
+  font-size: 1.5em;
+  ${media.greaterThan('medium')`
+    font-size: 3.5em;
+  `};
+  color: ${props => props.theme.black};
+`
 
 const ButtonsContaienr = styled.div
 `
@@ -38,6 +52,7 @@ const ButtonsContaienr = styled.div
   `};
   align-items: center;
   justify-content: center;
+  margin: 5em 0;
 `
 
 const ButtonsColumn = styled.div
@@ -49,7 +64,9 @@ const ButtonsColumn = styled.div
 
 
 const ButtonContainer = styled.div
-``
+`
+  margin: 1em;
+`
 
 const LatestInfoTitle = styled(Text)
 `
@@ -69,40 +86,41 @@ const SubscribeButton = styled.button
 function GDCAJoin () {
   const isMobileOrTablet = useMediaQuery({ query: '(max-width: 767px)' })
   
-  const handleSetProfileClick = () => {
-    
-  }
-
-  const handleHandbookClick = () => {
-    
-  }
-  
   return (
     <Page maxWidth='1120px'>
         <HeaderContainer><GDAHeader /></HeaderContainer>
-        <TitleContainer><Title>参加しよう</Title></TitleContainer>
+        <Heading1Container>
+          <Image2Container>
+            <ShoesHand2 width='100px'/>
+          </Image2Container>
+          <Heading>参加しよう！</Heading>
+          <Image1Container>
+            <ShoesHand2 width='100px'/>
+          </Image1Container>
+        </Heading1Container>
+        <StyledDivider />
         <ButtonsContaienr>
           <ButtonsColumn>
             <ButtonContainer>
               <HashLink smooth to='gda-application-form#actions-list'>
-                <IconButton text='イベント一覧'/>
+                <IconButton text='イベント一覧' imgSrc={sampleImgSrc}/>
               </HashLink>
             </ButtonContainer>
             <ButtonContainer>
               <a href="/logo.png" download >
-              <IconButton text='プロフィールフレーム設定'/>
+              <IconButton text='プロフィールフレーム設定' imgSrc={sampleImgSrc}/>
               </a>
             </ButtonContainer>
           </ButtonsColumn>
           <ButtonsColumn>
             <ButtonContainer>
               <HashLink smooth to='gdca-participants-info#join-online'>
-                <IconButton text='オンラインで参加'/>
+                <IconButton text='オンラインで参加' imgSrc={sampleImgSrc}/>
               </HashLink>
             </ButtonContainer>
             <ButtonContainer>
               <Link to='gdca-participants-info'>
-                <IconButton text='参加者の心得'　onClick={handleHandbookClick}/>
+                <IconButton text='参加者の心得'　imgSrc={sampleImgSrc}/>
               </Link>
             </ButtonContainer>
           </ButtonsColumn>
