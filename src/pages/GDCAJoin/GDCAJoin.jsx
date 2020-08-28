@@ -8,14 +8,14 @@ import Text from '../../components/Text'
 import GDAHeader from '../../components/GDAHeader'
 import Page from '../../components/Page'
 import Footer from '../../components/Footer'
-import ShoesHand2 from '../../components/RandomImages/ShoesHand2'
+import GDCA1 from '../../components/RandomImages/GDCA1'
+import GDCA2 from '../../components/RandomImages/GDCA2'
 import IconButton from '../../components/GDCAJoin/IconButton'
 import Heading from '../../components/GDAApplicationForm/Heading'
 import Heading2 from '../../components/GDAApplicationForm/Heading2'
 import sampleImgSrc from './shoes1-2.png'
 import { 
   Heading1Container,
-  Image1Container,
   Image2Container,
   StyledDivider 
 } from '../GDAApplicationForm'
@@ -26,6 +26,18 @@ const HeaderContainer = styled.div`
 
 const FooterContainer = styled.div`
   margin-top: 2.5em;
+`
+
+const Image1Container = styled.div
+`
+  width: 125px;
+  display: none;
+  ${media.greaterThan('medium')
+    `
+      display: block;
+      margin-right: 60px;
+    `
+  }
 `
 
 const StyledGDCAJoin = styled.div`
@@ -90,11 +102,11 @@ function GDCAJoin () {
         <StyledGDCAJoin>
         <Heading1Container>
           <Image2Container>
-            <ShoesHand2 width='100px'/>
+            <GDCA1 width='140px' />
           </Image2Container>
           <Heading>参加しよう！</Heading>
           <Image1Container>
-            <ShoesHand2 width='100px'/>
+            <GDCA2 width='140px' />
           </Image1Container>
         </Heading1Container>
         <StyledDivider />
