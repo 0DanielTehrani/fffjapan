@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import styled, { withTheme }  from 'styled-components'
 import { useMediaQuery } from 'react-responsive'
-import styled from 'styled-components'
 import media from 'styled-media-query'
 import Text from '../../components/Text'
 import GDAHeader from '../../components/GDAHeader'
@@ -9,9 +9,10 @@ import Page from '../../components/Page'
 import Footer from '../../components/Footer'
 import IconButton from '../../components/GDCAHome/IconButton'
 import { NEWSLETTER_SUB_URL } from '../../constants'
-import joinIcon from './tmp-icon.png'
-import orgIcon from './tmp-icon.png'
+import shoes3 from './shoes3.png'
 import { HashLink } from 'react-router-hash-link'
+import joinUsText from './join-us-text.png'
+import organizeText from './organize-text.png'
 
 const StyledGDCAHome = styled(Page)
 `
@@ -141,7 +142,7 @@ const SubTitle2 = styled(Text)
   text-decoration: underline;
 `
 
-function GDCAHome () {
+function GDCAHome (props) {
   const isMobileOrTablet = useMediaQuery({ query: '(max-width: 767px)' })
   return (
     <StyledGDCAHome maxWidth='1120px'>
@@ -161,10 +162,24 @@ function GDCAHome () {
           </SubTitleContainer2>
         <ButtonsContaienr>
           <Link to='/gdca-join'>
-            <ButtonContainer><IconButton text='参加する'　imgSrc={joinIcon } /></ButtonContainer>
+            <ButtonContainer>
+              <IconButton 
+                text='参加する'　
+                imgSrc={shoes3} 
+                textColor={props.theme.blue} 
+                textImgSrc={joinUsText}
+                />
+            </ButtonContainer>
           </Link>
           <Link to='/gda-application-form'>
-            <ButtonContainer><IconButton text='企画する'　imgSrc={orgIcon} /></ButtonContainer>
+            <ButtonContainer>
+              <IconButton 
+                text='企画する'　
+                imgSrc={shoes3} 
+                textColor={props.theme.blue}
+                textImgSrc={organizeText}
+               />
+            </ButtonContainer>
           </Link>
         </ButtonsContaienr>
         <SubscribeContainer>
@@ -175,4 +190,4 @@ function GDCAHome () {
   )
 }
 
-export default GDCAHome
+export default withTheme(GDCAHome)

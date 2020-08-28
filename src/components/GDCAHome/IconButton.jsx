@@ -10,29 +10,29 @@ const Icon = styled.img
 
 const IconContainer = styled.div
 `
-  width: 60px;
+  width: 40px;
   ${media.greaterThan('medium')`
-    width: 100px;
+    width: 60px;
   `};
 `
 
 const Button = styled.button
 `
-  background-color: ${props => props.theme.green};
+  background-color: ${props => props.theme.lime};
   border: 0px;
   padding: 1em;
   padding-left: 2em;
   padding-right: 4em;
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   ${media.greaterThan('medium')`
     padding: 2em;
     padding-left: 3em;
     padding-right: 6em;
   `};
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
   &:hover {
     cursor: pointer;
   }
@@ -41,20 +41,46 @@ const Button = styled.button
 const StyledText = styled(Text)
 `
   font-size: 1.5em;
-  ${media.greaterThan('medium')`
-    font-size: 2.5em;
-  `};
-  color: ${props => props.theme.yellow};
+  color: ${props => props.color || props.theme.yellow};
+  width: 240px;
 `
 
+const TextImageContainer = styled.div
+`
+  width: 150px;
+  ${media.greaterThan('medium')`
+    width: 200px;
+  `};
+`
+
+const TextImage = styled.img
+`
+  height: 40px;
+  ${media.greaterThan('medium')`
+    height: 60px;
+    width: auto;
+  `};
+`
+
+const TextsContainer = styled.div
+`
+  margin-left: 1em;
+`
+
+
 function IconButton (props) {
-  const { imgSrc, text } = props
+  const { imgSrc, text, textImgSrc } = props
   return (
     <Button {...props}>
       <IconContainer>
         <Icon src={imgSrc} />
       </IconContainer>
-      <StyledText>{text}</StyledText>
+      <TextsContainer>
+        <StyledText color={props.textColor}>{text}</StyledText>
+        <TextImageContainer>
+          <TextImage src={textImgSrc} />
+        </TextImageContainer>
+      </TextsContainer>
     </Button>
   )
 }
