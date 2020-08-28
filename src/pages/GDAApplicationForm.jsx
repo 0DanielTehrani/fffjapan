@@ -38,7 +38,7 @@ const StyledGDAApplicationForm = styled.div`
   `}
 `
 
-const Heading1Container = styled.div
+export const Heading1Container = styled.div
 `
   display: flex;
   flex-direction: column;
@@ -81,7 +81,7 @@ const FormContainer = styled.div
   margin: 50px 0;
 `
 
-const Image1Container = styled.div
+export const Image1Container = styled.div
 `
   width: 125px;
   display: none;
@@ -93,7 +93,7 @@ const Image1Container = styled.div
   }
 `
 
-const Image2Container = styled.div
+export const Image2Container = styled.div
 `
   width: 125px;
   text-align: center;
@@ -106,7 +106,7 @@ const Image2Container = styled.div
   }
 `
 
-const StyledDivider = styled.hr`
+export const StyledDivider = styled.hr`
   border-width: 0.1px;
   width: 70%;
 `

@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
-import slider from './gda-slider-b.jpg'
+import slider from './20200827_gdca_slider_00.jpg'
 import { useHistory } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link'
 import { GDA_APPLICATION_PAGE_URL } from '../../../constants'
 
 
@@ -20,16 +21,16 @@ const Button = styled.button
 `
   position: absolute;
   right: 3%;
-  top: 70%;
-  width: 163px;
-  height: 50px;
+  top: 85%;
+  width: 138px;
+  height: 30px;
   ${media.greaterThan('medium')`
-    width: 346px;
-    height: 100px;
+    width: 240px;
+    height: 60px;
   `}
   ${media.greaterThan('large')`
-    width: 470px;
-    height: 157px;
+    width: 370px;
+    height: 80px;
   `} 
   
   background-color: transparent;
@@ -46,7 +47,9 @@ function GDABanner () {
   return (
     <GDABannerContainer>
       <StyledImage src={slider} />
-      <Button onClick={() => {history.push(GDA_APPLICATION_PAGE_URL)}}></Button>
+      <HashLink to="#gdca-home" smooth>
+        <Button></Button>
+      </HashLink>
     </GDABannerContainer>
   )
 }

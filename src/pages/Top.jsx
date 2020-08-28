@@ -23,6 +23,7 @@ import TimeToQuestionTitle from '../components/Top/TimeToQuestionTitle'
 import ChapersSocials from '../components/Top/ChaptersSocials'
 import UpdateNotificationList from '../components/Top/UpdateNotificationList'
 import Text from '../components/Text'
+import GDCAHome from '../components/GDCAHome'
 
 const TopLargeImageContainer = styled.div`
   margin-top: 25px;
@@ -194,6 +195,8 @@ function Top () {
       <MessageBannerContainer>
         <MessageBanner />
       </MessageBannerContainer>
+      <div id='gdca-home'></div>
+      <GDCAHome/>
       <UpdateNotificationListContainer>
         <LatestUpdateTitleContainer>
           <LatestUpdateTitle>更新情報</LatestUpdateTitle>

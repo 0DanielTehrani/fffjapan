@@ -75,7 +75,7 @@ const GDATitle = styled(Text)
 function Header (props) {
   const isMobileOrTablet = useMediaQuery({ query: '(max-width: 768px)' })
   const roundLogoWidth = isMobileOrTablet ? '30px' : '50px'
-  const logoWidth = isMobileOrTablet ? '231px' : '385px'
+  const logoWidth = isMobileOrTablet ? '200px' : '200px'
   const fontSize = isMobileOrTablet ? '25px' : '18px'
   const { pathname } = props.location
   const { textColor, ocher } = props.theme
@@ -94,27 +94,12 @@ function Header (props) {
           <link id="favicon16" rel="icon" type="image/png" sizes="16x16" href="gda/favicon-16x16.png" />
       </Helmet>
       <UpperHalfContainer>
-        <GDATitleLink to='/'>
           <StyledLogos>
             <GDATitle>世界気候アクション0925</GDATitle>
           </StyledLogos>
-        </GDATitleLink>
-        {
-          isMobileOrTablet
-            ? <LinkMenu fontSize={fontSize}>
-              {pathname !== '/' && <MobileLinkItem fontSize={fontSize} to='/'>{t('Header.Top')}</MobileLinkItem>}
-              {pathname !== '/about-us' && <MobileLinkItem fontSize={fontSize} to='/about-us'>{t('Header.About Us')}</MobileLinkItem>}
-              {pathname !== '/faq' && <MobileLinkItem fontSize={fontSize} to='/faq'>FAQ</MobileLinkItem>}
-              {pathname !== '/to-organize-form' && <MobileLinkItem fontSize={fontSize} to='/to-organize-form'>{t('Header.Organize')}</MobileLinkItem>}
-              {pathname !== '/approach-to-governments' && <MobileLinkItem fontSize={fontSize} to='/approach-to-governments'>{t('Header.APG')}</MobileLinkItem>}
-            </LinkMenu>
-            : <StyledLinkItems>
-              <LinkItem fontSize={fontSize} to='/about-us' color={pathname === '/about-us' ? currentPageColor : textColor}>{t('Header.About Us')}</LinkItem>
-              <LinkItem fontSize={fontSize} to='/approach-to-governments' color={pathname === '/approach-to-governments' ? currentPageColor : textColor}>{t('Header.APG')}</LinkItem>
-              <LinkItem fontSize={fontSize} to='/to-organize-form' color={pathname === '/to-organize-form' ? currentPageColor : textColor}>{t('Header.Organize')}</LinkItem>
-              <LinkItem fontSize={fontSize} to='/faq' color={pathname === '/faq' ? currentPageColor : textColor}>{t('Header.FAQ')}</LinkItem>
-            </StyledLinkItems>
-        }
+        <Link to='/'>
+          <RoundLogo width={roundLogoWidth}/>
+        </Link>
       </UpperHalfContainer>
       <LowerHalfContainer>
         {
