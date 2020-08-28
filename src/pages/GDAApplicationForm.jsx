@@ -116,7 +116,6 @@ const GuidesContainer = styled.div
 `
   padding-top: 2em;
   padding-bottom: 4em;
-  width: 50%;
   ${media.greaterThan('medium')`
   width: 70%;
   `}
