@@ -18,22 +18,22 @@ const IconContainer = styled.div
 
 const Button = styled.button
 `
-  background-color: ${props => props.theme.green};
+  background-color: ${props => props.theme.lime};
   border: 0px;
   padding: 0.5em;
   padding-left: 2em;
   padding-right: 3em;
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   ${media.greaterThan('medium')`
     padding: 1em;
     padding-left: 4em;
     padding-right: 6em;
     width: 440px;
   `};
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
   &:hover {
     cursor: pointer;
   }
@@ -42,18 +42,46 @@ const Button = styled.button
 const StyledText = styled(Text)
 `
   font-size: 1.5em;
-  color: ${props => props.theme.yellow};
+  color: ${props => props.color || props.theme.yellow};
   width: 240px;
 `
 
+const TextImageContainer = styled.div
+`
+  width: 150px;
+  ${media.greaterThan('medium')`
+    width: 200px;
+    `};
+`
+
+const TextImage = styled.img
+`
+  height: 20px;
+  ${media.greaterThan('medium')`
+    height: 40px;
+    width: auto;
+  `};
+`
+
+const TextsContainer = styled.div
+`
+  margin-left: 1em;
+`
+
+
 function IconButton (props) {
-  const { imgSrc, text } = props
+  const { imgSrc, text, textImgSrc } = props
   return (
     <Button {...props}>
       <IconContainer>
         <Icon src={imgSrc} />
       </IconContainer>
-      <StyledText>{text}</StyledText>
+      <TextsContainer>
+        <StyledText color={props.textColor}>{text}</StyledText>
+        <TextImageContainer>
+          <TextImage src={textImgSrc} />
+        </TextImageContainer>
+      </TextsContainer>
     </Button>
   )
 }
