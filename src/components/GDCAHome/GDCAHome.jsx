@@ -48,6 +48,7 @@ const ButtonsContaienr = styled.div
 `
   display: flex;
   flex-direction: column;
+  margin-bottom: 13em;
   padding: 0 2em;
   ${media.greaterThan('medium')`
     flex-direction: row;
@@ -79,6 +80,7 @@ const LatestInfoTitle = styled(Text)
 
 const SubscribeContainer = styled.div
 `
+  display: none;
   text-align: center;
   margin-top: 2em;
   ${media.greaterThan('medium')`

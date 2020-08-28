@@ -195,7 +195,8 @@ function Top () {
       <MessageBannerContainer>
         <MessageBanner />
       </MessageBannerContainer>
-      <GDCAHome />
+      <div id='gdca-home'></div>
+      <GDCAHome/>
       <UpdateNotificationListContainer>
         <LatestUpdateTitleContainer>
           <LatestUpdateTitle>更新情報</LatestUpdateTitle>
