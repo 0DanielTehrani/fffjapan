@@ -128,7 +128,11 @@ const GuidesTitle = styled(Text)
 const GuideTitle = styled(Text)
 `
   display: block;
-  width: 175px;
+  ${media.greaterThan('medium')
+    `
+    width: 175px; 
+    `
+  }
   font-family: ${props => props.theme.fontFamily};
   color: ${props => props.theme.green} !important;
   text-decoration: underline !important;
@@ -202,7 +206,11 @@ function GDAApplicationForm () {
           {explain}
           </SentenceContainer>
         </Box1Container>
-        <Heading2>アクションモデルガイドライン</Heading2>
+        {
+          isMobileOrTablet ?
+          <Heading2>アクションモデル <br /> ガイドライン</Heading2>
+          : <Heading2>アクションモデルガイドライン</Heading2>
+        }
         <GuidesContainer>
           <Row>
             <StyledCol><Link to='gdca-action-guide'><GuideTitle>企画：地域版</GuideTitle></Link></StyledCol>
