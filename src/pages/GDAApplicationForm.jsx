@@ -13,6 +13,7 @@ import GoogleForm from '../components/GDAApplicationForm/GoogleForm'
 import Page from '../components/Page'
 import ClimateJusticeNow from '../components/RandomImages/ClimateJusticeNow'
 import ShoesHand from '../components/RandomImages/ShoesHand'
+import GDCAOrganize from '../components/RandomImages/GDCAOrganize'
 import Text from '../components/Text'
 import explain from '../components/GDAApplicationForm/explain'
 
@@ -186,18 +187,14 @@ const DemandDetailsText = styled(Text)
 
 function GDAApplicationForm () {
   const isMobileOrTablet = useMediaQuery({ query: '(max-width: 767px)' })
+  const organizeWidth = isMobileOrTablet ? '330px' : '430px'
+  
   return (
     <Page maxWidth='1120px'>
       <HeaderContainer><GDAHeader /></HeaderContainer>
       <StyledGDAApplicationForm>
         <Heading1Container>
-          <Image2Container>
-            <ShoesHand width='50px'/>
-          </Image2Container>
-          <Heading>企画しよう！</Heading>
-          <Image1Container>
-            <ClimateJusticeNow width='125px'/>
-          </Image1Container>
+          <GDCAOrganize width={organizeWidth}/>
         </Heading1Container>
         <StyledDivider />
         <Box1Container>
