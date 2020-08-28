@@ -44,7 +44,8 @@ const theme = {
   ocher: '#c8a050',
   gdaPrimaryColor: '#007850',
   gdaSecondaryColor: '#FFE564',
-  black: '#3C3C3C'
+  black: '#3C3C3C',
+  lime: '#96F564'
 }
 
 function App () {

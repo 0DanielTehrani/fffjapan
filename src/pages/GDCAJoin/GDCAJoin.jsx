@@ -2,7 +2,7 @@ import React from 'react'
 import { HashLink } from 'react-router-hash-link'
 import { Link } from 'react-router-dom'
 import { useMediaQuery } from 'react-responsive'
-import styled from 'styled-components'
+import styled, { withTheme }  from 'styled-components'
 import media from 'styled-media-query'
 import Text from '../../components/Text'
 import GDAHeader from '../../components/GDAHeader'
@@ -13,7 +13,13 @@ import GDCA2 from '../../components/RandomImages/GDCA2'
 import IconButton from '../../components/GDCAJoin/IconButton'
 import Heading from '../../components/GDAApplicationForm/Heading'
 import Heading2 from '../../components/GDAApplicationForm/Heading2'
-import sampleImgSrc from './shoes1-2.png'
+import GDCAJoinUs from '../../components/RandomImages/GDCAJoinUs'
+import shoes2 from './shoes2.png'
+import shoes3 from './shoes3.png'
+import shoes4 from './shoes4.png'
+import events from './events.png'
+import joinOnline from './join-online.png'
+import howToJoin from './how-to-join.png'
 import { 
   Heading1Container,
   Image2Container,
@@ -58,7 +64,7 @@ const ButtonsContaienr = styled.div
   display: flex;
   flex-direction: column;
   ${media.greaterThan('medium')`
-    flex-direction: row;
+    flex-direction: column;
   `};
   align-items: center;
   justify-content: center;
@@ -72,10 +78,23 @@ const ButtonsColumn = styled.div
   align-items: center;
 `
 
+const ButtonsRow = styled.div
+`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  ${media.greaterThan('medium')
+    `
+      flex-direction: row;
+    `
+  }
+`
+
 
 const ButtonContainer = styled.div
 `
-  margin: 1em;
+      margin: 1em;
 `
 
 const LatestInfoTitle = styled(Text)
@@ -93,48 +112,53 @@ const SubscribeButton = styled.button
 `
 
 
-function GDCAJoin () {
+function GDCAJoin (props) {
   const isMobileOrTablet = useMediaQuery({ query: '(max-width: 767px)' })
+  const joinUsWidth = isMobileOrTablet ? '330px' : '430px'
   
   return (
     <Page maxWidth='1120px'>
       <HeaderContainer><GDAHeader /></HeaderContainer>
         <StyledGDCAJoin>
         <Heading1Container>
-          <Image2Container>
-            <GDCA1 width='140px' />
-          </Image2Container>
-          <Heading>参加しよう！</Heading>
-          <Image1Container>
-            <GDCA2 width='140px' />
-          </Image1Container>
+          <GDCAJoinUs width={joinUsWidth} />
         </Heading1Container>
         <StyledDivider />
         <ButtonsContaienr>
-          <ButtonsColumn>
+          <ButtonsRow>
             <ButtonContainer>
               <HashLink smooth to='gda-application-form#actions-list'>
-                <IconButton text='イベント一覧' imgSrc={sampleImgSrc}/>
+                <IconButton 
+                  text='イベント一覧'
+                  imgSrc={shoes3} 
+                  textColor={props.theme.blue}
+                  textImgSrc={events}
+                />
               </HashLink>
             </ButtonContainer>
-            <ButtonContainer>
-              <a href="/logo.png" download >
-              <IconButton text='プロフィールフレーム設定' imgSrc={sampleImgSrc}/>
-              </a>
-            </ButtonContainer>
-          </ButtonsColumn>
-          <ButtonsColumn>
+          </ButtonsRow>
+          <ButtonsRow>
             <ButtonContainer>
               <HashLink smooth to='gdca-participants-info#join-online'>
-                <IconButton text='オンラインで参加' imgSrc={sampleImgSrc}/>
+                <IconButton 
+                  text='オンラインで参加' 
+                  imgSrc={shoes2} 
+                  textImgSrc={joinOnline}
+                  textColor={props.theme.black}
+                />
               </HashLink>
             </ButtonContainer>
             <ButtonContainer>
               <Link to='gdca-participants-info'>
-                <IconButton text='参加者の心得'　imgSrc={sampleImgSrc}/>
+                <IconButton 
+                  text='参加者の心得'　
+                  imgSrc={shoes4} 
+                  textColor={props.theme.red}
+                  textImgSrc={howToJoin}
+                />
               </Link>
             </ButtonContainer>
-          </ButtonsColumn>
+          </ButtonsRow>
         </ButtonsContaienr>
       <FooterContainer><Footer /></FooterContainer>
       </StyledGDCAJoin>
@@ -142,4 +166,4 @@ function GDCAJoin () {
   )
 }
 
-export default GDCAJoin
+export default withTheme(GDCAJoin)
