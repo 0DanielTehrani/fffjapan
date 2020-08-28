@@ -143,7 +143,7 @@ function GDADemand () {
         
       </Section>
       <Section>
-        <Heading1>（1）1.5度目標の達成と早急な対策の実施 </Heading1>
+        <Heading1 id='demand-1'>（1）1.5度目標の達成と早急な対策の実施 </Heading1>
         <Heading2>５年後ではなく今</Heading2>
 パリ協定という国際的な気候変動解決の取り決めでは、気温上昇を1.5度に食い止めるという目標を掲げています。そして、来年11月の国際会議（COP26）が各国のCO2などの削減目標を引き上げて提出する５年に１度のタイミングです。<br/>
 気温上昇を1.5度に食い止めるためには、５年後ではなく今、日本が掲げる温室効果ガスの削減目標（通称NDC）を「大幅に」引き上げることが必要です。
@@ -152,7 +152,7 @@ function GDADemand () {
       </Section>
       
       <Section>
-        <Heading1>（2）公正な政策決定のプロセス </Heading1>
+        <Heading1 id='demand-2'>（2）公正な政策決定のプロセス </Heading1>
         <Heading2>省庁横断型の議論</Heading2>
         従来の構造から脱却し、各省庁・内閣府で気候変動対策を最重要課題と捉え、省庁横断的な議論を進めるための体制を整えることを求めます。
         <Heading2>公正性と透明性の確保</Heading2>
@@ -164,7 +164,7 @@ function GDADemand () {
       </Section>
       
       <Section>
-        <Heading1>（3）若者の意見の尊重</Heading1>
+        <Heading1 id='demand-3'>（3）若者の意見の尊重</Heading1>
         <Heading2>制度の見直し</Heading2>
         若い世代ほど気候危機の影響を受けやすいことから、選挙権のない人を含む若者全体の意見を汲み取る制度を設けることを求めます。
         <Heading2>責任ある行動を</Heading2>

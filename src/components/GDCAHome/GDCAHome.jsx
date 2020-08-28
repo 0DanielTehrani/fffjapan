@@ -11,6 +11,7 @@ import IconButton from '../../components/GDCAHome/IconButton'
 import { NEWSLETTER_SUB_URL } from '../../constants'
 import joinIcon from './tmp-icon.png'
 import orgIcon from './tmp-icon.png'
+import { HashLink } from 'react-router-hash-link'
 
 const StyledGDCAHome = styled(Page)
 `
@@ -28,9 +29,9 @@ const FooterContainer = styled.div`
 const TitleContainer = styled.div
 `
   text-align: center;
-  margin: 2em 0;
+  margin-top: 2em;
   ${media.greaterThan('medium')`
-    margin: 4em 0;
+    margin-top: 4em;
   `};
 `
 
@@ -48,6 +49,7 @@ const ButtonsContaienr = styled.div
 `
   display: flex;
   flex-direction: column;
+  margin-top: 3em;
   margin-bottom: 13em;
   padding: 0 2em;
   ${media.greaterThan('medium')`
@@ -104,12 +106,59 @@ const SubscribeButton = styled.button
   }
 `
 
+const SubTitleContainer1 = styled.div
+`
+  text-align: center;
+  margin-bottom: 0.5em;
+`
+
+const SubTitleContainer2 = styled.div
+`
+  text-align: left;
+  width: 250px;
+  ${media.greaterThan('medium')`
+    width: 480px;
+    `};
+  margin: auto;
+`
+
+const SubTitle1 = styled(Text)
+`
+  font-size: 1em;
+  ${media.greaterThan('medium')`
+    font-size: 1.8em;
+    `};
+    color: ${props => props.theme.black};
+`
+
+const SubTitle2 = styled(Text)
+`
+  font-size: 0.8em;
+  ${media.greaterThan('medium')`
+    font-size: 1.5em;
+    `};
+  color: ${props => props.theme.black};
+  text-decoration: underline;
+`
 
 function GDCAHome () {
   const isMobileOrTablet = useMediaQuery({ query: '(max-width: 767px)' })
   return (
     <StyledGDCAHome maxWidth='1120px'>
         <TitleContainer><Title>世界気候アクション0925</Title></TitleContainer>
+        <SubTitleContainer1>
+          {
+            isMobileOrTablet ?
+            <SubTitle1>What do we want?<br /> 私たちが求めること</SubTitle1> 
+            : <SubTitle1>What do we want? 私たちが求めること</SubTitle1> 
+          }
+          <br />
+        </SubTitleContainer1>
+        <SubTitleContainer2>
+          <HashLink to='gdca-demand#demand-1' smooth><SubTitle2>（1）1.5度目標の達成と早急な対策の実施</SubTitle2></HashLink><br />
+          <HashLink to='gdca-demand#demand-2' smooth><SubTitle2>（2）公正な政策決定のプロセス</SubTitle2></HashLink><br />
+          <HashLink to='gdca-demand#demand-3' smooth><SubTitle2>（3）若者の意見の尊重</SubTitle2></HashLink>
+          </SubTitleContainer2>
         <ButtonsContaienr>
           <Link to='/gdca-join'>
             <ButtonContainer><IconButton text='参加する'　imgSrc={joinIcon } /></ButtonContainer>
