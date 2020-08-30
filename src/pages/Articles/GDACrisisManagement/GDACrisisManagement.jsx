@@ -200,9 +200,9 @@ function GDACrisisManagement () {
         <br />
         9/25 アクション前日までの連絡
         <hr />
-        中村　涼夏（なかむら すずか）FFF Nagoya Kagoshima<br />
-        電話番号：　080-1561-9887<br />
-        メールアドレス：suzukaminamikaho@gmail.com
+        黒部　睦（くろべ むつみ）　FFF Tokyo<br />
+        電話番号：080-9975-8672<br />
+        メールアドレス：toastoolofbridge3437@icloud.com
         <br />
         <br />
         9/25 アクション当日の連絡

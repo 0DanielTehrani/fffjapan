@@ -299,8 +299,10 @@ function GDAOrganizeInfo () {
             FFFJapan（運営）に参加者数（靴の数）を連絡
             </li>
             <ol>
-            <li>担当者：中村涼夏（FFF Nagoya）</li>
-            <li>電話番号：080-1561-9887</li>
+            <li>担当者：テヘラニ・ダニエル（FFF Tokyo）</li>
+            <li>電話番号：080-1529-0799</li>
+            <li>メールアドレス：daniel.tehrani.33@gmail.com</li>
+            <li>FFFJの企画者はslackも可</li>
             <li>受付時間：9/25　18:00まで</li>
             </ol>
             <li>帰るまでがGDCA、気をつけて帰る！！</li>
