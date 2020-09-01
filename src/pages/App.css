@@ -8,7 +8,14 @@ html {
 }
 
 @font-face {
-  font-family: 'Noto Sans JP Medium';
+  font-family: 'Noto Sans JP Bold';
+  font-style: normal;
+  src: url('../fonts/NotoSansJP-Bold.otf') format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans JP Regular';
   font-style: normal;
   src: url('../fonts/NotoSansJP-Regular.otf') format("woff");
   font-display: swap;
@@ -18,12 +25,6 @@ html {
   font-family: 'Noto Sans JP Light';
   font-style: normal;
   src: url('../fonts/NotoSansJP-Light.otf') format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'GothicA1 Bold';
-  src: url('../fonts/GothicA1-ExtraBold.ttf') format("woff");
   font-display: swap;
 }
 
