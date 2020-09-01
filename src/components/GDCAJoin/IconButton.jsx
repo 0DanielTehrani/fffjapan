@@ -77,7 +77,7 @@ function IconButton (props) {
         <Icon src={imgSrc} />
       </IconContainer>
       <TextsContainer>
-        <StyledText color={props.textColor}>{text}</StyledText>
+        <StyledText bold color={props.textColor}>{text}</StyledText>
         <TextImageContainer>
           <TextImage src={textImgSrc} />
         </TextImageContainer>

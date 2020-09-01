@@ -20,6 +20,7 @@ const GDAOrganizeInfoSchool2 = lazy(() => import('./Articles/GDAOrganizeInfoScho
 const GDAApplicationForm = lazy(() => import('./GDAApplicationForm'));
 const Statement200821 = lazy(() => import('./Articles/Statement200821'))
 const GDACrisisManagement = lazy(() => import('./Articles/GDACrisisManagement'))
+const GDCAProfileFrame = lazy(() => import('./GDCAProfileFrame'))
 const GDCAJoin = lazy(() => import('./GDCAJoin'))
 
 import { ThemeProvider } from 'styled-components'
@@ -114,6 +115,9 @@ function App () {
               </Route>
               <Route path='/gdca-join'>
                 <GDCAJoin />
+              </Route>
+              <Route path='/gdca-profile-frame'>
+                <GDCAProfileFrame />
               </Route>
             </Switch>
           </ScrollTop>

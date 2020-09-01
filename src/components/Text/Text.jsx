@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const StyledText = styled.span`
   font-size: ${props => props.fontSize || '1em'};
   color: ${props => props.color || props.theme.textColor};
-  font-family: ${props => props.theme.fontFamily};
+  font-family: ${props => props.bold ? props.theme.fontFamilyBold: props.theme.fontFamily};
   font-weight: ${props => props.bold ? 'bold' : 'normal'};
   text-decoration: ${props => props.underline ? 'underline' : 'none'};
   line-height: 1.625em;

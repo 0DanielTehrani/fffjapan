@@ -17,9 +17,11 @@ import GDCAJoinUs from '../../components/RandomImages/GDCAJoinUs'
 import shoes2 from './shoes2.png'
 import shoes3 from './shoes3.png'
 import shoes4 from './shoes4.png'
+import shoes5 from './shoes5.png'
 import events from './events.png'
 import joinOnline from './join-online.png'
 import howToJoin from './how-to-join.png'
+import profileFrame from './profile-frame.png'
 import { 
   Heading1Container,
   Image2Container,
@@ -136,6 +138,16 @@ function GDCAJoin (props) {
                 />
               </HashLink>
             </ButtonContainer>
+            <ButtonContainer>
+              <Link to='gdca-participants-info'>
+                <IconButton 
+                  text='参加者の心得'　
+                  imgSrc={shoes4} 
+                  textColor={props.theme.red}
+                  textImgSrc={howToJoin}
+                />
+              </Link>
+            </ButtonContainer>
           </ButtonsRow>
           <ButtonsRow>
             <ButtonContainer>
@@ -149,14 +161,14 @@ function GDCAJoin (props) {
               </HashLink>
             </ButtonContainer>
             <ButtonContainer>
-              <Link to='gdca-participants-info'>
+              <HashLink smooth to='gdca-profile-frame'>
                 <IconButton 
-                  text='参加者の心得'　
-                  imgSrc={shoes4} 
-                  textColor={props.theme.red}
-                  textImgSrc={howToJoin}
+                  text='プロフィールフレーム' 
+                  imgSrc={shoes5} 
+                  textImgSrc={profileFrame}
+                  textColor={props.theme.green}
                 />
-              </Link>
+              </HashLink>
             </ButtonContainer>
           </ButtonsRow>
         </ButtonsContaienr>
