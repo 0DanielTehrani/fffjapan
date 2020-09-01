@@ -1,3 +1,12 @@
+html {
+  font-size: 8px;
+}
+@media screen and (min-width: 768px) {
+  html {
+      font-size: 16px;
+  }
+}
+
 @font-face {
   font-family: 'Noto Sans JP Medium';
   font-style: normal;

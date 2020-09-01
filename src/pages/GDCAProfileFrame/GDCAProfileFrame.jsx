@@ -1,13 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useMediaQuery } from 'react-responsive'
-import styled  from 'styled-components'
+import styled, { withTheme }  from 'styled-components'
 import media from 'styled-media-query'
 import Text from '../../components/Text'
 import GDAHeader from '../../components/GDAHeader'
 import Page from '../../components/Page'
 import Footer from '../../components/Footer'
-
+import PageHeading from '../../components/GDCA/PageHeading'
+import profileFrame from './profile-frame.png'
 
 const HeaderContainer = styled.div`
   margin-bottom: 6em;
@@ -40,10 +41,15 @@ function GDCAProfileFrame (props) {
     <Page maxWidth='1120px'>
       <HeaderContainer><GDAHeader /></HeaderContainer>
       <StyledGDCAProfileFrame>
+        <PageHeading
+          textImgSrc={profileFrame}
+          title='プロフィールフレーム設定'
+          color={props.theme.green}
+        />
       <FooterContainer><Footer /></FooterContainer>
       </StyledGDCAProfileFrame>
     </Page>
   )
 }
 
-export default GDCAProfileFrame
+export default withTheme(GDCAProfileFrame)
