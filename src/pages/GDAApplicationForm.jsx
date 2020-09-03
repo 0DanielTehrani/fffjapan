@@ -14,6 +14,7 @@ import Page from '../components/Page'
 import ClimateJusticeNow from '../components/RandomImages/ClimateJusticeNow'
 import ShoesHand from '../components/RandomImages/ShoesHand'
 import GDCAOrganize from '../components/RandomImages/GDCAOrganize'
+import GDCAExamplePic from '../components/GDCA/GDCAExamplePic'
 import Text from '../components/Text'
 import explain from '../components/GDAApplicationForm/explain'
 
@@ -204,6 +205,7 @@ function GDAApplicationForm () {
         </Heading1Container>
         <StyledDivider />
         <Box1Container>
+          <GDCAExamplePic />
           <SentenceContainer>
           {explain}
           </SentenceContainer>

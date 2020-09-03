@@ -7,7 +7,7 @@ import Text from '../../components/Text'
 import GDAHeader from '../../components/GDAHeader'
 import Page from '../../components/Page'
 import Footer from '../../components/Footer'
-import PageHeading from '../../components/GDCA/PageHeading'
+import GDCAPageHeading from '../../components/GDCA/GDCAPageHeading'
 import profileFrame from './profile-frame.png'
 
 const HeaderContainer = styled.div`
@@ -39,9 +39,9 @@ function GDCAProfileFrame (props) {
   
   return (
     <Page maxWidth='1120px'>
-      <HeaderContainer><GDAHeader /></HeaderContainer>
+      <GDAHeader />
       <StyledGDCAProfileFrame>
-        <PageHeading
+        <GDCAPageHeading
           textImgSrc={profileFrame}
           title='プロフィールフレーム設定'
           color={props.theme.green}

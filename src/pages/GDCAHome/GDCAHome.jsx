@@ -9,10 +9,6 @@ import Footer from '../../components/Footer'
 import IconButton from '../../components/GDCAHome/IconButton'
 import { NEWSLETTER_SUB_URL } from '../../constants'
 
-const HeaderContainer = styled.div`
-  margin-bottom: 6em;
-`
-
 const FooterContainer = styled.div`
   margin-top: 2.5em;
 `
@@ -60,7 +56,7 @@ function GDCAHome () {
   const isMobileOrTablet = useMediaQuery({ query: '(max-width: 767px)' })
   return (
     <Page maxWidth='1120px'>
-        <HeaderContainer><GDAHeader /></HeaderContainer>
+        <GDAHeader />
         <TitleContainer><Title>世界気候アクション0925</Title></TitleContainer>
         <ButtonsContaienr>
           <ButtonContainer><IconButton text='参加しよう'　/></ButtonContainer>

@@ -22,6 +22,7 @@ const StyledHeader = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 100%;
+  margin-bottom: 6em;
 `
 
 const StyledLinkItems = styled.div`

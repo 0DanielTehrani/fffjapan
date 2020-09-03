@@ -28,10 +28,6 @@ import {
   StyledDivider 
 } from '../GDAApplicationForm'
 
-const HeaderContainer = styled.div`
-  margin-bottom: 6em;
-`
-
 const FooterContainer = styled.div`
   margin-top: 2.5em;
 `
@@ -120,7 +116,7 @@ function GDCAJoin (props) {
   
   return (
     <Page maxWidth='1120px'>
-      <HeaderContainer><GDAHeader /></HeaderContainer>
+        <GDAHeader />
         <StyledGDCAJoin>
         <Heading1Container>
           <GDCAJoinUs width={joinUsWidth} />
