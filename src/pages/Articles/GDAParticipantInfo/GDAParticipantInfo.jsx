@@ -11,6 +11,7 @@ import SectionHeading from '../../../components/GDCA/SectionHeading'
 import GDCAHeading3 from '../../../components/GDCA/GDCAHeading3'
 import GDCADivider from '../../../components/GDCA/GDCADivider'
 import GDCALabelText from '../../../components/GDCA/GDCALabelText'
+import GDCAFooter from '../../../components/GDCA/GDCAFooter'
 import Footer from '../../../components/Footer'
 import Page from '../../../components/Page'
 import TextLight from '../../../components/TextLight'
@@ -351,6 +352,7 @@ SNSで自分の思いとともにみんなへ拡散だ
           </ul>
         </Section>
         </SectionPossessions2>
+        <GDCAFooter />
       </Body>
     </StyledPage>    
   )
