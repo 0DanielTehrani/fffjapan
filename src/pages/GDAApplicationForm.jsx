@@ -204,7 +204,7 @@ function GDAApplicationForm (props) {
           <GDCAOrganize width={organizeWidth}/>
         </Heading1Container>
         <Box1Container>
-          <GDCAExamplePic />
+        <GDCAExamplePic />
           <SentenceContainer>
           {explain}
           </SentenceContainer>

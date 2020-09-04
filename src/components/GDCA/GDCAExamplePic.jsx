@@ -4,6 +4,7 @@ import Text from '../Text'
 import GDCADivider from './GDCADivider'
 import imgSRc from './images/top-image.png'
 
+
 const StyledGDCAExamplePic = styled.img
 `
   width: 90%;

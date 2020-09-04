@@ -14,6 +14,7 @@ import IconButton from '../../components/GDCAJoin/IconButton'
 import Heading from '../../components/GDAApplicationForm/Heading'
 import Heading2 from '../../components/GDAApplicationForm/Heading2'
 import GDCAJoinUs from '../../components/RandomImages/GDCAJoinUs'
+import GDCAExamplePic from '../../components/GDCA/GDCAExamplePic'
 import shoes2 from './shoes2.png'
 import shoes3 from './shoes3.png'
 import shoes4 from './shoes4.png'
@@ -109,6 +110,17 @@ const SubscribeButton = styled.button
 `
 `
 
+const ExamplePicContainer = styled.div
+`
+  width: 70%;
+  margin: auto;
+  margin-top: 30px;
+  ${media.lessThan('medium')`
+    width: 100%;
+  `}
+`
+
+
 
 function GDCAJoin (props) {
   const isMobileOrTablet = useMediaQuery({ query: '(max-width: 767px)' })
@@ -121,6 +133,9 @@ function GDCAJoin (props) {
         <Heading1Container>
           <GDCAJoinUs width={joinUsWidth} />
         </Heading1Container>
+        <ExamplePicContainer>
+          <GDCAExamplePic />
+        </ExamplePicContainer>
         <ButtonsContaienr>
           <ButtonsRow>
             <ButtonContainer>
