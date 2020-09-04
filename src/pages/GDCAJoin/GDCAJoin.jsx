@@ -121,7 +121,6 @@ function GDCAJoin (props) {
         <Heading1Container>
           <GDCAJoinUs width={joinUsWidth} />
         </Heading1Container>
-        <StyledDivider />
         <ButtonsContaienr>
           <ButtonsRow>
             <ButtonContainer>
@@ -168,7 +167,6 @@ function GDCAJoin (props) {
             </ButtonContainer>
           </ButtonsRow>
         </ButtonsContaienr>
-      <FooterContainer><Footer /></FooterContainer>
       </StyledGDCAJoin>
     </Page>
   )

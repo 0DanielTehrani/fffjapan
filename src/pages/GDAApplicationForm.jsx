@@ -1,12 +1,16 @@
 import React from 'react'
 import { useMediaQuery } from 'react-responsive'
-import styled from 'styled-components'
+import styled, { withTheme } from 'styled-components'
 import media from 'styled-media-query'
 import { Link } from 'react-router-dom'
 import GDAHeader from '../components/GDAHeader'
 import Footer from '../components/Footer'
 import Heading from '../components/GDAApplicationForm/Heading'
 import Heading2 from '../components/GDAApplicationForm/Heading2'
+import SectionHeading from '../components/GDCA/SectionHeading'
+import GDCAHeading2 from '../components/GDCA/GDCAHeading2'
+import GDCAPageHeading from '../components/GDCA/GDCAPageHeading'
+import GDCAFooter from '../components/GDCA/GDCAFooter'
 import SentenceContainer from '../components/GDAApplicationForm/SentenceContainer'
 import ActionsList from '../components/GDAApplicationForm/ActionsList'
 import GoogleForm from '../components/GDAApplicationForm/GoogleForm'
@@ -17,6 +21,7 @@ import GDCAOrganize from '../components/RandomImages/GDCAOrganize'
 import GDCAExamplePic from '../components/GDCA/GDCAExamplePic'
 import Text from '../components/Text'
 import explain from '../components/GDAApplicationForm/explain'
+import eventsImgSrc from './events.png'
 
 
 const HeaderContainer = styled.div`
@@ -80,7 +85,7 @@ const ActionsListContainer = styled.div
 
 const FormContainer = styled.div
 `
-  margin: 50px 0;
+  margin: 100px 0;
 `
 
 export const Image1Container = styled.div
@@ -108,11 +113,6 @@ export const Image2Container = styled.div
   }
 `
 
-export const StyledDivider = styled.hr`
-  border-width: 0.1px;
-  width: 70%;
-`
-
 const GuidesContainer = styled.div
 `
   padding-top: 2em;
@@ -137,7 +137,7 @@ const GuideTitle = styled(Text)
     `
   }
   font-family: ${props => props.theme.fontFamily};
-  color: ${props => props.theme.green} !important;
+  color: ${props => props.theme.black} !important;
   text-decoration: underline !important;
   font-size: 1.3em;
   &:hover {
@@ -192,7 +192,7 @@ const DemandDetailsText = styled(Text)
 `
 
 
-function GDAApplicationForm () {
+function GDAApplicationForm (props) {
   const isMobileOrTablet = useMediaQuery({ query: '(max-width: 767px)' })
   const organizeWidth = isMobileOrTablet ? '330px' : '430px'
   
@@ -203,7 +203,6 @@ function GDAApplicationForm () {
         <Heading1Container>
           <GDCAOrganize width={organizeWidth}/>
         </Heading1Container>
-        <StyledDivider />
         <Box1Container>
           <GDCAExamplePic />
           <SentenceContainer>
@@ -212,8 +211,11 @@ function GDAApplicationForm () {
         </Box1Container>
         {
           isMobileOrTablet ?
-          <Heading2>アクションモデル <br /> ガイドライン</Heading2>
-          : <Heading2>アクションモデルガイドライン</Heading2>
+          <>
+            <GDCAHeading2>アクションモデル</GDCAHeading2>
+            <GDCAHeading2>ガイドライン</GDCAHeading2>
+          </>
+          : <GDCAHeading2>アクションモデルガイドライン</GDCAHeading2>
         }
         <GuidesContainer>
           <Row>
@@ -228,19 +230,23 @@ function GDAApplicationForm () {
           </Row>
         </GuidesContainer>
         <Box2Container id='actions-list'>
-          <Heading2>イベントを確認しよう！</Heading2>
+          <GDCAPageHeading 
+            title='&emsp;&nbsp;イベント一覧&emsp;&nbsp;'
+            color={props.theme.blue}
+            textImgSrc={eventsImgSrc}
+          />
           <ActionsListContainer>
             <ActionsList />
           </ActionsListContainer>
         </Box2Container>
         <FormContainer>
-          <Heading2>登録しよう！</Heading2>
+        <SectionHeading title='登録しよう！'/>
           <GoogleForm />
         </FormContainer>
       </StyledGDAApplicationForm>
-      <FooterContainer><Footer /></FooterContainer>
+      <GDCAFooter />
     </Page>
   )
 }
 
-export default GDAApplicationForm
+export default withTheme(GDAApplicationForm)

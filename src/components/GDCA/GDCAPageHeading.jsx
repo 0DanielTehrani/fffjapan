@@ -13,18 +13,19 @@ const StyledPageHeading = styled.div
 
 const TextImageContainer = styled.div
 `
-  width: 300px;
+  height: 70px;
   text-align: center;
   margin: auto;
   margin-bottom: -2.5rem;
   ${media.lessThan('medium')`
-    margin-bottom: -1.75rem;
+    height: 50px;
+    margin-bottom: 0;
   `}
 `
 
 const TextImage = styled.img
 `
-  width: 100%;
+  height: 100%;
 `
 
 const Shoes = styled.img
