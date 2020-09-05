@@ -18,6 +18,8 @@ import Text from '../Text'
 
 import { Helmet } from 'react-helmet'
 
+import headerImage from './header-image.png'
+
 const StyledHeader = styled.div`
   display: flex;
   flex-direction: column;
@@ -54,24 +56,20 @@ const LowerHalfContainer = styled.div`
   justify-content: flex-end;
   margin-top: 1em;
 `
-const GDATitleLink = styled(Link)
-`
-  text-decoration: none;
-`
 
-const GDATitle = styled(Text)
-` 
-  color: ${props => props.theme.blue};
-  font-size: 1.3em;
+const HeaderImage = styled.img
+`
+  width: 150px;
+  height: auto;
   ${
     media.greaterThan('medium')
     `
-      font-size: 2.4em;
+      width: 300px;
+      height: auto;
     `
   }
-  text-decoration: none;
-  font-weight: bold;
 `
+
 
 function Header (props) {
   const isMobileOrTablet = useMediaQuery({ query: '(max-width: 768px)' })
@@ -96,7 +94,7 @@ function Header (props) {
       </Helmet>
       <UpperHalfContainer>
           <StyledLogos>
-            <GDATitle>世界気候アクション0925</GDATitle>
+            <HeaderImage src={headerImage} />
           </StyledLogos>
         <Link to='/'>
           <RoundLogo width={roundLogoWidth}/>

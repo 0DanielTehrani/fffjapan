@@ -4,6 +4,7 @@ import media from 'styled-media-query'
 import Text from '../Text'
 import GDCADivider from './GDCADivider'
 import imgSrc from './images/climate-action.png'
+import imgSrc2 from './images/footer.png'
 
 const StyledGDCAFooter = styled.div
 `
@@ -29,7 +30,18 @@ const Row = styled.div
 `
 
 const Image1 = styled.img
-``
+`
+  width: 150px;
+  height: auto;
+  margin-top: 40px;
+  ${
+    media.greaterThan('medium')
+    `
+    width: 300px;
+    height: auto;
+    `
+  }
+`
 
 const Image2 = styled.img
 `
@@ -42,7 +54,7 @@ function GDCAFooter (props) {
   return (
     <StyledGDCAFooter>
       <Row>
-        <Title bold>世界気候アクション0925</Title>
+        <Image1 src={imgSrc2} />
         <Image2 src={imgSrc} />
       </Row>
       <GDCADivider />

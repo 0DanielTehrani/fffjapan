@@ -15,6 +15,7 @@ import Heading from '../../components/GDAApplicationForm/Heading'
 import Heading2 from '../../components/GDAApplicationForm/Heading2'
 import GDCAJoinUs from '../../components/RandomImages/GDCAJoinUs'
 import GDCAExamplePic from '../../components/GDCA/GDCAExamplePic'
+import GDCAFooter from '../../components/GDCA/GDCAFooter'
 import shoes2 from './shoes2.png'
 import shoes3 from './shoes3.png'
 import shoes4 from './shoes4.png'
@@ -182,6 +183,7 @@ function GDCAJoin (props) {
             </ButtonContainer>
           </ButtonsRow>
         </ButtonsContaienr>
+        <GDCAFooter />
       </StyledGDCAJoin>
     </Page>
   )
