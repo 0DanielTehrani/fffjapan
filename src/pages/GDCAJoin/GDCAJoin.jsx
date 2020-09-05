@@ -162,7 +162,7 @@ function GDCAJoin (props) {
           </ButtonsRow>
           <ButtonsRow>
             <ButtonContainer>
-              <HashLink smooth to='gdca-participants-info#join-online'>
+              <HashLink smooth to='gdca-join-online'>
                 <IconButton 
                   text='オンラインで参加' 
                   imgSrc={shoes2} 

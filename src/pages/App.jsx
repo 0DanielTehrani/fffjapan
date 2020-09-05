@@ -22,6 +22,7 @@ const Statement200821 = lazy(() => import('./Articles/Statement200821'))
 const GDACrisisManagement = lazy(() => import('./Articles/GDACrisisManagement'))
 const GDCAProfileFrame = lazy(() => import('./GDCAProfileFrame'))
 const GDCAJoin = lazy(() => import('./GDCAJoin'))
+const GDCAJoinOnline = lazy(() => import('./GDCAJoinOnline'))
 
 import { ThemeProvider } from 'styled-components'
 import './App.css'
@@ -120,6 +121,9 @@ function App () {
               <Route path='/gdca-profile-frame'>
                 <GDCAProfileFrame />
               </Route>
+              <Route path='/gdca-join-online'>
+                <GDCAJoinOnline />
+              </Route>  
             </Switch>
           </ScrollTop>
         </Suspense>

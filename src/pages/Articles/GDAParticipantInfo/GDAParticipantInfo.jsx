@@ -12,6 +12,7 @@ import GDCAHeading3 from '../../../components/GDCA/GDCAHeading3'
 import GDCADivider from '../../../components/GDCA/GDCADivider'
 import GDCALabelText from '../../../components/GDCA/GDCALabelText'
 import GDCAFooter from '../../../components/GDCA/GDCAFooter'
+import IconButton from '../../../components/GDCAJoin/IconButton'
 import Footer from '../../../components/Footer'
 import Page from '../../../components/Page'
 import TextLight from '../../../components/TextLight'
@@ -23,6 +24,7 @@ import greenArrow from './green-arrow.png'
 
 import sampleInsta from './sample-insta.jpg'
 import sampleTwitter from './sample-twitter.png'
+import shoes2 from './shoes2.png'
 
 const StyledPage = styled(Page)`
   font-size: 16px;
@@ -222,6 +224,14 @@ const GreenArrow = styled.img
   `}
 `
 
+const JoinOnlineButtonContainer = styled.div
+`
+  display: flex;
+  justify-content: center;
+`
+
+
+
 
 
 function GDAParticipantInfo (props) {
@@ -280,25 +290,16 @@ SNSで自分の思いとともにみんなへ拡散だ
           <ArrowDownContainer>
             <GreenArrow src={greenArrow} />
           </ArrowDownContainer>
-          <GDCAPageHeading
-            textImgSrc={joinOnline}
-            title='オンラインで参加しよう！'
-            color={props.theme.black}
-          />
-          <div style={{ 'textAlign': 'center' }}>
-            InstagramとTwitterでClimate Shose Actionに参加したい場合は...。<br />
-            靴とプラカードの写った写真と「＃シューズアクション」をつけてSNSに投稿！<br />
-            実際に参加者としてカウントされます！
-          </div>
-          <SampleImagesContainer>
-          <InstaImageContainer>
-          <InstaImage src={sampleInsta} />  
-          </InstaImageContainer>
-          <TwitterImageContainer>
-          <TwitterImage src={sampleTwitter} />  
-          </TwitterImageContainer>
-          
-          </SampleImagesContainer>
+          <JoinOnlineButtonContainer>
+            <Link to='gdca-join-online'>
+              <IconButton 
+                text='オンラインで参加' 
+                imgSrc={shoes2} 
+                textImgSrc={joinOnline}
+                textColor={props.theme.black}
+              />
+            </Link>
+          </JoinOnlineButtonContainer>
         </Section>
 
           <SectionHeading title='持ち物'/>
