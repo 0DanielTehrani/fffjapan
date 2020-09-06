@@ -84,6 +84,7 @@ function GDCAJoinOnline (props) {
         color={props.theme.black}
       />
       <TextContainer>
+        InstagramとTwitterでClimate Shoes Actionに参加したい場合は...<br />
         靴とプラカードの写った写真と「＃シューズアクション」をつけてSNSに投稿！<br />
         実際に参加者としてカウントされます！
       </TextContainer>
