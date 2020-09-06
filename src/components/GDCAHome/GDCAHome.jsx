@@ -8,11 +8,12 @@ import GDAHeader from '../../components/GDAHeader'
 import Page from '../../components/Page'
 import Footer from '../../components/Footer'
 import IconButton from '../../components/GDCAHome/IconButton'
+import Demand from './Demand'
 import { NEWSLETTER_SUB_URL } from '../../constants'
 import shoes3 from './shoes3.png'
-import { HashLink } from 'react-router-hash-link'
 import joinUsText from './join-us-text.png'
 import organizeText from './organize-text.png'
+import whatDoWeWant from './what-do-we-want.png'
 
 const StyledGDCAHome = styled(Page)
 `
@@ -42,7 +43,7 @@ const Title = styled(Text)
   ${media.greaterThan('medium')`
     font-size: 3.5em;
   `};
-  color: ${props => props.theme.black};
+  color: ${props => props.theme.blue};
 `
 
 
@@ -110,7 +111,6 @@ const SubscribeButton = styled.button
 const SubTitleContainer1 = styled.div
 `
   text-align: center;
-  margin-bottom: 0.5em;
 `
 
 const SubTitleContainer2 = styled.div
@@ -125,11 +125,11 @@ const SubTitleContainer2 = styled.div
 
 const SubTitle1 = styled(Text)
 `
-  font-size: 1em;
+  font-size: 1.5em;
   ${media.greaterThan('medium')`
     font-size: 1.8em;
-    `};
-    color: ${props => props.theme.black};
+  `};
+  color: ${props => props.theme.blue};
 `
 
 const SubTitle2 = styled(Text)
@@ -138,28 +138,56 @@ const SubTitle2 = styled(Text)
   ${media.greaterThan('medium')`
     font-size: 1.5em;
     `};
-  color: ${props => props.theme.black};
+  color: ${props => props.theme.blue};
   text-decoration: underline;
+`
+
+const WhatDoWeWant = styled.img
+`
+  width: 200px;
+  height: auto;
+`
+
+const DemandsContainer = styled.div
+`
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  ${media.greaterThan('medium')`
+    padding: 0 4rem;
+    flex-direction: row;
+    align-items: flex-start;
+  `};
 `
 
 function GDCAHome (props) {
   const isMobileOrTablet = useMediaQuery({ query: '(max-width: 767px)' })
   return (
     <StyledGDCAHome maxWidth='1120px'>
-        <TitleContainer><Title>世界気候アクション0925</Title></TitleContainer>
+        <TitleContainer><Title bold>世界気候アクション0925</Title></TitleContainer>
         <SubTitleContainer1>
-          {
-            isMobileOrTablet ?
-            <SubTitle1>What do we want?<br /> 私たちが求めること</SubTitle1> 
-            : <SubTitle1>What do we want? 私たちが求めること</SubTitle1> 
-          }
+            <WhatDoWeWant src={whatDoWeWant} /><br/>
+            <SubTitle1 bold>私たちが求めること</SubTitle1> 
           <br />
         </SubTitleContainer1>
-        <SubTitleContainer2>
-          <HashLink to='gdca-demand#demand-1' smooth><SubTitle2>（1）1.5度目標の達成と早急な対策の実施</SubTitle2></HashLink><br />
-          <HashLink to='gdca-demand#demand-2' smooth><SubTitle2>（2）公正な政策決定のプロセス</SubTitle2></HashLink><br />
-          <HashLink to='gdca-demand#demand-3' smooth><SubTitle2>（3）若者の意見の尊重</SubTitle2></HashLink>
-          </SubTitleContainer2>
+        <DemandsContainer>
+          <Demand 
+            num={'1'}
+            text={<span>1.5度目標の達成と<br />早急な対策の実施</span>}
+            to='gdca-demand#demand-1'
+          />
+          <Demand 
+            num={'2'}
+            text={<span>公正な政策決定の<br />プロセス</span>}
+            to='gdca-demand#demand-2'
+          />
+          <Demand 
+            num={'3'}
+            text={'若者の意見の尊重'}
+            to='gdca-demand#demand-3'
+          />
+        </DemandsContainer>
         <ButtonsContaienr>
           <Link to='/gdca-join'>
             <ButtonContainer>

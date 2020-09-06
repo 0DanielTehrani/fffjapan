@@ -10,28 +10,26 @@ const Icon = styled.img
 
 const IconContainer = styled.div
 `
-  width: 40px;
+  z-index: 1000;
+  width: 50px;
+  margin-bottom: -50px;
   ${media.greaterThan('medium')`
-    width: 60px;
+    width: 90px;
+    margin-bottom: -80px;
   `};
 `
 
 const Button = styled.button
 `
-  background-color: ${props => props.theme.lime};
+  position: relative;
   border: 0px;
-  padding: 1em;
-  padding-left: 2em;
-  padding-right: 4em;
   width: 100%;
   display: flex;
+  background-color: #fff;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   ${media.greaterThan('medium')`
-    padding: 2em;
-    padding-left: 3em;
-    padding-right: 6em;
   `};
   &:hover {
     cursor: pointer;
@@ -40,16 +38,23 @@ const Button = styled.button
 
 const StyledText = styled(Text)
 `
-  font-size: 1.5em;
+  font-size: 2em;
+  ${media.greaterThan('medium')`
+    font-size: 3em;
+  `};
+  ${media.greaterThan('large')`
+    font-size: 3.8em;
+  `};
   color: ${props => props.color || props.theme.yellow};
   width: 240px;
+  margin-left: 0.3em;
 `
 
 const TextImageContainer = styled.div
 `
-  width: 150px;
+  width: 130px;
   ${media.greaterThan('medium')`
-    width: 200px;
+    width: 180px;
   `};
 `
 
@@ -64,7 +69,26 @@ const TextImage = styled.img
 
 const TextsContainer = styled.div
 `
-  margin-left: 1em;
+  z-index: 1000;
+`
+
+const BackgroundBox = styled.div
+`
+  position: absolute;
+  background-color: ${props => props.theme.lime};
+  width: 180px;
+  height: 60px;
+  top: 30%;
+  left: 10%; 
+  ${media.greaterThan('medium')`
+    width: 250px;
+    height: 100px;
+    top: 30%;
+    left: 10%; 
+  `};
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
 `
 
 
@@ -72,11 +96,12 @@ function IconButton (props) {
   const { imgSrc, text, textImgSrc } = props
   return (
     <Button {...props}>
+      <BackgroundBox />
       <IconContainer>
         <Icon src={imgSrc} />
       </IconContainer>
       <TextsContainer>
-        <StyledText color={props.textColor}>{text}</StyledText>
+        <StyledText bold color={props.textColor}>{text}</StyledText>
         <TextImageContainer>
           <TextImage src={textImgSrc} />
         </TextImageContainer>
