@@ -43,7 +43,7 @@ const Button = styled.button
 function ImageWithButton (props) {
   const { imgSrc, frameURL } = props
   return (
-    <a href={frameURL}>
+    <a href={frameURL} target='_blank'>
     <StyledImageWithButton>
       <ImageContainer>
         <Image src={imgSrc}/>

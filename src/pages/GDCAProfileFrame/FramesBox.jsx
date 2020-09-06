@@ -4,6 +4,7 @@ import styled, { withTheme }  from 'styled-components'
 import media from 'styled-media-query'
 import ImageWithButton from './ImageWithButton'
 import frameA from './frames/gdca-frame-a.png'
+import frameB from './frames/gdca-frame-b.png'
 
 const ImageWithButtonContainer = styled.div
 `
@@ -21,25 +22,31 @@ const StyledFramesBox = styled.div
   ${media.lessThan('medium')`
     flex-direction: column;
   `};
-  justify-content: space-between;
+  justify-content: space-evenly;
 `
 
+const imgSrcAndURL = [
+  {
+    frame: frameA,
+    url: 'https://www.facebook.com/profilepicframes/?selected_overlay_id=1438424726348616'
+  },
+  {
+    frame: frameB,
+    url: 'https://www.facebook.com/profilepicframes/?selected_overlay_id=953694235107727'
+  }
+]
 
 function FramesBox (props) {
   return (
     <StyledFramesBox>
-      <ImageWithButtonContainer>
-        <ImageWithButton imgSrc={frameA} frameURL='' />
-      </ImageWithButtonContainer>
-      <ImageWithButtonContainer>
-        <ImageWithButton imgSrc={frameA} frameURL='' />
-      </ImageWithButtonContainer>
-      <ImageWithButtonContainer>
-        <ImageWithButton imgSrc={frameA} frameURL='' />
-      </ImageWithButtonContainer>
-      <ImageWithButtonContainer>
-        <ImageWithButton imgSrc={frameA}  frameURL=''/>
-      </ImageWithButtonContainer>
+      {
+        imgSrcAndURL.map((obj) => {
+          const { frame, url } = obj
+          return  <ImageWithButtonContainer>
+            <ImageWithButton imgSrc={frame} frameURL={url} />
+          </ImageWithButtonContainer>
+        })
+      }
     </StyledFramesBox>
   )
 }
