@@ -191,6 +191,31 @@ const DemandDetailsText = styled(Text)
   
 `
 
+const AboutPetitionContainer = styled.div
+`
+  font-family: ${props => props.theme.fontFamily};
+  font-size: 1rem;
+`
+
+const DownloadQRButtonContainer = styled.div
+`
+  text-align: center;
+  margin: 2rem 0;
+`
+
+
+const DownloadQRButton = styled.button
+`
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  background-color: ${props => props.theme.beige};
+  border: 0;
+  &:hover {
+    cursor: pointer;
+  }
+`
+
+
 
 function GDAApplicationForm (props) {
   const isMobileOrTablet = useMediaQuery({ query: '(max-width: 767px)' })
@@ -207,6 +232,22 @@ function GDAApplicationForm (props) {
         <GDCAExamplePic />
           <SentenceContainer>
           {explain}
+          <AboutPetitionContainer>
+            <br />
+            現在、
+            <ul>
+              <li>1.5度目標の達成と早急な対策の実施</li>
+              <li>公正な政策決定のプロセス</li>
+              <li>若者の意見の尊重</li>
+            </ul>
+            の3項目を求める署名も行っています。
+            ぜひ、アクションを行う際は、署名用QRコードを使い署名集めにご協力ください！
+          </AboutPetitionContainer>
+          <DownloadQRButtonContainer>
+            <a href="/fffj-petition-qr.zip" download>
+            <DownloadQRButton><Text bold>署名用QRコードをダウンロード</Text></DownloadQRButton>
+            </a>
+          </DownloadQRButtonContainer>
           </SentenceContainer>
         </Box1Container>
         {

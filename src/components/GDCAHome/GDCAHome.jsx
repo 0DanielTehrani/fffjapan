@@ -161,6 +161,9 @@ const DemandsContainer = styled.div
   `};
 `
 
+
+
+
 function GDCAHome (props) {
   const isMobileOrTablet = useMediaQuery({ query: '(max-width: 767px)' })
   return (
