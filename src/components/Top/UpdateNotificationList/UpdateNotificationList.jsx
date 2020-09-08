@@ -100,7 +100,20 @@ const DateContainer = styled.div`
   margin: 0.8em 0;
 `
 
-function UpdateNotificationList () {
+const ReadMoreContainer = styled.div
+`
+  margin-top: 40px;
+  text-align: right;
+`
+
+const ReadMore = styled(Text)
+``
+
+function UpdateNotificationList (props) {
+  const {
+    only5
+  } = props
+  
   return (
     <StyledUpdateNotificationList>
       <Divider variant="inset" />
@@ -169,52 +182,62 @@ function UpdateNotificationList () {
           <ReadMoreButtonContainer><Link to='/gdca-demand'><ReadMoreButton /></Link></ReadMoreButtonContainer>
         </TitleAndButtonContainer>
       </ListItem>
+      <Divider variant="inset" />
+      {
+        only5 && <ReadMoreContainer>
+          <Link to="archives">
+            <ReadMore>もっとみる</ReadMore>
+          </Link>
+        </ReadMoreContainer>
+      }
+      {
+        !only5 &&
+        <>
+        <ListItem>
+          <DateContainer>
+            <DateText>2020/06/26</DateText>
+          </DateContainer>
+          <TitleAndButtonContainer>
+            <TitleContainer>
+              <ListItemTitle>若者、小泉環境大臣とのコロナ後の経済社会の再設計に関する意見交換会に出席</ListItemTitle>
+            </TitleContainer>
+            <ReadMoreButtonContainer><Link to='/press-release-200626'><ReadMoreButton /></Link></ReadMoreButtonContainer>
+          </TitleAndButtonContainer>
+        </ListItem>
+
+        <Divider variant="inset" />
+
+        <ListItem>
+          <DateContainer>
+            <DateText>2020/06/26</DateText>
+          </DateContainer>
+          <TitleAndButtonContainer>
+            <TitleContainer>
+              <ListItemTitle>コロナ後の経済社会の再設計に関する意見交換会に際する意見書</ListItemTitle>
+              <ListItemTitle>グリーンリカバリーについて</ListItemTitle>
+            </TitleContainer>
+            <ReadMoreButtonContainer><Link to='/opinion-200626'><ReadMoreButton /></Link></ReadMoreButtonContainer>
+          </TitleAndButtonContainer>
+        </ListItem>
+
+        <Divider variant="inset" />
+
+        <ListItem>
+          <DateContainer>
+            <DateText>2020/06/23</DateText>
+          </DateContainer>
+          <TitleAndButtonContainer>
+            <TitleContainer>
+              <ListItemTitle>現役大学生4人が気候変動の要因を生み出す銀行に物申す石炭火力発電事業に加担するメガバンク株主総会に参加！</ListItemTitle>
+            </TitleContainer>
+            <ReadMoreButtonContainer><Link to='/press-release-200623'><ReadMoreButton /></Link></ReadMoreButtonContainer>
+          </TitleAndButtonContainer>
+        </ListItem>
+
+        <Divider variant="inset" />
+        </>
+      }
       
-      <Divider variant="inset" />
-    
-      <ListItem>
-        <DateContainer>
-          <DateText>2020/06/26</DateText>
-        </DateContainer>
-        <TitleAndButtonContainer>
-          <TitleContainer>
-            <ListItemTitle>若者、小泉環境大臣とのコロナ後の経済社会の再設計に関する意見交換会に出席</ListItemTitle>
-          </TitleContainer>
-          <ReadMoreButtonContainer><Link to='/press-release-200626'><ReadMoreButton /></Link></ReadMoreButtonContainer>
-        </TitleAndButtonContainer>
-      </ListItem>
-
-      <Divider variant="inset" />
-
-      <ListItem>
-        <DateContainer>
-          <DateText>2020/06/26</DateText>
-        </DateContainer>
-        <TitleAndButtonContainer>
-          <TitleContainer>
-            <ListItemTitle>コロナ後の経済社会の再設計に関する意見交換会に際する意見書</ListItemTitle>
-            <ListItemTitle>グリーンリカバリーについて</ListItemTitle>
-          </TitleContainer>
-          <ReadMoreButtonContainer><Link to='/opinion-200626'><ReadMoreButton /></Link></ReadMoreButtonContainer>
-        </TitleAndButtonContainer>
-      </ListItem>
-
-      <Divider variant="inset" />
-
-      <ListItem>
-        <DateContainer>
-          <DateText>2020/06/23</DateText>
-        </DateContainer>
-        <TitleAndButtonContainer>
-          <TitleContainer>
-            <ListItemTitle>現役大学生4人が気候変動の要因を生み出す銀行に物申す石炭火力発電事業に加担するメガバンク株主総会に参加！</ListItemTitle>
-          </TitleContainer>
-          <ReadMoreButtonContainer><Link to='/press-release-200623'><ReadMoreButton /></Link></ReadMoreButtonContainer>
-        </TitleAndButtonContainer>
-      </ListItem>
-
-      <Divider variant="inset" />
-
     </StyledUpdateNotificationList>
   )
 }

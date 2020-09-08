@@ -23,6 +23,7 @@ const GDACrisisManagement = lazy(() => import('./Articles/GDACrisisManagement'))
 const GDCAProfileFrame = lazy(() => import('./GDCAProfileFrame'))
 const GDCAJoin = lazy(() => import('./GDCAJoin'))
 const GDCAJoinOnline = lazy(() => import('./GDCAJoinOnline'))
+const Archives = lazy(() => import('./Archives'))
 
 import { ThemeProvider } from 'styled-components'
 import './App.css'
@@ -124,6 +125,9 @@ function App () {
               <Route path='/gdca-join-online'>
                 <GDCAJoinOnline />
               </Route>  
+              <Route path='/archives'>
+                <Archives />
+              </Route>
             </Switch>
           </ScrollTop>
         </Suspense>
