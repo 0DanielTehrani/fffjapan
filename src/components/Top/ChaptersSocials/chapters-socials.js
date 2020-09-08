@@ -1,5 +1,11 @@
 export default [
   {
+    name_ja: '富良野',
+    name_en: 'Furano',
+    twitter: 'FFF_Furano',
+    instagram: 'fridays_for_future_furano'
+  },
+  {
     name_ja: '札幌',
     name_en: 'Sapporo',
     facebook: 'fffsapporo',
@@ -36,6 +42,11 @@ export default [
     twitter: 'fff_tokyo',
     facebook: 'fridaysforfuturetokyo',
     instagram: 'fridaysforfuturetokyo'
+  },
+  {
+    name_ja: '群馬',
+    name_en: 'Gunma',
+    instagram: 'fridaysforfuture_gunma'
   },
   {
     name_ja: '埼玉',
@@ -144,6 +155,12 @@ export default [
     facebook: 'FFFKumamoto',
     instagram: 'fff_kumamoto',
     website: 'http://fffkumamoto.online'
+  },
+  {
+    name_ja: '宮崎',
+    name_en: 'Miyazaki',
+    twitter: 'fffmiyazaki',
+    instagram: 'fffmiyazaki'
   },
   {
     name_ja: '鹿児島',
