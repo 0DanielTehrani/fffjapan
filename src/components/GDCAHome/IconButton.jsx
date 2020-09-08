@@ -21,6 +21,7 @@ const IconContainer = styled.div
 
 const Button = styled.button
 `
+  margin-left: -10%;
   position: relative;
   border: 0px;
   width: 100%;

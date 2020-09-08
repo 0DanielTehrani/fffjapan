@@ -72,6 +72,13 @@ const ButtonContainer = styled.div
   `};
 `
 
+const Button2Container = styled(ButtonContainer)
+`
+  ${media.lessThan('medium')`
+    margin-top: 5em;
+  `};
+`
+
 const LatestInfoTitle = styled(Text)
 `
   display: block;
@@ -144,7 +151,12 @@ const SubTitle2 = styled(Text)
 
 const WhatDoWeWant = styled.img
 `
-  width: 200px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  width: 150px;
+  ${media.greaterThan('medium')`
+    width: 200px; 
+  `};
   height: auto;
 `
 
@@ -203,14 +215,14 @@ function GDCAHome (props) {
             </ButtonContainer>
           </Link>
           <Link to='/gda-application-form'>
-            <ButtonContainer>
+            <Button2Container>
               <IconButton 
                 text='企画する'　
                 imgSrc={shoes3} 
                 textColor={props.theme.blue}
                 textImgSrc={organizeText}
                />
-            </ButtonContainer>
+            </Button2Container>
           </Link>
         </ButtonsContaienr>
         <SubscribeContainer>

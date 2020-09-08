@@ -11,14 +11,20 @@ const StyledDemand = styled.div
 const TextNum = styled(Text)
 `
   color: ${props => props.theme.lime};
-  font-size: 2.5rem;
+  font-size: 1.5rem;
+  ${media.greaterThan('medium')`
+    font-size: 2.5rem;
+  `};
 `
 
 const TextUnderline = styled(Text)
 `
   text-decoration: underline;
   color: ${props => props.theme.blue};
-  font-size: 1.8rem;
+  font-size: 1.4rem;
+  ${media.greaterThan('medium')`
+    font-size: 1.8rem;
+  `};
 `
 
 
