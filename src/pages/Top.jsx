@@ -201,7 +201,7 @@ function Top () {
         <LatestUpdateTitleContainer>
           <LatestUpdateTitle>更新情報</LatestUpdateTitle>
         </LatestUpdateTitleContainer>
-        <UpdateNotificationList />
+        <UpdateNotificationList only5 />
       </UpdateNotificationListContainer>
       {
         isMobile
