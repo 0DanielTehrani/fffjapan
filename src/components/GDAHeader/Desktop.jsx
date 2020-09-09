@@ -16,11 +16,17 @@ const StyledHeader = styled.div`
   margin-bottom: 6em;
 `
 
-const UpperHalfContainer = styled.div`
+const UpperHalfContainer = styled.div
+`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  ${media.lessThan('large')`
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  `}
 `
 
 
@@ -45,6 +51,11 @@ const StyledLinkItems = styled.div`
   & a {
     margin-left: 30px;
   }
+  ${media.lessThan('large')`
+    width: 90%;
+    margin: auto;
+    margin-top: 40px;
+  `}
 `
 
 const StyledLinkItem = styled(LinkItem)
