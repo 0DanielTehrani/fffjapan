@@ -53,11 +53,11 @@ function GDCAHeaderMobile (props) {
             {pathname !== '/gda-application-form' 
               && <MobileLinkItem fontSize={fontSize} to='/gda-application-form'>企画する</MobileLinkItem>
             }
-            {pathname !== '/' 
-              && <MobileLinkItem fontSize={fontSize} to='/'>シェアパック</MobileLinkItem>
+            {false && pathname !== '/' 
+              && <MobileLinkItem fontSize={fontSize} to='/gdca-sharepack'>シェアパック</MobileLinkItem>
             }
-            {pathname !== '/' 
-              && <MobileLinkItem fontSize={fontSize} to='/'>賛同団体</MobileLinkItem>
+            {false && pathname !== '/' 
+              && <MobileLinkItem fontSize={fontSize} to='/gdca-endorsements'>賛同団体</MobileLinkItem>
             }
           </LinkMenu>
       </UpperHalfContainer>
