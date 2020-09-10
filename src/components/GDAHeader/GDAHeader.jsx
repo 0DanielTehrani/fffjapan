@@ -1,24 +1,9 @@
 import React from 'react'
-import styled, { withTheme } from 'styled-components'
-import media from 'styled-media-query'
-
-import { withRouter, Link } from 'react-router-dom'
+import styled from 'styled-components'
 import { useMediaQuery } from 'react-responsive'
-import { useTranslation } from 'react-i18next'
-
-import LinkItem from '../LinkItem'
-import MobileLinkItem from '../Header/MobileLinkItem'
-import LinkMenu from '../LinkMenu'
-
-import RoundLogo from '../RoundLogo'
-import Logo from '../Logo'
-import MobileShareBar from '../MobileShareBar'
-
-import Text from '../Text'
-
 import { Helmet } from 'react-helmet'
-
-import headerImage from './header-image.png'
+import Desktop from './Desktop'
+import Mobile from './Mobile'
 
 const StyledHeader = styled.div`
   display: flex;
@@ -27,62 +12,9 @@ const StyledHeader = styled.div`
   margin-bottom: 6em;
 `
 
-const StyledLinkItems = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  & a {
-    margin-left: 30px;
-  }
-`
-
-const StyledLogos = styled.div`
-  & img:first-child {
-    margin-right: 12px;
-  }
-`
-
-const UpperHalfContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-`
-
-const LowerHalfContainer = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 1em;
-`
-
-const HeaderImage = styled.img
-`
-  width: 150px;
-  height: auto;
-  ${
-    media.greaterThan('medium')
-    `
-      width: 300px;
-      height: auto;
-    `
-  }
-`
-
 
 function Header (props) {
   const isMobileOrTablet = useMediaQuery({ query: '(max-width: 768px)' })
-  const roundLogoWidth = isMobileOrTablet ? '30px' : '50px'
-  const logoWidth = isMobileOrTablet ? '200px' : '200px'
-  const fontSize = isMobileOrTablet ? '25px' : '18px'
-  const { pathname } = props.location
-  const { textColor, ocher } = props.theme
-  const currentPageColor = ocher
-
-  const { t } = useTranslation()
-  
-  
 
   return (
     <StyledHeader>
@@ -92,21 +24,13 @@ function Header (props) {
           <link id="favicon32" rel="icon" type="image/png" sizes="32x32" href="gda/favicon-32x32.png" />
           <link id="favicon16" rel="icon" type="image/png" sizes="16x16" href="gda/favicon-16x16.png" />
       </Helmet>
-      <UpperHalfContainer>
-          <StyledLogos>
-            <HeaderImage src={headerImage} />
-          </StyledLogos>
-        <Link to='/'>
-          <RoundLogo width={roundLogoWidth}/>
-        </Link>
-      </UpperHalfContainer>
-      <LowerHalfContainer>
-        {
-          isMobileOrTablet && <MobileShareBar />
-        }
-      </LowerHalfContainer>
+      {
+        isMobileOrTablet ?
+        <Mobile />
+        : <Desktop />
+      }
     </StyledHeader>
   )
 }
 
-export default withTheme(withRouter(Header))
+export default Header

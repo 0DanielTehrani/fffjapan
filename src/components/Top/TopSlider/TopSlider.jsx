@@ -31,8 +31,8 @@ function TopSlider () {
       interval={3000} 
       showStatus={false}
       >
-      <EndorseBannerB />
       <GDABannerB />
+      <EndorseBannerB />
       <LargeImage />
     </Carousel>
   )
