@@ -45,7 +45,7 @@ function GDCAHeaderMobile (props) {
           </StyledLogos>
           <LinkMenu fontSize={fontSize}>
             {pathname !== '/' 
-              && <MobileLinkItem fontSize={fontSize} to='/gdca-demand'>私たちがが求めること</MobileLinkItem>
+              && <MobileLinkItem fontSize={fontSize} to='/gdca-demand'>私たちが求めること</MobileLinkItem>
             }
             {pathname !== '/gdca-join' 
               && <MobileLinkItem fontSize={fontSize} to='/gdca-join'>参加する</MobileLinkItem>
