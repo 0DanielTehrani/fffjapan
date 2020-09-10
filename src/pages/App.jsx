@@ -24,6 +24,8 @@ const GDCAProfileFrame = lazy(() => import('./GDCAProfileFrame'))
 const GDCAJoin = lazy(() => import('./GDCAJoin'))
 const GDCAJoinOnline = lazy(() => import('./GDCAJoinOnline'))
 const Archives = lazy(() => import('./Archives'))
+const GDCAEndorsements = lazy(() => import('./GDCAEndorsements'))
+const GDCASharePack = lazy(() => import('./GDCASharePack'))
 
 import { ThemeProvider } from 'styled-components'
 import './App.css'
@@ -128,6 +130,12 @@ function App () {
               <Route path='/archives'>
                 <Archives />
               </Route>
+              <Route path='/gdca-endorsements'>
+                <GDCAEndorsements />
+              </Route>  
+              <Route path='/gdca-sharepack'>
+                <GDCASharePack />
+              </Route>  
             </Switch>
           </ScrollTop>
         </Suspense>
