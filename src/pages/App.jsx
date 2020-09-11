@@ -126,14 +126,16 @@ function App () {
               <Route path='/gdca-join-online'>
                 <GDCAJoinOnline />
               </Route>  
-              /*
               <Route path='/gdca-endorsements'>
                 <GDCAEndorsements />
               </Route>  
-              <Route path='/gdca-sharepack'>
-                <GDCASharePack />
-              </Route>  
-              */
+              {
+                /*
+                <Route path='/gdca-sharepack'>
+                  <GDCASharePack />
+                </Route>  
+                */
+              }
             </Switch>
           </ScrollTop>
         </Suspense>
